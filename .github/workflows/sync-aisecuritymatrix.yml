@@ -2,42 +2,69 @@ name: Sync aisecuritymatrix.com
 
 on:
   schedule:
-    - cron: '17 6 * * *'   # daily ~06:17 UTC
-  workflow_dispatch: {}     # manual "Run workflow" button
+    - cron: '17 6 * * *'   # daily 06:17 UTC
+  workflow_dispatch: {}    # manual trigger
 
 permissions:
   contents: write
 
 concurrency:
   group: sync-aisecuritymatrix
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   sync:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
+    env:
+      TZ: UTC
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.11'
 
       - name: Scrape aisecuritymatrix.com
-        run: python3 scripts/scrape.py
+        id: scrape
+        run: |
+          set -euo pipefail
+          echo "::group::scrape"
+          python3 scripts/scrape.py
+          BEFORE=$(git show HEAD:tools.json 2>/dev/null | python3 -c "import json,sys; print(len(json.load(sys.stdin)))" || echo 0)
+          AFTER=$(python3 -c "import json; print(len(json.load(open('tools.json'))))")
+          CHANGED=$(git diff --stat HEAD 2>/dev/null | tail -1)
+          echo "before=$BEFORE after=$AFTER"
+          echo "changed=$CHANGED"
+          echo "before=$BEFORE" >> $GITHUB_OUTPUT
+          echo "after=$AFTER" >> $GITHUB_OUTPUT
+          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+          echo "::endgroup::"
 
       - name: Guard against a broken scrape
+        if: steps.scrape.outputs.after != ''
         run: |
-          new=$(jq 'length' tools.json)
-          old=$(git show HEAD:tools.json 2>/dev/null | jq 'length' || echo 0)
-          echo "tools: old=$old new=$new"
-          # abort if the scrape produced almost nothing, or lost >50% of tools
-          if [ "$new" -lt 10 ] || [ "$new" -lt $(( old / 2 )) ]; then
-            echo "::error::Scrape looks broken (new=$new, old=$old). Aborting, no push."
+          NEW=${{ steps.scrape.outputs.after }}
+          OLD=${{ steps.scrape.outputs.before }}
+          echo "tools: old=$OLD new=$NEW"
+          if [ "$NEW" -lt 10 ] || [ "$NEW" -lt $(( OLD / 2 )) ]; then
+            echo "::error::Scrape looks broken (new=$NEW, old=$OLD). Aborting, no push."
+            exit 1
+          fi
+          # also guard: the script should never delete existing tool pages without replacing them
+          REMAINING=$(ls tools/*/ 2>/dev/null | grep -c '\.md$' || echo 0)
+          echo "tool files on disk: $REMAIN"
+          if [ "$REMAIN" -lt 10 ]; then
+            echo "::error::Fewer than 10 tool .md files on disk. Aborting."
             exit 1
           fi
 
       - name: Commit & push if changed
+        if: steps.scrape.outputs.changed != ''
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
@@ -46,5 +73,25 @@ jobs:
             exit 0
           fi
           ts=$(date -u '+%Y-%m-%d %H:%M UTC')
-          git commit -m "chore(sync): refresh from aisecuritymatrix.com ($ts)"
+          git commit -m "chore(sync): refresh from aisecuritymatrix.com ($ts)
+
+          ${{ steps.scrape.outputs.changed }}"
+          # Rebase on origin to avoid push-fail races
+          git pull --rebase origin main --quiet
           git push
+
+      - name: Workflow summary
+        if: always()
+        run: |
+          STATUS="${{ job.status }}"
+          AFTER="${{ steps.scrape.outputs.after }}"
+          BEFORE="${{ steps.scrape.outputs.before }}"
+          COMMIT_MSG=$(git log -1 --format='%s' || true)
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          cat <<EOF | tee -a "$GITHUB_STEP_SUMMARY"
+          ## Sync result
+          - **Status:** $STATUS
+          - **Tools synced:** $AFTER (was $BEFORE)
+          - **Latest commit:** $COMMIT_MSG
+          - **Run:** [$RUN_URL]($RUN_URL)
+          EOF
