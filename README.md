@@ -1,37 +1,47 @@
-# AI Security Matrix
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="AI Security Matrix — curated directory of AI security testing tools">
+</p>
 
-[![source](https://img.shields.io/badge/source-aisecuritymatrix.com-blue)](https://aisecuritymatrix.com)
-![projects](https://img.shields.io/badge/projects-65-informational)
-[![中文文档](https://img.shields.io/badge/lang-中文-lightgrey)](README.zh.md)
+<div align="center">
 
-> A curated directory of open-source AI-enabled security testing tools, LLM red-teaming platforms, agentic pentesting systems, and security-focused Model Context Protocol (MCP) servers.
+[![source](https://img.shields.io/badge/source-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)
+![projects](https://img.shields.io/badge/projects-65-2fe3a0?style=flat-square&labelColor=002523)
+![auto-sync](https://img.shields.io/badge/daily%20sync-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)
+[![中文文档](https://img.shields.io/badge/Language-中文-9ca6a7?style=flat-square&labelColor=002523)](README.zh.md)
+
+</div>
+
+> **AI Security Matrix** is a curated directory of open-source AI-enabled security testing tools, LLM red-teaming platforms, agentic pentesting systems, and security-focused Model Context Protocol (MCP) servers.
 >
-> Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com). This README serves as a directory index only; each tool's detail page lives in `tools/<slug>.md`.
->
-_Automatically synced via GitHub Actions. Content is authoritative from aisecuritymatrix.com._
+> Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com) · This README is a directory index only; each tool's detail page lives in its category directory.
 
-**65** open-source projects, grouped by category:
+<p align="center">
+  <img src="./assets/readme/categories.svg" width="100%" alt="Tool categories: agents, scanners, MCP servers, skills">
+</p>
 
-- [Agents](tools/agents/) — 22 (Autonomous / multi-step AI orchestration)
-- [Scanners](tools/scanners/) — 20 (Rule / LLM-assisted detection & evaluation)
-- [MCP Servers](tools/mcp-servers/) — 14 (Model Context Protocol tool servers)
-- [Skills](tools/skills/) — 9 (Agent skill bundles, prompts & playbooks)
+## Categories
+
+| Category | Count | Purpose | Directory |
+|:---|:---:|:---|:---|
+| **Agents** (`agent`) | `22` | Autonomous / multi-step AI orchestration | [Browse →](tools/agents/) |
+| **Scanners** (`scanner`) | `20` | Rule / LLM-assisted detection & evaluation | [Browse →](tools/scanners/) |
+| **MCP Servers** (`mcp`) | `14` | Model Context Protocol tool servers | [Browse →](tools/mcp-servers/) |
+| **Skills** (`skill`) | `9` | Agent skill bundles, prompts & playbooks | [Browse →](tools/skills/) |
 
 ## Static Pages
 
-| Page | Description |
-|---|---|
-| [About](about.md) | Background and criteria |
-| [Guide](guide.md) | Dimensions, scopes, and taxonomy |
-| [Contribute](contribute.md) | Submissions instructions |
-| [Commercial](commercial.md) | Commercial solutions |
-
-Full project list lives under [`tools/`](tools/) (one `*.md` / `*.zh.md` per project).
-
----
+| Page | Description | Chinese |
+|:---|:---|:---|
+| 📖 [About](about.md) | Criteria, threat perspective & machine risk flags | [关于](about.zh.md) |
+| 🧭 [Guide](guide.md) | Four categories & scope dimensions | [使用指南](guide.zh.md) |
+| 🤝 [Contribute](contribute.md) | Submission instructions | [贡献](contribute.zh.md) |
+| 💼 [Commercial](commercial.md) | Enterprise tool directory | [商业方案](commercial.zh.md) |
 
 ## Data Files
 
-- [`tools.json`](tools.json) — Full structured JSON dataset
+- [`tools.json`](tools.json) — Complete structured dataset (stars, bundled tools, pre-run safety checklist)
+- [`translations.json`](translations.json) — Curated bilingual translation dictionary
 
-Original catalogue maintained at [aisecuritymatrix.com](https://aisecuritymatrix.com). This repository is an independent community mirror.
+---
+
+<p align="center"><sub>Original catalogue maintained at <a href="https://aisecuritymatrix.com">aisecuritymatrix.com</a> · Independent community mirror</sub></p>

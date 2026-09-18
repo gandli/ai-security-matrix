@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160"
+     role="img" aria-labelledby="title desc">
+  <title id="title">AI Security Matrix</title>
+  <desc id="desc">A curated directory of 65 open-source AI-enabled security testing tools, mirrored daily.</desc>
+  <defs>
+    <style>text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","PingFang SC","Microsoft YaHei",sans-serif; } .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }</style>
+  </defs>
+  <rect width="1200" height="160" rx="16" fill="#001615"/>
+  <rect x="48" y="0" width="264" height="5" fill="#2c85ff"/>
+<rect x="360" y="0" width="264" height="5" fill="#8f8b00"/>
+<rect x="672" y="0" width="264" height="5" fill="#009798"/>
+<rect x="984" y="0" width="264" height="5" fill="#ff10a3"/>
+  <text x="80" y="56" fill="#ebf7f7" font-size="44" font-weight="700" letter-spacing="-0.5">AI Security Matrix</text>
+  <text x="80" y="88" fill="#8A929C" font-size="15" class="mono">open-source AI security testing tools - mirrored daily from aisecuritymatrix.com</text>
+  <text x="180" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">22</text>
+<text x="180" y="128" fill="#8A929C" font-size="16" text-anchor="middle">智能体工具</text>
+<text x="492" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">20</text>
+<text x="492" y="128" fill="#8A929C" font-size="16" text-anchor="middle">扫描器</text>
+<text x="804" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">14</text>
+<text x="804" y="128" fill="#8A929C" font-size="16" text-anchor="middle">MCP 服务器</text>
+<text x="1116" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">9</text>
+<text x="1116" y="128" fill="#8A929C" font-size="16" text-anchor="middle">技能集</text>
+</svg>

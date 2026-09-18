@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="192" viewBox="0 0 1200 192"
+     role="img" aria-labelledby="title desc">
+  <title id="title">AI Security Matrix - Categories</title>
+  <desc id="desc">Four categories of AI security tools with live counts.</desc>
+  <defs>
+    <style>text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","PingFang SC","Microsoft YaHei",sans-serif; } .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }</style>
+  </defs>
+  <rect width="1200" height="192" rx="16" fill="#001615"/>
+  <text x="80" y="28" fill="#8A929C" font-size="12" font-weight="600" letter-spacing="0.08em">CATEGORIES</text>
+  <g transform="translate(48,40)">
+  <rect width="1104" height="28" rx="6" fill="#002523" stroke="#2c85ff40" stroke-width="1"/>
+  <rect x="0" y="5" width="4" height="18" rx="2" fill="#2c85ff"/>
+  <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">智能体工具</text>
+  <text x="69" y="20" fill="#7c8787" font-size="13">自主运行或多步骤编排的 AI 工具</text>
+  <text x="1020" y="20" fill="#2c85ff" font-size="15" font-weight="600" text-anchor="end" class="mono">22</text>
+</g>
+<g transform="translate(48,78)">
+  <rect width="1104" height="28" rx="6" fill="#002523" stroke="#8f8b0040" stroke-width="1"/>
+  <rect x="0" y="5" width="4" height="18" rx="2" fill="#8f8b00"/>
+  <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">扫描器</text>
+  <text x="51" y="20" fill="#7c8787" font-size="13">基于规则或 LLM 的检测与评估工具</text>
+  <text x="1020" y="20" fill="#8f8b00" font-size="15" font-weight="600" text-anchor="end" class="mono">20</text>
+</g>
+<g transform="translate(48,116)">
+  <rect width="1104" height="28" rx="6" fill="#002523" stroke="#00979840" stroke-width="1"/>
+  <rect x="0" y="5" width="4" height="18" rx="2" fill="#009798"/>
+  <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">MCP 服务器</text>
+  <text x="87" y="20" fill="#7c8787" font-size="13">模型上下文协议（MCP）工具服务器</text>
+  <text x="1020" y="20" fill="#009798" font-size="15" font-weight="600" text-anchor="end" class="mono">14</text>
+</g>
+<g transform="translate(48,154)">
+  <rect width="1104" height="28" rx="6" fill="#002523" stroke="#ff10a340" stroke-width="1"/>
+  <rect x="0" y="5" width="4" height="18" rx="2" fill="#ff10a3"/>
+  <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">技能集</text>
+  <text x="51" y="20" fill="#7c8787" font-size="13">智能体技能包、提示词与剧本</text>
+  <text x="1020" y="20" fill="#ff10a3" font-size="15" font-weight="600" text-anchor="end" class="mono">9</text>
+</g>
+</svg>

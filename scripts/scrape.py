@@ -278,7 +278,80 @@ def tool_md(t: dict, lang: str) -> str:
     return "\n".join(o)
 
 
-def directory_readme(data: list[dict], lang: str) -> str:
+def _accent(c):
+    return {"agent": "#2c85ff", "scanner": "#8f8b00", "mcp": "#009798", "skill": "#ff10a3"}.get(c, "#58A6FF")
+
+
+def _hero_svg(data, lang):
+    zh = lang == "zh"
+    counts = {c: sum(1 for t in data if t["category"] == c) for c in ORDER}
+    total = len(data)
+    top_colors = [_accent(c) for c in ORDER]
+    labels = [CATS[c]["zh"] if zh else CATS[c]["en"] for c in ORDER]
+    top_bar = "\n".join(
+        '<rect x="%d" y="0" width="264" height="5" fill="%s"/>' % (48 + i * 312, color)
+        for i, color in enumerate(top_colors))
+    metrics = "\n".join(
+        '<text x="%d" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">%d</text>\n'
+        '<text x="%d" y="128" fill="#8A929C" font-size="16" text-anchor="middle">%s</text>'
+        % (48 + i * 312 + 132, counts[c], 48 + i * 312 + 132, labels[i])
+        for i, c in enumerate(ORDER))
+    sub = ("open-source AI security testing tools - mirrored daily from aisecuritymatrix.com" if zh
+           else "Open-source AI security testing tools - mirrored daily from aisecuritymatrix.com")
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160"\n'
+        '     role="img" aria-labelledby="title desc">\n'
+        '  <title id="title">AI Security Matrix</title>\n'
+        '  <desc id="desc">A curated directory of %d open-source AI-enabled security testing tools, mirrored daily.</desc>\n'
+        '  <defs>\n'
+        '    <style>text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","PingFang SC","Microsoft YaHei",sans-serif; } .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }</style>\n'
+        '  </defs>\n'
+        '  <rect width="1200" height="160" rx="16" fill="#001615"/>\n'
+        '  %s\n'
+        '  <text x="80" y="56" fill="#ebf7f7" font-size="44" font-weight="700" letter-spacing="-0.5">AI Security Matrix</text>\n'
+        '  <text x="80" y="88" fill="#8A929C" font-size="15" class="mono">%s</text>\n'
+        '  %s\n'
+        '</svg>\n' % (total, top_bar, sub, metrics)
+    )
+
+
+def _categories_svg(data, lang):
+    zh = lang == "zh"
+    cards = []
+    for i, c in enumerate(ORDER):
+        cnt = sum(1 for t in data if t["category"] == c)
+        cat = CATS.get(c, {"en": c, "zh": c, "dz": "", "de": ""})
+        label = cat["zh"] if zh else cat["en"]
+        desc = cat.get("dz", cat.get("de", ""))
+        color = _accent(c)
+        y = 40 + i * 38
+        x_off = 24 + len(label) * 9
+        cards.append(
+            '<g transform="translate(48,%d)">\n'
+            '  <rect width="1104" height="28" rx="6" fill="#002523" stroke="%s" stroke-width="1"/>\n'
+            '  <rect x="0" y="5" width="4" height="18" rx="2" fill="%s"/>\n'
+            '  <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">%s</text>\n'
+            '  <text x="%d" y="20" fill="#7c8787" font-size="13">%s</text>\n'
+            '  <text x="1020" y="20" fill="%s" font-size="15" font-weight="600" text-anchor="end" class="mono">%d</text>\n'
+            '</g>' % (y, color + "40", color, label, x_off, desc, color, cnt)
+        )
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="192" viewBox="0 0 1200 192"\n'
+        '     role="img" aria-labelledby="title desc">\n'
+        '  <title id="title">AI Security Matrix - Categories</title>\n'
+        '  <desc id="desc">Four categories of AI security tools with live counts.</desc>\n'
+        '  <defs>\n'
+        '    <style>text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","PingFang SC","Microsoft YaHei",sans-serif; } .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }</style>\n'
+        '  </defs>\n'
+        '  <rect width="1200" height="192" rx="16" fill="#001615"/>\n'
+        '  <text x="80" y="28" fill="#8A929C" font-size="12" font-weight="600" letter-spacing="0.08em">CATEGORIES</text>\n'
+        '  %s\n'
+        '</svg>\n' % "\n".join(cards)
+    )
+
+
+def directory_readme(data, lang):
+
     zh = lang == "zh"
     by_cat = {c: [t for t in data if t["category"] == c] for c in ORDER}
     for c in by_cat:
@@ -286,95 +359,81 @@ def directory_readme(data: list[dict], lang: str) -> str:
     extras = sorted({t["category"] for t in data} - set(ORDER))
     for c in extras:
         by_cat[c] = sorted([t for t in data if t["category"] == c], key=lambda x: -stars_num(x["stars"]))
+    ordered = [c for c in list(ORDER) + extras if by_cat.get(c)]
+
+    hero = '<p align="center">\n  <img src="./assets/readme/hero%s.svg" width="100%%" alt="AI Security Matrix — curated directory of AI security testing tools">\n</p>' % (".zh" if zh else "")
+    cats_img = '<p align="center">\n  <img src="./assets/readme/categories%s.svg" width="100%%" alt="Tool categories: agents, scanners, MCP servers, skills">\n</p>' % (".zh" if zh else "")
 
     if zh:
         o = [
-            "# AI 安全矩阵（AI Security Matrix）",
-            "",
-            "[![数据来源](https://img.shields.io/badge/数据来源-aisecuritymatrix.com-blue)](https://aisecuritymatrix.com)",
-            f"![项目数](https://img.shields.io/badge/收录项目-{len(data)}-informational)",
-            f"[![English](https://img.shields.io/badge/lang-English-lightgrey)](README.md)",
-            "",
-            "> 一份精选的开源 AI 安全测试工具清单，涵盖 LLM 红队平台、智能体化渗透测试系统，以及面向安全的模型上下文协议（MCP）服务器。",
+            hero, "",
+            '<div align="center">', "",
+            "[![数据来源](https://img.shields.io/badge/数据来源-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)",
+            "![项目数](https://img.shields.io/badge/收录项目-%d-2fe3a0?style=flat-square&labelColor=002523)" % len(data),
+            "![自动同步](https://img.shields.io/badge/每日自动同步-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)",
+            "[![English](https://img.shields.io/badge/Language-English-9ca6a7?style=flat-square&labelColor=002523)](README.md)",
+            "", "</div>", "",
+            "> **AI 安全矩阵** 是一份精选的开源 AI 安全测试工具清单，涵盖 LLM 红队平台、智能体化渗透测试系统，以及面向安全领域的模型上下文协议（MCP）服务器。",
             ">",
-            "> 本 README 仅作为目录索引；每个工具的详细信息见 `tools/<slug>.zh.md`。",
-            ">",
-            "_由 GitHub Actions 自动同步，内容以 aisecuritymatrix.com 为准_",
-            "",
-            f"共收录 **{len(data)}** 个开源项目：",
-            "",
+            "> 镜像自 [aisecuritymatrix.com](https://aisecuritymatrix.com) · 本页面仅作分类索引，每个工具的详情见对应目录下的 `*.zh.md`。",
+            "", cats_img, "",
+            "## 分类导航", "",
+            "| 类别 | 数量 | 定位 | 目录入口 |", "|:---|:---:|:---|:---|",
         ]
-        for c in list(ORDER) + extras:
-            if not by_cat.get(c):
-                continue
-            cat_zh = CATS.get(c, {"zh": c, "dz": ""})["zh"]
-            cat_dz = CATS.get(c, {"dz": ""})["dz"]
-            o.append(f"- [{cat_zh}](tools/{CATS.get(c,{'dir':c})['dir']}/) — {len(by_cat[c])}（{cat_dz}）")
+        for c in ordered:
+            cat = CATS.get(c, {"zh": c, "dz": "", "dir": c})
+            o.append("| **%s** (`%s`) | `%d` | %s | [进入目录 →](tools/%s/) |"
+                     % (cat["zh"], c, len(by_cat[c]), cat["dz"], cat["dir"]))
         o += [
             "",
-            "## 静态页面",
+            "## 站点专页", "",
+            "| 页面 | 说明 | 英文原版 |", "|:---|:---|:---|",
+            "| 📖 [关于](about.zh.md) | 收录标准、威胁视角与运行风险说明 | [About](about.md) |",
+            "| 🧭 [使用指南](guide.zh.md) | 四大类别与测试范围维度详解 | [Guide](guide.md) |",
+            "| 🤝 [贡献指南](contribute.zh.md) | 项目提交流程 | [Contribute](contribute.md) |",
+            "| 💼 [商业方案](commercial.zh.md) | 企业级工具与服务参考 | [Commercial](commercial.md) |",
             "",
-            "| 页面 | 说明 |",
-            "|---|---|",
-            "| [关于 (about.zh.md)](about.zh.md) | 站点背景与收录标准 |",
-            "| [使用指南 (guide.zh.md)](guide.zh.md) | 维度、范围与图例说明 |",
-            "| [贡献 (contribute.zh.md)](contribute.zh.md) | 提交与贡献指引 |",
-            "| [商业方案 (commercial.zh.md)](commercial.zh.md) | 商业化相关信息 |",
-            "",
-            "完整项目列表见 [`tools/`](tools/) 目录（每个项目一份 `*.md` / `*.zh.md`）。",
-            "",
-            "---",
-            "",
-            "## 数据文件",
-            "",
-            "- [`tools.json`](tools.json) — 包含所有工具的完整结构化 JSON 数据集",
-            "",
-            "原始分类目录由 [aisecuritymatrix.com](https://aisecuritymatrix.com) 维护。本仓库为独立的社区镜像。",
+            "## 结构化数据", "",
+            "- [`tools.json`](tools.json) — 全部项目的 Stars、内置工具与运行前安全检查（root / 凭据读取 / 外部请求）",
+            "- [`translations.json`](translations.json) — 人工维护的双语翻译词条库",
+            "", "---", "",
+            '<p align="center"><sub>原始数据版权归 <a href="https://aisecuritymatrix.com">aisecuritymatrix.com</a> 所有 · 本仓库为社区自主同步的中英双语镜像</sub></p>',
         ]
         return "\n".join(o)
 
     o = [
-        "# AI Security Matrix",
-        "",
-        "[![source](https://img.shields.io/badge/source-aisecuritymatrix.com-blue)](https://aisecuritymatrix.com)",
-        f"![projects](https://img.shields.io/badge/projects-{len(data)}-informational)",
-        f"[![中文文档](https://img.shields.io/badge/lang-中文-lightgrey)](README.zh.md)",
-        "",
-        "> A curated directory of open-source AI-enabled security testing tools, LLM red-teaming platforms, agentic pentesting systems, and security-focused Model Context Protocol (MCP) servers.",
+        hero, "",
+        '<div align="center">', "",
+        "[![source](https://img.shields.io/badge/source-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)",
+        "![projects](https://img.shields.io/badge/projects-%d-2fe3a0?style=flat-square&labelColor=002523)" % len(data),
+        "![auto-sync](https://img.shields.io/badge/daily%20sync-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)",
+        "[![中文文档](https://img.shields.io/badge/Language-中文-9ca6a7?style=flat-square&labelColor=002523)](README.zh.md)",
+        "", "</div>", "",
+        "> **AI Security Matrix** is a curated directory of open-source AI-enabled security testing tools, LLM red-teaming platforms, agentic pentesting systems, and security-focused Model Context Protocol (MCP) servers.",
         ">",
-        "> Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com). This README serves as a directory index only; each tool's detail page lives in `tools/<slug>.md`.",
-        ">",
-        "_Automatically synced via GitHub Actions. Content is authoritative from aisecuritymatrix.com._",
-        "",
-        f"**{len(data)}** open-source projects, grouped by category:",
-        "",
+        "> Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com) · This README is a directory index only; each tool's detail page lives in its category directory.",
+        "", cats_img, "",
+        "## Categories", "",
+        "| Category | Count | Purpose | Directory |", "|:---|:---:|:---|:---|",
     ]
-    for c in list(ORDER) + extras:
-        if not by_cat.get(c):
-            continue
-        cat_en = CATS.get(c, {"en": c, "de": ""})["en"]
-        cat_de = CATS.get(c, {"de": ""})["de"]
-        o.append(f"- [{cat_en}](tools/{CATS.get(c,{'dir':c})['dir']}/) — {len(by_cat[c])} ({cat_de})")
+    for c in ordered:
+        cat = CATS.get(c, {"en": c, "de": "", "dir": c})
+        o.append("| **%s** (`%s`) | `%d` | %s | [Browse →](tools/%s/) |"
+                 % (cat["en"], c, len(by_cat[c]), cat["de"], cat["dir"]))
     o += [
         "",
-        "## Static Pages",
+        "## Static Pages", "",
+        "| Page | Description | Chinese |", "|:---|:---|:---|",
+        "| 📖 [About](about.md) | Criteria, threat perspective & machine risk flags | [关于](about.zh.md) |",
+        "| 🧭 [Guide](guide.md) | Four categories & scope dimensions | [使用指南](guide.zh.md) |",
+        "| 🤝 [Contribute](contribute.md) | Submission instructions | [贡献](contribute.zh.md) |",
+        "| 💼 [Commercial](commercial.md) | Enterprise tool directory | [商业方案](commercial.zh.md) |",
         "",
-        "| Page | Description |",
-        "|---|---|",
-        "| [About](about.md) | Background and criteria |",
-        "| [Guide](guide.md) | Dimensions, scopes, and taxonomy |",
-        "| [Contribute](contribute.md) | Submissions instructions |",
-        "| [Commercial](commercial.md) | Commercial solutions |",
-        "",
-        "Full project list lives under [`tools/`](tools/) (one `*.md` / `*.zh.md` per project).",
-        "",
-        "---",
-        "",
-        "## Data Files",
-        "",
-        "- [`tools.json`](tools.json) — Full structured JSON dataset",
-        "",
-        "Original catalogue maintained at [aisecuritymatrix.com](https://aisecuritymatrix.com). This repository is an independent community mirror.",
+        "## Data Files", "",
+        "- [`tools.json`](tools.json) — Complete structured dataset (stars, bundled tools, pre-run safety checklist)",
+        "- [`translations.json`](translations.json) — Curated bilingual translation dictionary",
+        "", "---", "",
+        '<p align="center"><sub>Original catalogue maintained at <a href="https://aisecuritymatrix.com">aisecuritymatrix.com</a> · Independent community mirror</sub></p>',
     ]
     return "\n".join(o)
 
@@ -488,6 +547,14 @@ def main() -> None:
         (d / "README.md").write_text("\n".join(en) + "\n", encoding="utf-8")
         (d / "README.zh.md").write_text("\n".join(zh) + "\n", encoding="utf-8")
     print("Wrote per-category index READMEs")
+    # 5c. Data-driven SVGs (counts stay fresh)
+    assets_dir = ROOT / "assets" / "readme"
+    assets_dir.mkdir(parents=True, exist_ok=True)
+    for lang in ("en", "zh"):
+        s = ".zh" if lang == "zh" else ""
+        (assets_dir / f"hero{s}.svg").write_text(_hero_svg(tools, lang), encoding="utf-8")
+        (assets_dir / f"categories{s}.svg").write_text(_categories_svg(tools, lang), encoding="utf-8")
+    print("Wrote data-driven SVGs (hero & categories, EN/ZH)")
 
     # 6. READMEs
     (ROOT / "README.md").write_text(directory_readme(tools, "en"), encoding="utf-8")
