@@ -32,13 +32,9 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git checkout --orphan gh-pages
-          git rm -rf --cached . || true
-          git clean -fd
-          rm -rf * .*  2>/dev/null || true
-          cp -r dist/* .
-          cp -r dist/.* . 2>/dev/null || true
+          rm -rf * .[!.]* 2>/dev/null || true
+          cp -r dist/. .
           touch .nojekyll
-          git add -A
-          git commit -m "Deploy $(date +%Y-%m-%d) $(git rev-parse --short HEAD)"
+          git add -A -f
+          git commit -m "Deploy $(date +%Y-%m-%dT%H:%M:%S) $(git rev-parse --short HEAD)"
           git push origin gh-pages --force
-        shell: bash
