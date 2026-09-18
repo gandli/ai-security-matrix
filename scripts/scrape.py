@@ -315,25 +315,8 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
             "| [贡献 (contribute.zh.md)](contribute.zh.md) | 提交与贡献指引 |",
             "| [商业方案 (commercial.zh.md)](commercial.zh.md) | 商业化相关信息 |",
             "",
-            "## 分类目录",
+            "完整项目列表见 [`tools/`](tools/) 目录（每个项目一份 `*.md` / `*.zh.md`）。",
             "",
-        ]
-        for c in list(ORDER) + extras:
-            if not by_cat.get(c):
-                continue
-            cat_zh = CATS.get(c, {"zh": c})["zh"]
-            cat_dz = CATS.get(c, {"dz": ""})["dz"]
-            o += [
-                f"### {c} · {cat_zh}",
-                "",
-                f"_{cat_dz}_ · {len(by_cat[c])} 个" if cat_dz else f"_{len(by_cat[c])} 个",
-                "",
-            ]
-            for t in by_cat[c]:
-                proj = f"- [{t['name']}](tools/{t['slug']}.zh.md) — {t['stars'] or '—'}"
-                o.append(proj)
-            o.append("")
-        o += [
             "---",
             "",
             "## 数据文件",
@@ -377,25 +360,8 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
         "| [Contribute](contribute.md) | Submissions instructions |",
         "| [Commercial](commercial.md) | Commercial solutions |",
         "",
-        "## Categories",
+        "Full project list lives under [`tools/`](tools/) (one `*.md` / `*.zh.md` per project).",
         "",
-    ]
-    for c in list(ORDER) + extras:
-        if not by_cat.get(c):
-            continue
-        cat_en = CATS.get(c, {"en": c})["en"]
-        cat_de = CATS.get(c, {"de": ""})["de"]
-        o += [
-            f"### {c} · {cat_en}",
-            "",
-            f"_{cat_de}_ · {len(by_cat[c])} tools" if cat_de else f"_{len(by_cat[c])} tools",
-            "",
-        ]
-        for t in by_cat[c]:
-            proj = f"- [{t['name']}](tools/{t['slug']}.md) — {t['stars'] or '—'}"
-            o.append(proj)
-        o.append("")
-    o += [
         "---",
         "",
         "## Data Files",
