@@ -9,7 +9,7 @@
 | **最近更新** | today |
 | **许可证** | Apache-2.0 |
 | **维护者** | 21 |
-| **规模** | 58,032 lines · 145 |
+| **规模** | 58,076 lines · 145 |
 | **源码** | <https://github.com/snyk/agent-scan> |
 | **作用范围/特征** | `agentic`（智能体及其循环） / *root* / *credentials* |
 

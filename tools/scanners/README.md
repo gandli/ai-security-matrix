@@ -18,7 +18,7 @@ _Rule / LLM-assisted detection & evaluation · 20 tools_
 - [counterfit](azure-counterfit.md) — 939 · a CLI that provides a generic automation layer for assessing the security of ML models
 - [modelscan](protectai-modelscan.md) — 774 · Protection against Model Serialization Attacks
 - [fickling](trailofbits-fickling.md) — 669 · A Python pickling decompiler and static analyzer
-- [AgentHound](adithyan-ak-agenthound.md) — 436 · Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A
+- [AgentHound](adithyan-ak-agenthound.md) — 437 · Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A
 - [picklescan](mmaitre314-picklescan.md) — 423 · Security scanner detecting Python Pickle files performing suspicious actions
 - [aisbom](lab700xorg-aisbom.md) — 79 · Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AI
 - [modelaudit](promptfoo-modelaudit.md) — 72 · Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment

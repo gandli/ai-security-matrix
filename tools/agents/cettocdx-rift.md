@@ -6,20 +6,20 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 11 |
-| **Last updated** | 85d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 7 |
-| **Size** | 128,667 lines · 639 |
+| **Size** | 489,896 lines · 2486 |
 | **Source** | <https://github.com/cettocdx/rift> |
-| **Scopes & traits** | `webapp` `network` *root* _binaries_ _installs_ ~calls out~ |
+| **Scopes & traits** | `webapp` `network` *root* *credentials* _installs_ ~calls out~ |
 
 ## Before running it
 
 | Check | Answer |
 |---|---|
-| Ships compiled binaries you did not build | **yes** |
+| Ships compiled binaries you did not build | **no** |
 | Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
+| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
 | Installs software on host | **—** |
 | Calls an endpoint the project does not own | **yes** |
 | Contains long encoded blobs you cannot read | **no** |

@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 17 |
-| **Size** | 583,613 lines · 2243 |
+| **Size** | 600,818 lines · 2307 |
 | **Source** | <https://github.com/samugit83/redamon> |
 | **Scopes & traits** | `redteam` `ad` `network` `recon` *root* *credentials* _installs_ ~calls out~ ~opaque~ |
 
