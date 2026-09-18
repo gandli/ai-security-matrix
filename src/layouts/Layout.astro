@@ -7,13 +7,15 @@ interface Props {
 }
 
 const {
-  title = "AI-enabled security testing tools — AI Security Matrix",
-  description = "A curated list of AI-enabled security testing tools.",
+  title,
+  description,
   lang = "en",
   canonical,
 } = Astro.props;
 
 const isZh = lang === "zh";
+const pageTitle = title || (isZh ? "AI 赋能安全测试工具 — AI 安全矩阵" : "AI-enabled security testing tools — AI Security Matrix");
+const pageDescription = description || (isZh ? "一份精选的 AI 赋能网络安全测试与红队工具目录。" : "A curated list of AI-enabled security testing tools.");
 const prefix = isZh ? "/zh" : "";
 const switchHref = isZh ? Astro.url.pathname.replace(/^\/zh/, "") || "/" : `/zh${Astro.url.pathname}`;
 
@@ -25,16 +27,16 @@ import "@/styles/global.css";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href={canonical || Astro.url.href} />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="AI Security Matrix" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={Astro.url.href} />
 
     <script is:inline>
