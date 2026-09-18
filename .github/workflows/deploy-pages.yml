@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -16,8 +14,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,18 +32,19 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           
-          # Remove all tracked files from orphan branch
+          # Backup dist outside git tree
+          mkdir /tmp/dist_backup
+          cp -r dist/* /tmp/dist_backup/
+          
+          # Checkout clean orphan branch
           git checkout --orphan gh-pages
           git rm -rf . || true
-          rm -rf * .[!.]* 2>/dev/null || true
           
-          # Copy built site
-          cp -r dist/. .
+          # Restore dist
+          cp -r /tmp/dist_backup/* .
           touch .nojekyll
           
-          # Force-add everything (including gitignored dist files)
+          # Commit and force push
           git add -A -f
-          git commit --allow-empty -m "Deploy $(date +%Y-%m-%dT%H:%M:%S) [${{ github.sha }}]"
-          
-          # Push with explicit refspec
-          git push --force origin HEAD:gh-pages
+          git commit -m "Deploy $(date +%Y-%m-%dT%H:%M:%S)"
+          git push --force origin gh-pages
