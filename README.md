@@ -8,14 +8,14 @@
 >
 > Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com). This README serves as a directory index only; each tool's detail page lives in `tools/<slug>.md`.
 >
-_Last updated: 2026-09-18 03:34 UTC (automatically synced via GitHub Actions)_
+_Last updated: 2026-09-18 03:50 UTC (automatically synced via GitHub Actions)_
 
 **65** open-source projects, grouped by category:
 
-- [Agents](#agent) — 22 (Autonomous / multi-step AI orchestration)
-- [Scanners](#scanner) — 20 (Rule / LLM-assisted detection & evaluation)
-- [MCP Servers](#mcp) — 14 (Model Context Protocol tool servers)
-- [Skills](#skill) — 9 (Agent skill bundles, prompts & playbooks)
+- [Agents](tools/agents/) — 22 (Autonomous / multi-step AI orchestration)
+- [Scanners](tools/scanners/) — 20 (Rule / LLM-assisted detection & evaluation)
+- [MCP Servers](tools/mcp-servers/) — 14 (Model Context Protocol tool servers)
+- [Skills](tools/skills/) — 9 (Agent skill bundles, prompts & playbooks)
 
 ## Static Pages
 

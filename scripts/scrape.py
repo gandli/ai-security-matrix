@@ -2,12 +2,14 @@
 """Scrape aisecuritymatrix.com and regenerate repo content.
 
 Stdlib-only so it runs unchanged in GitHub Actions.
-Generates: README.md, README.zh.md, tools/<slug>.md + <slug>.zh.md,
-about/guide/contribute/commercial (both langs), and tools.json.
+Generates: README.md, README.zh.md, per-category directories
+  tools/agents/ tools/scanners/ tools/mcp-servers/ tools/skills/
+each with <slug>.md <slug>.zh.md and a README/README.zh index.
+Also about/guide/contribute/commercial (both langs) and tools.json.
 """
 from __future__ import annotations
 
-import json, re, time, html as htmllib, urllib.request
+import json, re, time, shutil, html as htmllib, urllib.request
 from pathlib import Path
 from datetime import datetime, timezone
 
@@ -173,15 +175,19 @@ def static_to_md(html: str, slug: str) -> str:
 
 CATS = {
     "agent":   {"en": "Agents",      "zh": "智能体工具",
+                "dir": "agents",
                 "de": "Autonomous / multi-step AI orchestration",
                 "dz": "自主运行或多步骤编排的 AI 工具"},
     "scanner": {"en": "Scanners",    "zh": "扫描器",
+                "dir": "scanners",
                 "de": "Rule / LLM-assisted detection & evaluation",
                 "dz": "基于规则或 LLM 的检测与评估工具"},
     "mcp":     {"en": "MCP Servers", "zh": "MCP 服务器",
+                "dir": "mcp-servers",
                 "de": "Model Context Protocol tool servers",
                 "dz": "模型上下文协议（MCP）工具服务器"},
     "skill":   {"en": "Skills",      "zh": "技能集",
+                "dir": "skills",
                 "de": "Agent skill bundles, prompts & playbooks",
                 "dz": "智能体技能包、提示词与剧本"},
 }
@@ -303,7 +309,7 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
                 continue
             cat_zh = CATS.get(c, {"zh": c, "dz": ""})["zh"]
             cat_dz = CATS.get(c, {"dz": ""})["dz"]
-            o.append(f"- [{cat_zh}](#{c}) — {len(by_cat[c])}（{cat_dz}）")
+            o.append(f"- [{cat_zh}](tools/{CATS.get(c,{'dir':c})['dir']}/) — {len(by_cat[c])}（{cat_dz}）")
         o += [
             "",
             "## 静态页面",
@@ -348,7 +354,7 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
             continue
         cat_en = CATS.get(c, {"en": c, "de": ""})["en"]
         cat_de = CATS.get(c, {"de": ""})["de"]
-        o.append(f"- [{cat_en}](#{c}) — {len(by_cat[c])} ({cat_de})")
+        o.append(f"- [{cat_en}](tools/{CATS.get(c,{'dir':c})['dir']}/) — {len(by_cat[c])} ({cat_de})")
     o += [
         "",
         "## Static Pages",
@@ -412,8 +418,10 @@ def main() -> None:
         except Exception as e:
             print(f"  warn: {slug} failed: {e}")
 
-    # 4. Tool pages
+    # 4. Tool pages (one dir per category)
     tools_dir = ROOT / "tools"
+    if tools_dir.exists():
+        shutil.rmtree(tools_dir)  # start clean so renamed/removed tools don't linger
     tools_dir.mkdir(exist_ok=True)
     tools = []
     for u in tool_urls:
@@ -428,13 +436,15 @@ def main() -> None:
                 "scopes": [], "access": [], "host": [], "unseen": [],
             })
             owner, name = repo.split("/", 1) if "/" in repo else ("", repo)
+            cat = base["category"] or "other"
+            cat_dir = CATS.get(cat, {"dir": "other"})["dir"]
             tool = {
                 "slug": slug,
                 "repo": repo,
                 "name": name,
                 "owner": owner,
                 "url": base["url"],
-                "category": base["category"],
+                "category": cat,
                 "stars": base["stars"],
                 "freshness": base["freshness"],
                 "description": detail["description"] or base["description"],
@@ -451,8 +461,10 @@ def main() -> None:
                 "unseen": base["unseen"],
             }
             tools.append(tool)
-            (tools_dir / f"{slug}.md").write_text(tool_md(tool, "en"), encoding="utf-8")
-            (tools_dir / f"{slug}.zh.md").write_text(tool_md(tool, "zh"), encoding="utf-8")
+            out_dir = ROOT / "tools" / cat_dir
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / f"{slug}.md").write_text(tool_md(tool, "en"), encoding="utf-8")
+            (out_dir / f"{slug}.zh.md").write_text(tool_md(tool, "zh"), encoding="utf-8")
         except Exception as e:
             print(f"  warn: failed {u}: {e}")
 
@@ -460,6 +472,22 @@ def main() -> None:
     tools.sort(key=lambda x: -stars_num(x["stars"]))
     (ROOT / "tools.json").write_text(json.dumps(tools, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote tools.json ({len(tools)} tools)")
+
+    # 5b. Per-category index READMEs
+    for c, meta in CATS.items():
+        items = sorted([t for t in tools if t["category"] == c], key=lambda x: -stars_num(x["stars"]))
+        if not items:
+            continue
+        d = ROOT / "tools" / meta["dir"]
+        d.mkdir(parents=True, exist_ok=True)
+        en = [f"# {meta['en']}", "", f"_{meta['de']} · {len(items)} tools_", ""]
+        zh = [f"# {meta['zh']}", "", f"_{meta['dz']} · {len(items)} 个_", ""]
+        for t in items:
+            en.append(f"- [{t['name']}]({t['slug']}.md) — {t['stars'] or '—'} · {t['description']}")
+            zh.append(f"- [{t['name']}]({t['slug']}.zh.md) — {t['stars'] or '—'} · {t.get('description_zh') or t['description']}")
+        (d / "README.md").write_text("\n".join(en) + "\n", encoding="utf-8")
+        (d / "README.zh.md").write_text("\n".join(zh) + "\n", encoding="utf-8")
+    print("Wrote per-category index READMEs")
 
     # 6. READMEs
     (ROOT / "README.md").write_text(directory_readme(tools, "en", now_str), encoding="utf-8")
