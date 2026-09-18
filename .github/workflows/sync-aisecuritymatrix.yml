@@ -1,0 +1,50 @@
+name: Sync aisecuritymatrix.com
+
+on:
+  schedule:
+    - cron: '17 6 * * *'   # daily ~06:17 UTC
+  workflow_dispatch: {}     # manual "Run workflow" button
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-aisecuritymatrix
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Scrape aisecuritymatrix.com
+        run: python3 scripts/scrape.py
+
+      - name: Guard against a broken scrape
+        run: |
+          new=$(jq 'length' tools.json)
+          old=$(git show HEAD:tools.json 2>/dev/null | jq 'length' || echo 0)
+          echo "tools: old=$old new=$new"
+          # abort if the scrape produced almost nothing, or lost >50% of tools
+          if [ "$new" -lt 10 ] || [ "$new" -lt $(( old / 2 )) ]; then
+            echo "::error::Scrape looks broken (new=$new, old=$old). Aborting, no push."
+            exit 1
+          fi
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes — nothing to commit."
+            exit 0
+          fi
+          ts=$(date -u '+%Y-%m-%d %H:%M UTC')
+          git commit -m "chore(sync): refresh from aisecuritymatrix.com ($ts)"
+          git push
