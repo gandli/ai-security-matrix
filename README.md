@@ -9,10 +9,10 @@
 
 ## Summary
 
-- **[Agent](#agent)**: 22 projects
-- **[Scanner](#scanner)**: 20 projects
-- **[Mcp](#mcp)**: 14 projects
-- **[Skill](#skill)**: 9 projects
+- **[Agents](#agents)** — 22 projects
+- **[Scanners](#scanners)** — 20 projects
+- **[MCP Servers](#mcp-servers)** — 14 projects
+- **[Skills](#skills)** — 9 projects
 
 ## Taxonomy & Legend
 
@@ -24,7 +24,7 @@
 | **Execution** (_under_) | Local footprint: _installs_ (runs/installs on host) |
 | **Traffic** (~strike~) | Egress visibility: ~calls out~ (outbound traffic), ~opaque~ (hidden/encrypted) |
 
-## Agents (Autonomous & Copilot)
+## Agents
 
 | Project | Stars | Freshness | Description | Scopes & Traits |
 |:---|---:|:---|:---|:---|
@@ -51,7 +51,7 @@
 | [AI-Pentest-Agent](https://github.com/mayank-dev-15/AI-Pentest-Agent)<br><sub>mayank-dev-15</sub> | 3 | 86d | Autonomous AI penetration testing agent with scanning, reconnaissance, and exploitation modules | `webapp` `recon` |
 | [nightly](https://github.com/Nightlysec/nightly)<br><sub>Nightlysec</sub> | 1 | 35d | Autonomous AI penetration testing agent | `webapp` `api` `code` *root* *credentials* _installs_ ~calls out~ |
 
-## Scanners & Evaluators
+## Scanners
 
 | Project | Stars | Freshness | Description | Scopes & Traits |
 |:---|---:|:---|:---|:---|
@@ -76,7 +76,7 @@
 | [aisbom](https://github.com/Lab700xOrg/aisbom)<br><sub>Lab700xOrg</sub> | 79 | &#9733; 2d | Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AIBOM) as EU AI Act, CRA and FDA §524B evidence. | `modfile` |
 | [modelaudit](https://github.com/promptfoo/modelaudit)<br><sub>promptfoo</sub> | 72 | &#9733; 1d | Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment | `modfile` *root* *credentials* ~calls out~ |
 
-## MCP Servers (Model Context Protocol)
+## MCP Servers
 
 | Project | Stars | Freshness | Description | Scopes & Traits |
 |:---|---:|:---|:---|:---|
@@ -95,7 +95,7 @@
 | [zebbern-kali-mcp](https://github.com/zebbern/zebbern-kali-mcp)<br><sub>zebbern</sub> | 47 | &#9733; 12d | MCP server for Kali Linux penetration testing - 121 tools for AI-assisted security testing - Giving Agents access to full pentesting tools | `network` `webapp` `recon` *root* *credentials* |
 | [red-clippy](https://github.com/CSPF-Founder/red-clippy)<br><sub>CSPF-Founder</sub> | 28 | &#9733; 16d | open-source pentest management built to be operated by an AI agent | `redteam` `logging` *root* |
 
-## Agent Skills & Playbooks
+## Skills
 
 | Project | Stars | Freshness | Description | Scopes & Traits |
 |:---|---:|:---|:---|:---|
