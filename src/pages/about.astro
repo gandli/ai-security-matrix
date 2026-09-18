@@ -1,0 +1,37 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout lang="en" title="About — AI Security Matrix">
+  <article class="static-doc">
+    <h1>About</h1>
+    <h2>What Is the AI Security Matrix?</h2>
+    <p>The AI Security Matrix helps you find AI-enabled security testing tools for your engagements.</p>
+    <p>Searching for them leads down a rabbit hole. GitHub stars, blog reviews, Reddit threads, and it's still hard to tell what's what. The matrix categorizes each tool by purpose and testing scope. It also flags the risk of what running the tool does to your machine so you can determine if you can trust the tool in your scenario.</p>
+
+    <h2>What is an AI Security Tool?</h2>
+    <p>An AI security tool evaluates the security posture of a system during an assessment, with a language model doing part of the work. Teams use them for vulnerability assessments, penetration testing, and red team engagements.</p>
+    <p>Their scope runs in two directions. Some point at traditional targets like web apps, enterprise systems, and cloud. Others are built to test AI systems themselves: model scanners, prompt injection testing, agent and RAG assessment.</p>
+
+    <h2>Who it is for</h2>
+    <p>Anyone running security assessments. Pentesters, red teamers, bug bounty hunters, and the defenders who need to know what those tools do.</p>
+    <p>The scope labels tell you which tools point at your targets, whether that's web applications, internal networks, Active Directory, cloud, reverse engineering, or AI systems themselves. The last-push date tells you whether anyone still maintains it. The risk flags tell you what the tool installs, what privilege it wants, and whether it reaches for your credentials.</p>
+
+    <h2>What the AI Security Matrix is not</h2>
+    <p>The matrix does not rank tools and does not test them. Nothing here has been verified to work as described, so treat every listing as a starting point you check yourself.</p>
+
+    <h2>Can you trust these tools?</h2>
+    <p>The AI Security Matrix flags risk to give you a starting point, but treat everything here as unsafe until you vet and test it yourself.</p>
+
+    <h2>What it does to your machine</h2>
+    <p>Every tool here is a repo you could clone yourself. Six checks tell you what happens if you do. Nothing on this list is ever executed to find out: the repo is cloned, read, and thrown away. The risk column identifies observed risks.</p>
+
+    <h2>None of this is an accusation</h2>
+    <p>Plenty of good tools need root. Most projects vendor something. A flag tells you what to look at before you run it, not what to avoid.</p>
+    <p>An entry with no flags is not a clean bill. Where a check could not read something, the entry says not checked rather than no.</p>
+
+    <h2>Creators</h2>
+    <p><strong>Joe Vest</strong></p>
+    <p>The threat gets a vote. If you build a defense without understanding how an adversary actually operates, you're not making security decisions. The threat is making them for you.</p>
+    <p>Joe has spent over 20 years in cybersecurity, the last 15 focused on offensive security operations.</p>
+  </article>
+</Layout>

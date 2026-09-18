@@ -1,0 +1,189 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import siteData from "@/data/site.json";
+
+export function getStaticPaths() {
+  return siteData.map((item) => ({
+    params: { slug: item.entry.repo.replace("/", "-") },
+    props: { item },
+  }));
+}
+
+interface Item {
+  entry: any;
+  derived: any;
+}
+const { item } = Astro.props as { item: Item };
+const { entry, derived } = item;
+const d = derived || {};
+const [owner, name] = entry.repo.split("/");
+const catColor: Record<string, string> = {
+  agent: "var(--cat-agent)",
+  scanner: "var(--cat-scanner)",
+  mcp: "var(--cat-mcp)",
+  skill: "var(--cat-skill)",
+};
+
+const idle = (() => {
+  const a = d.alive;
+  if (!a || a.days_idle == null) return "—";
+  if (a.archived) return "archived";
+  const n = a.days_idle;
+  if (n < 1) return "today";
+  if (n < 365) return `${n}d`;
+  return `${(n / 365).toFixed(1)}y`;
+})();
+
+const stars = d.identity?.stars != null
+  ? d.identity.stars >= 1000
+    ? `${(d.identity.stars / 1000).toFixed(1)}k`
+    : String(d.identity.stars)
+  : "—";
+
+const risks = Object.keys(d.risk || {}).filter((k) => d.risk[k]);
+const FLAG_FAMILY: Record<string, string> = {
+  binaries: "host",
+  installs: "host",
+  root: "access",
+  credentials: "access",
+  "calls out": "unseen",
+  opaque: "unseen",
+};
+
+const CHECK_LABELS: Record<string, string> = {
+  binaries: "Ships compiled binaries you did not build",
+  installs: "Installs software on your host",
+  root: "Asks for root or sudo",
+  credentials: "Reads credential paths such as ~/.aws or ~/.ssh",
+  "calls out": "Calls an endpoint the project does not own",
+  opaque: "Contains long encoded blobs you cannot read",
+};
+
+const allChecks = Object.keys(CHECK_LABELS);
+---
+<Layout lang="en" title={`${entry.repo} — AI Security Matrix`} description={d.identity?.description || ""}>
+  <article class="static-doc">
+    <p style="font-size: 0.8125rem; color: var(--stale);">
+      <a href="/">← back to matrix</a>
+    </p>
+
+    <h1 style="margin-top: 0.75rem;">
+      <span style="color: var(--stale);">{owner}/</span><span style="color: var(--name);">{name}</span>
+    </h1>
+
+    <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+      {d.identity?.description || ""}
+    </p>
+
+    <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+      <span style={`color: ${catColor[entry.category] || "var(--stale)"}; font-weight: 600; font-size: 0.875rem;`}>
+        {entry.category}
+      </span>
+      <span style="color: var(--rule-strong);">·</span>
+      <a href={entry.repo ? `https://github.com/${entry.repo}` : "#"} target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.8125rem;">
+        github.com/{entry.repo} ↗
+      </a>
+    </div>
+
+    <!-- Stat grid -->
+    <div class="tool-detail-grid">
+      <div class="stat-item">
+        <div class="label">Stars</div>
+        <div class="value" style="color: var(--star);">★ {stars}</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">Last updated</div>
+        <div class="value">{idle}</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">Licence</div>
+        <div class="value" style="font-size: 1rem;">{d.licence?.file || "—"}</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">Contributors</div>
+        <div class="value">{d.identity?.contributors ?? "—"}</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">Size</div>
+        <div class="value" style="font-size: 1rem;">
+          {d.shape?.loc ? d.shape.loc.toLocaleString() : "—"} lines
+        </div>
+        <div class="sub">{d.shape?.code_files ?? "—"} code files</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">Forks</div>
+        <div class="value">{d.identity?.forks?.toLocaleString() ?? "—"}</div>
+      </div>
+    </div>
+
+    <!-- Scope -->
+    {entry.scope?.length ? (
+      <section>
+        <h2>Scope</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+          {entry.scope.map((s: string) => <span class="pill pill-scope">{s}</span>)}
+        </div>
+      </section>
+    ) : null}
+
+    <!-- Bundled tools -->
+    {d.bundled?.length ? (
+      <section>
+        <h2>Bundled tools</h2>
+        <p style="font-family: var(--font-mono); font-size: 0.8125rem;">
+          {d.bundled.join(", ")}
+        </p>
+      </section>
+    ) : null}
+
+    <!-- Shares files with -->
+    {d.shares_with ? (
+      <section>
+        <h2>Shares files with</h2>
+        <p style="font-family: var(--font-mono); font-size: 0.8125rem;">{d.shares_with}</p>
+      </section>
+    ) : null}
+
+    <!-- Before running it (safety checklist) -->
+    <section>
+      <h2>Before running it</h2>
+      <table class="checklist-table">
+        <tbody>
+          {allChecks.map((k) => {
+            const val = d.risk ? d.risk[k] : null;
+            const label = val === true ? "yes" : val === false ? "no" : "not checked";
+            const cls = val === true ? "ans-yes" : val === false ? "ans-no" : "";
+            return (
+              <tr>
+                <td>{CHECK_LABELS[k]}</td>
+                <td class={cls}>{label}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Risk flags -->
+    {risks.length ? (
+      <section>
+        <h2>Flags</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+          {risks.map((k) => <span class={`pill pill-${FLAG_FAMILY[k] || "host"}`}>{k}</span>)}
+        </div>
+      </section>
+    ) : null}
+
+    <!-- Topics -->
+    {d.identity?.topics?.length ? (
+      <section>
+        <h2>Topics</h2>
+        <p style="font-size: 0.8125rem; color: var(--stale);">{d.identity.topics.join(" · ")}</p>
+      </section>
+    ) : null}
+
+    <p style="margin-top: 3rem; font-size: 0.75rem; color: var(--dead);">
+      Data checked at {d.checked_at || "—"} · extracted from aisecuritymatrix.com
+    </p>
+  </article>
+</Layout>

@@ -1,0 +1,125 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: 'en' | 'zh';
+  canonical?: string;
+}
+
+const {
+  title = "AI-enabled security testing tools — AI Security Matrix",
+  description = "A curated list of AI-enabled security testing tools.",
+  lang = "en",
+  canonical,
+} = Astro.props;
+
+const isZh = lang === "zh";
+const prefix = isZh ? "/zh" : "";
+const switchHref = isZh ? Astro.url.pathname.replace(/^\/zh/, "") || "/" : `/zh${Astro.url.pathname}`;
+
+import "@/styles/global.css";
+---
+
+<!doctype html>
+<html lang={lang} data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonical || Astro.url.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AI Security Matrix" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url.href} />
+
+    <script is:inline>
+      // theme init
+      const saved = localStorage.getItem("theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+    </script>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- Site Header -->
+      <header class="site-header">
+        <div>
+          <h1>
+            <a href={`${prefix}/`} class="brand">
+              <svg width="22" height="22" viewBox="0 0 19 19" role="img" aria-label="AI Security Matrix">
+                <rect x="0.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5" />
+                <rect x="7" y="0" width="5" height="5" rx="0.5" fill="currentColor" />
+                <rect x="14.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5" />
+                <rect x="0" y="7" width="5" height="5" rx="0.5" fill="currentColor" />
+                <rect x="7" y="7" width="5" height="5" rx="0.5" fill="currentColor" />
+                <rect x="14" y="7" width="5" height="5" rx="0.5" fill="currentColor" />
+                <rect x="0" y="14" width="5" height="5" rx="0.5" fill="currentColor" />
+                <rect x="7.6" y="14.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5" />
+                <rect x="14" y="14" width="5" height="5" rx="0.5" fill="currentColor" />
+              </svg>
+              <span class="brand-title">AI Security <em>Matrix</em></span>
+            </a>
+          </h1>
+          <p class="tagline">
+            {isZh
+              ? "一份精选的 AI 赋能网络安全测试与红队工具目录。"
+              : "A curated list of AI-enabled security testing tools."}
+          </p>
+        </div>
+
+        <nav class="site-nav" aria-label="Site">
+          <a href={`${prefix}/about`}>{isZh ? "关于" : "About"}</a>
+          <a href={`${prefix}/guide`}>{isZh ? "使用指南" : "Definitions"}</a>
+          <a href={`${prefix}/contribute`}>{isZh ? "贡献" : "Contribute"}</a>
+          <a href={`${prefix}/commercial`}>{isZh ? "商业工具" : "Commercial tools"}</a>
+
+          <!-- Language toggle -->
+          <div class="lang-switch">
+            <a href={isZh ? switchHref : Astro.url.pathname} class={!isZh ? "active" : ""}>EN</a>
+            <span>/</span>
+            <a href={!isZh ? switchHref : Astro.url.pathname} class={isZh ? "active" : ""}>中文</a>
+          </div>
+
+          <!-- Theme toggle -->
+          <button id="theme-btn" class="btn-theme" type="button" aria-label="Toggle theme">
+            theme
+          </button>
+        </nav>
+      </header>
+
+      <!-- Main Slot -->
+      <main>
+        <slot />
+      </main>
+
+      <!-- Site Footer -->
+      <footer class="site-footer">
+        <nav aria-label="Pages">
+          <a href={`${prefix}/about`}>{isZh ? "关于" : "About"}</a>
+          <a href={`${prefix}/guide`}>{isZh ? "使用指南" : "Definitions"}</a>
+          <a href={`${prefix}/contribute`}>{isZh ? "贡献" : "Contribute"}</a>
+          <a href={`${prefix}/commercial`}>{isZh ? "商业工具" : "Commercial tools"}</a>
+          <a href="https://github.com/gandli/ai-security-matrix" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+        <p>
+          {isZh
+            ? "© 2026 AI Security Matrix · 开源镜像维护者 gandli/ai-security-matrix"
+            : "© 2026 AI Security Matrix · Independent replica by gandli/ai-security-matrix"}
+        </p>
+      </footer>
+    </div>
+
+    <script is:inline>
+      document.getElementById("theme-btn")?.addEventListener("click", () => {
+        const cur = document.documentElement.dataset.theme;
+        const next = cur === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem("theme", next);
+      });
+    </script>
+  </body>
+</html>

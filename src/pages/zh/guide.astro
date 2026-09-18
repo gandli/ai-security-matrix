@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout lang="zh" title="使用指南 — AI 安全矩阵">
+  <article class="static-doc">
+    <h1>使用指南</h1>
+    <h2>类别（Category）</h2>
+    <ul>
+      <li><strong>agent（智能体工具）</strong> — 运行自己的任务循环，根据上一步的发现决定下一步。</li>
+      <li><strong>scanner（扫描器）</strong> — 执行一组固定的检查并报告其发现。</li>
+      <li><strong>mcp（MCP 服务器）</strong> — 通过模型上下文协议向模型提供工具，由模型来驱动。</li>
+      <li><strong>skill（技能集）</strong> — 给模型的提示词与指令，本身没有独立程序。</li>
+    </ul>
+
+    <h2>范围（Scope）</h2>
+    <ul>
+      <li><strong>ad</strong> — Active Directory：本地域身份。</li>
+      <li><strong>agentic</strong> — 作为被测对象的 AI 智能体及其运行的循环。</li>
+      <li><strong>api</strong> — 应用背后的 HTTP 与 RPC 接口。</li>
+      <li><strong>binary</strong> — 已编译的可执行文件与固件。</li>
+      <li><strong>cloud</strong> — 云账号及其配置。</li>
+      <li><strong>code</strong> — 代码仓库或 diff 中的源码。</li>
+      <li><strong>container</strong> — 镜像、镜像仓库及其内部运行的内容。</li>
+      <li><strong>entra</strong> — Entra ID：微软的云端身份。</li>
+      <li><strong>llm</strong> — 模型本身：它的提示词、护栏与产出。</li>
+      <li><strong>logging</strong> — 测试的记录：覆盖面、发现及其背后的证据。</li>
+      <li><strong>mobile</strong> — iOS 与 Android 应用。</li>
+      <li><strong>modfile</strong> — 序列化模型文件，其格式可能携带可执行代码。</li>
+      <li><strong>network</strong> — 主机、端口与流量。</li>
+      <li><strong>recon</strong> — 在任何东西被测试前，先发现存在什么。</li>
+      <li><strong>redteam</strong> — 跨整个地盘的对手模拟。</li>
+      <li><strong>social</strong> — 人：钓鱼、借口（pretexting）以及他们会交出的东西。</li>
+      <li><strong>webapp</strong> — 面向浏览器的应用。</li>
+    </ul>
+  </article>
+</Layout>

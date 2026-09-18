@@ -1,0 +1,456 @@
+---
+import siteData from "@/data/site.json";
+
+interface Props {
+  lang?: "en" | "zh";
+}
+
+const { lang = "en" } = Astro.props;
+const isZh = lang === "zh";
+
+// compute category counts
+const total = siteData.length;
+const catCounts: Record<string, number> = {};
+for (const item of siteData) {
+  const c = item.entry.category || "other";
+  catCounts[c] = (catCounts[c] || 0) + 1;
+}
+
+const cats = [
+  { id: "all", labelEn: "all", labelZh: "全部", count: total },
+  { id: "agent", labelEn: "agent", labelZh: "智能体", count: catCounts["agent"] || 0 },
+  { id: "scanner", labelEn: "scanner", labelZh: "扫描器", count: catCounts["scanner"] || 0 },
+  { id: "mcp", labelEn: "mcp", labelZh: "MCP", count: catCounts["mcp"] || 0 },
+  { id: "skill", labelEn: "skill", labelZh: "技能", count: catCounts["skill"] || 0 },
+];
+---
+
+<div class="matrix-app" data-lang={lang}>
+  <!-- Toolbar: Category bar + views -->
+  <div class="toolbar">
+    <div class="cat-tabs" id="cat-tabs">
+      {cats.map((c) => (
+        <button
+          type="button"
+          class={`cat-tab ${c.id === "all" ? "is-active" : ""}`}
+          data-cat={c.id}
+          data-color={c.id}
+        >
+          <span>{isZh ? c.labelZh : c.labelEn}</span>
+          <span class="count">{c.count}</span>
+        </button>
+      ))}
+    </div>
+
+    <!-- View toggle -->
+    <div class="views">
+      <button type="button" class="view-btn is-active" data-view="list">
+        {isZh ? "列表" : "list"}
+      </button>
+      <button type="button" class="view-btn" data-view="coverage">
+        {isZh ? "覆盖面" : "coverage"}
+      </button>
+    </div>
+  </div>
+
+  <!-- Search / Filter input -->
+  <div class="search-box">
+    <input
+      id="search-input"
+      type="search"
+      placeholder={isZh ? "按名称、范围、标签搜索…" : "filter by text, scope, flag…"}
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <span class="meta" id="match-count">{total} / {total}</span>
+  </div>
+
+  <!-- Main table container -->
+  <div class="table-wrap" id="list-view">
+    <table class="matrix" id="matrix-table">
+      <thead>
+        <tr>
+          <th scope="col" class="col-date" data-sort="idle" aria-sort="none">
+            {isZh ? "最近更新" : "Last updated"}
+            <span class="sort-indicator"></span>
+          </th>
+          <th scope="col" class="col-cat" data-sort="category" aria-sort="none">
+            {isZh ? "类别" : "Category"}
+            <span class="sort-indicator"></span>
+          </th>
+          <th scope="col" data-sort="tool" aria-sort="none">
+            {isZh ? "工具" : "Tool"}
+            <span class="sort-indicator"></span>
+          </th>
+          <th scope="col" style="width: 13rem;">
+            {isZh ? "范围" : "Scope"}
+          </th>
+          <th scope="col" class="col-stars" data-sort="stars" aria-sort="descending">
+            {isZh ? "Stars" : "Stars"}
+            <span class="sort-indicator">▾</span>
+          </th>
+          <th scope="col" class="col-flags" data-sort="flags" aria-sort="none">
+            {isZh ? "风险标记" : "Flags"}
+            <span class="sort-indicator"></span>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="matrix-tbody">
+        <!-- Rendered client-side for instant filter/sort -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Coverage View (hidden by default) -->
+  <div id="coverage-view" class="table-wrap" style="display: none;">
+    <!-- Rendered client-side -->
+  </div>
+
+  <!-- Legend -->
+  <div class="legend" id="legend">
+    <div>
+      <span class="star-mark">★</span>
+      <strong>{isZh ? "活跃" : "Fresh"}:</strong>
+      <span>{isZh ? "30 天内有代码提交" : "Pushed in the last 30 days"}</span>
+    </div>
+    <div>
+      <span class="pill pill-scope">{isZh ? "范围" : "scope"}</span>
+      <span>{isZh ? "工具的攻击/测试面" : "Target surface (webapp, llm, ad...)"}</span>
+    </div>
+    <div>
+      <span class="pill pill-access">root</span>
+      <span>{isZh ? "权限与运行足迹检查" : "Host privileges / execution footprint"}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Raw data for client-side search & render -->
+<script define:vars={{ siteData, isZh }}>
+  window.__SITE_DATA__ = siteData;
+  window.__IS_ZH__ = isZh;
+</script>
+
+<script>
+  // Client-side table logic
+  const ALIASES = {
+    "active directory": "ad",
+    "domain controller": "ad",
+    azure: "entra",
+    "azure ad": "entra",
+    aad: "entra",
+    "entra id": "entra",
+    "web app": "webapp",
+    web: "webapp",
+    "prompt injection": "llm",
+    jailbreak: "llm",
+    model: "llm",
+    llms: "llm",
+    "model file": "modfile",
+    pickle: "modfile",
+    safetensors: "modfile",
+    serialization: "modfile",
+    "reverse engineering": "binary",
+    "reverse engineer": "binary",
+    malware: "binary",
+    phishing: "social",
+    "social engineering": "social",
+    "source code": "code",
+    sast: "code",
+    osint: "recon",
+    reconnaissance: "recon",
+    "red team": "redteam",
+    k8s: "container",
+    kubernetes: "container",
+    docker: "container",
+    android: "mobile",
+    ios: "mobile",
+    aws: "cloud",
+    gcp: "cloud",
+  };
+
+  const FLAG_FAMILY = {
+    binaries: "host",
+    installs: "host",
+    root: "access",
+    credentials: "access",
+    "calls out": "unseen",
+    opaque: "unseen",
+  };
+
+  const CAT_COLORS = {
+    agent: "var(--cat-agent)",
+    scanner: "var(--cat-scanner)",
+    mcp: "var(--cat-mcp)",
+    skill: "var(--cat-skill)",
+  };
+
+  const rows = window.__SITE_DATA__ || [];
+  const isZh = window.__IS_ZH__ || false;
+  const prefix = isZh ? "/zh" : "";
+
+  let state = {
+    category: "all",
+    query: "",
+    sortKey: "stars",
+    sortDir: "desc",
+    view: "list",
+  };
+
+  function parseTerms(q) {
+    const words = q.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    return words.map((w) => ALIASES[w] || w);
+  }
+
+  function matches(r, terms) {
+    if (!terms.length) return true;
+    const entry = r.entry;
+    const derived = r.derived || {};
+    const text = [
+      entry.repo,
+      entry.category,
+      ...(entry.scope || []),
+      derived.identity?.description || "",
+      derived.licence?.file || "",
+      ...(derived.bundled || []),
+      derived.shares_with || "",
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    const risks = Object.keys(derived.risk || {}).filter((k) => derived.risk[k]);
+    const all = text + " " + risks.join(" ");
+
+    return terms.every((t) => all.includes(t));
+  }
+
+  function idleLabel(d) {
+    const a = d.alive;
+    if (!a || a.days_idle == null) return "—";
+    if (a.archived) return "archived";
+    const n = a.days_idle;
+    if (n < 1) return "today";
+    if (n < 365) return `${n}d`;
+    return `${(n / 365).toFixed(1)}y`;
+  }
+
+  function formatStars(n) {
+    if (n == null || n < 0) return "—";
+    if (n >= 10000) return `${(n / 1000).toFixed(0)}k`;
+    if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
+    return String(n);
+  }
+
+  function renderRows() {
+    const terms = parseTerms(state.query);
+    let filtered = rows.filter(
+      (r) =>
+        (state.category === "all" || r.entry.category === state.category) &&
+        matches(r, terms)
+    );
+
+    // sort
+    filtered.sort((a, b) => {
+      let vA, vB;
+      if (state.sortKey === "idle") {
+        vA = a.derived.alive?.days_idle ?? 99999;
+        vB = b.derived.alive?.days_idle ?? 99999;
+      } else if (state.sortKey === "category") {
+        vA = a.entry.category || "";
+        vB = b.entry.category || "";
+      } else if (state.sortKey === "tool") {
+        vA = a.entry.repo || "";
+        vB = b.entry.repo || "";
+      } else if (state.sortKey === "stars") {
+        vA = a.derived.identity?.stars ?? -1;
+        vB = b.derived.identity?.stars ?? -1;
+      } else if (state.sortKey === "flags") {
+        vA = Object.values(a.derived.risk || {}).filter(Boolean).length;
+        vB = Object.values(b.derived.risk || {}).filter(Boolean).length;
+      }
+      if (vA < vB) return state.sortDir === "asc" ? -1 : 1;
+      if (vA > vB) return state.sortDir === "asc" ? 1 : -1;
+      return 0;
+    });
+
+    const tbody = document.getElementById("matrix-tbody");
+    if (!tbody) return;
+
+    if (!filtered.length) {
+      tbody.innerHTML = `<tr><td colspan="6" style="padding: 2rem; text-align: center; color: var(--dead);">
+        ${isZh ? "未找到匹配的工具。" : "No matching tools found."}
+      </td></tr>`;
+      document.getElementById("match-count").textContent = `0 / ${rows.length}`;
+      return;
+    }
+
+    document.getElementById("match-count").textContent = `${filtered.length} / ${rows.length}`;
+
+    const html = filtered
+      .map((r) => {
+        const entry = r.entry;
+        const d = r.derived || {};
+        const isAlive = d.alive && !d.alive.archived && (d.alive.days_idle ?? 99) <= 30;
+        const idle = idleLabel(d);
+        const [owner, name] = entry.repo.split("/");
+        const slug = entry.repo.replace("/", "-");
+        const cat = entry.category || "";
+        const catColor = CAT_COLORS[cat] || "var(--stale)";
+
+        const desc = (isZh && entry.description_zh) ? entry.description_zh : (d.identity?.description || "");
+
+        // scopes
+        const scopesHtml = (entry.scope || [])
+          .map((s) => `<span class="pill pill-scope">${s}</span>`)
+          .join(" ");
+
+        // flags
+        const risks = Object.keys(d.risk || {}).filter((k) => d.risk[k]);
+        const flagsHtml = risks.length
+          ? risks
+              .map((k) => {
+                const fam = FLAG_FAMILY[k] || "host";
+                return `<span class="pill pill-${fam}">${k}</span>`;
+              })
+              .join(" ")
+          : `<span style="color: var(--dead); font-size: 0.8125rem;">none</span>`;
+
+        const starsStr = formatStars(d.identity?.stars);
+
+        return `
+          <tr onclick="location.href='${prefix}/tools/${slug}'">
+            <td class="col-date">
+              ${isAlive ? '<span class="star-mark">★</span>' : ""}
+              ${idle}
+            </td>
+            <td class="col-cat" style="color: ${catColor};">
+              ${cat}
+            </td>
+            <td>
+              <div class="tool-head">
+                <img class="owner-avatar" src="https://github.com/${owner}.png?size=40" alt="" loading="lazy" onerror="this.style.display='none'" />
+                <a class="tool-link" href="${prefix}/tools/${slug}" onclick="event.stopPropagation();">
+                  <span class="owner">${owner}/</span><span class="name">${name}</span>
+                </a>
+              </div>
+              <p class="tool-desc">${desc}</p>
+            </td>
+            <td>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                ${scopesHtml}
+              </div>
+            </td>
+            <td class="col-stars">${starsStr}</td>
+            <td class="col-flags">
+              <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                ${flagsHtml}
+              </div>
+            </td>
+          </tr>
+        `;
+      })
+      .join("");
+
+    tbody.innerHTML = html;
+  }
+
+  // Bind category tabs
+  document.querySelectorAll(".cat-tab").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".cat-tab").forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      state.category = btn.dataset.cat;
+      renderRows();
+    });
+  });
+
+  // Bind search input
+  const searchInput = document.getElementById("search-input");
+  searchInput?.addEventListener("input", (e) => {
+    state.query = e.target.value;
+    renderRows();
+  });
+
+  // Bind table header sorting
+  document.querySelectorAll(".matrix thead th[data-sort]").forEach((th) => {
+    th.addEventListener("click", () => {
+      const key = th.dataset.sort;
+      if (state.sortKey === key) {
+        state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
+      } else {
+        state.sortKey = key;
+        state.sortDir = key === "stars" || key === "flags" ? "desc" : "asc";
+      }
+
+      // update indicators
+      document.querySelectorAll(".matrix thead th[data-sort]").forEach((h) => {
+        h.setAttribute("aria-sort", "none");
+        const ind = h.querySelector(".sort-indicator");
+        if (ind) ind.textContent = "";
+      });
+      th.setAttribute("aria-sort", state.sortDir === "asc" ? "ascending" : "descending");
+      const ind = th.querySelector(".sort-indicator");
+      if (ind) ind.textContent = state.sortDir === "asc" ? "▴" : "▾";
+
+      renderRows();
+    });
+  });
+
+  // Bind view toggle (list vs coverage)
+  document.querySelectorAll(".view-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".view-btn").forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      state.view = btn.dataset.view;
+      const listView = document.getElementById("list-view");
+      const covView = document.getElementById("coverage-view");
+      if (state.view === "coverage") {
+        listView.style.display = "none";
+        covView.style.display = "block";
+        renderCoverage();
+      } else {
+        listView.style.display = "block";
+        covView.style.display = "none";
+      }
+    });
+  });
+
+  // Coverage matrix renderer (Scope vs Tool grid)
+  function renderCoverage() {
+    const cov = document.getElementById("coverage-view");
+    if (!cov) return;
+    const scopes = [
+      "webapp", "api", "code", "llm", "agentic", "network", "recon",
+      "binary", "ad", "entra", "cloud", "modfile", "redteam", "social", "logging"
+    ];
+    const filtered = rows.filter(
+      (r) => state.category === "all" || r.entry.category === state.category
+    );
+
+    let head = `<tr><th style="padding: 0.5rem 1rem; border-bottom: 1px solid var(--rule-strong); text-align: left; font-size: 0.75rem; color: var(--stale);">Tool</th>`;
+    scopes.forEach((s) => {
+      head += `<th style="padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--rule-strong); text-align: center; font-size: 0.6875rem; font-family: var(--font-mono); color: var(--stale);">${s}</th>`;
+    });
+    head += `</tr>`;
+
+    const body = filtered
+      .map((r) => {
+        const repo = r.entry.repo;
+        const itemScopes = new Set(r.entry.scope || []);
+        let cells = `<td style="padding: 0.4rem 1rem; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.8125rem;"><a href="${prefix}/tools/${repo.replace('/', '-')}">${repo}</a></td>`;
+        scopes.forEach((s) => {
+          const hit = itemScopes.has(s);
+          const bg = hit ? "var(--scope-pill)" : "transparent";
+          const color = hit ? "var(--scope-ink)" : "var(--dead)";
+          const char = hit ? "●" : "·";
+          cells += `<td style="padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: center; font-size: 0.75rem; color: ${color};">${char}</td>`;
+        });
+        return `<tr>${cells}</tr>`;
+      })
+      .join("");
+
+    cov.innerHTML = `<table class="matrix" style="width: 100%;"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  }
+
+  // Initial render
+  renderRows();
+</script>

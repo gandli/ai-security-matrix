@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+<Layout lang="en" title="Definitions — AI Security Matrix">
+  <article class="static-doc">
+    <h1>Definitions</h1>
+    <h2>Category</h2>
+    <ul>
+      <li><strong>agent</strong> — Runs its own task loop, deciding the next step from what it just found.</li>
+      <li><strong>scanner</strong> — Runs a fixed set of checks and reports what they found.</li>
+      <li><strong>mcp</strong> — Serves tools to a model over Model Context Protocol. The model drives.</li>
+      <li><strong>skill</strong> — Prompts and instructions for a model. No program of its own.</li>
+    </ul>
+
+    <h2>Scope</h2>
+    <ul>
+      <li><strong>ad</strong> — Active Directory: on-premises domain identity. (10)</li>
+      <li><strong>agentic</strong> — AI agents and the loops they run, as the thing under test. (9)</li>
+      <li><strong>api</strong> — HTTP and RPC interfaces behind an application. (4)</li>
+      <li><strong>binary</strong> — Compiled executables and firmware. (7)</li>
+      <li><strong>cloud</strong> — Provider accounts and their configuration. (2)</li>
+      <li><strong>code</strong> — Source, in a repository or a diff. (7)</li>
+      <li><strong>container</strong> — Images, registries, and what runs inside them. (0)</li>
+      <li><strong>entra</strong> — Entra ID: Microsoft's cloud identity. (2)</li>
+      <li><strong>llm</strong> — The model itself: its prompts, its guardrails, and what it emits. (11)</li>
+      <li><strong>logging</strong> — The record of a test: coverage, findings, and the evidence behind them. (1)</li>
+      <li><strong>mobile</strong> — iOS and Android applications. (0)</li>
+      <li><strong>modfile</strong> — Serialised model files, whose formats can carry executable code. (5)</li>
+      <li><strong>network</strong> — Hosts, ports, and traffic. (21)</li>
+      <li><strong>recon</strong> — Finding what exists, before anything is tested. (15)</li>
+      <li><strong>redteam</strong> — Adversary emulation across a whole estate. (11)</li>
+      <li><strong>social</strong> — People: phishing, pretexting, and what they hand over. (1)</li>
+      <li><strong>webapp</strong> — Browser-facing applications. (25)</li>
+    </ul>
+  </article>
+</Layout>
