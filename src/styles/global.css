@@ -565,3 +565,84 @@ input {
 }
 .ans-yes { color: var(--host-ink); }
 .ans-no  { color: var(--scope-ink); }
+
+/* ===== Mobile-first responsive ===== */
+
+@media (max-width: 640px) {
+  /* Header: vertical layout on small screens */
+  .site-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .icon-btn {
+    padding: 0.25rem 0.375rem;
+  }
+  
+  /* Matrix toolbar: wrap on mobile */
+  .matrix-app .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cat-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 0.25rem;
+  }
+  .cat-tab span:first-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Table: horizontal scroll, compact fonts */
+  .matrix {
+    min-width: 600px;
+    font-size: 0.8125rem;
+  }
+  .col-date, .col-cat, .col-stars, .col-flags {
+    min-width: 3rem;
+    padding: 0.375rem 0.5rem;
+  }
+  .tool-head img.owner-avatar {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tool detail grid: 2 columns */
+  .tool-detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .static-doc h1 {
+    font-size: 1.25rem;
+  }
+  .static-doc h2 {
+    font-size: 1.125rem;
+  }
+  /* Search box full width */
+  .search-box input {
+    width: 100%;
+  }
+  .search-box .meta {
+    position: static;
+    margin-top: 0.25rem;
+    display: block;
+  }
+}
+
+/* Mobile footer: wrap links */
+@media (max-width: 480px) {
+  .site-footer nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+  }
+}
