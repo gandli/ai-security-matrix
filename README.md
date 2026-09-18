@@ -28,15 +28,6 @@
 | **MCP Servers** (`mcp`) | `14` | Model Context Protocol tool servers | [Browse →](tools/mcp-servers/) |
 | **Skills** (`skill`) | `9` | Agent skill bundles, prompts & playbooks | [Browse →](tools/skills/) |
 
-## Static Pages
-
-| Page | Description | Chinese |
-|:---|:---|:---|
-| 📖 [About](about.md) | Criteria, threat perspective & machine risk flags | [关于](about.zh.md) |
-| 🧭 [Guide](guide.md) | Four categories & scope dimensions | [使用指南](guide.zh.md) |
-| 🤝 [Contribute](contribute.md) | Submission instructions | [贡献](contribute.zh.md) |
-| 💼 [Commercial](commercial.md) | Enterprise tool directory | [商业方案](commercial.zh.md) |
-
 ## Data Files
 
 - [`tools.json`](tools.json) — Complete structured dataset (stars, bundled tools, pre-run safety checklist)

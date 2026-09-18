@@ -386,13 +386,6 @@ def directory_readme(data, lang):
                      % (cat["zh"], c, len(by_cat[c]), cat["dz"], cat["dir"]))
         o += [
             "",
-            "## 站点专页", "",
-            "| 页面 | 说明 | 英文原版 |", "|:---|:---|:---|",
-            "| 📖 [关于](about.zh.md) | 收录标准、威胁视角与运行风险说明 | [About](about.md) |",
-            "| 🧭 [使用指南](guide.zh.md) | 四大类别与测试范围维度详解 | [Guide](guide.md) |",
-            "| 🤝 [贡献指南](contribute.zh.md) | 项目提交流程 | [Contribute](contribute.md) |",
-            "| 💼 [商业方案](commercial.zh.md) | 企业级工具与服务参考 | [Commercial](commercial.md) |",
-            "",
             "## 结构化数据", "",
             "- [`tools.json`](tools.json) — 全部项目的 Stars、内置工具与运行前安全检查（root / 凭据读取 / 外部请求）",
             "- [`translations.json`](translations.json) — 人工维护的双语翻译词条库",
@@ -421,15 +414,7 @@ def directory_readme(data, lang):
         o.append("| **%s** (`%s`) | `%d` | %s | [Browse →](tools/%s/) |"
                  % (cat["en"], c, len(by_cat[c]), cat["de"], cat["dir"]))
     o += [
-        "",
-        "## Static Pages", "",
-        "| Page | Description | Chinese |", "|:---|:---|:---|",
-        "| 📖 [About](about.md) | Criteria, threat perspective & machine risk flags | [关于](about.zh.md) |",
-        "| 🧭 [Guide](guide.md) | Four categories & scope dimensions | [使用指南](guide.zh.md) |",
-        "| 🤝 [Contribute](contribute.md) | Submission instructions | [贡献](contribute.zh.md) |",
-        "| 💼 [Commercial](commercial.md) | Enterprise tool directory | [商业方案](commercial.zh.md) |",
-        "",
-        "## Data Files", "",
+        "", "## Data Files", "",
         "- [`tools.json`](tools.json) — Complete structured dataset (stars, bundled tools, pre-run safety checklist)",
         "- [`translations.json`](translations.json) — Curated bilingual translation dictionary",
         "", "---", "",

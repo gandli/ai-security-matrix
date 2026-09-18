@@ -28,15 +28,6 @@
 | **MCP 服务器** (`mcp`) | `14` | 模型上下文协议（MCP）工具服务器 | [进入目录 →](tools/mcp-servers/) |
 | **技能集** (`skill`) | `9` | 智能体技能包、提示词与剧本 | [进入目录 →](tools/skills/) |
 
-## 站点专页
-
-| 页面 | 说明 | 英文原版 |
-|:---|:---|:---|
-| 📖 [关于](about.zh.md) | 收录标准、威胁视角与运行风险说明 | [About](about.md) |
-| 🧭 [使用指南](guide.zh.md) | 四大类别与测试范围维度详解 | [Guide](guide.md) |
-| 🤝 [贡献指南](contribute.zh.md) | 项目提交流程 | [Contribute](contribute.md) |
-| 💼 [商业方案](commercial.zh.md) | 企业级工具与服务参考 | [Commercial](commercial.md) |
-
 ## 结构化数据
 
 - [`tools.json`](tools.json) — 全部项目的 Stars、内置工具与运行前安全检查（root / 凭据读取 / 外部请求）
