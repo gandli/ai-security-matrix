@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import siteData from "@/data/site.json";
+import { home } from "@/lib/url";
 
 export function getStaticPaths() {
   return siteData.map((item) => ({
@@ -64,7 +65,7 @@ const allChecks = Object.keys(CHECK_LABELS);
 <Layout lang="en" title={`${entry.repo} — AI Security Matrix`} description={d.identity?.description || ""}>
   <article class="static-doc">
     <p style="font-size: 0.8125rem; color: var(--stale);">
-      <a href="/">← back to matrix</a>
+      <a href={home("en")}>← back to matrix</a>
     </p>
 
     <h1 style="margin-top: 0.75rem;">

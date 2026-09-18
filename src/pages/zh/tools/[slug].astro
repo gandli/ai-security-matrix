@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import siteData from "@/data/site.json";
+import { home } from "@/lib/url";
 
 export function getStaticPaths() {
   return siteData.map((item) => ({
@@ -72,7 +73,7 @@ const desc = entry.description_zh || d.identity?.description || "";
 <Layout lang="zh" title={`${entry.repo} — AI 安全矩阵`} description={desc}>
   <article class="static-doc">
     <p style="font-size: 0.8125rem; color: var(--stale);">
-      <a href="/zh">← 返回矩阵</a>
+      <a href={home("zh")}>← 返回矩阵</a>
     </p>
 
     <h1 style="margin-top: 0.75rem;">

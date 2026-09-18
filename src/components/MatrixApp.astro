@@ -128,6 +128,7 @@ const cats = [
 <script define:vars={{ siteData, isZh }}>
   window.__SITE_DATA__ = siteData;
   window.__IS_ZH__ = isZh;
+  window.__BASE__ = "/ai-security-matrix/";
 </script>
 
 <script>
@@ -186,7 +187,9 @@ const cats = [
 
   const rows = window.__SITE_DATA__ || [];
   const isZh = window.__IS_ZH__ || false;
-  const prefix = isZh ? "/zh" : "";
+  // Base-aware tool path prefix (injected by the data script above)
+  const BASE = window.__BASE__ || "/";
+  const prefix = `${BASE}${isZh ? "zh/" : ""}`;
 
   let state = {
     category: "all",

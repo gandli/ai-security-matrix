@@ -1,8 +1,11 @@
 ---
+import "@/styles/global.css";
+import { url, home, asset, type Lang } from "@/lib/url";
+
 interface Props {
   title?: string;
   description?: string;
-  lang?: 'en' | 'zh';
+  lang?: Lang;
   canonical?: string;
 }
 
@@ -16,10 +19,28 @@ const {
 const isZh = lang === "zh";
 const pageTitle = title || (isZh ? "AI 赋能安全测试工具 — AI 安全矩阵" : "AI-enabled security testing tools — AI Security Matrix");
 const pageDescription = description || (isZh ? "一份精选的 AI 赋能网络安全测试与红队工具目录。" : "A curated list of AI-enabled security testing tools.");
-const prefix = isZh ? "/zh" : "";
-const switchHref = isZh ? Astro.url.pathname.replace(/^\/zh/, "") || "/" : `/zh${Astro.url.pathname}`;
 
-import "@/styles/global.css";
+// Strip any existing base/language prefix to compute switch target
+const pathname = Astro.url.pathname;
+const baseNoSlash = import.meta.env.BASE_URL.replace(/^\/|\/$/g, "");
+let relative = pathname;
+if (baseNoSlash && relative.startsWith(`/${baseNoSlash}`)) {
+  relative = relative.slice(`/${baseNoSlash}`.length);
+}
+relative = relative.replace(/^\/+/, "");
+
+// Language toggle href
+let switchHref: string;
+if (isZh) {
+  const enRel = relative.replace(/^zh\/?/, "");
+  switchHref = url(enRel, "en");
+} else {
+  switchHref = url(relative, "zh");
+}
+
+const homeHref = home(lang);
+const faviconHref = asset("favicon.svg");
+const ogImage = `https://gandli.github.io/ai-security-matrix/og-image${isZh ? ".zh" : ""}.png`;
 ---
 
 <!doctype html>
@@ -29,7 +50,7 @@ import "@/styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={faviconHref} type="image/svg+xml" />
     <link rel="canonical" href={canonical || Astro.url.href} />
 
     <!-- Open Graph -->
@@ -38,20 +59,19 @@ import "@/styles/global.css";
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:image" content={`https://gandli.github.io/ai-security-matrix/og-image${isZh ? ".zh" : ""}.png`} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={isZh ? "AI 安全矩阵 — 精选的 AI 赋能安全测试工具" : "AI Security Matrix — curated AI security testing tools"} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
-    <meta name="twitter:image" content={`https://gandli.github.io/ai-security-matrix/og-image${isZh ? ".zh" : ""}.png`} />
+    <meta name="twitter:image" content={ogImage} />
 
     <script is:inline>
       // theme init
       const saved = localStorage.getItem("theme");
       if (saved) document.documentElement.dataset.theme = saved;
-      // reflect current theme on icons
       const applyThemeIcon = () => {
         const dark = document.documentElement.dataset.theme !== "light";
         document.querySelectorAll(".theme-icon-sun").forEach((el) => (el.style.display = dark ? "none" : ""));
@@ -73,7 +93,7 @@ import "@/styles/global.css";
       <header class="site-header">
         <div>
           <h1>
-            <a href={`${prefix}/`} class="brand">
+            <a href={homeHref} class="brand">
               <svg width="22" height="22" viewBox="0 0 19 19" role="img" aria-label="AI Security Matrix">
                 <rect x="0.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5" />
                 <rect x="7" y="0" width="5" height="5" rx="0.5" fill="currentColor" />
@@ -97,16 +117,16 @@ import "@/styles/global.css";
 
         <nav class="site-nav" aria-label="Site">
           <div class="nav-links">
-            <a href={`${prefix}/about`}>{isZh ? "关于" : "About"}</a>
-            <a href={`${prefix}/guide`}>{isZh ? "使用指南" : "Definitions"}</a>
-            <a href={`${prefix}/contribute`}>{isZh ? "贡献" : "Contribute"}</a>
-            <a href={`${prefix}/commercial`}>{isZh ? "商业工具" : "Commercial tools"}</a>
+            <a href={url("about", lang)}>{isZh ? "关于" : "About"}</a>
+            <a href={url("guide", lang)}>{isZh ? "使用指南" : "Definitions"}</a>
+            <a href={url("contribute", lang)}>{isZh ? "贡献" : "Contribute"}</a>
+            <a href={url("commercial", lang)}>{isZh ? "商业工具" : "Commercial tools"}</a>
           </div>
 
           <div class="nav-actions">
             <!-- Language toggle -->
             <a
-              href={isZh ? switchHref : `/zh${Astro.url.pathname}`}
+              href={switchHref}
               class="icon-btn"
               aria-label={isZh ? "Switch to English" : "切换为中文"}
               title={isZh ? "English" : "中文"}
@@ -148,10 +168,10 @@ import "@/styles/global.css";
       <!-- Site Footer -->
       <footer class="site-footer">
         <nav aria-label="Pages">
-          <a href={`${prefix}/about`}>{isZh ? "关于" : "About"}</a>
-          <a href={`${prefix}/guide`}>{isZh ? "使用指南" : "Definitions"}</a>
-          <a href={`${prefix}/contribute`}>{isZh ? "贡献" : "Contribute"}</a>
-          <a href={`${prefix}/commercial`}>{isZh ? "商业工具" : "Commercial tools"}</a>
+          <a href={url("about", lang)}>{isZh ? "关于" : "About"}</a>
+          <a href={url("guide", lang)}>{isZh ? "使用指南" : "Definitions"}</a>
+          <a href={url("contribute", lang)}>{isZh ? "贡献" : "Contribute"}</a>
+          <a href={url("commercial", lang)}>{isZh ? "商业工具" : "Commercial tools"}</a>
           <a href="https://github.com/gandli/ai-security-matrix" target="_blank" rel="noopener">GitHub</a>
         </nav>
         <p>
@@ -161,14 +181,5 @@ import "@/styles/global.css";
         </p>
       </footer>
     </div>
-
-    <script is:inline>
-      document.getElementById("theme-btn")?.addEventListener("click", () => {
-        const cur = document.documentElement.dataset.theme;
-        const next = cur === "dark" ? "light" : "dark";
-        document.documentElement.dataset.theme = next;
-        localStorage.setItem("theme", next);
-      });
-    </script>
   </body>
 </html>
