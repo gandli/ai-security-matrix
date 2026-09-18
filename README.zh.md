@@ -8,7 +8,7 @@
 >
 > 本 README 仅作为目录索引；每个工具的详细信息见 `tools/<slug>.zh.md`。
 >
-_最近更新：2026-09-18 04:29 UTC（由 GitHub Actions 自动同步）_
+_最近更新：2026-09-18 04:34 UTC（由 GitHub Actions 自动同步）_
 
 共收录 **65** 个开源项目：
 

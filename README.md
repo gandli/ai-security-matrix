@@ -8,7 +8,7 @@
 >
 > Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com). This README serves as a directory index only; each tool's detail page lives in `tools/<slug>.md`.
 >
-_Last updated: 2026-09-18 04:29 UTC (automatically synced via GitHub Actions)_
+_Last updated: 2026-09-18 04:34 UTC (automatically synced via GitHub Actions)_
 
 **65** open-source projects, grouped by category:
 
