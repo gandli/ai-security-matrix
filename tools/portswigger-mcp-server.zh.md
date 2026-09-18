@@ -1,6 +1,6 @@
 # PortSwigger/mcp-server
 
-> MCP Server for Burp
+> 面向 Burp 的 MCP 服务器。
 
 | | |
 |---|---|

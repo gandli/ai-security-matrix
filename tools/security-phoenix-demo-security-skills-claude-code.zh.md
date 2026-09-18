@@ -1,6 +1,6 @@
 # Security-Phoenix-demo/security-skills-claude-code
 
-> This repository is a curated collection of skills, plugins, and automation pipelines designed for Claude Code — Anthropic's CLI for AI-assisted software engineering. It was built by the engineering and security engineering teams at Phoenix Security and released as open source so that security professionals, DevSecOps engineers, AppSec teams
+> 本仓库是为 Claude Code——Anthropic 面向 AI 辅助软件工程的 CLI——设计的技能、插件与自动化流水线的精选集合，由 Phoenix Security 的工程与安全工程团队构建并开源。
 
 | | |
 |---|---|

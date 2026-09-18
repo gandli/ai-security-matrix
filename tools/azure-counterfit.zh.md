@@ -1,6 +1,6 @@
 # Azure/counterfit
 
-> a CLI that provides a generic automation layer for assessing the security of ML models
+> 提供通用自动化层以评估机器学习模型安全性的 CLI。
 
 | | |
 |---|---|

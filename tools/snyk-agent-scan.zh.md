@@ -1,6 +1,6 @@
 # snyk/agent-scan
 
-> Security scanner for AI agents, MCP servers and agent skills.
+> 面向 AI 智能体、MCP 服务器与智能体技能的安全扫描器。
 
 | | |
 |---|---|

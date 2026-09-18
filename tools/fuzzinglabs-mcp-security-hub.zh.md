@@ -1,6 +1,6 @@
 # FuzzingLabs/mcp-security-hub
 
-> A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.
+> 不断增长的 MCP 服务器集合，为 AI 助手带来进攻性安全工具。Nmap、Ghidra、Nuclei、SQLMap、Hashcat 等。
 
 | | |
 |---|---|

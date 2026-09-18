@@ -1,6 +1,6 @@
 # MorDavid/BloodHound-MCP-AI
 
-> BloodHound-MCP-AI is integration that connects BloodHound with AI through Model Context Protocol, allowing security professionals to analyze Active Directory attack paths using natural language instead of complex Cypher queries.
+> BloodHound-MCP-AI 通过模型上下文协议将 BloodHound 与 AI 连接，让安全从业者用自然语言而非复杂的 Cypher 查询分析 Active Directory 攻击路径。
 
 | | |
 |---|---|

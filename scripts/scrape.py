@@ -127,9 +127,13 @@ def parse_detail(html: str, slug: str) -> dict:
     bundled = [x.strip() for x in after("Bundled tools").split(",") if x.strip()]
     shares = after("Shares files with")
 
+    meta = re.search(r'<meta name="description" content="([^"]+)"', html)
+    description = htmllib.unescape(meta.group(1)).strip() if meta else ""
+
     return {
         "slug": slug,
         "repo": repo,
+        "description": description,
         "licence": after("Licence"),
         "maintainers": after("Maintainers"),
         "size": size,
@@ -208,7 +212,8 @@ def badges_zh(t: dict) -> str:
 
 def tool_md(t: dict, lang: str) -> str:
     if lang == "zh":
-        o = [f"# {t['repo']}", "", f"> {t['description']}", "",
+        desc = t.get("description_zh") or t.get("description") or ""
+        o = [f"# {t['repo']}", "", f"> {desc}", "",
              "| | |", "|---|---|",
              f"| **类别** | `{t['category']}` |",
              f"| **Stars** | {t['stars'] or '—'} |",
@@ -333,7 +338,7 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
             "",
             "## 数据文件",
             "",
-            "- [`tools.json`](tools.json) — 包含所有 65+ 工具的完整结构化 JSON 数据集",
+            "- [`tools.json`](tools.json) — 包含所有工具的完整结构化 JSON 数据集",
             "",
             "原始分类目录由 [aisecuritymatrix.com](https://aisecuritymatrix.com) 维护。本仓库为独立的社区镜像。",
         ]
@@ -403,6 +408,17 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
 
 
 def main() -> None:
+    # Load curated Chinese translations
+    trans_path = ROOT / "translations.json"
+    translations = {}
+    if trans_path.exists():
+        try:
+            translations = json.loads(trans_path.read_text(encoding="utf-8"))
+        except Exception:
+            translations = {}
+    tools_zh = translations.get("tools", {})
+    static_zh = translations.get("static", {})
+
     now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
     print(f"[{now_str}] Scraping {BASE}...")
 
@@ -419,9 +435,13 @@ def main() -> None:
     # 3. Static pages
     for slug in ("about", "guide", "contribute", "commercial"):
         try:
+            if slug in static_zh:
+                (ROOT / f"{slug}.zh.md").write_text(static_zh[slug], encoding="utf-8")
+            else:
+                h = fetch(f"{BASE}/{slug}.html")
+                (ROOT / f"{slug}.zh.md").write_text(static_to_md(h, slug), encoding="utf-8")
             h = fetch(f"{BASE}/{slug}.html")
             (ROOT / f"{slug}.md").write_text(static_to_md(h, slug), encoding="utf-8")
-            (ROOT / f"{slug}.zh.md").write_text(static_to_md(h, slug), encoding="utf-8")
             print(f"  wrote {slug}.md, {slug}.zh.md")
         except Exception as e:
             print(f"  warn: {slug} failed: {e}")
@@ -451,7 +471,8 @@ def main() -> None:
                 "category": base["category"],
                 "stars": base["stars"],
                 "freshness": base["freshness"],
-                "description": base["description"],
+                "description": detail["description"] or base["description"],
+                "description_zh": tools_zh.get(slug, ""),
                 "licence": detail["licence"],
                 "maintainers": detail["maintainers"],
                 "size": detail["size"],

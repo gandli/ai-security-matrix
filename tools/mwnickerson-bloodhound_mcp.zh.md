@@ -1,6 +1,6 @@
 # mwnickerson/bloodhound_mcp
 
-> A Model Context Protocol (MCP) server to converse with data in Bloodhound
+> 一个用于与 BloodHound 数据对话的模型上下文协议（MCP）服务器。
 
 | | |
 |---|---|

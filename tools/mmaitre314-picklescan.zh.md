@@ -1,6 +1,6 @@
 # mmaitre314/picklescan
 
-> Security scanner detecting Python Pickle files performing suspicious actions
+> 检测执行可疑行为的 Python Pickle 文件的安全扫描器。
 
 | | |
 |---|---|

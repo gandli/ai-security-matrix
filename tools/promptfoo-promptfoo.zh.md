@@ -1,6 +1,6 @@
 # promptfoo/promptfoo
 
-> Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration. Used by OpenAI and Anthropic.
+> 测试你的提示词、智能体与 RAG。面向 AI 的红队/渗透/漏洞扫描。对比 GPT、Claude、Gemini、DeepSeek 等的表现。简洁的声明式配置，支持命令行与 CI/CD 集成。被 OpenAI 与 Anthropic 采用。
 
 | | |
 |---|---|

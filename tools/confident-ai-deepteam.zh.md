@@ -1,6 +1,6 @@
 # confident-ai/deepteam
 
-> DeepTeam is a framework to red team LLMs and AI agents.
+> DeepTeam 是一个对 LLM 与 AI 智能体进行红队的框架。
 
 | | |
 |---|---|

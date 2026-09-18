@@ -1,6 +1,6 @@
 # hypnguyen1209/offensive-claude
 
-> Offensive security toolkit for Claude Code covering red team, exploit dev, AD attacks, EDR bypass, mobile pentest
+> 面向 Claude Code 的进攻性安全工具包，涵盖红队、利用开发、AD 攻击、EDR 绕过与移动渗透测试。
 
 | | |
 |---|---|

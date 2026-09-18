@@ -1,6 +1,6 @@
 # Masriyan/Claude-Code-CyberSecurity-Skill
 
-> 22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat hunting, threat intelligence, purple team / adversary emulation, CSOC automation, AI/LLM security, mobile, OT/ICS, GRC, software supply chain security, and more.
+> 为网络安全从业者打造的 22 个生产级 Claude Code 技能——涵盖进攻性安全、防御运营、逆向工程、威胁猎杀、威胁情报、紫队/对手模拟、CSOC 自动化、AI/LLM 安全、移动端、OT/ICS、GRC、软件供应链安全等。
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # Tencent/AI-Infra-Guard
 
-> A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.
+> 全栈 AI 红队平台，通过 Agent 扫描、技能扫描、MCP 扫描、AI 基础设施扫描与 LLM 越狱评估来守护 AI 生态。
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # chetstriker/LLMtary
 
-> Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal &amp; external targets. Supports local AI (Ollama, LM Studio) and cloud models (Claude, GPT-4, Gemini). Linux · macOS · Windows
+> 自主 AI 驱动的渗透测试平台。面向内外部目标的 LLM 驱动侦察、漏洞分析与利用验证。支持本地 AI（Ollama、LM Studio）与云端模型（Claude、GPT-4、Gemini）。Linux · macOS · Windows。
 
 | | |
 |---|---|

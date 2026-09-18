@@ -1,6 +1,6 @@
 # Nightlysec/nightly
 
-> Autonomous AI penetration testing agent
+> 自主 AI 渗透测试智能体。
 
 | | |
 |---|---|

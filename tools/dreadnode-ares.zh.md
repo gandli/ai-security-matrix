@@ -1,6 +1,6 @@
 # dreadnode/ares
 
-> Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling realistic evaluation of attack and defense.
+> Ares 是自主安全运营平台，让 LLM 驱动的红队与蓝队智能体在真实基础设施上互相对抗，实现攻防的现实评估。
 
 | | |
 |---|---|

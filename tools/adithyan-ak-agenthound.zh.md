@@ -1,6 +1,6 @@
 # adithyan-ak/AgentHound
 
-> Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A2A, gateways, and AI services. BloodHound for the agentic stack.
+> 面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。
 
 | | |
 |---|---|

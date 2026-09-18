@@ -1,6 +1,6 @@
 # Masriyan/Claude-Code-CyberSecurity-Skill
 
-> 22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat hunting, threat intelligence, purple team / adversary emulation, CSOC automation, AI/LLM security, mobile, OT/ICS, GRC, software supply chain security, and more.
+> 22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat h
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # trailofbits/fickling
 
-> A Python pickling decompiler and static analyzer
+> Python pickle 反编译与静态分析工具。
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # vxcontrol/pentagi
 
-> Fully autonomous AI Agents system capable of performing complex penetration testing tasks
+> 完全自主的 AI 智能体系统，能够执行复杂的渗透测试任务。
 
 | | |
 |---|---|

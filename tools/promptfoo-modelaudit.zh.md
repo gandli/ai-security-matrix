@@ -1,6 +1,6 @@
 # promptfoo/modelaudit
 
-> Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment
+> 面向 AI/ML 模型文件的安全扫描器，在部署前检测恶意代码、后门与漏洞。
 
 | | |
 |---|---|

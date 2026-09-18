@@ -1,6 +1,6 @@
 # MythicAgents/Sage
 
-> Sage is a virtual Mythic agent that that uses an AI agentic system to operate Mythic and Mythic agents running on compromised hosts.
+> Sage 是一个虚拟 Mythic 智能体，使用 AI 智能体系统来操作运行在被控主机上的 Mythic 及其他 Mythic 智能体。
 
 | | |
 |---|---|

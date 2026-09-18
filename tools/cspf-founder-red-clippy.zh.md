@@ -1,6 +1,6 @@
 # CSPF-Founder/red-clippy
 
-> open-source pentest management built to be operated by an AI agent
+> 为 AI 智能体操作而构建的开源渗透测试管理工具。
 
 | | |
 |---|---|

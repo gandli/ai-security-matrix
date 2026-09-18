@@ -1,6 +1,6 @@
 # NVIDIA/garak
 
-> the LLM vulnerability scanner
+> LLM 漏洞扫描器。
 
 | | |
 |---|---|

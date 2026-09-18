@@ -1,6 +1,6 @@
 # trailofbits/skills
 
-> Trail of Bits Claude Code skills for security research, vulnerability detection, and audit workflows
+> Trail of Bits 的 Claude Code 技能，用于安全研究、漏洞检测与审计工作流。
 
 | | |
 |---|---|

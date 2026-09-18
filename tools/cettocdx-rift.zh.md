@@ -1,6 +1,6 @@
 # cettocdx/rift
 
-> RIFT - Autonomous AI Penetration Testing Agent
+> RIFT——自主 AI 渗透测试智能体。
 
 | | |
 |---|---|

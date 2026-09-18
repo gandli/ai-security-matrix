@@ -1,6 +1,6 @@
 # cyberark/FuzzyAI
 
-> A powerful tool for automated LLM fuzzing. It is designed to help developers and security researchers identify and mitigate potential jailbreaks in their LLM APIs.
+> A powerful tool for automated LLM fuzzing. It is designed to help developers and security researchers identify and mitigate potential jailbreaks in their L
 
 | | |
 |---|---|

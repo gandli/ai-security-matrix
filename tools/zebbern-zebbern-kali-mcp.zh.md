@@ -1,6 +1,6 @@
 # zebbern/zebbern-kali-mcp
 
-> MCP server for Kali Linux penetration testing - 121 tools for AI-assisted security testing - Giving Agents access to full pentesting tools
+> 面向 Kali Linux 渗透测试的 MCP 服务器——121 个工具用于 AI 辅助安全测试，为智能体提供完整的渗透工具集。
 
 | | |
 |---|---|

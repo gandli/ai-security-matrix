@@ -1,7 +1,7 @@
-# Contribute
+# 贡献
 
-Submissions and contribution instructions coming soon.
+提交与贡献说明即将上线。
 
 ---
 
-_Source: <https://aisecuritymatrix.com/contribute.html>_
+_来源：<https://aisecuritymatrix.com/contribute.html>_

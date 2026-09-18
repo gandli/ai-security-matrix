@@ -1,6 +1,6 @@
 # samugit83/redamon
 
-> An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero human intervention.
+> An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero
 
 | | |
 |---|---|

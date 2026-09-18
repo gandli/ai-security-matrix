@@ -1,6 +1,6 @@
 # protectai/modelscan
 
-> Protection against Model Serialization Attacks
+> 防范模型序列化攻击。
 
 | | |
 |---|---|

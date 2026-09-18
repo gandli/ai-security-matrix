@@ -1,6 +1,6 @@
 # SpecterOps/skills
 
-> A marketplace for LLM skills
+> LLM 技能的市场。
 
 | | |
 |---|---|

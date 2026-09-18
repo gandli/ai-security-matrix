@@ -1,6 +1,6 @@
 # utkusen/promptmap
 
-> a security scanner for custom LLM applications
+> 面向自定义 LLM 应用的安全扫描器。
 
 | | |
 |---|---|

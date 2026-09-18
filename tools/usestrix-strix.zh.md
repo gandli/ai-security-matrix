@@ -1,6 +1,6 @@
 # usestrix/strix
 
-> Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.
+> 开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。
 
 | | |
 |---|---|

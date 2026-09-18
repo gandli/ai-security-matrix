@@ -1,6 +1,6 @@
 # Wh0am123/MCP-Kali-Server
 
-> MCP configuration to connect AI agent to a Linux machine.
+> 将 AI 智能体连接到 Linux 主机的 MCP 配置。
 
 | | |
 |---|---|

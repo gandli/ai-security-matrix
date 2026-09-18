@@ -1,6 +1,6 @@
 # mpgn/NetExec-mcp
 
-> NetExec MCP
+> NetExec 的 MCP。
 
 | | |
 |---|---|

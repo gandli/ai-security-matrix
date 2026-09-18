@@ -1,6 +1,6 @@
 # atomicchonk/roadrecon_mcp_server
 
-> Claude MCP server to perform analysis on ROADrecon data
+> 用于分析 ROADrecon 数据的 Claude MCP 服务器。
 
 | | |
 |---|---|

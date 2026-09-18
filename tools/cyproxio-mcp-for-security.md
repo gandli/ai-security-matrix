@@ -1,6 +1,6 @@
 # cyproxio/mcp-for-security
 
-> MCP for Security: A collection of Model Context Protocol servers for popular security tools like SQLMap, FFUF, NMAP, Masscan and more. Integrate security testing and penetration testing into AI workflows.
+> MCP for Security: A collection of Model Context Protocol servers for popular security tools like SQLMap, FFUF, NMAP, Masscan and more. Integrate security t
 
 | | |
 |---|---|

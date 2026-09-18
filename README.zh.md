@@ -8,7 +8,7 @@
 >
 > 本 README 仅作为目录索引；每个工具的详细信息见 `tools/<slug>.zh.md`。
 >
-_最近更新：2026-09-18 03:10 UTC（由 GitHub Actions 自动同步）_
+_最近更新：2026-09-18 03:31 UTC（由 GitHub Actions 自动同步）_
 
 共收录 **65** 个开源项目：
 
@@ -117,6 +117,6 @@ _智能体技能包、提示词与剧本_ · 9 个
 
 ## 数据文件
 
-- [`tools.json`](tools.json) — 包含所有 65+ 工具的完整结构化 JSON 数据集
+- [`tools.json`](tools.json) — 包含所有工具的完整结构化 JSON 数据集
 
 原始分类目录由 [aisecuritymatrix.com](https://aisecuritymatrix.com) 维护。本仓库为独立的社区镜像。

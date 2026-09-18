@@ -1,6 +1,6 @@
 # trilwu/secskills
 
-> Transform Claude Code into your personal security engineer
+> 将 Claude Code 变为你的个人安全工程师。
 
 | | |
 |---|---|

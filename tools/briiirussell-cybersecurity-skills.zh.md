@@ -1,6 +1,6 @@
 # briiirussell/cybersecurity-skills
 
-> Cybersecurity skills for AI coding agents (Claude Code, Cursor, Codex)
+> 面向 AI 编码智能体（Claude Code、Cursor、Codex）的网络安全技能。
 
 | | |
 |---|---|

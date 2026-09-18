@@ -1,6 +1,6 @@
 # capture0x/AdStrike
 
-> AI-powered modular Active Directory red-team framework for authorized penetration testing, AD enumeration, attack-path analysis, Kerberos/ADCS workflows, reporting, operator automation, and MCP server integration.
+> AI 驱动的模块化 Active Directory 红队框架，用于授权渗透测试、AD 枚举、攻击路径分析、Kerberos/ADCS 工作流、报告、运维自动化与 MCP 集成。
 
 | | |
 |---|---|

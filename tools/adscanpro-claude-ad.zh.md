@@ -1,6 +1,6 @@
 # ADScanPro/Claude-AD
 
-> Active Directory pentest methodology for Claude Code: skills, agents and slash commands for internal AD red-team work (Kerberoasting, ADCS ESC1-17, DCSync, ACL abuse, NTLM relay, delegation), with per-technique OPSEC/telemetry notes. Drives netexec, impacket, certipy, bloodyAD, BloodHound CE.
+> 面向 Claude Code 的 Active Directory 渗透测试方法论：用于内部 AD 红队作业（Kerberoasting、ADCS ESC1-17、DCSync、ACL 滥用、NTLM 中继、委派）的技能、智能体与斜杠命令，附带逐技术的 OPSEC/遥测注记。驱动 netexec、impacket、certipy、bloodyAD、BloodHound CE。
 
 | | |
 |---|---|

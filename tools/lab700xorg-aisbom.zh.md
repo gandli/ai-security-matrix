@@ -1,6 +1,6 @@
 # Lab700xOrg/aisbom
 
-> Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AIBOM) as EU AI Act, CRA and FDA §524B evidence.
+> 面向 ML 模型文件的静态安全扫描器——检测 pickle 炸弹、Keras Lambda RCE 与 GGUF 模板注入，并生成 CycloneDX / SPDX 的 AI-BOM（AIBOM），作为 EU AI Act、CRA 与 FDA §524B 的合规证据。
 
 | | |
 |---|---|

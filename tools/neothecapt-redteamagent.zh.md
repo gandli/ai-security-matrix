@@ -1,6 +1,6 @@
 # NeoTheCapt/RedteamAgent
 
-> An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit → report workflow, with containerized tools and resumable state.
+> 面向授权实验室与 Web 应用渗透工作流的 AI 红队智能体。将 Claude Code / OpenCode / Codex 变为结构化的侦察→测试→利用→报告流程，含容器化工具与可恢复状态。
 
 | | |
 |---|---|

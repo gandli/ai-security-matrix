@@ -1,6 +1,6 @@
 # LaurieWired/GhidraMCP
 
-> MCP Server for Ghidra
+> 面向 Ghidra 的 MCP 服务器。
 
 | | |
 |---|---|

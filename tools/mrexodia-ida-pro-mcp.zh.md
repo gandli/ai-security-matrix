@@ -1,6 +1,6 @@
 # mrexodia/ida-pro-mcp
 
-> AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.
+> 通过 MCP 将 IDA Pro 与大语言模型桥接的 AI 驱动逆向工程助手。
 
 | | |
 |---|---|

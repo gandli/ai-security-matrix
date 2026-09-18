@@ -1,6 +1,6 @@
 # GH05TCREW/MetasploitMCP
 
-> MCP Server for Metasploit
+> 面向 Metasploit 的 MCP 服务器。
 
 | | |
 |---|---|

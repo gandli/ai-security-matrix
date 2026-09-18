@@ -1,79 +1,50 @@
-# About
+# 关于
 
-## What Is the AI Security Matrix?
+## 什么是 AI 安全矩阵？
 
-The AI Security Matrix helps you find AI-enabled security testing tools for your engagements.
+AI 安全矩阵帮助你找到用于安全测试作战的 AI 赋能安全测试工具。自行搜索往往会陷入无底洞——GitHub star 数、博客评测、Reddit 帖子——仍然难以分辨每个工具的定位。本矩阵按**用途**与**测试范围**对每个工具进行分类，并标注工具对你机器的**运行风险**，帮你判断在某场景下是否可以信任该工具。
 
-Searching for them leads down a rabbit hole. GitHub stars, blog reviews, Reddit threads, and it's still hard to tell what's what. The matrix categorizes each tool by purpose and testing scope. It also flags the risk of what running the tool does to your machine so you can determine if you can trust the tool in your scenario.
+## 什么是 AI 安全工具？
 
-## What is an AI Security Tool?
+AI 安全工具在评估过程中借助语言模型完成部分工作，用以评估系统的安全态势。团队将其用于漏洞评估、渗透测试与红队作战。其范围朝两个方向延伸：一些指向 Web 应用、企业系统、云等传统目标；另一些则用于测试 AI 系统本身——模型扫描器、提示注入测试、智能体与 RAG 评估。
 
-An AI security tool evaluates the security posture of a system during an assessment, with a language model doing part of the work. Teams use them for vulnerability assessments, penetration testing, and red team engagements.
+## 面向谁？
 
-Their scope runs in two directions. Some point at traditional targets like web apps, enterprise systems, and cloud. Others are built to test AI systems themselves: model scanners, prompt injection testing, agent and RAG assessment.
+任何执行安全评估的人：渗透测试员、红队、漏洞赏金猎人、以及需要了解工具行为的防守方。范围标签告诉你工具指向何种目标（Web 应用、内网、Active Directory、云、逆向工程，或 AI 系统本身）；最近推送日期告诉你是否还有人维护；风险标签告诉你工具会安装什么、需要什么权限、是否索取凭据。
 
-## Who it is for
+## AI 安全矩阵不是什么？
 
-Anyone running security assessments. Pentesters, red teamers, bug bounty hunters, and the defenders who need to know what those tools do.
+本矩阵不排名、也不测试工具。此处没有任何条目被验证过能如描述那样工作，因此请把每条列表都当作你自己进一步核实的起点。
 
-The scope labels tell you which tools point at your targets, whether that's web applications, internal networks, Active Directory, cloud, reverse engineering, or AI systems themselves. The last-push date tells you whether anyone still maintains it. The risk flags tell you what the tool installs, what privilege it wants, and whether it reaches for your credentials.
+## 你能信任这些工具吗？
 
-## What the AI Security Matrix is not
+AI 安全矩阵通过风险标注给你一个起点，但在你亲自审查并测试之前，请把一切视为不安全。
 
-The matrix does not rank tools and does not test them. Nothing here has been verified to work as described, so treat every listing as a starting point you check yourself.
+## 它对机器做了什么？
 
-## Can you trust these tools?
+这里每个工具都是你可以自行克隆的仓库。六项检查告诉你若这样做会发生什么。列表中的任何内容都从未被执行验证——仓库只是被克隆、阅读、丢弃。风险列标识的是**观察到的**风险。
 
-The AI Security Matrix flags risk to give you a starting point, but treat everything here as unsafe until you vet and test it yourself.
+- **二进制（Binaries）**：项目自带已编译产物，你没有构建过、也无法阅读。
+- **安装（Installs）**：运行它会向你的机器装入更多软件——从互联网直接管道进 shell 的脚本、安装时静默触发的钩子、或宽松到让你装到当天任意版本的依赖清单。
+- **Root**：安装过程在某处需要特权：sudo、特权容器、Docker socket。
+- **凭据（Credentials）**：代码会伸向存放密钥之处：AWS profile、SSH 目录、Kubernetes 配置。
+- **对外请求（Calls out）**：代码中内置了遥测，使用它就是在告诉别人你用了它。
+- **不透明（Opaque）**：项目中有你读不懂的部分：内联的第三方代码、压缩文件、超长的编码数据块。
 
-## What it does to your machine
+## 这些标注不是指控
 
-Every tool here is a repo you could clone yourself. Six checks tell you what happens if you do. Nothing on this list is ever executed to find out: the repo is cloned, read, and thrown away. The risk column idendifies observed risks.
+很多好工具都需要 root，多数项目都会内联某些代码。标注只是提醒你在运行前先看一眼，而非告诉你去回避它。没有任何标注的条目也**不是**清白证明——凡是某项检查未能读取到内容的地方，条目标为“未检查”而非“无”。
 
-## What lands on your host
+## 创建者
 
-Binaries means the project ships something already compiled. You did not build it and you cannot read it.
+**Joe Vest** —— “threat gets vote（威胁说了算）”。如果你构建防御却不理解对手如何实际运作，那做安全决策的就不是你，而是威胁本身。Joe 在网络安全领域深耕 20 余年，近 15 年专注进攻性安全作战。他不满足于产生漏洞积压的发现式测试，而是聚焦威胁视角：理解对手行为，驱动可度量的干扰。他是一位注重系统性问题解决的动手型技术负责人，而非只会记录理论缺陷，并善于用工程师能用的方式传达复杂技术概念。
 
-Installs means running it puts more software on your machine. A script piped from the internet straight into your shell, a hook that fires quietly during install, or a dependency list loose enough that you get whichever versions happen to be current that day.
+- **干扰对手**：超越模拟，判断系统能否在影响发生前检测并阻止特定威胁。
+- **弥合鸿沟**：在攻防团队之间协作，把技术洞察转化为更好的可见性与响应。
+- **聚焦关键**：剪除噪声，把精力集中到影响对手成功能力的地方。
 
-## What it asks for
-
-Root means the setup wants privilege somewhere: sudo, a privileged container, the Docker socket.
-
-Credentials means the code reaches toward the places your keys live. Your AWS profile, your SSH directory, your Kubernetes config.
-
-## What you cannot see
-
-Calls out means there is analytics in the code, so using the tool tells someone else you used it.
-
-Opaque means part of the project is unreadable. Vendored code, minified files, long encoded blobs.
-
-## None of this is an accusation
-
-Plenty of good tools need root. Most projects vendor something. A flag tells you what to look at before you run it, not what to avoid.
-
-An entry with no flags is not a clean bill. Where a check could not read something, the entry says not checked rather than no.
-
-## Creators
-
-Joe Vest
-
-The threat gets a vote. If you build a defense without understanding how an adversary actually operates, you're not making security decisions. The threat is making them for you.
-
-Joe has spent over 20 years in cybersecurity, the last 15 focused on offensive security operations.
-
-He is not interested in findings-based testing that grows a backlog of vulnerabilities. He focuses on the threat perspective: understanding adversary behavior to drive measurable disruption.
-
-He is a hands-on technical lead who would rather solve systemic issues than document theoretical flaws, and relays complex technical concepts in a way engineers can use.
-
-- Adversary disruption. Moving past simulation to whether a system can detect and stop a specific threat before it has impact.
-- Bridging the gap. Working between offensive and defensive teams to turn technical insight into better visibility and response.
-- Focusing on what matters. Pruning the noise to concentrate effort where it affects a threat's ability to succeed.
-
-He is here to disrupt the threat's ability to succeed, not just document it.
-
-Joe wrote Red Team Development and Operations, hosts the Red Team Guide, built a cybersecurity company that later merged with SpecterOps, and led Cobalt Strike strategy post-acquisition.
+他的目标在此是干扰对手成功的能力，而不只是记录它。Joe 著有《Red Team Development and Operations》，主持 Red Team Guide，创办了一家后来并入 SpecterOps 的网络安全公司，并在收购后主导 Cobalt Strike 战略。
 
 ---
 
-_Source: <https://aisecuritymatrix.com/about.html>_
+_来源：<https://aisecuritymatrix.com/about.html>_

@@ -1,6 +1,6 @@
 # ipa-lab/hackingBuddyGPT
 
-> Helping Ethical Hackers use LLMs in 50 Lines of Code or less..
+> 用不超过 50 行代码帮助道德黑客使用大语言模型。
 
 | | |
 |---|---|

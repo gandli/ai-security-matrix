@@ -1,6 +1,6 @@
 # msoedov/agentic_security
 
-> Agentic LLM Vulnerability Scanner / AI red teaming kit 🧪
+> 智能体化 LLM 漏洞扫描器 / AI 红队工具包 🧪
 
 | | |
 |---|---|

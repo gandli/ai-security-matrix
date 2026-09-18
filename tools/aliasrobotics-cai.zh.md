@@ -1,6 +1,6 @@
 # aliasrobotics/cai
 
-> Cybersecurity AI (CAI), the framework for AI Security
+> Cybersecurity AI (CAI)，面向 AI 安全的框架。
 
 | | |
 |---|---|

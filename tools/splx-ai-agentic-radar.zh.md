@@ -1,6 +1,6 @@
 # splx-ai/agentic-radar
 
-> A security scanner for your LLM agentic workflows
+> 面向你的 LLM 智能体工作流的安全扫描器。
 
 | | |
 |---|---|

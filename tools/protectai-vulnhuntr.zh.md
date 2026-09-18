@@ -1,6 +1,6 @@
 # protectai/vulnhuntr
 
-> Zero shot vulnerability discovery using LLMs
+> 使用大语言模型进行零样本漏洞发现。
 
 | | |
 |---|---|

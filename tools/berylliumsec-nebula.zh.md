@@ -1,6 +1,6 @@
 # berylliumsec/nebula
 
-> AI-powered penetration testing assistant for automating recon, note-taking, and vulnerability analysis.
+> AI 驱动的渗透测试助手，自动化侦察、笔记与漏洞分析。
 
 | | |
 |---|---|

@@ -1,6 +1,6 @@
 # cisco-ai-defense/mcp-scanner
 
-> Scan MCP servers for potential threats &amp; security findings.
+> Scan MCP servers for potential threats & security findings.
 
 | | |
 |---|---|

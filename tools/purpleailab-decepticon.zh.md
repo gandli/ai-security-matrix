@@ -1,6 +1,6 @@
 # PurpleAILAB/Decepticon
 
-> Autonomous Hacking Agent for Red Team
+> 面向红队的自主攻击智能体。
 
 | | |
 |---|---|

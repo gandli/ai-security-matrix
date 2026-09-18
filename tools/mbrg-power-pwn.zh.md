@@ -1,6 +1,6 @@
 # mbrg/power-pwn
 
-> An offensive/defense security toolset for discovery, recon and ethical assessment of AI Agents
+> 用于发现、侦察与道德评估 AI 智能体的攻防安全工具集。
 
 | | |
 |---|---|

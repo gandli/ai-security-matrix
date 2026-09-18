@@ -1,6 +1,6 @@
 # xalgorix/xalgorix
 
-> Autonomous AI pentesting agents — real-time reconnaissance, vulnerability detection, and exploitation orchestration. Go + TypeScript.
+> 自主 AI 渗透测试智能体——实时侦察、漏洞检测与利用编排。Go + TypeScript。
 
 | | |
 |---|---|
