@@ -54,9 +54,9 @@ jobs:
             exit 1
           fi
           # also guard: the script should never delete existing tool pages without replacing them
-          REMAINING=$(ls tools/*/ 2>/dev/null | grep -c '\.md$' || echo 0)
-          echo "tool files on disk: $REMAIN"
-          if [ "$REMAIN" -lt 10 ]; then
+          REMAINING=$(find tools -name '*.md' 2>/dev/null | wc -l)
+          echo "tool files on disk: $REMAINING"
+          if [ "$REMAINING" -lt 10 ]; then
             echo "::error::Fewer than 10 tool .md files on disk. Aborting."
             exit 1
           fi

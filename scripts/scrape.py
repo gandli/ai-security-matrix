@@ -278,7 +278,7 @@ def tool_md(t: dict, lang: str) -> str:
     return "\n".join(o)
 
 
-def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
+def directory_readme(data: list[dict], lang: str) -> str:
     zh = lang == "zh"
     by_cat = {c: [t for t in data if t["category"] == c] for c in ORDER}
     for c in by_cat:
@@ -299,7 +299,7 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
             ">",
             "> 本 README 仅作为目录索引；每个工具的详细信息见 `tools/<slug>.zh.md`。",
             ">",
-            f"_最近更新：{generated_at} UTC（由 GitHub Actions 自动同步）_",
+            "_由 GitHub Actions 自动同步，内容以 aisecuritymatrix.com 为准_",
             "",
             f"共收录 **{len(data)}** 个开源项目：",
             "",
@@ -344,7 +344,7 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
         ">",
         "> Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com). This README serves as a directory index only; each tool's detail page lives in `tools/<slug>.md`.",
         ">",
-        f"_Last updated: {generated_at} UTC (automatically synced via GitHub Actions)_",
+        "_Automatically synced via GitHub Actions. Content is authoritative from aisecuritymatrix.com._",
         "",
         f"**{len(data)}** open-source projects, grouped by category:",
         "",
@@ -490,8 +490,8 @@ def main() -> None:
     print("Wrote per-category index READMEs")
 
     # 6. READMEs
-    (ROOT / "README.md").write_text(directory_readme(tools, "en", now_str), encoding="utf-8")
-    (ROOT / "README.zh.md").write_text(directory_readme(tools, "zh", now_str), encoding="utf-8")
+    (ROOT / "README.md").write_text(directory_readme(tools, "en"), encoding="utf-8")
+    (ROOT / "README.zh.md").write_text(directory_readme(tools, "zh"), encoding="utf-8")
     print(f"Wrote README.md and README.zh.md")
 
 
