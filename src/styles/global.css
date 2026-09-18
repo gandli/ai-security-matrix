@@ -142,9 +142,15 @@ input {
   padding: 1.5rem 1.25rem 4rem;
 }
 
+@media (min-width: 48rem) {
+  .wrap {
+    padding: 1.5rem 2rem 4rem;
+  }
+}
+
 @media (min-width: 64rem) {
   .wrap {
-    padding: 2rem 2rem 4rem;
+    padding: 2rem 4rem 4rem;
   }
 }
 
