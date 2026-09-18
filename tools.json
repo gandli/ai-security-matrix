@@ -1,0 +1,1205 @@
+[
+  {
+    "repo": "usestrix/strix",
+    "category": "agent",
+    "url": "https://github.com/usestrix/strix",
+    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "stars": "63k",
+    "freshness": "&#9733; today",
+    "scopes": [
+      "webapp",
+      "api",
+      "code"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "berylliumsec/nebula",
+    "category": "agent",
+    "url": "https://github.com/berylliumsec/nebula",
+    "description": "AI-powered penetration testing assistant for automating recon, note-taking, and vulnerability analysis.",
+    "stars": "1.1k",
+    "freshness": "&#9733; today",
+    "scopes": [
+      "network",
+      "recon"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "promptfoo/promptfoo",
+    "category": "scanner",
+    "url": "https://github.com/promptfoo/promptfoo",
+    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+    "stars": "25k",
+    "freshness": "&#9733; today",
+    "scopes": [
+      "llm",
+      "agentic"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out",
+      "opaque"
+    ]
+  },
+  {
+    "repo": "snyk/agent-scan",
+    "category": "scanner",
+    "url": "https://github.com/snyk/agent-scan",
+    "description": "Security scanner for AI agents, MCP servers and agent skills.",
+    "stars": "3.1k",
+    "freshness": "&#9733; today",
+    "scopes": [
+      "agentic"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "Tencent/AI-Infra-Guard",
+    "category": "scanner",
+    "url": "https://github.com/Tencent/AI-Infra-Guard",
+    "description": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
+    "stars": "6.4k",
+    "freshness": "&#9733; today",
+    "scopes": [
+      "llm",
+      "agentic"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "cisco-ai-defense/mcp-scanner",
+    "category": "scanner",
+    "url": "https://github.com/cisco-ai-defense/mcp-scanner",
+    "description": "Scan MCP servers for potential threats &amp; security findings.",
+    "stars": "1.1k",
+    "freshness": "&#9733; today",
+    "scopes": [
+      "agentic"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "Armur-Ai/Pentest-Swarm-AI",
+    "category": "agent",
+    "url": "https://github.com/Armur-Ai/Pentest-Swarm-AI",
+    "description": "Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning — supports bug bounty, continuous monitoring, and CTF modes. Built with Go and 7+ native security tools.",
+    "stars": "2.5k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "webapp",
+      "network",
+      "recon"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "samugit83/redamon",
+    "category": "agent",
+    "url": "https://github.com/samugit83/redamon",
+    "description": "An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero human intervention.",
+    "stars": "2.5k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "redteam",
+      "ad",
+      "network",
+      "recon"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out",
+      "opaque"
+    ]
+  },
+  {
+    "repo": "dreadnode/ares",
+    "category": "agent",
+    "url": "https://github.com/dreadnode/ares",
+    "description": "Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling realistic evaluation of attack and defense.",
+    "stars": "76",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "ad",
+      "network",
+      "redteam"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "opaque"
+    ]
+  },
+  {
+    "repo": "mrexodia/ida-pro-mcp",
+    "category": "mcp",
+    "url": "https://github.com/mrexodia/ida-pro-mcp",
+    "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
+    "stars": "12k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "binary"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "NVIDIA/garak",
+    "category": "scanner",
+    "url": "https://github.com/NVIDIA/garak",
+    "description": "the LLM vulnerability scanner",
+    "stars": "9.3k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "llm"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "microsoft/PyRIT",
+    "category": "scanner",
+    "url": "https://github.com/microsoft/PyRIT",
+    "description": "The Python Risk Identification Tool for generative AI (PyRIT) is an open source framework built to empower security professionals and engineers to proactively identify risks in generative AI systems.",
+    "stars": "4.5k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "llm"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out",
+      "opaque"
+    ]
+  },
+  {
+    "repo": "trailofbits/skills",
+    "category": "skill",
+    "url": "https://github.com/trailofbits/skills",
+    "description": "Trail of Bits Claude Code skills for security research, vulnerability detection, and audit workflows",
+    "stars": "7.1k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "agentic",
+      "binary",
+      "code",
+      "webapp"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "AIPentest/CyberStrikeAI",
+    "category": "agent",
+    "url": "https://github.com/AIPentest/CyberStrikeAI",
+    "description": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
+    "stars": "6.8k",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "network",
+      "webapp"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "opaque"
+    ]
+  },
+  {
+    "repo": "promptfoo/modelaudit",
+    "category": "scanner",
+    "url": "https://github.com/promptfoo/modelaudit",
+    "description": "Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment",
+    "stars": "72",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "modfile"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "hypnguyen1209/offensive-claude",
+    "category": "skill",
+    "url": "https://github.com/hypnguyen1209/offensive-claude",
+    "description": "Offensive security toolkit for Claude Code covering red team, exploit dev, AD attacks, EDR bypass, mobile pentest",
+    "stars": "367",
+    "freshness": "&#9733; 1d",
+    "scopes": [
+      "redteam",
+      "ad"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "xalgorix/xalgorix",
+    "category": "agent",
+    "url": "https://github.com/xalgorix/xalgorix",
+    "description": "Autonomous AI pentesting agents — real-time reconnaissance, vulnerability detection, and exploitation orchestration. Go + TypeScript.",
+    "stars": "1.1k",
+    "freshness": "&#9733; 2d",
+    "scopes": [
+      "recon",
+      "webapp",
+      "network"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "Lab700xOrg/aisbom",
+    "category": "scanner",
+    "url": "https://github.com/Lab700xOrg/aisbom",
+    "description": "Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AIBOM) as EU AI Act, CRA and FDA §524B evidence.",
+    "stars": "79",
+    "freshness": "&#9733; 2d",
+    "scopes": [
+      "modfile"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "ipa-lab/hackingBuddyGPT",
+    "category": "agent",
+    "url": "https://github.com/ipa-lab/hackingBuddyGPT",
+    "description": "Helping Ethical Hackers use LLMs in 50 Lines of Code or less..",
+    "stars": "1.2k",
+    "freshness": "&#9733; 4d",
+    "scopes": [
+      "network"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "0xSteph/pentest-ai",
+    "category": "agent",
+    "url": "https://github.com/0xSteph/pentest-ai",
+    "description": "Open-source AI pentester that proves every finding. Machine oracles re-run each exploit; verified bugs ship a proof capsule you can replay yourself.",
+    "stars": "1.7k",
+    "freshness": "&#9733; 4d",
+    "scopes": [
+      "webapp",
+      "network"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "adithyan-ak/AgentHound",
+    "category": "scanner",
+    "url": "https://github.com/adithyan-ak/AgentHound",
+    "description": "Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A2A, gateways, and AI services. BloodHound for the agentic stack.",
+    "stars": "436",
+    "freshness": "&#9733; 5d",
+    "scopes": [
+      "agentic"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "msoedov/agentic_security",
+    "category": "scanner",
+    "url": "https://github.com/msoedov/agentic_security",
+    "description": "Agentic LLM Vulnerability Scanner / AI red teaming kit 🧪",
+    "stars": "2.0k",
+    "freshness": "&#9733; 6d",
+    "scopes": [
+      "llm",
+      "agentic"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "Security-Phoenix-demo/security-skills-claude-code",
+    "category": "skill",
+    "url": "https://github.com/Security-Phoenix-demo/security-skills-claude-code",
+    "description": "This repository is a curated collection of skills, plugins, and automation pipelines designed for Claude Code — Anthropic's CLI for AI-assisted software engineering.  It was built by the engineering and security engineering teams at Phoenix Security and released as open source so that security professionals, DevSecOps engineers, AppSec teams",
+    "stars": "74",
+    "freshness": "&#9733; 6d",
+    "scopes": [
+      "code"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "vxcontrol/pentagi",
+    "category": "agent",
+    "url": "https://github.com/vxcontrol/pentagi",
+    "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+    "stars": "25k",
+    "freshness": "&#9733; 7d",
+    "scopes": [
+      "webapp",
+      "network",
+      "recon"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "binaries",
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "trailofbits/fickling",
+    "category": "scanner",
+    "url": "https://github.com/trailofbits/fickling",
+    "description": "A Python pickling decompiler and static analyzer",
+    "stars": "669",
+    "freshness": "&#9733; 7d",
+    "scopes": [
+      "modfile"
+    ],
+    "access": [
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "opaque"
+    ]
+  },
+  {
+    "repo": "GH05TCREW/pentestagent",
+    "category": "agent",
+    "url": "https://github.com/GH05TCREW/pentestagent",
+    "description": "PentestAgent is an AI agent framework for black-box security testing, supporting bug bounty, red-team, and penetration testing workflows.",
+    "stars": "3.1k",
+    "freshness": "&#9733; 10d",
+    "scopes": [
+      "webapp",
+      "api"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "Masriyan/Claude-Code-CyberSecurity-Skill",
+    "category": "skill",
+    "url": "https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill",
+    "description": "22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat hunting, threat intelligence, purple team / adversary emulation, CSOC automation, AI/LLM security, mobile, OT/ICS, GRC, software supply chain security, and more.",
+    "stars": "425",
+    "freshness": "&#9733; 10d",
+    "scopes": [
+      "redteam",
+      "binary",
+      "llm"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "mpgn/NetExec-mcp",
+    "category": "mcp",
+    "url": "https://github.com/mpgn/NetExec-mcp",
+    "description": "NetExec MCP",
+    "stars": "78",
+    "freshness": "&#9733; 11d",
+    "scopes": [
+      "ad",
+      "network"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "zebbern/zebbern-kali-mcp",
+    "category": "mcp",
+    "url": "https://github.com/zebbern/zebbern-kali-mcp",
+    "description": "MCP server for Kali Linux penetration testing - 121 tools for AI-assisted security testing - Giving Agents access to full pentesting tools",
+    "stars": "47",
+    "freshness": "&#9733; 12d",
+    "scopes": [
+      "network",
+      "webapp",
+      "recon"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "trilwu/secskills",
+    "category": "skill",
+    "url": "https://github.com/trilwu/secskills",
+    "description": "Transform Claude Code into your personal security engineer",
+    "stars": "143",
+    "freshness": "&#9733; 13d",
+    "scopes": [
+      "redteam",
+      "code"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "SpecterOps/skills",
+    "category": "skill",
+    "url": "https://github.com/SpecterOps/skills",
+    "description": "A marketplace for LLM skills",
+    "stars": "628",
+    "freshness": "&#9733; 14d",
+    "scopes": [
+      "ad",
+      "binary",
+      "code",
+      "entra",
+      "network",
+      "recon",
+      "redteam",
+      "social",
+      "webapp"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "binaries",
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "CSPF-Founder/red-clippy",
+    "category": "mcp",
+    "url": "https://github.com/CSPF-Founder/red-clippy",
+    "description": "open-source pentest management built to be operated by an AI agent",
+    "stars": "28",
+    "freshness": "&#9733; 16d",
+    "scopes": [
+      "redteam",
+      "logging"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "mmaitre314/picklescan",
+    "category": "scanner",
+    "url": "https://github.com/mmaitre314/picklescan",
+    "description": "Security scanner detecting Python Pickle files performing suspicious actions",
+    "stars": "423",
+    "freshness": "&#9733; 16d",
+    "scopes": [
+      "modfile"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "PurpleAILAB/Decepticon",
+    "category": "agent",
+    "url": "https://github.com/PurpleAILAB/Decepticon",
+    "description": "Autonomous Hacking Agent for Red Team",
+    "stars": "5.5k",
+    "freshness": "&#9733; 18d",
+    "scopes": [
+      "redteam",
+      "network",
+      "webapp"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "PortSwigger/mcp-server",
+    "category": "mcp",
+    "url": "https://github.com/PortSwigger/mcp-server",
+    "description": "MCP Server for Burp",
+    "stars": "1.2k",
+    "freshness": "&#9733; 20d",
+    "scopes": [
+      "webapp",
+      "api"
+    ],
+    "access": [],
+    "host": [
+      "binaries"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "MythicAgents/Sage",
+    "category": "agent",
+    "url": "https://github.com/MythicAgents/Sage",
+    "description": "Sage is a virtual Mythic agent that that uses an AI agentic system to operate Mythic and Mythic agents running on compromised hosts.",
+    "stars": "25",
+    "freshness": "&#9733; 22d",
+    "scopes": [
+      "redteam",
+      "ad"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "ADScanPro/Claude-AD",
+    "category": "skill",
+    "url": "https://github.com/ADScanPro/Claude-AD",
+    "description": "Active Directory pentest methodology for Claude Code: skills, agents and slash commands for internal AD red-team work (Kerberoasting, ADCS ESC1-17, DCSync, ACL abuse, NTLM relay, delegation), with per-technique OPSEC/telemetry notes. Drives netexec, impacket, certipy, bloodyAD, BloodHound CE.",
+    "stars": "201",
+    "freshness": "&#9733; 24d",
+    "scopes": [
+      "ad"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "confident-ai/deepteam",
+    "category": "scanner",
+    "url": "https://github.com/confident-ai/deepteam",
+    "description": "DeepTeam is a framework to red team LLMs and AI agents.",
+    "stars": "2.8k",
+    "freshness": "&#9733; 27d",
+    "scopes": [
+      "llm",
+      "agentic"
+    ],
+    "access": [],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "mwnickerson/bloodhound_mcp",
+    "category": "mcp",
+    "url": "https://github.com/mwnickerson/bloodhound_mcp",
+    "description": "A Model Context Protocol (MCP) server to converse with data in Bloodhound",
+    "stars": "131",
+    "freshness": "&#9733; 29d",
+    "scopes": [
+      "ad"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "0xSteph/pentest-ai-agents",
+    "category": "skill",
+    "url": "https://github.com/0xSteph/pentest-ai-agents",
+    "description": "Turn Claude Code into your offensive security research assistant. Specialized AI subagents for authorized penetration testing plan engagements, analyze recon, research exploits, build detections, audit STIGs, and write reports.",
+    "stars": "2.2k",
+    "freshness": "32d",
+    "scopes": [
+      "redteam",
+      "recon"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "bugbasesecurity/pentest-copilot",
+    "category": "agent",
+    "url": "https://github.com/bugbasesecurity/pentest-copilot",
+    "description": "Pentest Copilot is an AI-powered browser based ethical hacking assistant tool designed to streamline pentesting workflows.",
+    "stars": "1.5k",
+    "freshness": "34d",
+    "scopes": [
+      "webapp"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "Nightlysec/nightly",
+    "category": "agent",
+    "url": "https://github.com/Nightlysec/nightly",
+    "description": "Autonomous AI penetration testing agent",
+    "stars": "1",
+    "freshness": "35d",
+    "scopes": [
+      "webapp",
+      "api",
+      "code"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "0x4m4/hexstrike-ai",
+    "category": "mcp",
+    "url": "https://github.com/0x4m4/hexstrike-ai",
+    "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capabilities.",
+    "stars": "12k",
+    "freshness": "45d",
+    "scopes": [
+      "webapp",
+      "network",
+      "recon",
+      "binary"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "NeoTheCapt/RedteamAgent",
+    "category": "agent",
+    "url": "https://github.com/NeoTheCapt/RedteamAgent",
+    "description": "An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit → report workflow, with containerized tools and resumable state.",
+    "stars": "132",
+    "freshness": "46d",
+    "scopes": [
+      "webapp",
+      "redteam"
+    ],
+    "access": [
+      "credentials"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "GreyDGL/PentestGPT",
+    "category": "agent",
+    "url": "https://github.com/GreyDGL/PentestGPT",
+    "description": "Automated Penetration Testing Agentic Framework Powered by Large Language Models",
+    "stars": "16k",
+    "freshness": "65d",
+    "scopes": [
+      "webapp",
+      "network",
+      "recon"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "cettocdx/rift",
+    "category": "agent",
+    "url": "https://github.com/cettocdx/rift",
+    "description": "RIFT - Autonomous AI Penetration Testing Agent",
+    "stars": "11",
+    "freshness": "85d",
+    "scopes": [
+      "webapp",
+      "network"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "binaries",
+      "installs"
+    ],
+    "unseen": [
+      "calls out"
+    ]
+  },
+  {
+    "repo": "mayank-dev-15/AI-Pentest-Agent",
+    "category": "agent",
+    "url": "https://github.com/mayank-dev-15/AI-Pentest-Agent",
+    "description": "Autonomous AI penetration testing agent with scanning, reconnaissance, and exploitation modules",
+    "stars": "3",
+    "freshness": "86d",
+    "scopes": [
+      "webapp",
+      "recon"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "capture0x/AdStrike",
+    "category": "agent",
+    "url": "https://github.com/capture0x/AdStrike",
+    "description": "AI-powered modular Active Directory red-team framework for authorized penetration testing, AD enumeration, attack-path analysis,   Kerberos/ADCS workflows, reporting, operator automation, and MCP server integration.",
+    "stars": "354",
+    "freshness": "98d",
+    "scopes": [
+      "ad"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "briiirussell/cybersecurity-skills",
+    "category": "skill",
+    "url": "https://github.com/briiirussell/cybersecurity-skills",
+    "description": "Cybersecurity skills for AI coding agents (Claude Code, Cursor, Codex)",
+    "stars": "393",
+    "freshness": "113d",
+    "scopes": [
+      "recon",
+      "webapp"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "chetstriker/LLMtary",
+    "category": "agent",
+    "url": "https://github.com/chetstriker/LLMtary",
+    "description": "Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal &amp; external targets. Supports local AI (Ollama, LM Studio) and cloud models (Claude, GPT-4, Gemini). Linux · macOS · Windows",
+    "stars": "35",
+    "freshness": "159d",
+    "scopes": [
+      "recon",
+      "webapp"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "FuzzingLabs/mcp-security-hub",
+    "category": "mcp",
+    "url": "https://github.com/FuzzingLabs/mcp-security-hub",
+    "description": "A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.",
+    "stars": "791",
+    "freshness": "162d",
+    "scopes": [
+      "network",
+      "webapp",
+      "binary"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "aliasrobotics/cai",
+    "category": "agent",
+    "url": "https://github.com/aliasrobotics/cai",
+    "description": "Cybersecurity AI (CAI), the framework for AI Security",
+    "stars": "9.8k",
+    "freshness": "archived",
+    "scopes": [
+      "network",
+      "webapp",
+      "recon"
+    ],
+    "access": [
+      "root",
+      "credentials"
+    ],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "cyproxio/mcp-for-security",
+    "category": "mcp",
+    "url": "https://github.com/cyproxio/mcp-for-security",
+    "description": "MCP for Security: A collection of Model Context Protocol servers for popular security tools like SQLMap, FFUF, NMAP, Masscan and more. Integrate security testing and penetration testing into AI workflows.",
+    "stars": "631",
+    "freshness": "archived",
+    "scopes": [
+      "webapp",
+      "network",
+      "recon"
+    ],
+    "access": [],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "Wh0am123/MCP-Kali-Server",
+    "category": "mcp",
+    "url": "https://github.com/Wh0am123/MCP-Kali-Server",
+    "description": "MCP configuration to connect AI agent to a Linux machine.",
+    "stars": "826",
+    "freshness": "184d",
+    "scopes": [
+      "network",
+      "webapp"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "protectai/modelscan",
+    "category": "scanner",
+    "url": "https://github.com/protectai/modelscan",
+    "description": "Protection against Model Serialization Attacks",
+    "stars": "774",
+    "freshness": "211d",
+    "scopes": [
+      "modfile"
+    ],
+    "access": [
+      "credentials"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "cyberark/FuzzyAI",
+    "category": "scanner",
+    "url": "https://github.com/cyberark/FuzzyAI",
+    "description": "A powerful tool for automated LLM fuzzing. It is designed to help developers and security researchers identify and mitigate potential jailbreaks in their LLM APIs.",
+    "stars": "1.6k",
+    "freshness": "223d",
+    "scopes": [
+      "llm"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "GH05TCREW/MetasploitMCP",
+    "category": "mcp",
+    "url": "https://github.com/GH05TCREW/MetasploitMCP",
+    "description": "MCP Server for Metasploit",
+    "stars": "728",
+    "freshness": "224d",
+    "scopes": [
+      "network"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "mbrg/power-pwn",
+    "category": "scanner",
+    "url": "https://github.com/mbrg/power-pwn",
+    "description": "An offensive/defense security toolset for discovery, recon and ethical assessment of AI Agents",
+    "stars": "1.2k",
+    "freshness": "270d",
+    "scopes": [
+      "cloud",
+      "llm"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "utkusen/promptmap",
+    "category": "scanner",
+    "url": "https://github.com/utkusen/promptmap",
+    "description": "a security scanner for custom LLM applications",
+    "stars": "1.3k",
+    "freshness": "290d",
+    "scopes": [
+      "llm"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "splx-ai/agentic-radar",
+    "category": "scanner",
+    "url": "https://github.com/splx-ai/agentic-radar",
+    "description": "A security scanner for your LLM agentic workflows",
+    "stars": "1.1k",
+    "freshness": "294d",
+    "scopes": [
+      "agentic"
+    ],
+    "access": [],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "Azure/counterfit",
+    "category": "scanner",
+    "url": "https://github.com/Azure/counterfit",
+    "description": "a CLI that provides a generic automation layer for assessing the security of ML models",
+    "stars": "939",
+    "freshness": "1.2y",
+    "scopes": [
+      "llm"
+    ],
+    "access": [
+      "root"
+    ],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "LaurieWired/GhidraMCP",
+    "category": "mcp",
+    "url": "https://github.com/LaurieWired/GhidraMCP",
+    "description": "MCP Server for Ghidra",
+    "stars": "10k",
+    "freshness": "1.2y",
+    "scopes": [
+      "binary"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "MorDavid/BloodHound-MCP-AI",
+    "category": "mcp",
+    "url": "https://github.com/MorDavid/BloodHound-MCP-AI",
+    "description": "BloodHound-MCP-AI is integration that connects BloodHound with AI through Model Context Protocol, allowing security professionals to analyze Active Directory attack paths using natural language instead of complex Cypher queries.",
+    "stars": "376",
+    "freshness": "1.3y",
+    "scopes": [
+      "ad"
+    ],
+    "access": [],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  },
+  {
+    "repo": "atomicchonk/roadrecon_mcp_server",
+    "category": "mcp",
+    "url": "https://github.com/atomicchonk/roadrecon_mcp_server",
+    "description": "Claude MCP server to perform analysis on ROADrecon data",
+    "stars": "52",
+    "freshness": "1.5y",
+    "scopes": [
+      "entra",
+      "cloud"
+    ],
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "repo": "protectai/vulnhuntr",
+    "category": "scanner",
+    "url": "https://github.com/protectai/vulnhuntr",
+    "description": "Zero shot vulnerability discovery using LLMs",
+    "stars": "2.8k",
+    "freshness": "1.6y",
+    "scopes": [
+      "code"
+    ],
+    "access": [],
+    "host": [
+      "installs"
+    ],
+    "unseen": []
+  }
+]
