@@ -321,15 +321,12 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
             o += [
                 f"### {c} · {cat_zh}",
                 "",
-                f"_{cat_dz}_" if cat_dz else "",
+                f"_{cat_dz}_ · {len(by_cat[c])} 个" if cat_dz else f"_{len(by_cat[c])} 个",
                 "",
-                "| 项目 | Stars | 更新 | 描述 | 作用范围/特征 |",
-                "|:---|---:|:---|:---|:---|",
             ]
             for t in by_cat[c]:
-                proj = f"[{t['name']}](tools/{t['slug']}.zh.md)<br><sub>{t['owner']}</sub>"
-                desc = t["description"].replace("|", "\\|")
-                o.append(f"| {proj} | {t['stars'] or '—'} | {t['freshness']} | {desc} | {badges_zh(t)} |")
+                proj = f"- [{t['name']}](tools/{t['slug']}.zh.md) — {t['stars'] or '—'}"
+                o.append(proj)
             o.append("")
         o += [
             "---",
@@ -386,15 +383,12 @@ def directory_readme(data: list[dict], lang: str, generated_at: str) -> str:
         o += [
             f"### {c} · {cat_en}",
             "",
-            f"_{cat_de}_" if cat_de else "",
+            f"_{cat_de}_ · {len(by_cat[c])} tools" if cat_de else f"_{len(by_cat[c])} tools",
             "",
-            "| Project | Stars | Updated | Description | Scopes & traits |",
-            "|:---|---:|:---|:---|:---|",
         ]
         for t in by_cat[c]:
-            proj = f"[{t['name']}](tools/{t['slug']}.md)<br><sub>{t['owner']}</sub>"
-            desc = t["description"].replace("|", "\\|")
-            o.append(f"| {proj} | {t['stars'] or '—'} | {t['freshness']} | {desc} | {badges_en(t)} |")
+            proj = f"- [{t['name']}](tools/{t['slug']}.md) — {t['stars'] or '—'}"
+            o.append(proj)
         o.append("")
     o += [
         "---",
