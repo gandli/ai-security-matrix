@@ -7,6 +7,9 @@
 [![数据来源](https://img.shields.io/badge/数据来源-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)
 ![项目数](https://img.shields.io/badge/收录项目-65-2fe3a0?style=flat-square&labelColor=002523)
 ![自动同步](https://img.shields.io/badge/每日自动同步-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-gandli%2Fai--security--matrix-2c85ff?style=flat-square)](https://deepwiki.com/gandli/ai-security-matrix)
+[![Zread](https://img.shields.io/badge/Zread-AI%20code%20wiki-009798?style=flat-square)](https://zread.ai/gandli/ai-security-matrix)
+[![CodeWiki](https://img.shields.io/badge/CodeWiki-Google-4285f4?style=flat-square)](https://codewiki.google/github.com/gandli/ai-security-matrix)
 [![English](https://img.shields.io/badge/Language-English-9ca6a7?style=flat-square&labelColor=002523)](README.md)
 
 </div>

@@ -1,0 +1,42 @@
+---
+import siteData from "@/data/site.json";
+
+interface Props {
+  lang?: "en" | "zh";
+}
+
+const { lang = "en" } = Astro.props;
+const isZh = lang === "zh";
+
+const total = siteData.length;
+const categoryCount = new Set(siteData.map((item) => item.entry.category)).size;
+const scopeCount = new Set(siteData.flatMap((item) => item.entry.scope || [])).size;
+---
+
+<section class="hero" aria-label={isZh ? "站点概览" : "Site overview"}>
+  <h2 class="hero-headline">
+    {isZh ? (
+      <>
+        AI 安全工具，<br />
+        按<em>它对机器做了什么</em>排序。
+      </>
+    ) : (
+      <>
+        AI security tooling,<br />
+        sorted by <em>what it does to your machine</em>.
+      </>
+    )}
+  </h2>
+
+  <p class="hero-lede">
+    {isZh
+      ? `${total} 款工具，覆盖 ${categoryCount} 个类别、${scopeCount} 个测试范围。每条记录每日核验活跃度，并标注它会安装什么、索取什么权限、读取哪些凭据。`
+      : `${total} tools across ${categoryCount} categories and ${scopeCount} testing scopes. Every entry is checked daily for activity, and flagged for what it installs, what privilege it asks for, and which credentials it reads.`}
+  </p>
+
+  <p class="hero-note">
+    {isZh
+      ? "不排名，不做推荐。每条记录都请自行核验后再运行。"
+      : "No rankings, no endorsements. Vet every entry yourself before you run it."}
+  </p>
+</section>
