@@ -43,6 +43,20 @@ import "@/styles/global.css";
       // theme init
       const saved = localStorage.getItem("theme");
       if (saved) document.documentElement.dataset.theme = saved;
+      // reflect current theme on icons
+      const applyThemeIcon = () => {
+        const dark = document.documentElement.dataset.theme !== "light";
+        document.querySelectorAll(".theme-icon-sun").forEach((el) => (el.style.display = dark ? "none" : ""));
+        document.querySelectorAll(".theme-icon-moon").forEach((el) => (el.style.display = dark ? "" : "none"));
+      };
+      applyThemeIcon();
+      document.getElementById("theme-btn")?.addEventListener("click", () => {
+        const cur = document.documentElement.dataset.theme;
+        const next = cur === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem("theme", next);
+        applyThemeIcon();
+      });
     </script>
   </head>
   <body>
@@ -80,15 +94,36 @@ import "@/styles/global.css";
           <a href={`${prefix}/commercial`}>{isZh ? "商业工具" : "Commercial tools"}</a>
 
           <!-- Language toggle -->
-          <div class="lang-switch">
-            <a href={isZh ? switchHref : Astro.url.pathname} class={!isZh ? "active" : ""}>EN</a>
-            <span>/</span>
-            <a href={!isZh ? switchHref : Astro.url.pathname} class={isZh ? "active" : ""}>中文</a>
-          </div>
+          <a
+            href={isZh ? switchHref : `/zh${Astro.url.pathname}`}
+            class="icon-btn"
+            aria-label={isZh ? "Switch to English" : "切换为中文"}
+            title={isZh ? "English" : "中文"}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+            <span class="icon-label">{isZh ? "EN" : "中"}</span>
+          </a>
 
           <!-- Theme toggle -->
-          <button id="theme-btn" class="btn-theme" type="button" aria-label="Toggle theme">
-            theme
+          <button id="theme-btn" class="icon-btn" type="button" aria-label={isZh ? "切换明暗主题" : "Toggle dark/light theme"} title={isZh ? "明暗主题" : "Theme"}>
+            <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
           </button>
         </nav>
       </header>
