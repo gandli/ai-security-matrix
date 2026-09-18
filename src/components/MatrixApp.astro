@@ -331,7 +331,7 @@ const cats = [
         const starsStr = formatStars(d.identity?.stars);
 
         return `
-          <tr onclick="location.href='${prefix}/tools/${slug}'">
+          <tr onclick="location.href='${prefix}tools/${slug}'">
             <td class="col-date">
               ${isAlive ? '<span class="star-mark">★</span>' : ""}
               ${idle}
@@ -342,7 +342,7 @@ const cats = [
             <td>
               <div class="tool-head">
                 <img class="owner-avatar" src="https://github.com/${owner}.png?size=40" alt="" loading="lazy" onerror="this.style.display='none'" />
-                <a class="tool-link" href="${prefix}/tools/${slug}" onclick="event.stopPropagation();">
+                <a class="tool-link" href="${prefix}tools/${slug}" onclick="event.stopPropagation();">
                   <span class="owner">${owner}/</span><span class="name">${name}</span>
                 </a>
               </div>
@@ -452,7 +452,7 @@ const cats = [
       .map((r) => {
         const repo = r.entry.repo;
         const itemScopes = new Set(r.entry.scope || []);
-        let cells = `<td style="padding: 0.4rem 1rem; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.8125rem;"><a href="${prefix}/tools/${repo.replace('/', '-')}">${repo}</a></td>`;
+        let cells = `<td style="padding: 0.4rem 1rem; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.8125rem;"><a href="${prefix}tools/${repo.replace('/', '-')}">${repo}</a></td>`;
         scopes.forEach((s) => {
           const hit = itemScopes.has(s);
           const bg = hit ? "var(--scope-pill)" : "transparent";
