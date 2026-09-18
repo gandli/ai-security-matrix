@@ -136,6 +136,24 @@ input {
   outline-offset: 2px;
 }
 
+/* Browser surfaces — color from palette */
+::selection { background: var(--raised); color: var(--alive); }
+::-webkit-selection { background: var(--raised); color: var(--alive); }
+* { caret-color: var(--alive); }
+
+/* Custom scrollbars on dark theme */
+[data-theme="dark"] ::-webkit-scrollbar { width: 8px; height: 8px; }
+[data-theme="dark"] ::-webkit-scrollbar-track { background: var(--paper-raised); }
+[data-theme="dark"] ::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: var(--rule-strong); }
+
+/* Light theme scrollbar — subtle */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--paper-raised); }
+::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--rule-strong); }
+
+
 .wrap {
   max-width: 76rem;
   margin-inline: auto;
