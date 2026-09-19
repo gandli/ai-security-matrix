@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00201e"/>
+      <stop offset="1" stop-color="#001615"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Left color bar -->
+  <rect x="0" y="0" width="8" height="630" fill="#2c85ff"/>
+
+  <!-- Matrix dots pattern -->
+  <g fill="#1c4f4c" opacity="0.65">
+    <rect x="1080" y="60" width="12" height="12" rx="2"/><rect x="1104" y="60" width="12" height="12" rx="2"/><rect x="1128" y="60" width="12" height="12" rx="2"/><rect x="1152" y="60" width="12" height="12" rx="2"/><rect x="1176" y="60" width="12" height="12" rx="2"/><rect x="1080" y="84" width="12" height="12" rx="2"/><rect x="1104" y="84" width="12" height="12" rx="2"/><rect x="1128" y="84" width="12" height="12" rx="2"/><rect x="1152" y="84" width="12" height="12" rx="2"/><rect x="1176" y="84" width="12" height="12" rx="2"/><rect x="1080" y="108" width="12" height="12" rx="2"/><rect x="1104" y="108" width="12" height="12" rx="2"/><rect x="1128" y="108" width="12" height="12" rx="2"/><rect x="1152" y="108" width="12" height="12" rx="2"/><rect x="1176" y="108" width="12" height="12" rx="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="210" font-family="IBM Plex Sans, Arial, sans-serif" font-size="68" font-weight="700" fill="#ebf7f7" letter-spacing="-1">AI Security</text>
+  <text x="80" y="290" font-family="IBM Plex Sans, Arial, sans-serif" font-size="68" font-weight="700" fill="#ff9e37" letter-spacing="-1">Matrix</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="360" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" fill="#9ca6a7">
+    <tspan>A curated, flagged, and continuously checked directory</tspan>
+  </text>
+  <text x="80" y="400" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" fill="#9ca6a7">
+    <tspan>of AI-enabled security testing tools.</tspan>
+  </text>
+
+  <!-- Stats bar -->
+  <g transform="translate(80,480)">
+    <rect x="0" y="0" width="220" height="54" rx="6" fill="#002523" stroke="#123a38"/>
+    <text x="12" y="24" font-family="IBM Plex Mono, Arial, sans-serif" font-size="12" fill="#7c8787" letter-spacing="0.5">TOOL ENTRIES</text>
+    <text x="12" y="44" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#2fe3a0">65 tools</text>
+
+    <rect x="240" y="0" width="220" height="54" rx="6" fill="#002523" stroke="#123a38"/>
+    <text x="252" y="24" font-family="IBM Plex Mono, Arial, sans-serif" font-size="12" fill="#7c8787" letter-spacing="0.5">CATEGORIES</text>
+    <text x="252" y="44" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#2c85ff">4 (agent/scanner/mcp/skill)</text>
+
+    <rect x="480" y="0" width="220" height="54" rx="6" fill="#002523" stroke="#123a38"/>
+    <text x="492" y="24" font-family="IBM Plex Mono, Arial, sans-serif" font-size="12" fill="#7c8787" letter-spacing="0.5">TESTING SCOPES</text>
+    <text x="492" y="44" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#8f8b00">15 (webapp/llm/ad/network…)</text>
+
+    <rect x="720" y="0" width="220" height="54" rx="6" fill="#002523" stroke="#123a38"/>
+    <text x="732" y="24" font-family="IBM Plex Mono, Arial, sans-serif" font-size="12" fill="#7c8787" letter-spacing="0.5">FRESHNESS</text>
+    <text x="732" y="44" font-family="IBM Plex Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#ff10a3">daily check</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="80" y="580" font-family="IBM Plex Mono, Arial, sans-serif" font-size="13" fill="#5f6d72">github.com/gandli/ai-security-matrix</text>
+</svg>
