@@ -2,15 +2,15 @@ import { defineConfig, devices } from 'playwright/test';
 
 const PORT = Number(process.env.PORT || 4321);
 const BASE = `http://localhost:${PORT}`;
-const SITE = `${BASE}/ai-security-matrix`;
 
 /**
  * The site is an Astro project deployed to a GitHub Pages *project* page, so
  * every route lives under `/ai-security-matrix/`. In production the same
  * prefix is produced by `base` in astro.config.mjs.
  *
- * Locally a dev server must already be running (`npm run dev`). In CI the
- * `webServer` block below starts one and waits for the base path to answer.
+ * Tests run against the **production build** (`astro preview`), not the dev
+ * server. The dev server's injected toolbar pollutes the DOM (extra h1s, etc.)
+ * which breaks structural assertions like `h1.last()`.
  */
 export default defineConfig({
   testDir: './e2e',
@@ -20,7 +20,9 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: process.env.CI ? [['github'], ['list'], ['html', { open: 'never' }]] : [['list']],
+  reporter: process.env.CI
+    ? [['github'], ['list'], ['html', { open: 'never' }]]
+    : [['list']],
   use: {
     baseURL: BASE,
     trace: 'on-first-retry',
@@ -36,9 +38,9 @@ export default defineConfig({
     { name: 'tablet', use: { viewport: { width: 768, height: 1024 } } },
   ],
   webServer: {
-    command: `npm run dev -- --host 0.0.0.0 --port ${PORT}`,
-    url: `${SITE}/`,
+    command: `npm run build && npx astro preview --host 0.0.0.0 --port ${PORT}`,
+    url: `${BASE}/ai-security-matrix/`,
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 180_000,
   },
 });
