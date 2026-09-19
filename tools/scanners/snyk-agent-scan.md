@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 21 |
-| **Size** | 58,076 lines · 145 |
+| **Size** | 59,810 lines · 145 |
 | **Source** | <https://github.com/snyk/agent-scan> |
 | **Scopes & traits** | `agentic` *root* *credentials* _installs_ |
 

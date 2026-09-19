@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 462,420 lines · 1685 |
+| **Size** | 468,132 lines · 1702 |
 | **Source** | <https://github.com/microsoft/PyRIT> |
 | **Scopes & traits** | `llm` *root* _installs_ ~calls out~ ~opaque~ |
 

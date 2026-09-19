@@ -2,7 +2,7 @@
 
 _Autonomous / multi-step AI orchestration · 22 tools_
 
-- [strix](usestrix-strix.md) — 63k · Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.
+- [strix](usestrix-strix.md) — 64k · Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.
 - [pentagi](vxcontrol-pentagi.md) — 25k · Fully autonomous AI Agents system capable of performing complex penetration testing tasks
 - [PentestGPT](greydgl-pentestgpt.md) — 16k · Automated Penetration Testing Agentic Framework Powered by Large Language Models
 - [cai](aliasrobotics-cai.md) — 9.8k · Cybersecurity AI (CAI), the framework for AI Security
@@ -18,8 +18,8 @@ _Autonomous / multi-step AI orchestration · 22 tools_
 - [xalgorix](xalgorix-xalgorix.md) — 1.1k · Autonomous AI pentesting agents — real-time reconnaissance, vulnerability detection, and exploitation orchestration. Go + TypeScript.
 - [AdStrike](capture0x-adstrike.md) — 354 · AI-powered modular Active Directory red-team framework for authorized penetration testing, AD enumeration, attack-path analysis,   Kerberos/ADCS workflows,
 - [RedteamAgent](neothecapt-redteamagent.md) — 132 · An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit →
-- [ares](dreadnode-ares.md) — 77 · Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling re
-- [LLMtary](chetstriker-llmtary.md) — 36 · Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal & external targets. Suppo
+- [ares](dreadnode-ares.md) — 78 · Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling re
+- [LLMtary](chetstriker-llmtary.md) — 37 · Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal & external targets. Suppo
 - [Sage](mythicagents-sage.md) — 25 · Sage is a virtual Mythic agent that that uses an AI agentic system to operate Mythic and Mythic agents running on compromised hosts.
 - [rift](cettocdx-rift.md) — 11 · RIFT - Autonomous AI Penetration Testing Agent
 - [AI-Pentest-Agent](mayank-dev-15-ai-pentest-agent.md) — 3 · Autonomous AI penetration testing agent with scanning, reconnaissance, and exploitation modules
