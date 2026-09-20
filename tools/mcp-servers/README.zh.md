@@ -12,7 +12,7 @@ _模型上下文协议（MCP）工具服务器 · 14 个_
 - [mcp-for-security](cyproxio-mcp-for-security.zh.md) — 631 · 安全版 MCP：一系列面向 SQLMap、FFUF、NMAP、Masscan 等流行安全工具的模型上下文协议服务器，将安全与渗透测试集成进 AI 工作流。
 - [BloodHound-MCP-AI](mordavid-bloodhound-mcp-ai.zh.md) — 376 · BloodHound-MCP-AI 通过模型上下文协议将 BloodHound 与 AI 连接，让安全从业者用自然语言而非复杂的 Cypher 查询分析 Active Directory 攻击路径。
 - [bloodhound_mcp](mwnickerson-bloodhound_mcp.zh.md) — 134 · 一个用于与 BloodHound 数据对话的模型上下文协议（MCP）服务器。
-- [NetExec-mcp](mpgn-netexec-mcp.zh.md) — 79 · NetExec 的 MCP。
+- [NetExec-mcp](mpgn-netexec-mcp.zh.md) — 80 · NetExec 的 MCP。
 - [roadrecon_mcp_server](atomicchonk-roadrecon_mcp_server.zh.md) — 52 · 用于分析 ROADrecon 数据的 Claude MCP 服务器。
-- [zebbern-kali-mcp](zebbern-zebbern-kali-mcp.zh.md) — 47 · 面向 Kali Linux 渗透测试的 MCP 服务器——121 个工具用于 AI 辅助安全测试，为智能体提供完整的渗透工具集。
+- [zebbern-kali-mcp](zebbern-zebbern-kali-mcp.zh.md) — 48 · 面向 Kali Linux 渗透测试的 MCP 服务器——121 个工具用于 AI 辅助安全测试，为智能体提供完整的渗透工具集。
 - [red-clippy](cspf-founder-red-clippy.zh.md) — 28 · 为 AI 智能体操作而构建的开源渗透测试管理工具。

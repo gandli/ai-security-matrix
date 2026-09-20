@@ -6,8 +6,8 @@ _Autonomous / multi-step AI orchestration · 22 tools_
 - [pentagi](vxcontrol-pentagi.md) — 25k · Fully autonomous AI Agents system capable of performing complex penetration testing tasks
 - [PentestGPT](greydgl-pentestgpt.md) — 16k · Automated Penetration Testing Agentic Framework Powered by Large Language Models
 - [cai](aliasrobotics-cai.md) — 9.8k · Cybersecurity AI (CAI), the framework for AI Security
-- [CyberStrikeAI](aipentest-cyberstrikeai.md) — 6.9k · The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves
-- [Decepticon](purpleailab-decepticon.md) — 5.5k · Autonomous Hacking Agent for Red Team
+- [CyberStrikeAI](aipentest-cyberstrikeai.md) — 7.0k · The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves
+- [Decepticon](purpleailab-decepticon.md) — 5.6k · Autonomous Hacking Agent for Red Team
 - [pentestagent](gh05tcrew-pentestagent.md) — 3.1k · PentestAgent is an AI agent framework for black-box security testing, supporting bug bounty, red-team, and penetration testing workflows.
 - [Pentest-Swarm-AI](armur-ai-pentest-swarm-ai.md) — 2.5k · Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning
 - [redamon](samugit83-redamon.md) — 2.5k · An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero

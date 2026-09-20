@@ -9,9 +9,9 @@
 | **Last updated** | today |
 | **Licence** | BSD-2 |
 | **Maintainers** | 7 |
-| **Size** | 244,866 lines · 606 |
+| **Size** | 273,525 lines · 677 |
 | **Source** | <https://github.com/berylliumsec/nebula> |
-| **Scopes & traits** | `network` `recon` *root* ~calls out~ |
+| **Scopes & traits** | `network` `recon` *root* *credentials* ~calls out~ |
 
 ## Before running it
 
@@ -19,7 +19,7 @@
 |---|---|
 | Ships compiled binaries you did not build | **no** |
 | Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
+| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
 | Installs software on host | **—** |
 | Calls an endpoint the project does not own | **yes** |
 | Contains long encoded blobs you cannot read | **no** |

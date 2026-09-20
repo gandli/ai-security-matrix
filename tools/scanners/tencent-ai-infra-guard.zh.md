@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `scanner` |
 | **Stars** | 6.5k |
-| **最近更新** | 1d |
+| **最近更新** | today |
 | **许可证** | Apache-2.0 |
-| **维护者** | 56 |
-| **规模** | 152,998 lines · 960 |
+| **维护者** | 57 |
+| **规模** | 153,437 lines · 963 |
 | **源码** | <https://github.com/Tencent/AI-Infra-Guard> |
 | **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *root* / *credentials* |
 

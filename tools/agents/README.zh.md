@@ -6,8 +6,8 @@ _自主运行或多步骤编排的 AI 工具 · 22 个_
 - [pentagi](vxcontrol-pentagi.zh.md) — 25k · 完全自主的 AI 智能体系统，能够执行复杂的渗透测试任务。
 - [PentestGPT](greydgl-pentestgpt.zh.md) — 16k · 由大语言模型驱动的自动化渗透测试智能体框架。
 - [cai](aliasrobotics-cai.zh.md) — 9.8k · Cybersecurity AI (CAI)，面向 AI 安全的框架。
-- [CyberStrikeAI](aipentest-cyberstrikeai.zh.md) — 6.9k · AI 原生网络安全的行动系统——让意图变为受控执行、证据变为运行记忆，并使每次操作都优化下一次。
-- [Decepticon](purpleailab-decepticon.zh.md) — 5.5k · 面向红队的自主攻击智能体。
+- [CyberStrikeAI](aipentest-cyberstrikeai.zh.md) — 7.0k · AI 原生网络安全的行动系统——让意图变为受控执行、证据变为运行记忆，并使每次操作都优化下一次。
+- [Decepticon](purpleailab-decepticon.zh.md) — 5.6k · 面向红队的自主攻击智能体。
 - [pentestagent](gh05tcrew-pentestagent.zh.md) — 3.1k · PentestAgent 是面向黑盒安全测试的 AI 智能体框架，支持漏洞赏金、红队与渗透测试工作流。
 - [Pentest-Swarm-AI](armur-ai-pentest-swarm-ai.zh.md) — 2.5k · 用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用与报告专家——支持漏洞赏金、持续监控与 CTF 模式。基于 Go 与 7+ 原生安全工具构建。
 - [redamon](samugit83-redamon.zh.md) — 2.5k · AI 驱动的智能体化红队框架，从零人工干预地自动化进攻性安全作战，从侦察到利用再到后渗透。
