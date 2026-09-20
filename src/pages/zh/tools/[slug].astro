@@ -206,7 +206,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
         <h2>标签</h2>
         <div class="pill-row">
           {d.identity.topics.map((t: string) => (
-            <a class="topic-tag" href={url(`topic/${t}/`, "zh")}>#{t}</a>
+            <a class="pill pill-scope pill-link" href={url(`topic/${t}/`, "zh")}>{t}</a>
           ))}
         </div>
       </section>
@@ -246,30 +246,18 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
   }
   .cat-chip {
     display: inline-block;
+    white-space: nowrap;
+    border-radius: 9999px;
     padding: 0.125rem 0.625rem;
     font-weight: 600;
-    font-size: 0.875rem;
-    color: #001615;
-    background: var(--chip);
-    border-radius: 6px;
-    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: var(--alive);
+    background: color-mix(in srgb, var(--chip) 28%, transparent);
+    transition: box-shadow 0.15s ease, background-color 0.15s ease;
   }
-  .topic-tag {
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    color: var(--stale);
-    text-decoration: none;
-    padding: 0.125rem 0.5rem;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
-  }
-  .topic-tag:hover {
-    color: #001615;
-    background: var(--scope-ink);
-    border-color: var(--scope-ink);
+  .cat-chip:hover {
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--scope-ink) 28%, transparent);
+    background: color-mix(in srgb, var(--chip) 42%, transparent);
   }
 </style>
