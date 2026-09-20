@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+import { FLAG_FAMILY } from "@/lib/taxonomy";
+
+export function getStaticPaths() {
+  const flags = [...new Set(siteData.flatMap((i) => Object.keys(i.derived?.risk || {}).filter((k) => i.derived.risk[k])))].sort();
+  return flags.map((flag) => ({ params: { flag: flag.replace(/\s+/g, "-").toLowerCase() }, props: { flag } }));
+}
+
+const { flag } = Astro.props;
+const flags = Object.keys(siteData[0]?.derived?.risk || {});
+const tools = siteData.filter((i) => {
+  const risks = i.derived?.risk || {};
+  return risks[flag] || risks[Object.keys(risks).find((k) => k.replace(/\s+/g, "-").toLowerCase() === flag) || ""];
+});
+const FLAG_EN: Record<string, string> = { binaries: "Ships binaries", installs: "Installs software", root: "Asks for root", privilege: "Requests privilege", credentials: "Reads credentials", "calls out": "Calls external endpoints", "calls-out": "Calls external endpoints", phones_home: "Phones home", opaque: "Contains opaque code" };
+const title = FLAG_EN[flag] || flag;
+const family = FLAG_FAMILY[flag] || "host";
+const desc = `${title} — AI security tools flagged for "${title.toLowerCase()}". Data from aisecuritymatrix.com.`;
+---
+
+<Layout lang="en" title={`Flag: ${flag} — ${tools.length} tools`} description={desc}>
+  <TermList title={title} description={desc} items={tools} count={tools.length} lang="en" anchorPrefix="flag" />
+</Layout>

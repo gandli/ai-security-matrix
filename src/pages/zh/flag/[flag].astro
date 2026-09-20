@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+import { FLAG_FAMILY } from "@/lib/taxonomy";
+
+export function getStaticPaths() {
+  const flags = [...new Set(siteData.flatMap((i) => Object.keys(i.derived?.risk || {}).filter((k) => i.derived.risk[k])))].sort();
+  return flags.map((flag) => ({ params: { flag: flag.replace(/\s+/g, "-").toLowerCase() }, props: { flag } }));
+}
+
+const { flag } = Astro.props;
+const tools = siteData.filter((i) => {
+  const risks = i.derived?.risk || {};
+  return risks[flag] || risks[Object.keys(risks).find((k) => k.replace(/\s+/g, "-").toLowerCase() === flag) || ""];
+});
+const FLAG_ZH: Record<string, string> = { binaries: "分发二进制", installs: "安装软件", install: "安装软件", root: "要求 root", privilege: "请求提权", credentials: "读取凭证", "calls out": "外部调用", "calls-out": "外部调用", phones_home: "回连上报", opaque: "不透明代码块" };
+const title = FLAG_ZH[flag.replace(/-/g, " ")] || FLAG_ZH[flag] || flag;
+const desc = `${title} — 标记为"${title}"的 AI 安全工具。数据来自 aisecuritymatrix.com。`;
+---
+
+<Layout lang="zh" title={`风险标记：${flag} — ${tools.length} 款工具`} description={desc}>
+  <TermList title={title} description={desc} items={tools} count={tools.length} lang="zh" anchorPrefix="flag" />
+</Layout>

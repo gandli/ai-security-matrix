@@ -248,6 +248,13 @@ input {
   display: inline-flex;
   align-items: center;
 }
+/* In the mobile 2-column grid, stretch each link across its cell so EN and ZH
+   occupy identical widths instead of shrinking to their text length. */
+@media (max-width: 640px) {
+  .site-nav .nav-links a {
+    display: flex;
+  }
+}
 .site-nav .nav-actions {
   display: flex;
   align-items: center;
@@ -661,10 +668,16 @@ input {
     align-items: center;
   }
   .site-nav .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.25rem 0.75rem;
+  }
+  .site-nav .nav-links a {
+    justify-content: flex-start;
+    padding-block: 0.25rem;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem 1rem;
   }
   .site-nav .nav-actions {
     justify-content: center;

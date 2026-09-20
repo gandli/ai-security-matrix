@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+
+export function getStaticPaths() {
+  const scopes = [...new Set(siteData.flatMap((i) => i.entry.scope || []))].sort();
+  return scopes.map((scope) => ({ params: { scope }, props: { scope } }));
+}
+
+const { scope } = Astro.props;
+const tools = siteData.filter((i) => (i.entry.scope || []).includes(scope));
+const SCOPE_EN: Record<string, string> = { webapp: "Web apps", api: "API", code: "Code", llm: "LLM", agentic: "Agentic AI", network: "Network", ad: "Ads", cloud: "Cloud", entra: "Entra ID", binary: "Binary", logging: "Logging", modfile: "Model file", recon: "Recon", redteam: "Red team", social: "Social engineering" };
+const title = SCOPE_EN[scope] || scope;
+const desc = `${title} testing — AI security tools that test ${title.toLowerCase()}. Curated from aisecuritymatrix.com.`;
+---
+
+<Layout lang="en" title={`Scope: ${scope} — ${tools.length} tools`} description={desc}>
+  <TermList title={title} description={desc} items={tools} count={tools.length} lang="en" anchorPrefix="scope" />
+</Layout>

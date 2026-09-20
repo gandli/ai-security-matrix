@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+
+export function getStaticPaths() {
+  const cats = [...new Set(siteData.map((i) => i.entry.category))].sort();
+  return cats.map((cat) => ({ params: { cat }, props: { cat } }));
+}
+
+const { cat } = Astro.props;
+const tools = siteData.filter((i) => i.entry.category === cat);
+const EN_TITLES: Record<string, string> = { agent: "AI red-team agents", scanner: "Scanner tools", mcp: "MCP tools", skill: "Skill tools" };
+const title = EN_TITLES[cat] || cat;
+const desc = `${title} — AI-enabled security testing tools classified as "${cat}". Curated from aisecuritymatrix.com.`;
+---
+
+<Layout lang="en" title={`Category: ${cat} — ${tools.length} tools`} description={desc}>
+  <TermList title={title} description={desc} items={tools} count={tools.length} lang="en" anchorPrefix="category" />
+</Layout>

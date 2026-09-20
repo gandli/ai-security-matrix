@@ -1,0 +1,151 @@
+---
+/**
+ * TermList — render a paginated list of tools grouped by coverage,
+ * styled like the static index cards on aisecuritymatrix.com.
+ * Props:
+ *   - items: { owner, name, stars, description }[] from site.json filtered by term
+ *   - count: total (for breadcrumbs)
+ *   - lang: en | zh
+ */
+import { url, home } from "@/lib/url";
+
+interface Item {
+  entry: { repo: string };
+  derived?: { identity?: { stars?: number; description?: string } };
+}
+
+export interface Props {
+  title: string;
+  description: string;
+  items: Item[];
+  count: number;
+  lang: "en" | "zh";
+  anchorPrefix: string; // e.g., "category", "scope", "flag"
+}
+
+const { title, description, items, count, lang, anchorPrefix } = Astro.props;
+const isZh = lang === "zh";
+
+function starLabel(s?: number): string {
+  if (!s) return "";
+  return s >= 1000 ? `${(s / 1000).toFixed(1)}k` : String(s);
+}
+
+function descShort(d?: string): string {
+  return (d || "").slice(0, 140);
+}
+
+function rowItem(item: Item): { label: string; href: string; desc: string; stars: number } {
+  const [owner, name] = item.entry.repo.split("/");
+  return {
+    label: `${owner}/${name}`,
+    href: `/ai-security-matrix/${lang === "zh" ? "zh/" : ""}tools/${item.entry.repo.replace("/", "-")}/`,
+    desc: descShort(item.derived?.identity?.description || ""),
+    stars: item.derived?.identity?.stars || 0,
+  };
+}
+
+const rows = items.map(rowItem);
+---
+
+<section class="term-list">
+  <header>
+    <h2 class="term-headline">{title}</h2>
+    <p class="term-sub">{count} 款工具 · <a href={home(lang)}>返回目录</a></p>
+  </header>
+
+  <ul class="tool-card-grid">
+    {rows.map((r) => (
+      <li class="tool-card-link">
+        <a href={r.href}>
+          <div class="card-top">
+            <span class="repo-name">{r.label}</span>
+            {r.stars > 0 && <span class="star-badge">★ {r.stars.toLocaleString()}</span>}
+          </div>
+          <div class="card-desc">{r.desc}</div>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <footer>
+    {rows.length === 0 ? <em>{isZh ? "暂无相关工具。" : "No tools yet."}</em> : null}
+  </footer>
+</section>
+
+<style>
+  .term-list {
+    max-width: 980px;
+    margin: 3rem auto;
+  }
+  .term-headline {
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    color: #ebf7f7;
+    letter-spacing: -0.5px;
+  }
+  .term-sub {
+    margin: 0 0 1.25rem 0;
+    font-size: 0.9375rem;
+    color: var(--stale);
+  }
+  .term-sub a {
+    color: var(--cat-scanner);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+  .term-list ul, .term-list li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tool-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.75rem;
+  }
+  .tool-card-link a {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 0.875rem;
+    min-height: 6rem;
+    position: relative;
+    transition: box-shadow 0.15s ease;
+    text-decoration: none;
+  }
+  .tool-card-link a:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  .repo-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ebf7f7;
+  }
+  .star-badge {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--dead);
+    background: #002523;
+    padding: 0.125rem 0.5rem;
+    border-radius: 999px;
+  }
+  .card-desc {
+    font-size: 0.875rem;
+    color: #8da4a3;
+    line-height: 1.4;
+  }
+  .term-list footer em {
+    font-size: 0.875rem;
+    color: var(--dead);
+    font-style: italic;
+  }
+</style>

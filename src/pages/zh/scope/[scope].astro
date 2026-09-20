@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+import { SCOPE_ZH } from "@/lib/taxonomy";
+
+export function getStaticPaths() {
+  const scopes = [...new Set(siteData.flatMap((i) => i.entry.scope || []))].sort();
+  return scopes.map((scope) => ({ params: { scope }, props: { scope } }));
+}
+
+const { scope } = Astro.props;
+const tools = siteData.filter((i) => (i.entry.scope || []).includes(scope));
+const title = SCOPE_ZH[scope] || scope;
+const desc = `${title}测试 — 覆盖${title}的 AI 安全工具。数据来自 aisecuritymatrix.com。`;
+---
+
+<Layout lang="zh" title={`范围：${scope} — ${tools.length} 款工具`} description={desc}>
+  <TermList title={title} description={desc} items={tools} count={tools.length} lang="zh" anchorPrefix="scope" />
+</Layout>

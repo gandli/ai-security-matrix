@@ -7,6 +7,8 @@ interface Props {
   description?: string;
   lang?: Lang;
   canonical?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
 }
 
 const {
@@ -14,6 +16,8 @@ const {
   description,
   lang = "en",
   canonical,
+  ogImage: ogImageProp,
+  ogImageAlt,
 } = Astro.props;
 
 const isZh = lang === "zh";
@@ -40,7 +44,7 @@ if (isZh) {
 
 const homeHref = home(lang);
 const faviconHref = asset("favicon.svg");
-const ogImage = `https://gandli.github.io/ai-security-matrix/og-image${isZh ? ".zh" : ""}.png`;
+const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-image${isZh ? ".zh" : ""}.png`;
 ---
 
 <!doctype html>
@@ -62,7 +66,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix/og-image${isZh ? ".
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={isZh ? "AI 安全矩阵 — 精选的 AI 赋能安全测试工具" : "AI Security Matrix — curated AI security testing tools"} />
+    <meta property="og:image:alt" content={ogImageAlt || (isZh ? "AI 安全矩阵 — 精选的 AI 赋能安全测试工具" : "AI Security Matrix — curated AI security testing tools")} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />

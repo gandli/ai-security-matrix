@@ -1,7 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import ToolBadges from "@/components/ToolBadges.astro";
 import siteData from "@/data/site.json";
-import { home } from "@/lib/url";
+import { home, url } from "@/lib/url";
 
 export function getStaticPaths() {
   return siteData.map((item) => ({
@@ -25,26 +26,19 @@ const catColor: Record<string, string> = {
   skill: "var(--cat-skill)",
 };
 
-const catZh: Record<string, string> = {
-  agent: "智能体工具",
-  scanner: "扫描器",
-  mcp: "MCP 服务器",
-  skill: "技能集",
-};
-
 const idle = (() => {
   const a = d.alive;
   if (!a || a.days_idle == null) return "—";
-  if (a.archived) return "已归档";
+  if (a.archived) return "归档";
   const n = a.days_idle;
   if (n < 1) return "今天";
-  if (n < 365) return `${n} 天前`;
-  return `${(n / 365).toFixed(1)} 年前`;
+  if (n < 365) return `${n}天前`;
+  return `${(n / 365).toFixed(1)}年前`;
 })();
 
 const stars = d.identity?.stars != null
   ? d.identity.stars >= 1000
-    ? `${(d.identity.stars / 1000).toFixed(1)}k`
+    ? `${(d.identity.stars / 1000).toFixed(1)}万`
     : String(d.identity.stars)
   : "—";
 
@@ -56,24 +50,36 @@ const FLAG_FAMILY: Record<string, string> = {
   credentials: "access",
   "calls out": "unseen",
   opaque: "unseen",
+  privilege: "host",
+  phones_home: "unseen",
 };
 
 const CHECK_LABELS: Record<string, string> = {
-  binaries: "是否包含未自行构建的预编译二进制",
-  installs: "是否在主机上安装软件",
-  root: "是否索取 root / sudo 权限",
-  credentials: "是否读取 ~/.aws 或 ~/.ssh 等凭据路径",
-  "calls out": "是否调用项目不拥有的外部端点",
-  opaque: "是否包含无法阅读的超长编码数据",
+  binaries: "分发你未编译的二进制文件",
+  installs: "在你的主机上安装软件",
+  root: "要求 root 或 sudo 权限",
+  credentials: "读取 ~/.aws 或 ~/.ssh 等凭证路径",
+  "calls out": "调用项目不拥有的端点",
+  opaque: "包含无法阅读的长编码 blob",
 };
 
 const allChecks = Object.keys(CHECK_LABELS);
-const desc = entry.description_zh || d.identity?.description || "";
+const descEn = d.identity?.description || "";
+const descZh = entry.description_zh || descEn.substring(0, 80);
+
+
+const slug = `${owner}-${name}`;
+const selfOg = `/og/${slug}.png`;
+const zhSelfOg = `/og/${slug}-zh.png`;
+const ogTitle = `AI 安全矩阵 — ${owner}/${name}`;
+const ogDesc = `${descZh.substring(0, 60)} — AI 赋能安全测试工具，含风险标记和安全检查清单。`;
+const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
 ---
-<Layout lang="zh" title={`${entry.repo} — AI 安全矩阵`} description={desc}>
+
+<Layout lang="zh" title={ogTitle} description={ogDesc} ogImage={ogImage} ogImageAlt={`AI 安全矩阵 - ${owner}/${name} - AI 赋能安全测试工具`}>
   <article class="static-doc">
     <p style="font-size: 0.8125rem; color: var(--stale);">
-      <a href={home("zh")}>← 返回矩阵</a>
+      <a href={home("zh")}>← 返回目录</a>
     </p>
 
     <h1 style="margin-top: 0.75rem;">
@@ -81,56 +87,67 @@ const desc = entry.description_zh || d.identity?.description || "";
     </h1>
 
     <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
-      {desc}
+      {descZh || "(暂无中文描述)"}
     </p>
 
-    <div style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
-      <span style={`color: ${catColor[entry.category] || "var(--stale)"}; font-weight: 600; font-size: 0.875rem;`}>
-        {catZh[entry.category] || entry.category}
-      </span>
-      <span style="color: var(--rule-strong);">·</span>
-      <a href={entry.repo ? `https://github.com/${entry.repo}` : "#"} target="_blank" rel="noopener" style="font-family: var(--font-mono); font-size: 0.8125rem;">
-        github.com/{entry.repo} ↗
-      </a>
-    </div>
+    <!-- Badge row (aligned with EN via shared ToolBadges component) -->
+    <ToolBadges repo={entry.repo} lang="zh" />
+
+    <!-- GitHub social-preview card as illustration -->
+    <figure class="gh-og">
+      <img
+        src="https://opengraph.githubassets.com/1/${entry.repo}"
+        alt={`GitHub 社交预览卡 for ${entry.repo}`}
+        width="1200"
+        height="630"
+        loading="lazy"
+      />
+      <figcaption>
+        {entry.repo} on GitHub — GitHub 社交预览渲染由 opengraph.githubassets.com 提供
+      </figcaption>
+    </figure>
 
     <!-- Stat grid -->
     <div class="tool-detail-grid">
       <div class="stat-item">
-        <div class="label">Stars</div>
+        <div class="label">分类</div>
+        <div class="value" style="font-size: 1.125rem;">
+          <a class="cat-chip" href={url(`category/${entry.category}`, "zh")} style={`--chip:${catColor[entry.category] || "var(--cat-scanner)"}`}>{entry.category}</a>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="label">Star</div>
         <div class="value" style="color: var(--star);">★ {stars}</div>
       </div>
       <div class="stat-item">
-        <div class="label">最近更新</div>
+        <div class="label">最后更新</div>
         <div class="value">{idle}</div>
       </div>
       <div class="stat-item">
-        <div class="label">开源许可证</div>
+        <div class="label">许可证</div>
         <div class="value" style="font-size: 1rem;">{d.licence?.file || "—"}</div>
       </div>
       <div class="stat-item">
-        <div class="label">贡献者数</div>
+        <div class="label">贡献者</div>
         <div class="value">{d.identity?.contributors ?? "—"}</div>
       </div>
       <div class="stat-item">
-        <div class="label">代码规模</div>
+        <div class="label">大小</div>
         <div class="value" style="font-size: 1rem;">
           {d.shape?.loc ? d.shape.loc.toLocaleString() : "—"} 行
         </div>
-        <div class="sub">{d.shape?.code_files ?? "—"} 个代码文件</div>
-      </div>
-      <div class="stat-item">
-        <div class="label">Forks</div>
-        <div class="value">{d.identity?.forks?.toLocaleString() ?? "—"}</div>
+        <div class="sub">{d.shape?.code_files ?? "—"} 代码文件</div>
       </div>
     </div>
 
-    <!-- Scope -->
+    <!-- Scope (clickable → scope index) -->
     {entry.scope?.length ? (
       <section>
-        <h2>作用范围</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
-          {entry.scope.map((s: string) => <span class="pill pill-scope">{s}</span>)}
+        <h2>适用范围</h2>
+        <div class="pill-row">
+          {entry.scope.map((s: string) => (
+            <a class="pill pill-scope pill-link" href={url(`scope/${s}`, "zh")}>{s}</a>
+          ))}
         </div>
       </section>
     ) : null}
@@ -138,7 +155,7 @@ const desc = entry.description_zh || d.identity?.description || "";
     <!-- Bundled tools -->
     {d.bundled?.length ? (
       <section>
-        <h2>内置工具</h2>
+        <h2>内嵌工具</h2>
         <p style="font-family: var(--font-mono); font-size: 0.8125rem;">
           {d.bundled.join(", ")}
         </p>
@@ -148,19 +165,19 @@ const desc = entry.description_zh || d.identity?.description || "";
     <!-- Shares files with -->
     {d.shares_with ? (
       <section>
-        <h2>共享文件项目</h2>
+        <h2>共享文件来源</h2>
         <p style="font-family: var(--font-mono); font-size: 0.8125rem;">{d.shares_with}</p>
       </section>
     ) : null}
 
-    <!-- Safety checklist -->
+    <!-- Before running it (safety checklist) -->
     <section>
-      <h2>运行前安全检查</h2>
+      <h2>运行前注意事项</h2>
       <table class="checklist-table">
         <tbody>
           {allChecks.map((k) => {
             const val = d.risk ? d.risk[k] : null;
-            const label = val === true ? "是" : val === false ? "否" : "未检查";
+            const label = val === true ? "yes" : val === false ? "no" : "未检查";
             const cls = val === true ? "ans-yes" : val === false ? "ans-no" : "";
             return (
               <tr>
@@ -173,12 +190,12 @@ const desc = entry.description_zh || d.identity?.description || "";
       </table>
     </section>
 
-    <!-- Risk flags -->
+    <!-- Risk flags (clickable → flag index) -->
     {risks.length ? (
       <section>
         <h2>风险标记</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
-          {risks.map((k) => <span class={`pill pill-${FLAG_FAMILY[k] || "host"}`}>{k}</span>)}
+        <div class="pill-row">
+          {risks.map((k) => <a class={`pill pill-${FLAG_FAMILY[k] || "host"} pill-link`} href={url(`flag/${k.replace(/\s+/g, "-")}`, "zh")}>{k}</a>)}
         </div>
       </section>
     ) : null}
@@ -186,13 +203,67 @@ const desc = entry.description_zh || d.identity?.description || "";
     <!-- Topics -->
     {d.identity?.topics?.length ? (
       <section>
-        <h2>标签（Topics）</h2>
-        <p style="font-size: 0.8125rem; color: var(--stale);">{d.identity.topics.join(" · ")}</p>
+        <h2>标签</h2>
+        <div class="pill-row">
+          {d.identity.topics.map((t: string) => (
+            <a class="topic-tag" href={`https://github.com/search?q=topic%3A${t}&type=repositories`} target="_blank" rel="noopener noreferrer">#{t}</a>
+          ))}
+        </div>
       </section>
     ) : null}
 
     <p style="margin-top: 3rem; font-size: 0.75rem; color: var(--dead);">
-      数据检查于 {d.checked_at || "—"} · 来源于 aisecuritymatrix.com
+      数据核验时间：{d.checked_at || "—"} · 来自 aisecuritymatrix.com
     </p>
   </article>
 </Layout>
+
+<style>
+  .gh-og {
+    margin: 1.5rem 0;
+  }
+  .gh-og img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+  }
+  .gh-og figcaption {
+    margin-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--dead);
+  }
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+  .pill-link {
+    text-decoration: none;
+  }
+  .cat-chip {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #001615;
+    background: var(--chip);
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .topic-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--stale);
+    text-decoration: none;
+    padding: 0.125rem 0.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+/**
+ * ToolBadges — shared badge row for tool detail pages.
+ * Shields.io static badges that reference the TOOL's own repo, e.g.
+ * DeepWiki → https://deepwiki.com/{owner}/{repo}
+ */
+interface Props {
+  repo: string; // "owner/name"
+  lang?: "en" | "zh";
+}
+const { repo, lang = "en" } = Astro.props;
+const [owner, name] = repo.split("/");
+
+// shields.io path escaping: "-" becomes "--", "/" becomes "%2F"
+const esc = (s: string) => s.replace(/-/g, "--");
+const msg = `${esc(owner)}%2F${esc(name)}`;
+const Q = "style=flat-square&labelColor=002523";
+
+const badges = [
+  {
+    label: lang === "zh" ? "GitHub 仓库" : "GitHub repository",
+    href: `https://github.com/${repo}`,
+    img: `https://img.shields.io/github/stars/${repo}?${Q}&logo=github&label=GitHub&color=ff9e37`,
+    alt: `GitHub stars for ${repo}`,
+  },
+  {
+    label: "DeepWiki",
+    href: `https://deepwiki.com/${repo}`,
+    img: `https://img.shields.io/badge/DeepWiki-${msg}-2c85ff?${Q}`,
+    alt: `Read ${repo} documentation on DeepWiki`,
+  },
+  {
+    label: "Zread",
+    href: `https://zread.ai/${repo}`,
+    img: `https://img.shields.io/badge/Zread-${msg}-009798?${Q}`,
+    alt: `Read ${repo} on Zread`,
+  },
+  {
+    label: "CodeWiki",
+    href: `https://codewiki.google/github.com/${repo}`,
+    img: `https://img.shields.io/badge/CodeWiki-${msg}-4285f4?${Q}`,
+    alt: `Browse ${repo} on Google CodeWiki`,
+  },
+];
+---
+
+<div class="tool-badges" role="group" aria-label={lang === "zh" ? "外部文档链接" : "External documentation links"}>
+  {badges.map((b) => (
+    <a href={b.href} target="_blank" rel="noopener noreferrer" aria-label={b.label} title={b.label}>
+      <img src={b.img} alt={b.alt} loading="lazy" width="120" height="20" />
+    </a>
+  ))}
+</div>
+
+<style>
+  .tool-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+  .tool-badges a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+  .tool-badges img {
+    border: 0;
+    height: 20px;
+    width: auto;
+  }
+</style>

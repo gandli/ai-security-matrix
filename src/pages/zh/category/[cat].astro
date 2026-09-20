@@ -1,0 +1,20 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+import { CAT_ZH } from "@/lib/taxonomy";
+
+export function getStaticPaths() {
+  const cats = [...new Set(siteData.map((i) => i.entry.category))].sort();
+  return cats.map((cat) => ({ params: { cat }, props: { cat } }));
+}
+
+const { cat } = Astro.props;
+const tools = siteData.filter((i) => i.entry.category === cat);
+const title = CAT_ZH[cat] || cat;
+const desc = `${title} — 分类为"${cat}"的 AI 赋能安全测试工具。数据来自 aisecuritymatrix.com。`;
+---
+
+<Layout lang="zh" title={`分类：${cat} — ${tools.length} 款工具`} description={desc}>
+  <TermList title={title} description={desc} items={tools} count={tools.length} lang="zh" anchorPrefix="category" />
+</Layout>
