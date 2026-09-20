@@ -34,18 +34,18 @@
   --live-slow: #b07c00;
   --live-none: #a6b1b4;
   --name: #824800;
-  --star: #8a6a00;
+  --star: #665000;
   --cat-agent: #0061d4;
   --cat-mcp: #007374;
   --cat-scanner: #6c6a00;
   --cat-skill: #c4007c;
-  --scope-ink: #00755a;
+  --scope-ink: #005240;
   --scope-pill: #d2f2e6;
-  --host-ink: #cf0021;
+  --host-ink: #990015;
   --host-pill: #ffe2df;
-  --access-ink: #796400;
+  --access-ink: #4d4000;
   --access-pill: #f1eace;
-  --unseen-ink: #007084;
+  --unseen-ink: #00485a;
   --unseen-pill: #cef1fa;
 
   color-scheme: light;
@@ -69,13 +69,13 @@
   --cat-mcp: #009798;
   --cat-scanner: #8f8b00;
   --cat-skill: #ff10a3;
-  --scope-ink: #009978;
+  --scope-ink: #45e0ad;
   --scope-pill: #002016;
-  --host-ink: #ff373e;
+  --host-ink: #ff8078;
   --host-pill: #2b100f;
-  --access-ink: #a08600;
+  --access-ink: #e0c420;
   --access-pill: #201900;
-  --unseen-ink: #0094ad;
+  --unseen-ink: #3cd4ed;
   --unseen-pill: #001e25;
 
   color-scheme: dark;
