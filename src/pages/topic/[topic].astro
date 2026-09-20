@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import TermList from "@/components/TermList.astro";
+import siteData from "@/data/site.json";
+
+export function getStaticPaths() {
+  const topics = [...new Set(siteData.flatMap((i) => i.derived?.identity?.topics || []))].sort();
+  return topics.map((topic) => ({ params: { topic }, props: { topic } }));
+}
+
+const { topic } = Astro.props;
+const tools = siteData.filter((i) => (i.derived?.identity?.topics || []).includes(topic));
+const display = topic.replace(/-/g, " ");
+const title = `#${topic}`;
+const desc = `${tools.length} AI security testing tool${tools.length === 1 ? "" : "s"} tagged “${display}” in the AI Security Matrix. Curated from aisecuritymatrix.com.`;
+---
+
+<Layout lang="en" title={`${title} — ${tools.length} tools · AI Security Matrix`} description={desc}>
+  <TermList
+    title={title}
+    description={desc}
+    items={tools}
+    count={tools.length}
+    lang="en"
+    anchorPrefix="topic"
+  />
+</Layout>

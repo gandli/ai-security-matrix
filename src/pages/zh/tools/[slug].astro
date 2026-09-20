@@ -96,7 +96,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
     <!-- GitHub social-preview card as illustration -->
     <figure class="gh-og">
       <img
-        src="https://opengraph.githubassets.com/1/${entry.repo}"
+        src={`https://opengraph.githubassets.com/1/${entry.repo}`}
         alt={`GitHub 社交预览卡 for ${entry.repo}`}
         width="1200"
         height="630"
@@ -112,7 +112,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
       <div class="stat-item">
         <div class="label">分类</div>
         <div class="value" style="font-size: 1.125rem;">
-          <a class="cat-chip" href={url(`category/${entry.category}`, "zh")} style={`--chip:${catColor[entry.category] || "var(--cat-scanner)"}`}>{entry.category}</a>
+          <a class="cat-chip" href={url(`category/${entry.category}/`, "zh")} style={`--chip:${catColor[entry.category] || "var(--cat-scanner)"}`}>{entry.category}</a>
         </div>
       </div>
       <div class="stat-item">
@@ -146,7 +146,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
         <h2>适用范围</h2>
         <div class="pill-row">
           {entry.scope.map((s: string) => (
-            <a class="pill pill-scope pill-link" href={url(`scope/${s}`, "zh")}>{s}</a>
+            <a class="pill pill-scope pill-link" href={url(`scope/${s}/`, "zh")}>{s}</a>
           ))}
         </div>
       </section>
@@ -195,18 +195,18 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
       <section>
         <h2>风险标记</h2>
         <div class="pill-row">
-          {risks.map((k) => <a class={`pill pill-${FLAG_FAMILY[k] || "host"} pill-link`} href={url(`flag/${k.replace(/\s+/g, "-")}`, "zh")}>{k}</a>)}
+          {risks.map((k) => <a class={`pill pill-${FLAG_FAMILY[k] || "host"} pill-link`} href={url(`flag/${k.replace(/\s+/g, "-")}/`, "zh")}>{k}</a>)}
         </div>
       </section>
     ) : null}
 
-    <!-- Topics -->
+    <!-- Topics (clickable → topic index) -->
     {d.identity?.topics?.length ? (
       <section>
         <h2>标签</h2>
         <div class="pill-row">
           {d.identity.topics.map((t: string) => (
-            <a class="topic-tag" href={`https://github.com/search?q=topic%3A${t}&type=repositories`} target="_blank" rel="noopener noreferrer">#{t}</a>
+            <a class="topic-tag" href={url(`topic/${t}/`, "zh")}>#{t}</a>
           ))}
         </div>
       </section>
@@ -265,5 +265,11 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  }
+  .topic-tag:hover {
+    color: #001615;
+    background: var(--scope-ink);
+    border-color: var(--scope-ink);
   }
 </style>
