@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import SoundToggle from "@/components/SoundToggle.astro";
 import { url, home, asset, type Lang } from "@/lib/url";
 
 interface Props {
@@ -141,6 +142,7 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
           </div>
 
           <div class="nav-actions">
+            <SoundToggle />
             <!-- Language toggle -->
             <a
               href={switchHref}
@@ -200,3 +202,55 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
     </div>
   </body>
 </html>
+
+<!-- Audio engine init -->
+<script type="module" is:inline={true}>
+  // Inject sound engine
+  import { audio } from '@/lib/audio/sounds.js';
+  
+  window.__AUDIO_ENGINE__ = audio;
+  
+  // Initialize on first interaction (browser policy)
+  function initAudio() {
+    if (!window.__AUDIO_INITED__) {
+      audio.init();
+      window.__AUDIO_INITED__ = true;
+      
+      // Global event delegation for sounds
+      document.addEventListener('mouseenter', (e) => {
+        const el = e.target.closest('a, button, [data-sound-hover]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('hover');
+        }
+      });
+      
+      document.addEventListener('mousedown', (e) => {
+        const el = e.target.closest('a, button, [data-sound-click]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('click');
+        }
+      });
+      
+      document.addEventListener('focusin', (e) => {
+        const el = e.target.closest('a, input, button, [data-sound-focus]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('focus');
+        }
+      });
+    }
+  }
+  
+  // Init on user gesture
+  window.__AUDIO_INIT__ = () => {
+    initAudio();
+    return Promise.resolve();
+  };
+  
+  // Also set up SoundToggle state persistence
+  const saved = localStorage.getItem('ai-security-matrix-audio');
+  if (saved === '1') {
+    window.__AUDIO_ENABLED__ = true;
+  } else {
+    window.__AUDIO_ENABLED__ = false;
+  }
+</script>

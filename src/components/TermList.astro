@@ -51,7 +51,9 @@ const rows = items.map(rowItem);
 <section class="term-list">
   <header>
     <h2 class="term-headline">{title}</h2>
-    <p class="term-sub">{count} 款工具 · <a href={home(lang)}>返回目录</a></p>
+    {lang === "zh"
+    ? <p class="term-sub">{count} 款工具 · <a href={home("zh")}>返回目录</a></p>
+    : <p class="term-sub">{count} tools · <a href={home("en")}>Back to matrix</a></p>}
   </header>
 
   <ul class="tool-card-grid">
