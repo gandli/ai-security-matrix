@@ -1,9 +1,153 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { home } from "@/lib/url";
+
+const JSON_SAMPLE = `{
+  "tools": {
+    "usestrix-strix": "开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。"
+  }
+}`;
 ---
-<Layout lang="en" title="Contribute — AI Security Matrix">
+
+<Layout
+  lang="en"
+  title="Contribute — AI Security Matrix"
+  description="How to fix a translation, improve a tool description, or report a data problem. This mirror syncs aisecuritymatrix.com daily."
+>
   <article class="static-doc">
+    <p class="crumb"><a href={home("en")}>← Back to matrix</a></p>
+
     <h1>Contribute</h1>
-    <p>Submissions and contribution instructions coming soon.</p>
+
+    <p class="lede">
+      This repository mirrors <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a>
+      and syncs once a day. The tool list itself is not maintained here, but
+      <strong>translations, prose, and the whole presentation layer</strong> are ours to own —
+      pull requests welcome.
+    </p>
+
+    <h2>Where the data comes from</h2>
+
+    <table class="checklist-table">
+      <tbody>
+        <tr>
+          <td>Tool list, stars, risk flags</td>
+          <td>Scraped automatically — <strong>do not edit by hand</strong></td>
+        </tr>
+        <tr>
+          <td>Chinese tool descriptions</td>
+          <td><code>translations.json</code> — edit directly</td>
+        </tr>
+        <tr>
+          <td>Static page copy (about / guide / contribute / commercial)</td>
+          <td>The <code>static</code> block in <code>translations.json</code>, or the matching <code>.astro</code> file</td>
+        </tr>
+        <tr>
+          <td>Page templates and styling</td>
+          <td><code>src/</code> — edit directly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Three common contributions</h2>
+
+    <h3>1. Fix or improve a Chinese description</h3>
+
+    <p>
+      Open <a href="https://github.com/gandli/ai-security-matrix/blob/astro-site/translations.json" target="_blank" rel="noopener"><code>translations.json</code></a>
+      and rewrite the entry under <code>tools</code>, keyed by the tool's slug:
+    </p>
+
+    <pre><code>{JSON_SAMPLE}</code></pre>
+
+    <p>
+      The key is the site slug — the last segment of the detail URL, e.g.
+      <code>/tools/usestrix-strix/</code>. Your translation survives the next sync:
+      the scraper only overwrites fields it fetches, and never touches this file.
+    </p>
+
+    <h3>2. Report a data problem</h3>
+
+    <p>
+      If a tool's stars, risk flags, or description look wrong, the cause is usually upstream.
+      Check <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a> first.
+      If upstream is right and this mirror is wrong,
+      <a href="https://github.com/gandli/ai-security-matrix/issues" target="_blank" rel="noopener">open an issue</a>
+      with the tool link and the expected value.
+    </p>
+
+    <h3>3. Improve pages and styling</h3>
+
+    <p>
+      Page templates live in <code>src/pages/</code>, shared components in <code>src/components/</code>,
+      and every design token and style rule in <code>src/styles/global.css</code>.
+      Read <code>DESIGN.md</code> at the repository root before changing anything —
+      it records the colour, type, and spacing systems.
+    </p>
+
+    <h2>Run it locally</h2>
+
+    <pre><code>git clone https://github.com/gandli/ai-security-matrix.git
+cd ai-security-matrix
+npm install
+npm run dev      # http://localhost:4321/ai-security-matrix/</code></pre>
+
+    <p>Before opening a pull request, confirm the build and tests pass:</p>
+
+    <pre><code>npm run build          # emits 688 static pages
+npx playwright test    # end-to-end suite (164 passed)</code></pre>
+
+    <h2>Pre-flight checklist</h2>
+
+    <ul>
+      <li>Both languages updated, when copy changed</li>
+      <li>Checked in both light and dark themes</li>
+      <li>No overflow down to 320px wide</li>
+      <li><code>npm run build</code> is clean</li>
+      <li>One concern per pull request, so it can be reverted cleanly</li>
+    </ul>
+
+    <h2>About upstream</h2>
+
+    <p>
+      Curation, categorisation, and the risk-audit criteria are decided by
+      <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a>.
+      To add a tool or move one between categories, raise it upstream —
+      this mirror picks it up on the next sync.
+    </p>
   </article>
+
+  <style>
+    .crumb {
+      font-size: 0.875rem;
+      color: var(--stale);
+    }
+    .lede {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--alive);
+      max-width: 68ch;
+    }
+    .static-doc h3 {
+      margin-top: 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--name);
+    }
+    .static-doc ul {
+      max-width: 68ch;
+      padding-left: 1.25rem;
+      line-height: 1.7;
+    }
+    .static-doc li {
+      margin-bottom: 0.25rem;
+    }
+    .static-doc pre {
+      max-width: 68ch;
+      overflow-x: auto;
+    }
+    .static-doc :global(code) {
+      font-size: 0.875rem;
+    }
+  </style>
 </Layout>

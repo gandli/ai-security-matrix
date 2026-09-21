@@ -1,9 +1,147 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { home, url } from "@/lib/url";
+
+const JSON_SAMPLE = `{
+  "tools": {
+    "usestrix-strix": "开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。"
+  }
+}`;
 ---
-<Layout lang="zh" title="贡献 — AI 安全矩阵">
+
+<Layout
+  lang="zh"
+  title="贡献 — AI 安全矩阵"
+  description="如何修正翻译、补充工具说明，或报告数据问题。本仓库每日自动同步 aisecuritymatrix.com。"
+>
   <article class="static-doc">
+    <p class="crumb"><a href={home("zh")}>← 返回目录</a></p>
+
     <h1>贡献</h1>
-    <p>提交与贡献说明即将上线。</p>
+
+    <p class="lede">
+      本仓库是 <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a> 的社区镜像，
+      每天自动同步一次。工具清单本身不在这里维护，但<strong>翻译、说明文字和展示层</strong>完全由本仓库掌控，
+      欢迎直接提 PR。
+    </p>
+
+    <h2>数据从哪里来</h2>
+
+    <table class="checklist-table">
+      <tbody>
+        <tr>
+          <td>工具清单、星级、风险标记</td>
+          <td>自动抓取，<strong>请勿手动修改</strong></td>
+        </tr>
+        <tr>
+          <td>中文翻译（工具描述）</td>
+          <td><code>translations.json</code> — 可直接编辑</td>
+        </tr>
+        <tr>
+          <td>静态页文案（关于 / 指南 / 贡献 / 商业）</td>
+          <td><code>translations.json</code> 的 <code>static</code> 段，或对应 <code>.astro</code> 文件</td>
+        </tr>
+        <tr>
+          <td>页面模板与样式</td>
+          <td><code>src/</code> — 可直接编辑</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>三种常见贡献</h2>
+
+    <h3>1. 修正或改进工具的中文描述</h3>
+
+    <p>
+      打开 <a href="https://github.com/gandli/ai-security-matrix/blob/astro-site/translations.json" target="_blank" rel="noopener"><code>translations.json</code></a>，
+      在 <code>tools</code> 对象中按工具 slug 找到条目并改写：
+    </p>
+
+    <pre><code>{JSON_SAMPLE}</code></pre>
+
+    <p>
+      键名是站点的工具 slug（即详情页 URL 的最后一段，如 <code>/zh/tools/usestrix-strix/</code>）。
+      提交后次日同步会自动保留你的译文——同步脚本只覆盖抓取到的字段，不会动这个文件。
+    </p>
+
+    <h3>2. 报告数据问题</h3>
+
+    <p>
+      如果某个工具的星级、风险标记或描述与实际不符，问题多半出在上游站点。
+      请先到 <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a> 确认；
+      若上游正确而本仓库错误，请<a href="https://github.com/gandli/ai-security-matrix/issues" target="_blank" rel="noopener">开 issue</a>并附上工具链接与期望值。
+    </p>
+
+    <h3>3. 改进页面与样式</h3>
+
+    <p>
+      页面模板在 <code>src/pages/</code>，共享组件在 <code>src/components/</code>，
+      设计令牌与全部样式在 <code>src/styles/global.css</code>。
+      改动前请阅读根目录的 <code>DESIGN.md</code>——它记录了配色、字阶与间距系统。
+    </p>
+
+    <h2>本地运行</h2>
+
+    <pre><code>git clone https://github.com/gandli/ai-security-matrix.git
+cd ai-security-matrix
+npm install
+npm run dev      # http://localhost:4321/ai-security-matrix/</code></pre>
+
+    <p>提交前请确认构建与测试通过：</p>
+
+    <pre><code>npm run build          # 生成 688 个静态页
+npx playwright test    # 端到端测试（164 passed）</code></pre>
+
+    <h2>提交前的检查清单</h2>
+
+    <ul>
+      <li>中英文两个版本都改了（若涉及文案）</li>
+      <li>明暗两种主题都看过</li>
+      <li>移动端窄至 320px 不溢出</li>
+      <li><code>npm run build</code> 无错误</li>
+      <li>一次 PR 只做一件事，便于回滚</li>
+    </ul>
+
+    <h2>关于上游</h2>
+
+    <p>
+      工具清单的选题、分类与风险审计标准由
+      <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a> 制定。
+      若想新增一个工具或调整分类归属，请在上游提出；本仓库同步后会自动收录。
+    </p>
   </article>
+
+  <style>
+    .crumb {
+      font-size: 0.875rem;
+      color: var(--stale);
+    }
+    .lede {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--alive);
+      max-width: 68ch;
+    }
+    .static-doc h3 {
+      margin-top: 1.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--name);
+    }
+    .static-doc ul {
+      max-width: 68ch;
+      padding-left: 1.25rem;
+      line-height: 1.7;
+    }
+    .static-doc li {
+      margin-bottom: 0.25rem;
+    }
+    .static-doc pre {
+      max-width: 68ch;
+      overflow-x: auto;
+    }
+    .static-doc :global(code) {
+      font-size: 0.875rem;
+    }
+  </style>
 </Layout>
