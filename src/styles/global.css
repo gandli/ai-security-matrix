@@ -6,7 +6,7 @@
 
 :root {
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    "PingFang SC", "Microsoft YaHei", sans-serif;
+    "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --radius-sm: 0.25rem;
 
