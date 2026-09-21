@@ -1,9 +1,82 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import siteData from "@/data/site.json";
+import { home } from "@/lib/url";
+
+const total = siteData.length;
+const licences = new Set(
+  siteData.map((t) => t.derived?.licence?.api_spdx || t.derived?.licence?.file).filter(Boolean)
+);
 ---
-<Layout lang="zh" title="商业工具 — AI 安全矩阵">
+
+<Layout
+  lang="zh"
+  title="商业工具 — AI 安全矩阵"
+  description="为什么本索引目前只收录开源项目，以及商业收录需要满足什么条件。"
+>
   <article class="static-doc">
+    <p class="crumb"><a href={home("zh")}>← 返回目录</a></p>
+
     <h1>商业工具</h1>
-    <p>即将上线。</p>
+
+    <p class="lede">
+      本索引中的全部 <strong>{total}</strong> 个条目都是开源项目——每个都指向公开仓库，
+      并声明了许可证（全库共 {licences.size} 种）。厂商产品与付费工具
+      <strong>目前尚未收录</strong>，上游站点同样还没有。
+    </p>
+
+    <h2>为什么要分开</h2>
+
+    <p>
+      本站的风险标记只回答一个问题：<em>它会对我的机器做什么？</em>
+      对开源工具，这个问题是可核验的——代码就在那里，
+      <a href="/ai-security-matrix/zh/guide/">使用指南</a>里写了每个标记怎么得出。
+      商业产品是另一笔交易：你信的是厂商的描述，而不是读过源码，
+      同样的标记没法用同样的方式验证。把两者混进一张表，会让页面上每一个标签都悄悄贬值。
+    </p>
+
+    <h2>收录需要什么</h2>
+
+    <table class="checklist-table">
+      <tbody>
+        <tr>
+          <td>公开的产品页</td>
+          <td>不需要预约销售就能打开，描述才可核验</td>
+        </tr>
+        <tr>
+          <td>部署方式</td>
+          <td>跑在你的主机上，还是托管服务——这决定了标记的含义</td>
+        </tr>
+        <tr>
+          <td>测什么</td>
+          <td>覆盖<a href="/ai-security-matrix/zh/guide/">测试范围</a>中的哪些</td>
+        </tr>
+        <tr>
+          <td>计价形态</td>
+          <td>至少说明有没有免费档或试用档</td>
+        </tr>
+        <tr>
+          <td>独立证据</td>
+          <td>文档、公开更新日志，或第三方评测——不是营销材料</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>如何推荐</h2>
+
+    <p>
+      收录的筛选在上游
+      <a href="https://aisecuritymatrix.com/commercial.html" target="_blank" rel="noopener">aisecuritymatrix.com</a>
+      进行，请在那里提出；本仓库会在下一次同步时自动跟进。
+      如果问题出在本镜像自身——翻译、排版、某个标记不对——请看
+      <a href={home("zh")}>贡献</a>。
+    </p>
   </article>
+
+  <style>
+    .crumb { font-size: 0.875rem; color: var(--stale); }
+    .lede { font-size: 1rem; line-height: 1.7; color: var(--alive); max-width: 68ch; }
+    .static-doc .checklist-table { max-width: 68ch; }
+    .static-doc .checklist-table td:first-child { width: 11rem; }
+  </style>
 </Layout>

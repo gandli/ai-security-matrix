@@ -1,9 +1,84 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import siteData from "@/data/site.json";
+import { home } from "@/lib/url";
+
+const total = siteData.length;
+const licences = new Set(
+  siteData.map((t) => t.derived?.licence?.api_spdx || t.derived?.licence?.file).filter(Boolean)
+);
 ---
-<Layout lang="en" title="Commercial Tools — AI Security Matrix">
+
+<Layout
+  lang="en"
+  title="Commercial Tools — AI Security Matrix"
+  description="Why this index covers open-source projects only, and what a commercial listing would need to qualify."
+>
   <article class="static-doc">
+    <p class="crumb"><a href={home("en")}>← Back to matrix</a></p>
+
     <h1>Commercial Tools</h1>
-    <p>Coming soon.</p>
+
+    <p class="lede">
+      Every one of the <strong>{total}</strong> entries in this index is an open-source project —
+      each links to a public repository and declares a licence
+      ({licences.size} distinct licences across the set). Vendor and paid products are
+      <strong>not listed yet</strong>, and upstream does not list them either.
+    </p>
+
+    <h2>Why the split matters</h2>
+
+    <p>
+      The risk flags on this site answer one question: <em>what does this do to my machine?</em>
+      For open-source tools that is checkable — the code is right there, and the
+      <a href="/ai-security-matrix/guide/">guide</a> explains how each flag is derived.
+      A commercial product is a different bargain: you are trusting a vendor's description
+      instead of reading the source, so the same flags cannot be verified the same way.
+      Mixing the two in one table would quietly weaken every label on the page.
+    </p>
+
+    <h2>What a listing would need</h2>
+
+    <table class="checklist-table">
+      <tbody>
+        <tr>
+          <td>A public product page</td>
+          <td>Reachable without a sales call, so the description can be checked</td>
+        </tr>
+        <tr>
+          <td>Deployment model</td>
+          <td>Runs on your host, or a hosted service — this changes what the flags mean</td>
+        </tr>
+        <tr>
+          <td>What it tests</td>
+          <td>Which of the <a href="/ai-security-matrix/guide/">scopes</a> it covers</td>
+        </tr>
+        <tr>
+          <td>Pricing shape</td>
+          <td>At minimum, whether there is a free or trial tier</td>
+        </tr>
+        <tr>
+          <td>Independent evidence</td>
+          <td>Docs, a public changelog, or third-party evaluation — something that is not marketing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Suggesting one</h2>
+
+    <p>
+      Curation happens upstream at
+      <a href="https://aisecuritymatrix.com/commercial.html" target="_blank" rel="noopener">aisecuritymatrix.com</a>.
+      Raise the suggestion there; this mirror picks up changes on its next sync.
+      For anything about this mirror itself — translations, layout, a wrong flag —
+      see <a href={home("en")}>Contribute</a>.
+    </p>
   </article>
+
+  <style>
+    .crumb { font-size: 0.875rem; color: var(--stale); }
+    .lede { font-size: 1rem; line-height: 1.7; color: var(--alive); max-width: 68ch; }
+    .static-doc .checklist-table { max-width: 68ch; }
+    .static-doc .checklist-table td:first-child { width: 11rem; }
+  </style>
 </Layout>
