@@ -126,19 +126,26 @@ const rows = items.map(rowItem);
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+    min-width: 0;
   }
   .repo-name {
     font-weight: 700;
     font-size: 1rem;
     color: var(--alive);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .star-badge {
     font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--dead);
-    background: #002523;
+    background: var(--paper-raised);
     padding: 0.125rem 0.5rem;
     border-radius: 999px;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
   .card-desc {
     font-size: 0.875rem;
