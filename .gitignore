@@ -12,3 +12,5 @@ dist/
 
 # temp static previews (never commit)
 dist-live/
+__pycache__/
+*.pyc
