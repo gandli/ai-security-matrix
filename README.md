@@ -47,15 +47,15 @@
 
 | Home | Category | Tool Detail |
 |------|----------|-------------|
-| ![Home Dark](src/assets/screenshots/home/1-desktop-dark.png) | ![Category Dark](src/assets/screenshots/category/agent-dark.png) | ![Detail Dark](src/assets/screenshots/detail/usestrix-strix-dark.png) |
-| ![Home Light](src/assets/screenshots/home/1-desktop-light.png) | ![Category Light](src/assets/screenshots/category/agent-light.png) | ![Detail Light](src/assets/screenshots/detail/usestrix-strix-light.png) |
+| ![Home Dark](assets/readme/home/1-desktop-dark.png) | ![Category Dark](assets/readme/category/agent-dark.png) | ![Detail Dark](assets/readme/detail/usestrix-strix-dark.png) |
+| ![Home Light](assets/readme/home/1-desktop-light.png) | ![Category Light](assets/readme/category/agent-light.png) | ![Detail Light](assets/readme/detail/usestrix-strix-light.png) |
 
 ### Mobile (Dark / Light)
 
 | Home | Flag Index | Topic Index |
 |------|------------|-------------|
-| ![Mobile Dark](src/assets/screenshots/home/1-mobile-dark.png) | ![Flag Dark](src/assets/screenshots/flag/privilege-dark.png) | ![Topic Dark](src/assets/screenshots/topic/ai-security-dark.png) |
-| ![Mobile Light](src/assets/screenshots/home/1-mobile-light.png) | ![Flag Light](src/assets/screenshots/flag/privilege-light.png) | ![Topic Light](src/assets/screenshots/topic/ai-security-light.png) |
+| ![Mobile Dark](assets/readme/home/1-mobile-dark.png) | ![Flag Dark](assets/readme/flag/privilege-dark.png) | ![Topic Dark](assets/readme/topic/ai-security-dark.png) |
+| ![Mobile Light](assets/readme/home/1-mobile-light.png) | ![Flag Light](assets/readme/flag/privilege-light.png) | ![Topic Light](assets/readme/topic/ai-security-light.png) |
 
 > 全部截图由 Playwright 自动采集，覆盖 EN/ZH、dark/light 双主题。
 
