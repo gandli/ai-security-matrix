@@ -350,9 +350,23 @@ def _categories_svg(data, lang):
     )
 
 
+def flag_stats(data):
+    """Count how many tools carry each pre-run risk flag."""
+    counts = {"root": 0, "credentials": 0, "installs": 0, "binaries": 0,
+              "calls out": 0, "opaque": 0}
+    for t in data:
+        for field in ("access", "host", "unseen"):
+            for v in t.get(field, []):
+                if v in counts:
+                    counts[v] += 1
+    return counts
+
+
 def directory_readme(data, lang):
+    """Build the repository README: pitch -> proof -> screenshots -> index -> data."""
 
     zh = lang == "zh"
+    sfx = ".zh" if zh else ""
     by_cat = {c: [t for t in data if t["category"] == c] for c in ORDER}
     for c in by_cat:
         by_cat[c].sort(key=lambda x: -stars_num(x["stars"]))
@@ -361,22 +375,70 @@ def directory_readme(data, lang):
         by_cat[c] = sorted([t for t in data if t["category"] == c], key=lambda x: -stars_num(x["stars"]))
     ordered = [c for c in list(ORDER) + extras if by_cat.get(c)]
 
-    hero = '<p align="center">\n  <img src="./assets/readme/hero%s.svg" width="100%%" alt="AI Security Matrix — curated directory of AI security testing tools">\n</p>' % (".zh" if zh else "")
-    cats_img = '<p align="center">\n  <img src="./assets/readme/categories%s.svg" width="100%%" alt="Tool categories: agents, scanners, MCP servers, skills">\n</p>' % (".zh" if zh else "")
+    n = len(data)
+    fs = flag_stats(data)
+    hero = '<p align="center">\n  <img src="./assets/readme/hero%s.svg" width="100%%" alt="AI Security Matrix">\n</p>' % sfx
+    cats_img = '<p align="center">\n  <img src="./assets/readme/categories%s.svg" width="100%%" alt="Tool categories">\n</p>' % sfx
+
+    site = "https://gandli.github.io/ai-security-matrix/"
 
     if zh:
         o = [
             hero, "",
             '<div align="center">', "",
             "[![数据来源](https://img.shields.io/badge/数据来源-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)",
-            "![项目数](https://img.shields.io/badge/收录项目-%d-2fe3a0?style=flat-square&labelColor=002523)" % len(data),
+            "![项目数](https://img.shields.io/badge/收录项目-%d-2fe3a0?style=flat-square&labelColor=002523)" % n,
             "![自动同步](https://img.shields.io/badge/每日自动同步-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)",
             "[![English](https://img.shields.io/badge/Language-English-9ca6a7?style=flat-square&labelColor=002523)](README.md)",
+            "[![DeepWiki](https://img.shields.io/badge/DeepWiki-文档-2c85ff?style=flat-square)](https://deepwiki.com/gandli/ai-security-matrix)",
+            "[![Zread](https://img.shields.io/badge/Zread-中文解读-009798?style=flat-square)](https://zread.ai/gandli/ai-security-matrix)",
             "", "</div>", "",
-            "> **AI 安全矩阵** 是一份精选的开源 AI 安全测试工具清单，涵盖 LLM 红队平台、智能体化渗透测试系统，以及面向安全领域的模型上下文协议（MCP）服务器。",
-            ">",
-            "> 镜像自 [aisecuritymatrix.com](https://aisecuritymatrix.com) · 本页面仅作分类索引，每个工具的详情见对应目录下的 `*.zh.md`。",
-            "", cats_img, "",
+            "## 这是什么",
+            "",
+            "一份精选的 **AI 安全测试工具**清单：LLM 红队平台、智能体化渗透框架、面向安全的 MCP 服务器与技能包。",
+            "",
+            "**与其他 awesome-list 的区别：每个工具在运行前都被审计过。**",
+            "仓库每天自动同步 [aisecuritymatrix.com](https://aisecuritymatrix.com)，并为每个项目标注它会如何影响你的机器——是否索取 root、是否读取 `~/.aws` 与 `~/.ssh`、是否安装软件、是否向外发起请求。",
+            "",
+            "| 入口 | 说明 |",
+            "|:---|:---|",
+            "| **[在线浏览 →](%s)** | 可搜索、排序、按类别与测试范围筛选（暗色/亮色主题） |" % site,
+            "| **[分类目录 →](#分类导航)** | 按类别进入，浏览全部 %d 个项目的详情页 |" % n,
+            "| **[结构化数据 →](tools.json)** | `tools.json` 直接消费，含星级、内置工具与安全检查结果 |",
+            "",
+            "## 运行前风险审计",
+            "",
+            "每个条目都回答同一组问题。当前 %d 个项目的统计：" % n,
+            "",
+            "| 风险标记 | 含义 | 项目数 |",
+            "|:---|:---|:---:|",
+            "| `root` | 要求 root / sudo 权限 | `%d` |" % fs["root"],
+            "| `credentials` | 读取凭证路径（`~/.aws`、`~/.ssh` 等） | `%d` |" % fs["credentials"],
+            "| `installs` | 在你的主机上安装软件 | `%d` |" % fs["installs"],
+            "| `calls out` | 请求项目自身不拥有的端点 | `%d` |" % fs["calls out"],
+            "| `opaque` | 含无法阅读的长编码数据块 | `%d` |" % fs["opaque"],
+            "| `binaries` | 分发你未编译的二进制文件 | `%d` |" % fs["binaries"],
+            "",
+            "> 这些标记不是安全判决，而是让你在 `git clone` 之前就知道该准备什么。",
+            "",
+            "## 界面预览",
+            "",
+            "**中文** — 暗色主题",
+            "",
+            "| 首页 | 标签索引 | 工具详情 |",
+            "|:---:|:---:|:---:|",
+            "| [![首页](assets/readme/home-zh-dark.png)](%s) | ![标签](assets/readme/topic-zh-dark.png) | ![详情](assets/readme/detail-zh-dark.png) |" % site,
+            "",
+            "**English** — dark / light",
+            "",
+            "| Home | Category | Tool detail |",
+            "|:---:|:---:|:---:|",
+            "| ![Home](assets/readme/home-dark.png) | ![Category](assets/readme/category-dark.png) | ![Detail](assets/readme/detail-dark.png) |",
+            "| ![Home light](assets/readme/home-light.png) | ![Category light](assets/readme/category-light.png) | ![Detail light](assets/readme/detail-light.png) |",
+            "",
+            "<sub>截图由 Playwright 自动采集，覆盖中英双语与暗色/亮色双主题。</sub>",
+            "",
+            cats_img, "",
             "## 分类导航", "",
             "| 类别 | 数量 | 定位 | 目录入口 |", "|:---|:---:|:---|:---|",
         ]
@@ -387,8 +449,9 @@ def directory_readme(data, lang):
         o += [
             "",
             "## 结构化数据", "",
-            "- [`tools.json`](tools.json) — 全部项目的 Stars、内置工具与运行前安全检查（root / 凭据读取 / 外部请求）",
+            "- [`tools.json`](tools.json) — 全部 %d 个项目的星级、内置工具、许可证与运行前安全检查" % n,
             "- [`translations.json`](translations.json) — 人工维护的双语翻译词条库",
+            "- [`scripts/scrape.py`](scripts/scrape.py) — 抓取与生成脚本（本 README 由它生成）",
             "", "---", "",
             '<p align="center"><sub>原始数据版权归 <a href="https://aisecuritymatrix.com">aisecuritymatrix.com</a> 所有 · 本仓库为社区自主同步的中英双语镜像</sub></p>',
         ]
@@ -398,14 +461,64 @@ def directory_readme(data, lang):
         hero, "",
         '<div align="center">', "",
         "[![source](https://img.shields.io/badge/source-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)",
-        "![projects](https://img.shields.io/badge/projects-%d-2fe3a0?style=flat-square&labelColor=002523)" % len(data),
+        "![tools](https://img.shields.io/badge/tools-%d-2fe3a0?style=flat-square&labelColor=002523)" % n,
         "![auto-sync](https://img.shields.io/badge/daily%20sync-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)",
         "[![中文文档](https://img.shields.io/badge/Language-中文-9ca6a7?style=flat-square&labelColor=002523)](README.zh.md)",
+        "[![DeepWiki](https://img.shields.io/badge/DeepWiki-docs-2c85ff?style=flat-square)](https://deepwiki.com/gandli/ai-security-matrix)",
+        "[![Zread](https://img.shields.io/badge/Zread-walkthrough-009798?style=flat-square)](https://zread.ai/gandli/ai-security-matrix)",
         "", "</div>", "",
-        "> **AI Security Matrix** is a curated directory of open-source AI-enabled security testing tools, LLM red-teaming platforms, agentic pentesting systems, and security-focused Model Context Protocol (MCP) servers.",
-        ">",
-        "> Full mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com) · This README is a directory index only; each tool's detail page lives in its category directory.",
-        "", cats_img, "",
+        "## What this is",
+        "",
+        "A curated directory of **AI security testing tools** — LLM red-teaming platforms, agentic pentest frameworks, security-focused MCP servers, and skill packs.",
+        "",
+        "**What sets it apart: every tool is audited for what it does to your machine before you run it.**",
+        "The repository syncs daily from [aisecuritymatrix.com](https://aisecuritymatrix.com) and flags whether each project asks for root, reads `~/.aws` or `~/.ssh`, installs software, or calls endpoints it does not own.",
+        "",
+        "| Entry point | What you get |",
+        "|:---|:---|",
+        "| **[Browse online →](%s)** | Search, sort, and filter by category and testing scope (dark / light theme) |" % site,
+        "| **[Category index →](#categories)** | Enter by category and read detail pages for all %d tools |" % n,
+        "| **[Structured data →](tools.json)** | Consume `tools.json` directly — stars, bundled tools, and safety checks |",
+        "",
+        "## Pre-run risk audit",
+        "",
+        "Every entry answers the same set of questions. Across all %d tools:" % n,
+        "",
+        "| Flag | Meaning | Tools |",
+        "|:---|:---|:---:|",
+        "| `root` | Asks for root / sudo | `%d` |" % fs["root"],
+        "| `credentials` | Reads credential paths (`~/.aws`, `~/.ssh`, …) | `%d` |" % fs["credentials"],
+        "| `installs` | Installs software on your host | `%d` |" % fs["installs"],
+        "| `calls out` | Calls endpoints the project does not own | `%d` |" % fs["calls out"],
+        "| `opaque` | Contains long unreadable encoded blobs | `%d` |" % fs["opaque"],
+        "| `binaries` | Ships compiled binaries you did not build | `%d` |" % fs["binaries"],
+        "",
+        "> These flags are not a verdict. They tell you what to expect before you `git clone`.",
+        "",
+        "## Screenshots",
+        "",
+        "**English** — dark / light",
+        "",
+        "| Home | Category | Tool detail |",
+        "|:---:|:---:|:---:|",
+        "| [![Home](assets/readme/home-dark.png)](%s) | ![Category](assets/readme/category-dark.png) | ![Detail](assets/readme/detail-dark.png) |" % site,
+        "| ![Home light](assets/readme/home-light.png) | ![Category light](assets/readme/category-light.png) | ![Detail light](assets/readme/detail-light.png) |",
+        "",
+        "**中文** — 暗色主题",
+        "",
+        "| 首页 | 标签索引 | 工具详情 |",
+        "|:---:|:---:|:---:|",
+        "| ![首页](assets/readme/home-zh-dark.png) | ![标签](assets/readme/topic-zh-dark.png) | ![详情](assets/readme/detail-zh-dark.png) |",
+        "",
+        "**风险标记索引**",
+        "",
+        "| Flag index (dark) | Topic index (dark) |",
+        "|:---:|:---:|",
+        "| ![Flag](assets/readme/flag-dark.png) | ![Topic](assets/readme/topic-dark.png) |",
+        "",
+        "<sub>Captured with Playwright across both languages and both themes.</sub>",
+        "",
+        cats_img, "",
         "## Categories", "",
         "| Category | Count | Purpose | Directory |", "|:---|:---:|:---|:---|",
     ]
@@ -414,9 +527,10 @@ def directory_readme(data, lang):
         o.append("| **%s** (`%s`) | `%d` | %s | [Browse →](tools/%s/) |"
                  % (cat["en"], c, len(by_cat[c]), cat["de"], cat["dir"]))
     o += [
-        "", "## Data Files", "",
-        "- [`tools.json`](tools.json) — Complete structured dataset (stars, bundled tools, pre-run safety checklist)",
-        "- [`translations.json`](translations.json) — Curated bilingual translation dictionary",
+        "", "## Data files", "",
+        "- [`tools.json`](tools.json) — all %d tools with stars, bundled tools, licence, and pre-run safety checks" % n,
+        "- [`translations.json`](translations.json) — curated bilingual translation dictionary",
+        "- [`scripts/scrape.py`](scripts/scrape.py) — the scraper that generates this README",
         "", "---", "",
         '<p align="center"><sub>Original catalogue maintained at <a href="https://aisecuritymatrix.com">aisecuritymatrix.com</a> · Independent community mirror</sub></p>',
     ]
