@@ -74,7 +74,7 @@ const ogDesc = `${desc.substring(0, 140)} — AI security testing tool with risk
 
 <Layout lang="en" title={ogTitle} description={ogDesc} ogImage={ghOg} ogImageAlt={`GitHub social preview for ${entry.repo}`}>
   <article class="static-doc">
-    <p style="font-size: 0.8125rem; color: var(--stale);">
+    <p style="font-size: 0.875rem; color: var(--stale);">
       <a href={home("en")}>← back to matrix</a>
     </p>
 
@@ -82,7 +82,7 @@ const ogDesc = `${desc.substring(0, 140)} — AI security testing tool with risk
       <span style="color: var(--stale);">{owner}/</span><span style="color: var(--name);">{name}</span>
     </h1>
 
-    <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+    <p style="margin-top: 0.5rem; font-size: 1rem;">
       {desc}
     </p>
 
@@ -151,7 +151,7 @@ const ogDesc = `${desc.substring(0, 140)} — AI security testing tool with risk
     {d.bundled?.length ? (
       <section>
         <h2>Bundled tools</h2>
-        <p style="font-family: var(--font-mono); font-size: 0.8125rem;">
+        <p style="font-family: var(--font-mono); font-size: 0.875rem;">
           {d.bundled.join(", ")}
         </p>
       </section>
@@ -161,7 +161,7 @@ const ogDesc = `${desc.substring(0, 140)} — AI security testing tool with risk
     {d.shares_with ? (
       <section>
         <h2>Shares files with</h2>
-        <p style="font-family: var(--font-mono); font-size: 0.8125rem;">{d.shares_with}</p>
+        <p style="font-family: var(--font-mono); font-size: 0.875rem;">{d.shares_with}</p>
       </section>
     ) : null}
 

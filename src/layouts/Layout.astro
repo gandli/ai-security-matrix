@@ -1,6 +1,5 @@
 ---
 import "@/styles/global.css";
-import SoundToggle from "@/components/SoundToggle.astro";
 import { url, home, asset, type Lang } from "@/lib/url";
 
 interface Props {
@@ -143,7 +142,6 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
           </div>
 
           <div class="nav-actions">
-            <SoundToggle />
             <!-- Language toggle -->
             <a
               href={switchHref}
@@ -247,11 +245,6 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
     return Promise.resolve();
   };
   
-  // Also set up SoundToggle state persistence
-  const saved = localStorage.getItem('ai-security-matrix-audio');
-  if (saved === '1') {
-    window.__AUDIO_ENABLED__ = true;
-  } else {
-    window.__AUDIO_ENABLED__ = false;
-  }
+  // Audio is on by default; no toggle UI.
+  window.__AUDIO_ENABLED__ = true;
 </script>

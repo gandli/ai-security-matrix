@@ -78,7 +78,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
 
 <Layout lang="zh" title={ogTitle} description={ogDesc} ogImage={ogImage} ogImageAlt={`AI 安全矩阵 - ${owner}/${name} - AI 赋能安全测试工具`}>
   <article class="static-doc">
-    <p style="font-size: 0.8125rem; color: var(--stale);">
+    <p style="font-size: 0.875rem; color: var(--stale);">
       <a href={home("zh")}>← 返回目录</a>
     </p>
 
@@ -86,7 +86,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
       <span style="color: var(--stale);">{owner}/</span><span style="color: var(--name);">{name}</span>
     </h1>
 
-    <p style="margin-top: 0.5rem; font-size: 0.9375rem;">
+    <p style="margin-top: 0.5rem; font-size: 1rem;">
       {descZh || "(暂无中文描述)"}
     </p>
 
@@ -156,7 +156,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
     {d.bundled?.length ? (
       <section>
         <h2>内嵌工具</h2>
-        <p style="font-family: var(--font-mono); font-size: 0.8125rem;">
+        <p style="font-family: var(--font-mono); font-size: 0.875rem;">
           {d.bundled.join(", ")}
         </p>
       </section>
@@ -166,7 +166,7 @@ const ogImage = `https://gandli.github.io/ai-security-matrix${zhSelfOg}`;
     {d.shares_with ? (
       <section>
         <h2>共享文件来源</h2>
-        <p style="font-family: var(--font-mono); font-size: 0.8125rem;">{d.shares_with}</p>
+        <p style="font-family: var(--font-mono); font-size: 0.875rem;">{d.shares_with}</p>
       </section>
     ) : null}
 

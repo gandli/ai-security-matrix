@@ -280,7 +280,7 @@ const cats = [
     if (!tbody) return;
 
     if (!filtered.length) {
-      tbody.innerHTML = `<tr class="matrix-empty"><td colspan="6" style="padding: 2.5rem 1rem; text-align: center; color: var(--dead);">
+      tbody.innerHTML = `<tr class="matrix-empty"><td colspan="6" style="padding: 2rem 1rem; text-align: center; color: var(--dead);">
         ${isZh ? "未找到匹配的工具。" : "No matching tools found."}
         <button type="button" class="clear-link" id="clear-filters">${isZh ? "清除筛选" : "Clear filters"}</button>
       </td></tr>`;
@@ -327,7 +327,7 @@ const cats = [
                 return `<span class="pill pill-${fam}">${k}</span>`;
               })
               .join(" ")
-          : `<span style="color: var(--dead); font-size: 0.8125rem;">none</span>`;
+          : `<span style="color: var(--dead); font-size: 0.875rem;">none</span>`;
 
         const starsStr = formatStars(d.identity?.stars);
 
@@ -451,7 +451,7 @@ const cats = [
 
     let head = `<tr><th style="padding: 0.5rem 1rem; border-bottom: 1px solid var(--rule-strong); text-align: left; font-size: 0.75rem; color: var(--stale);">Tool</th>`;
     scopes.forEach((s) => {
-      head += `<th style="padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--rule-strong); text-align: center; font-size: 0.6875rem; font-family: var(--font-mono); color: var(--stale);">${s}</th>`;
+      head += `<th style="padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--rule-strong); text-align: center; font-size: 0.75rem; font-family: var(--font-mono); color: var(--stale);">${s}</th>`;
     });
     head += `</tr>`;
 
@@ -459,13 +459,13 @@ const cats = [
       .map((r) => {
         const repo = r.entry.repo;
         const itemScopes = new Set(r.entry.scope || []);
-        let cells = `<td style="padding: 0.4rem 1rem; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.8125rem;"><a href="${prefix}tools/${repo.replace('/', '-')}">${repo}</a></td>`;
+        let cells = `<td style="padding: 0.375rem 1rem; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.875rem;"><a href="${prefix}tools/${repo.replace('/', '-')}">${repo}</a></td>`;
         scopes.forEach((s) => {
           const hit = itemScopes.has(s);
           const bg = hit ? "var(--scope-pill)" : "transparent";
           const color = hit ? "var(--scope-ink)" : "var(--dead)";
           const char = hit ? "●" : "·";
-          cells += `<td style="padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: center; font-size: 0.75rem; color: ${color};">${char}</td>`;
+          cells += `<td style="padding: 0.375rem 0.5rem; border-bottom: 1px solid var(--rule); text-align: center; font-size: 0.75rem; color: ${color};">${char}</td>`;
         });
         return `<tr>${cells}</tr>`;
       })
