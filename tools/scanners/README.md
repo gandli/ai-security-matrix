@@ -20,5 +20,5 @@ _Rule / LLM-assisted detection & evaluation · 20 tools_
 - [fickling](trailofbits-fickling.md) — 670 · A Python pickling decompiler and static analyzer
 - [AgentHound](adithyan-ak-agenthound.md) — 438 · Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A
 - [picklescan](mmaitre314-picklescan.md) — 423 · Security scanner detecting Python Pickle files performing suspicious actions
-- [aisbom](lab700xorg-aisbom.md) — 79 · Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AI
+- [aisbom](lab700xorg-aisbom.md) — 80 · Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AI
 - [modelaudit](promptfoo-modelaudit.md) — 73 · Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment

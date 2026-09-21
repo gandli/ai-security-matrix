@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 2.5k |
-| **最近更新** | 2d |
+| **最近更新** | 1d |
 | **许可证** | MIT |
-| **维护者** | 19 |
-| **规模** | 605,639 lines · 2326 |
+| **维护者** | 20 |
+| **规模** | 605,745 lines · 2327 |
 | **源码** | <https://github.com/samugit83/redamon> |
 | **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） / `network`（主机/端口/流量） / `recon`（信息收集） / *root* / *credentials* |
 

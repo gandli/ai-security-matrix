@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.1k |
-| **Last updated** | today |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 16 |
-| **Size** | 128,921 lines · 401 |
+| **Size** | 129,892 lines · 404 |
 | **Source** | <https://github.com/xalgorix/xalgorix> |
 | **Scopes & traits** | `recon` `webapp` `network` *root* *credentials* _installs_ ~calls out~ |
 

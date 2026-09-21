@@ -17,8 +17,8 @@ _Autonomous / multi-step AI orchestration · 22 tools_
 - [nebula](berylliumsec-nebula.md) — 1.1k · AI-powered penetration testing assistant for automating recon, note-taking, and vulnerability analysis.
 - [xalgorix](xalgorix-xalgorix.md) — 1.1k · Autonomous AI pentesting agents — real-time reconnaissance, vulnerability detection, and exploitation orchestration. Go + TypeScript.
 - [AdStrike](capture0x-adstrike.md) — 354 · AI-powered modular Active Directory red-team framework for authorized penetration testing, AD enumeration, attack-path analysis,   Kerberos/ADCS workflows,
-- [RedteamAgent](neothecapt-redteamagent.md) — 132 · An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit →
-- [ares](dreadnode-ares.md) — 78 · Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling re
+- [RedteamAgent](neothecapt-redteamagent.md) — 133 · An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit →
+- [ares](dreadnode-ares.md) — 80 · Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling re
 - [LLMtary](chetstriker-llmtary.md) — 37 · Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal & external targets. Suppo
 - [Sage](mythicagents-sage.md) — 25 · Sage is a virtual Mythic agent that that uses an AI agentic system to operate Mythic and Mythic agents running on compromised hosts.
 - [rift](cettocdx-rift.md) — 11 · RIFT - Autonomous AI Penetration Testing Agent

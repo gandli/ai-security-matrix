@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 374 |
-| **Last updated** | 4d |
+| **Stars** | 375 |
+| **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 4 |
-| **Size** | 39,476 lines · 238 |
+| **Size** | 39,821 lines · 240 |
 | **Source** | <https://github.com/hypnguyen1209/offensive-claude> |
 | **Scopes & traits** | `redteam` `ad` *root* *credentials* _installs_ |
 

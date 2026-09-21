@@ -17,8 +17,8 @@ _自主运行或多步骤编排的 AI 工具 · 22 个_
 - [nebula](berylliumsec-nebula.zh.md) — 1.1k · AI 驱动的渗透测试助手，自动化侦察、笔记与漏洞分析。
 - [xalgorix](xalgorix-xalgorix.zh.md) — 1.1k · 自主 AI 渗透测试智能体——实时侦察、漏洞检测与利用编排。Go + TypeScript。
 - [AdStrike](capture0x-adstrike.zh.md) — 354 · AI 驱动的模块化 Active Directory 红队框架，用于授权渗透测试、AD 枚举、攻击路径分析、Kerberos/ADCS 工作流、报告、运维自动化与 MCP 集成。
-- [RedteamAgent](neothecapt-redteamagent.zh.md) — 132 · 面向授权实验室与 Web 应用渗透工作流的 AI 红队智能体。将 Claude Code / OpenCode / Codex 变为结构化的侦察→测试→利用→报告流程，含容器化工具与可恢复状态。
-- [ares](dreadnode-ares.zh.md) — 78 · Ares 是自主安全运营平台，让 LLM 驱动的红队与蓝队智能体在真实基础设施上互相对抗，实现攻防的现实评估。
+- [RedteamAgent](neothecapt-redteamagent.zh.md) — 133 · 面向授权实验室与 Web 应用渗透工作流的 AI 红队智能体。将 Claude Code / OpenCode / Codex 变为结构化的侦察→测试→利用→报告流程，含容器化工具与可恢复状态。
+- [ares](dreadnode-ares.zh.md) — 80 · Ares 是自主安全运营平台，让 LLM 驱动的红队与蓝队智能体在真实基础设施上互相对抗，实现攻防的现实评估。
 - [LLMtary](chetstriker-llmtary.zh.md) — 37 · 自主 AI 驱动的渗透测试平台。面向内外部目标的 LLM 驱动侦察、漏洞分析与利用验证。支持本地 AI（Ollama、LM Studio）与云端模型（Claude、GPT-4、Gemini）。Linux · macOS · Windows。
 - [Sage](mythicagents-sage.zh.md) — 25 · Sage 是一个虚拟 Mythic 智能体，使用 AI 智能体系统来操作运行在被控主机上的 Mythic 及其他 Mythic 智能体。
 - [rift](cettocdx-rift.zh.md) — 11 · RIFT——自主 AI 渗透测试智能体。

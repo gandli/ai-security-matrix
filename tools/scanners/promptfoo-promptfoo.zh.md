@@ -9,7 +9,7 @@
 | **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 100 |
-| **规模** | 1,029,721 lines · 2958 |
+| **规模** | 1,035,316 lines · 2962 |
 | **源码** | <https://github.com/promptfoo/promptfoo> |
 | **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *root* / *credentials* |
 

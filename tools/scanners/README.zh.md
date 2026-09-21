@@ -20,5 +20,5 @@ _基于规则或 LLM 的检测与评估工具 · 20 个_
 - [fickling](trailofbits-fickling.zh.md) — 670 · Python pickle 反编译与静态分析工具。
 - [AgentHound](adithyan-ak-agenthound.zh.md) — 438 · 面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。
 - [picklescan](mmaitre314-picklescan.zh.md) — 423 · 检测执行可疑行为的 Python Pickle 文件的安全扫描器。
-- [aisbom](lab700xorg-aisbom.zh.md) — 79 · 面向 ML 模型文件的静态安全扫描器——检测 pickle 炸弹、Keras Lambda RCE 与 GGUF 模板注入，并生成 CycloneDX / SPDX 的 AI-BOM（AIBOM），作为 EU AI Act、CRA 与 FDA §524B 的合规证据。
+- [aisbom](lab700xorg-aisbom.zh.md) — 80 · 面向 ML 模型文件的静态安全扫描器——检测 pickle 炸弹、Keras Lambda RCE 与 GGUF 模板注入，并生成 CycloneDX / SPDX 的 AI-BOM（AIBOM），作为 EU AI Act、CRA 与 FDA §524B 的合规证据。
 - [modelaudit](promptfoo-modelaudit.zh.md) — 73 · 面向 AI/ML 模型文件的安全扫描器，在部署前检测恶意代码、后门与漏洞。
