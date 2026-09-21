@@ -4,6 +4,16 @@ import Layout from "@/layouts/Layout.astro";
 <Layout lang="en" title="About — AI Security Matrix">
   <article class="static-doc">
     <h1>About</h1>
+
+    <p class="lede">
+      Curation and risk auditing are done by
+      <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a>.
+      This repository is an independent bilingual mirror: it syncs their data daily and
+      adds Chinese translations, a searchable interface, and per-tool detail pages.
+      Nothing on this site originates here — see
+      <a href="/ai-security-matrix/contribute/">Contribute</a> if you want to help with the mirror.
+    </p>
+
     <h2>What Is the AI Security Matrix?</h2>
     <p>The AI Security Matrix helps you find AI-enabled security testing tools for your engagements.</p>
     <p>Searching for them leads down a rabbit hole. GitHub stars, blog reviews, Reddit threads, and it's still hard to tell what's what. The matrix categorizes each tool by purpose and testing scope. It also flags the risk of what running the tool does to your machine so you can determine if you can trust the tool in your scenario.</p>
@@ -24,6 +34,14 @@ import Layout from "@/layouts/Layout.astro";
 
     <h2>What it does to your machine</h2>
     <p>Every tool here is a repo you could clone yourself. Six checks tell you what happens if you do. Nothing on this list is ever executed to find out: the repo is cloned, read, and thrown away. The risk column identifies observed risks.</p>
+    <ul>
+      <li><strong>binaries</strong> — the project ships compiled artifacts you did not build and cannot read.</li>
+      <li><strong>installs</strong> — running it puts more software on your machine: a script piped straight into a shell, an install-time hook, or a dependency range loose enough to pull whatever ships that day.</li>
+      <li><strong>root</strong> — setup needs privilege somewhere: sudo, a privileged container, the Docker socket.</li>
+      <li><strong>credentials</strong> — the code reaches for where secrets live: AWS profiles, SSH directories, Kubernetes config.</li>
+      <li><strong>calls out</strong> — telemetry is built in. Using it tells someone else that you did.</li>
+      <li><strong>opaque</strong> — parts of the project you cannot read: inlined third-party code, archives, long encoded blobs.</li>
+    </ul>
 
     <h2>None of this is an accusation</h2>
     <p>Plenty of good tools need root. Most projects vendor something. A flag tells you what to look at before you run it, not what to avoid.</p>
@@ -34,4 +52,29 @@ import Layout from "@/layouts/Layout.astro";
     <p>The threat gets a vote. If you build a defense without understanding how an adversary actually operates, you're not making security decisions. The threat is making them for you.</p>
     <p>Joe has spent over 20 years in cybersecurity, the last 15 focused on offensive security operations.</p>
   </article>
+
+  <style>
+    .lede {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--alive);
+      max-width: 68ch;
+      padding: 0.875rem 1rem;
+      border-left: 2px solid var(--rule-strong);
+      background: var(--paper-raised);
+      border-radius: 0 6px 6px 0;
+      margin: 1rem 0 1.75rem;
+    }
+    .static-doc ul {
+      max-width: 68ch;
+      padding-left: 1.25rem;
+      line-height: 1.7;
+    }
+    .static-doc li {
+      margin-bottom: 0.375rem;
+    }
+    .static-doc h2 {
+      margin-top: 2.25rem;
+    }
+  </style>
 </Layout>

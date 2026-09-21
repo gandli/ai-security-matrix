@@ -4,6 +4,14 @@ import Layout from "@/layouts/Layout.astro";
 <Layout lang="zh" title="关于 — AI 安全矩阵">
   <article class="static-doc">
     <h1>关于</h1>
+
+    <p class="lede">
+      工具筛选与风险审计由
+      <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a>
+      完成。本仓库是独立的双语镜像：每天同步其数据，并补上中文翻译、可搜索界面与工具详情页。
+      本站内容不在此原创——若想参与镜像维护，请看<a href="/ai-security-matrix/zh/contribute/">贡献</a>。
+    </p>
+
     <h2>什么是 AI 安全矩阵？</h2>
     <p>AI 安全矩阵帮助你找到用于安全测试作战的 AI 赋能安全测试工具。</p>
     <p>自行搜索往往会陷入无底洞——GitHub star 数、博客评测、Reddit 帖子——仍然难以分辨每个工具的定位。本矩阵按<strong>用途</strong>与<strong>测试范围</strong>对每个工具进行分类，并标注工具对你机器的<strong>运行风险</strong>，帮你判断在某场景下是否可以信任该工具。</p>
@@ -41,4 +49,29 @@ import Layout from "@/layouts/Layout.astro";
     <p><strong>Joe Vest</strong> —— “threat gets vote（威胁说了算）”。如果你构建防御却不理解对手如何实际运作，那做安全决策的就不是你，而是威胁本身。</p>
     <p>Joe 在网络安全领域深耕 20 余年，近 15 年专注进攻性安全作战。</p>
   </article>
+
+  <style>
+    .lede {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--alive);
+      max-width: 68ch;
+      padding: 0.875rem 1rem;
+      border-left: 2px solid var(--rule-strong);
+      background: var(--paper-raised);
+      border-radius: 0 6px 6px 0;
+      margin: 1rem 0 1.75rem;
+    }
+    .static-doc ul {
+      max-width: 68ch;
+      padding-left: 1.25rem;
+      line-height: 1.7;
+    }
+    .static-doc li {
+      margin-bottom: 0.375rem;
+    }
+    .static-doc h2 {
+      margin-top: 2.25rem;
+    }
+  </style>
 </Layout>
