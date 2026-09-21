@@ -11,7 +11,7 @@ export function getStaticPaths() {
 const { topic } = Astro.props;
 const tools = siteData.filter((i) => (i.derived?.identity?.topics || []).includes(topic));
 const display = topic.replace(/-/g, " ");
-const title = `#${topic}`;
+const title = topic.replace(/-/g, " ");
 const desc = `${tools.length} AI security testing tool${tools.length === 1 ? "" : "s"} tagged “${display}” in the AI Security Matrix. Curated from aisecuritymatrix.com.`;
 ---
 

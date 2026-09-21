@@ -49,6 +49,6 @@ test.describe('Tool Detail', () => {
 
   test('ZH tool page shows Chinese content', async ({ page }) => {
     await page.goto('/ai-security-matrix/zh/tools/usestrix-strix/');
-    await expect(page.locator('a:has-text("返回矩阵")')).toBeVisible();
+    await expect(page.locator('a:has-text("返回目录")')).toBeVisible();
   });
 });

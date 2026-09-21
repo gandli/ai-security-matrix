@@ -52,8 +52,8 @@ const rows = items.map(rowItem);
   <header>
     <h2 class="term-headline">{title}</h2>
     {lang === "zh"
-    ? <p class="term-sub">{count} 款工具 · <a href={home("zh")}>返回目录</a></p>
-    : <p class="term-sub">{count} tools · <a href={home("en")}>Back to matrix</a></p>}
+    ? <p class="term-sub">{count} 款工具，<a href={home("zh")}>返回目录</a></p>
+    : <p class="term-sub">{count} tools. <a href={home("en")}>Back to matrix</a></p>}
   </header>
 
   <ul class="tool-card-grid">
@@ -62,7 +62,7 @@ const rows = items.map(rowItem);
         <a href={r.href}>
           <div class="card-top">
             <span class="repo-name">{r.label}</span>
-            {r.stars > 0 && <span class="star-badge">★ {r.stars.toLocaleString()}</span>}
+            {r.stars > 0 && <span class="star-badge"><span style="color: var(--star);">★</span> {r.stars.toLocaleString()}</span>}
           </div>
           <div class="card-desc">{r.desc}</div>
         </a>
@@ -111,7 +111,7 @@ const rows = items.map(rowItem);
     display: block;
     background: var(--surface);
     border: 1px solid var(--rule);
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 0.875rem;
     min-height: 6rem;
     position: relative;
@@ -140,9 +140,10 @@ const rows = items.map(rowItem);
   .star-badge {
     font-family: var(--font-mono);
     font-size: 0.75rem;
-    color: var(--dead);
-    background: var(--paper-raised);
+    font-variant-numeric: tabular-nums;
+    color: var(--stale);
     padding: 0.125rem 0.5rem;
+    border: 1px solid var(--rule);
     border-radius: 999px;
     flex-shrink: 0;
     white-space: nowrap;
@@ -154,7 +155,7 @@ const rows = items.map(rowItem);
   }
   .term-list footer em {
     font-size: 0.875rem;
-    color: var(--dead);
+    color: var(--stale);
     font-style: italic;
   }
 </style>

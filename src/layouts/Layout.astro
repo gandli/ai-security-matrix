@@ -106,6 +106,7 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">{isZh ? "跳到主要内容" : "Skip to main content"}</a>
     <div class="wrap">
       <!-- Site Header -->
       <header class="site-header">
@@ -180,7 +181,7 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
       </header>
 
       <!-- Main Slot -->
-      <main>
+      <main id="main" tabindex="-1">
         <slot />
       </main>
 

@@ -10,7 +10,7 @@ export function getStaticPaths() {
 
 const { topic } = Astro.props;
 const tools = siteData.filter((i) => (i.derived?.identity?.topics || []).includes(topic));
-const title = `#${topic}`;
+const title = topic.replace(/-/g, " ");
 const desc = `AI 安全矩阵中标记为“${topic.replace(/-/g, " ")}”的工具共 ${tools.length} 款。数据来自 aisecuritymatrix.com。`;
 ---
 

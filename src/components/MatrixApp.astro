@@ -58,6 +58,7 @@ const cats = [
     <input
       id="search-input"
       type="search"
+      aria-label={isZh ? "搜索工具" : "Search tools"}
       placeholder={isZh ? "按名称、范围、标签搜索…" : "filter by text, scope, flag…"}
       autocomplete="off"
       spellcheck="false"
@@ -70,26 +71,26 @@ const cats = [
     <table class="matrix" id="matrix-table">
       <thead>
         <tr>
-          <th scope="col" class="col-date" data-sort="idle" aria-sort="none">
+          <th scope="col" class="col-date" data-sort="idle" aria-sort="none" tabindex="0" role="columnheader">
             {isZh ? "最近更新" : "Last updated"}
             <span class="sort-indicator"></span>
           </th>
-          <th scope="col" class="col-cat" data-sort="category" aria-sort="none">
+          <th scope="col" class="col-cat" data-sort="category" aria-sort="none" tabindex="0" role="columnheader">
             {isZh ? "类别" : "Category"}
             <span class="sort-indicator"></span>
           </th>
-          <th scope="col" data-sort="tool" aria-sort="none">
+          <th scope="col" data-sort="tool" aria-sort="none" tabindex="0" role="columnheader">
             {isZh ? "工具" : "Tool"}
             <span class="sort-indicator"></span>
           </th>
           <th scope="col" style="width: 13rem;">
             {isZh ? "范围" : "Scope"}
           </th>
-          <th scope="col" class="col-stars" data-sort="stars" aria-sort="descending">
+          <th scope="col" class="col-stars" data-sort="stars" aria-sort="descending" tabindex="0" role="columnheader">
             {isZh ? "Stars" : "Stars"}
             <span class="sort-indicator">▾</span>
           </th>
-          <th scope="col" class="col-flags" data-sort="flags" aria-sort="none">
+          <th scope="col" class="col-flags" data-sort="flags" aria-sort="none" tabindex="0" role="columnheader">
             {isZh ? "风险标记" : "Flags"}
             <span class="sort-indicator"></span>
           </th>
@@ -341,7 +342,7 @@ const cats = [
             </td>
             <td>
               <div class="tool-head">
-                <img class="owner-avatar" src="https://github.com/${owner}.png?size=40" alt="" loading="lazy" onerror="this.style.display='none'" />
+                <img class="owner-avatar" src="https://github.com/${owner}.png?size=40" alt="" width="20" height="20" loading="lazy" decoding="async" onerror="this.style.display='none'" />
                 <a class="tool-link" href="${prefix}tools/${slug}" onclick="event.stopPropagation();">
                   <span class="owner">${owner}/</span><span class="name">${name}</span>
                 </a>
@@ -388,6 +389,12 @@ const cats = [
 
   // Bind table header sorting
   document.querySelectorAll(".matrix thead th[data-sort]").forEach((th) => {
+    th.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        th.click();
+      }
+    });
     th.addEventListener("click", () => {
       const key = th.dataset.sort;
       if (state.sortKey === key) {
