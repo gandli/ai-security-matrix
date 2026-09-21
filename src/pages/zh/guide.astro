@@ -1,36 +1,127 @@
 ---
 import Layout from "@/layouts/Layout.astro";
----
-<Layout lang="zh" title="使用指南 — AI 安全矩阵">
-  <article class="static-doc">
-    <h1>使用指南</h1>
-    <h2>类别（Category）</h2>
-    <ul>
-      <li><strong>agent（智能体工具）</strong> — 运行自己的任务循环，根据上一步的发现决定下一步。</li>
-      <li><strong>scanner（扫描器）</strong> — 执行一组固定的检查并报告其发现。</li>
-      <li><strong>mcp（MCP 服务器）</strong> — 通过模型上下文协议向模型提供工具，由模型来驱动。</li>
-      <li><strong>skill（技能集）</strong> — 给模型的提示词与指令，本身没有独立程序。</li>
-    </ul>
+import siteData from "@/data/site.json";
+import { home } from "@/lib/url";
 
-    <h2>范围（Scope）</h2>
-    <ul>
-      <li><strong>ad</strong> — Active Directory：本地域身份。</li>
-      <li><strong>agentic</strong> — 作为被测对象的 AI 智能体及其运行的循环。</li>
-      <li><strong>api</strong> — 应用背后的 HTTP 与 RPC 接口。</li>
-      <li><strong>binary</strong> — 已编译的可执行文件与固件。</li>
-      <li><strong>cloud</strong> — 云账号及其配置。</li>
-      <li><strong>code</strong> — 代码仓库或 diff 中的源码。</li>
-      <li><strong>container</strong> — 镜像、镜像仓库及其内部运行的内容。</li>
-      <li><strong>entra</strong> — Entra ID：微软的云端身份。</li>
-      <li><strong>llm</strong> — 模型本身：它的提示词、护栏与产出。</li>
-      <li><strong>logging</strong> — 测试的记录：覆盖面、发现及其背后的证据。</li>
-      <li><strong>mobile</strong> — iOS 与 Android 应用。</li>
-      <li><strong>modfile</strong> — 序列化模型文件，其格式可能携带可执行代码。</li>
-      <li><strong>network</strong> — 主机、端口与流量。</li>
-      <li><strong>recon</strong> — 在任何东西被测试前，先发现存在什么。</li>
-      <li><strong>redteam</strong> — 跨整个地盘的对手模拟。</li>
-      <li><strong>social</strong> — 人：钓鱼、借口（pretexting）以及他们会交出的东西。</li>
-      <li><strong>webapp</strong> — 面向浏览器的应用。</li>
-    </ul>
+// 计数在构建时派生，每日同步后不会静默过期。
+const countBy = (fn) => {
+  const c = {};
+  for (const t of siteData) for (const v of fn(t)) c[v] = (c[v] || 0) + 1;
+  return c;
+};
+const scopeCounts = countBy((t) => t.entry.scope || []);
+const catCounts = countBy((t) => [t.entry.category].filter(Boolean));
+
+const CATEGORIES: [string, string][] = [
+  ["agent", "自己运行任务循环，根据刚发现的结果决定下一步。"],
+  ["scanner", "跑一组固定的检查，报告查到了什么。"],
+  ["mcp", "通过模型上下文协议把工具提供给模型。由模型驱动。"],
+  ["skill", "给模型的提示词与指令，自身不是程序。"],
+];
+
+const SCOPES: [string, string][] = [
+  ["ad", "Active Directory：本地域身份。"],
+  ["agentic", "AI 智能体及其运行循环——被测试的对象就是它本身。"],
+  ["api", "应用背后的 HTTP 与 RPC 接口。"],
+  ["binary", "编译后的可执行文件与固件。"],
+  ["cloud", "云厂商账号及其配置。"],
+  ["code", "源码：仓库里的，或一次 diff。"],
+  ["entra", "Entra ID：微软的云身份。"],
+  ["llm", "模型本身：它的提示词、护栏，以及它输出什么。"],
+  ["logging", "测试留下的记录：覆盖面、发现，以及背后的证据。"],
+  ["modfile", "序列化的模型文件——这类格式可以携带可执行代码。"],
+  ["network", "主机、端口与流量。"],
+  ["recon", "在测试任何东西之前，先弄清有什么。"],
+  ["redteam", "针对整个环境的对手模拟。"],
+  ["social", "人：钓鱼、话术，以及他们交出了什么。"],
+  ["webapp", "面向浏览器的应用。"],
+];
+
+const FLAGS: [string, string][] = [
+  ["root", "要求 root 或 sudo——预期它想要提权。"],
+  ["credentials", "读取 ~/.aws、~/.ssh 这类凭证路径。"],
+  ["installs", "在你的主机上安装软件。"],
+  ["calls out", "请求项目自身不拥有的端点。"],
+  ["opaque", "含无法阅读的长编码数据块。"],
+  ["binaries", "分发你未编译的二进制文件。"],
+];
+---
+
+<Layout
+  lang="zh"
+  title="使用指南 — AI 安全矩阵"
+  description="AI 安全矩阵中每个类别、测试范围与风险标记的含义。"
+>
+  <article class="static-doc">
+    <p class="crumb"><a href={home("zh")}>← 返回目录</a></p>
+    <h1>使用指南</h1>
+    <p class="lede">
+      每个工具带三类标签：<strong>类别</strong>（它怎么工作）、
+      <strong>测试范围</strong>（它测什么），以及若干
+      <strong>风险标记</strong>（它会对运行它的机器做什么）。
+    </p>
+
+    <h2>类别</h2>
+    <table class="checklist-table">
+      <tbody>
+        {CATEGORIES.map(([name, desc]) => (
+          <tr>
+            <td><code>{name}</code></td>
+            <td>{desc} <span class="n">{catCounts[name] || 0}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>测试范围</h2>
+    <p class="note">工具被指向的目标。一个工具可以覆盖多个范围。</p>
+    <table class="checklist-table">
+      <tbody>
+        {SCOPES.map(([name, desc]) => (
+          <tr>
+            <td><a href={`/ai-security-matrix/zh/scope/${name}/`}><code>{name}</code></a></td>
+            <td>{desc} <span class="n">{scopeCounts[name] || 0}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>风险标记</h2>
+    <p class="note">
+      这些标记回答了本来要克隆之后才会知道的问题。
+      它不是判决，只是让你提前知道该准备什么。
+    </p>
+    <table class="checklist-table">
+      <tbody>
+        {FLAGS.map(([name, desc]) => (
+          <tr>
+            <td><a href={`/ai-security-matrix/zh/flag/${name.replace(/\s+/g, "-")}/`}><code>{name}</code></a></td>
+            <td>{desc}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>怎么读一行</h2>
+    <p class="note">
+      星级与最近更新说明项目是否还活着，风险标记说明它跑起来会做什么。
+      提交活跃且没有标记的工具最容易上手；带 <code>root</code> 和
+      <code>credentials</code> 的工具，请放在一次性环境里运行。
+    </p>
   </article>
+
+  <style>
+    .crumb { font-size: 0.875rem; color: var(--stale); }
+    .lede { font-size: 1rem; line-height: 1.7; color: var(--alive); max-width: 68ch; }
+    .note { font-size: 0.875rem; color: var(--stale); max-width: 68ch; margin-top: 0.5rem; }
+    .static-doc .checklist-table { max-width: 68ch; }
+    .static-doc .checklist-table td:first-child { width: 9rem; }
+    .n {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--dead);
+      margin-left: 0.375rem;
+    }
+  </style>
 </Layout>

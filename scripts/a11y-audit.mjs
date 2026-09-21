@@ -11,6 +11,8 @@ const PAGES = [
   ['flag',           'flag/privilege/'],
   ['topic',          'topic/agents/'],
   ['about',          'about/'],
+  ['guide',          'guide/'],
+  ['zh-guide',       'zh/guide/'],
   ['contribute',     'contribute/'],
   ['zh-contribute',  'zh/contribute/'],
   ['zh-home',        'zh/'],

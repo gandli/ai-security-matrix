@@ -1,36 +1,128 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import siteData from "@/data/site.json";
+import { home } from "@/lib/url";
+
+// Counts are derived at build time so a daily sync can never leave them stale.
+const countBy = (fn) => {
+  const c = {};
+  for (const t of siteData) for (const v of fn(t)) c[v] = (c[v] || 0) + 1;
+  return c;
+};
+const scopeCounts = countBy((t) => t.entry.scope || []);
+const catCounts = countBy((t) => [t.entry.category].filter(Boolean));
+
+const CATEGORIES: [string, string][] = [
+  ["agent", "Runs its own task loop, deciding the next step from what it just found."],
+  ["scanner", "Runs a fixed set of checks and reports what they found."],
+  ["mcp", "Serves tools to a model over Model Context Protocol. The model drives."],
+  ["skill", "Prompts and instructions for a model. No program of its own."],
+];
+
+const SCOPES: [string, string][] = [
+  ["ad", "Active Directory: on-premises domain identity."],
+  ["agentic", "AI agents and the loops they run, as the thing under test."],
+  ["api", "HTTP and RPC interfaces behind an application."],
+  ["binary", "Compiled executables and firmware."],
+  ["cloud", "Provider accounts and their configuration."],
+  ["code", "Source, in a repository or a diff."],
+  ["entra", "Entra ID: Microsoft's cloud identity."],
+  ["llm", "The model itself: its prompts, its guardrails, and what it emits."],
+  ["logging", "The record of a test: coverage, findings, and the evidence behind them."],
+  ["modfile", "Serialised model files, whose formats can carry executable code."],
+  ["network", "Hosts, ports, and traffic."],
+  ["recon", "Finding what exists, before anything is tested."],
+  ["redteam", "Adversary emulation across a whole estate."],
+  ["social", "People: phishing, pretexting, and what they hand over."],
+  ["webapp", "Browser-facing applications."],
+];
+
+const FLAGS: [string, string][] = [
+  ["root", "Asks for root or sudo. Expect it to want elevated privileges."],
+  ["credentials", "Reads credential paths such as ~/.aws or ~/.ssh."],
+  ["installs", "Installs software on your host."],
+  ["calls out", "Calls an endpoint the project does not own."],
+  ["opaque", "Contains long encoded blobs you cannot read."],
+  ["binaries", "Ships compiled binaries you did not build."],
+];
 ---
-<Layout lang="en" title="Definitions — AI Security Matrix">
+
+<Layout
+  lang="en"
+  title="Guide — AI Security Matrix"
+  description="What each category, testing scope, and risk flag means in the AI Security Matrix."
+>
   <article class="static-doc">
-    <h1>Definitions</h1>
+    <p class="crumb"><a href={home("en")}>← Back to matrix</a></p>
+    <h1>Guide</h1>
+    <p class="lede">
+      Every tool carries three labels: a <strong>category</strong> (how it works),
+      a set of <strong>scopes</strong> (what it tests), and zero or more
+      <strong>risk flags</strong> (what it does to the machine running it).
+    </p>
+
     <h2>Category</h2>
-    <ul>
-      <li><strong>agent</strong> — Runs its own task loop, deciding the next step from what it just found.</li>
-      <li><strong>scanner</strong> — Runs a fixed set of checks and reports what they found.</li>
-      <li><strong>mcp</strong> — Serves tools to a model over Model Context Protocol. The model drives.</li>
-      <li><strong>skill</strong> — Prompts and instructions for a model. No program of its own.</li>
-    </ul>
+    <table class="checklist-table">
+      <tbody>
+        {CATEGORIES.map(([name, desc]) => (
+          <tr>
+            <td><code>{name}</code></td>
+            <td>{desc} <span class="n">{catCounts[name] || 0}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
 
     <h2>Scope</h2>
-    <ul>
-      <li><strong>ad</strong> — Active Directory: on-premises domain identity. (10)</li>
-      <li><strong>agentic</strong> — AI agents and the loops they run, as the thing under test. (9)</li>
-      <li><strong>api</strong> — HTTP and RPC interfaces behind an application. (4)</li>
-      <li><strong>binary</strong> — Compiled executables and firmware. (7)</li>
-      <li><strong>cloud</strong> — Provider accounts and their configuration. (2)</li>
-      <li><strong>code</strong> — Source, in a repository or a diff. (7)</li>
-      <li><strong>container</strong> — Images, registries, and what runs inside them. (0)</li>
-      <li><strong>entra</strong> — Entra ID: Microsoft's cloud identity. (2)</li>
-      <li><strong>llm</strong> — The model itself: its prompts, its guardrails, and what it emits. (11)</li>
-      <li><strong>logging</strong> — The record of a test: coverage, findings, and the evidence behind them. (1)</li>
-      <li><strong>mobile</strong> — iOS and Android applications. (0)</li>
-      <li><strong>modfile</strong> — Serialised model files, whose formats can carry executable code. (5)</li>
-      <li><strong>network</strong> — Hosts, ports, and traffic. (21)</li>
-      <li><strong>recon</strong> — Finding what exists, before anything is tested. (15)</li>
-      <li><strong>redteam</strong> — Adversary emulation across a whole estate. (11)</li>
-      <li><strong>social</strong> — People: phishing, pretexting, and what they hand over. (1)</li>
-      <li><strong>webapp</strong> — Browser-facing applications. (25)</li>
-    </ul>
+    <p class="note">What the tool is pointed at. A tool may cover several.</p>
+    <table class="checklist-table">
+      <tbody>
+        {SCOPES.map(([name, desc]) => (
+          <tr>
+            <td><a href={`/ai-security-matrix/scope/${name}/`}><code>{name}</code></a></td>
+            <td>{desc} <span class="n">{scopeCounts[name] || 0}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>Risk flags</h2>
+    <p class="note">
+      Answers a question you would otherwise learn the hard way, after cloning.
+      A flag is not a verdict — it tells you what to expect.
+    </p>
+    <table class="checklist-table">
+      <tbody>
+        {FLAGS.map(([name, desc]) => (
+          <tr>
+            <td><a href={`/ai-security-matrix/flag/${name.replace(/\s+/g, "-")}/`}><code>{name}</code></a></td>
+            <td>{desc}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    <h2>Reading a row</h2>
+    <p class="note">
+      Stars and last-updated say whether a project is alive. The flags say what it
+      will do once it runs. A tool with recent commits and no flags is the easiest
+      to try; a tool with <code>root</code> and <code>credentials</code> belongs in
+      a disposable environment.
+    </p>
   </article>
+
+  <style>
+    .crumb { font-size: 0.875rem; color: var(--stale); }
+    .lede { font-size: 1rem; line-height: 1.7; color: var(--alive); max-width: 68ch; }
+    .note { font-size: 0.875rem; color: var(--stale); max-width: 68ch; margin-top: 0.5rem; }
+    .static-doc .checklist-table { max-width: 68ch; }
+    .static-doc .checklist-table td:first-child { width: 9rem; }
+    .n {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--dead);
+      margin-left: 0.375rem;
+    }
+  </style>
 </Layout>
