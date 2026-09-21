@@ -1,6 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { home } from "@/lib/url";
+import translations from "@/../translations.json";
+
+const toolSlugs = Object.keys(translations.tools || {}).sort();
+const ISSUES_URL = "https://github.com/gandli/ai-security-matrix/issues/new";
 
 const JSON_SAMPLE = `{
   "tools": {
@@ -12,7 +16,7 @@ const JSON_SAMPLE = `{
 <Layout
   lang="en"
   title="Contribute — AI Security Matrix"
-  description="How to fix a translation, improve a tool description, or report a data problem. This mirror syncs aisecuritymatrix.com daily."
+  description="Fix a translation, suggest a tool, or report a data problem — submission forms pre-fill a GitHub issue for you."
 >
   <article class="static-doc">
     <p class="crumb"><a href={home("en")}>← Back to matrix</a></p>
@@ -26,32 +30,116 @@ const JSON_SAMPLE = `{
       pull requests welcome.
     </p>
 
-    <h2>Where the data comes from</h2>
+    <!-- ==================== SUBMISSION FORMS ==================== -->
+    <h2>Submit something</h2>
+    <p class="note">
+      Fill in the form — it opens a pre-filled GitHub issue. No account needed on this site,
+      but GitHub will ask you to sign in before it creates the issue.
+    </p>
 
-    <table class="checklist-table">
-      <tbody>
-        <tr>
-          <td>Tool list, stars, risk flags</td>
-          <td>Scraped automatically — <strong>do not edit by hand</strong></td>
-        </tr>
-        <tr>
-          <td>Chinese tool descriptions</td>
-          <td><code>translations.json</code> — edit directly</td>
-        </tr>
-        <tr>
-          <td>Static page copy (about / guide / contribute / commercial)</td>
-          <td>The <code>static</code> block in <code>translations.json</code>, or the matching <code>.astro</code> file</td>
-        </tr>
-        <tr>
-          <td>Page templates and styling</td>
-          <td><code>src/</code> — edit directly</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="form-tabs" role="tablist" aria-label="Submission type">
+      <button type="button" role="tab" class="ftab is-active" id="tab-translation" aria-selected="true" aria-controls="panel-translation" data-panel="translation">Translation fix</button>
+      <button type="button" role="tab" class="ftab" id="tab-new-tool" aria-selected="false" aria-controls="panel-new-tool" data-panel="new-tool">Suggest a tool</button>
+      <button type="button" role="tab" class="ftab" id="tab-data" aria-selected="false" aria-controls="panel-data" data-panel="data">Report data</button>
+    </div>
 
-    <h2>Three common contributions</h2>
+    <!-- Translation fix -->
+    <div id="panel-translation" role="tabpanel" aria-labelledby="tab-translation" class="fpanel is-active">
+      <form class="sub-form" data-kind="translation">
+        <label>
+          <span>Tool</span>
+          <select name="slug" required>
+            <option value="" disabled selected>Choose a tool…</option>
+            {toolSlugs.map((slug: string) => <option value={slug}>{slug}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Suggested Chinese description</span>
+          <textarea name="zh" rows="3" required
+            placeholder="开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。"
+          ></textarea>
+        </label>
+        <label>
+          <span>Reason <em>(optional)</em></span>
+          <input name="reason" type="text" placeholder="e.g. the current one mistranslates 'red team'" />
+        </label>
+        <button type="submit" class="submit-btn">Open GitHub issue →</button>
+      </form>
+    </div>
 
-    <h3>1. Fix or improve a Chinese description</h3>
+    <!-- New tool -->
+    <div id="panel-new-tool" role="tabpanel" aria-labelledby="tab-new-tool" class="fpanel" hidden>
+      <p class="form-note">
+        Curation happens upstream at
+        <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a>.
+        This form raises it here as well, so we can track it and link the two.
+      </p>
+      <form class="sub-form" data-kind="new-tool">
+        <label>
+          <span>GitHub repo URL</span>
+          <input name="repo" type="url" required placeholder="https://github.com/owner/repo"
+            pattern="https://github\.com/[^/]+/[^/]+.*" />
+        </label>
+        <label>
+          <span>Category</span>
+          <select name="category" required>
+            <option value="" disabled selected>Choose…</option>
+            <option value="agent">agent — autonomous task loop</option>
+            <option value="scanner">scanner — fixed checks, reports findings</option>
+            <option value="mcp">mcp — serves tools to a model via MCP</option>
+            <option value="skill">skill — prompts and instructions for a model</option>
+          </select>
+        </label>
+        <fieldset>
+          <legend>Scopes</legend>
+          {["ad","agentic","api","binary","cloud","code","entra","llm","logging","modfile","network","recon","redteam","social","webapp"].map((s) => (
+            <label class="scope-check">
+              <input type="checkbox" name="scope" value={s} /> {s}
+            </label>
+          ))}
+        </fieldset>
+        <label>
+          <span>Why it belongs here <em>(optional)</em></span>
+          <textarea name="reason" rows="2" placeholder="e.g. first open-source tool that covers X"></textarea>
+        </label>
+        <button type="submit" class="submit-btn">Open GitHub issue →</button>
+      </form>
+    </div>
+
+    <!-- Data problem -->
+    <div id="panel-data" role="tabpanel" aria-labelledby="tab-data" class="fpanel" hidden>
+      <form class="sub-form" data-kind="data">
+        <label>
+          <span>Tool slug</span>
+          <select name="slug" required>
+            <option value="" disabled selected>Choose a tool…</option>
+            {toolSlugs.map((slug: string) => <option value={slug}>{slug}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>What is wrong?</span>
+          <select name="field" required>
+            <option value="" disabled selected>Choose…</option>
+            <option value="stars">Star count is wrong</option>
+            <option value="flags">Risk flags are wrong</option>
+            <option value="description">Description is wrong</option>
+            <option value="category">Category is wrong</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <label>
+          <span>Expected value</span>
+          <textarea name="expected" rows="2" required
+            placeholder="e.g. it should be flagged 'credentials' because it reads ~/.aws in setup.sh"></textarea>
+        </label>
+        <button type="submit" class="submit-btn">Open GitHub issue →</button>
+      </form>
+    </div>
+
+    <!-- ==================== MANUAL PATHS ==================== -->
+    <h2>Or do it by hand</h2>
+
+    <h3>Fix a translation via pull request</h3>
 
     <p>
       Open <a href="https://github.com/gandli/ai-security-matrix/blob/astro-site/translations.json" target="_blank" rel="noopener"><code>translations.json</code></a>
@@ -66,17 +154,17 @@ const JSON_SAMPLE = `{
       the scraper only overwrites fields it fetches, and never touches this file.
     </p>
 
-    <h3>2. Report a data problem</h3>
+    <h3>Report a data problem</h3>
 
     <p>
       If a tool's stars, risk flags, or description look wrong, the cause is usually upstream.
       Check <a href="https://aisecuritymatrix.com" target="_blank" rel="noopener">aisecuritymatrix.com</a> first.
       If upstream is right and this mirror is wrong,
-      <a href="https://github.com/gandli/ai-security-matrix/issues" target="_blank" rel="noopener">open an issue</a>
+      <a href={ISSUES_URL} target="_blank" rel="noopener">open an issue</a>
       with the tool link and the expected value.
     </p>
 
-    <h3>3. Improve pages and styling</h3>
+    <h3>Improve pages and styling</h3>
 
     <p>
       Page templates live in <code>src/pages/</code>, shared components in <code>src/components/</code>,
@@ -117,37 +205,213 @@ npx playwright test    # end-to-end suite (164 passed)</code></pre>
     </p>
   </article>
 
+  <script>
+    // Tab switching
+    document.querySelectorAll(".ftab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".ftab").forEach((b) => {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(".fpanel").forEach((p) => {
+          p.classList.remove("is-active");
+          p.hidden = true;
+        });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-selected", "true");
+        const panel = document.getElementById("panel-" + btn.dataset.panel);
+        if (panel) { panel.hidden = false; panel.classList.add("is-active"); }
+      });
+    });
+
+    // Form → GitHub issue URL
+    const REPO_ISSUES = "https://github.com/gandli/ai-security-matrix/issues/new";
+
+    function openIssue(title: string, body: string) {
+      const url = REPO_ISSUES
+        + "?title=" + encodeURIComponent(title)
+        + "&body=" + encodeURIComponent(body);
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    document.querySelectorAll(".sub-form").forEach((form) => {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const fd = new FormData(form as HTMLFormElement);
+        const kind = (form as HTMLElement).dataset.kind;
+
+        if (kind === "translation") {
+          const slug = fd.get("slug") as string;
+          const zh = (fd.get("zh") as string).trim();
+          const reason = (fd.get("reason") as string || "").trim();
+          const body = [
+            "## Translation fix",
+            "",
+            "**Tool:** `" + slug + "`",
+            "**Suggested Chinese description:**",
+            "",
+            "> " + zh,
+            "",
+            reason ? "**Reason:** " + reason : "",
+            "",
+            "---",
+            "_Submitted via the contribute form on " + new Date().toISOString().slice(0, 10) + "_",
+          ].filter(Boolean).join("\n");
+          openIssue("Translation fix: " + slug, body);
+
+        } else if (kind === "new-tool") {
+          const repo = (fd.get("repo") as string).trim();
+          const category = fd.get("category") as string;
+          const scopes = fd.getAll("scope") as string[];
+          const reason = (fd.get("reason") as string || "").trim();
+          const body = [
+            "## New tool suggestion",
+            "",
+            "**Repo:** " + repo,
+            "**Category:** " + category,
+            "**Scopes:** " + (scopes.length ? scopes.map(s => "`" + s + "`").join(", ") : "—"),
+            "",
+            reason ? "**Why:** " + reason : "",
+            "",
+            "⚠️ _Curation happens upstream at aisecuritymatrix.com. This issue tracks it for the mirror._",
+            "",
+            "---",
+            "_Submitted via the contribute form on " + new Date().toISOString().slice(0, 10) + "_",
+          ].filter(Boolean).join("\n");
+          const slug = repo.replace("https://github.com/", "").replace(/\/$/, "");
+          openIssue("New tool: " + slug + " (" + category + ")", body);
+
+        } else if (kind === "data") {
+          const slug = fd.get("slug") as string;
+          const field = fd.get("field") as string;
+          const expected = (fd.get("expected") as string).trim();
+          const body = [
+            "## Data problem",
+            "",
+            "**Tool:** `" + slug + "`",
+            "**Field:** " + field,
+            "**Expected:** " + expected,
+            "",
+            "---",
+            "_Submitted via the contribute form on " + new Date().toISOString().slice(0, 10) + "_",
+          ].join("\n");
+          openIssue("Data problem: " + slug + " — " + field, body);
+        }
+      });
+    });
+  </script>
+
   <style>
-    .crumb {
+    .crumb { font-size: 0.875rem; color: var(--stale); }
+    .lede { font-size: 1rem; line-height: 1.7; color: var(--alive); max-width: 68ch; }
+    .note { font-size: 0.875rem; color: var(--stale); max-width: 68ch; margin-top: 0.375rem; }
+    .form-note { font-size: 0.8125rem; color: var(--stale); max-width: 68ch; }
+
+    /* Tabs */
+    .form-tabs {
+      display: flex; flex-wrap: wrap; gap: 0.25rem;
+      border-bottom: 1px solid var(--rule);
+      margin: 1.25rem 0 0;
+    }
+    .ftab {
+      padding: 0.5rem 0.875rem;
+      min-height: 44px;
+      font-family: inherit;
       font-size: 0.875rem;
+      font-weight: 500;
       color: var(--stale);
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
     }
-    .lede {
-      font-size: 1rem;
-      line-height: 1.7;
+    .ftab:hover { color: var(--alive); }
+    .ftab.is-active {
       color: var(--alive);
-      max-width: 68ch;
+      border-bottom-color: var(--name);
     }
+
+    /* Panels */
+    .fpanel { margin-top: 1rem; }
+    .fpanel[hidden] { display: none; }
+
+    /* Form fields */
+    .sub-form {
+      max-width: 34rem;
+      display: flex; flex-direction: column; gap: 0.875rem;
+      margin-bottom: 2rem;
+    }
+    .sub-form label {
+      display: flex; flex-direction: column; gap: 0.375rem;
+      font-size: 0.8125rem; font-weight: 500; color: var(--stale);
+    }
+    .sub-form label em { font-weight: 400; font-style: italic; color: var(--dead); }
+    .sub-form input, .sub-form select, .sub-form textarea {
+      font-family: inherit; font-size: 0.875rem;
+      padding: 0.5rem 0.625rem;
+      min-height: 44px;
+      background: var(--paper-raised);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      color: var(--alive);
+      transition: border-color 0.15s;
+    }
+    .sub-form input:focus-visible, .sub-form select:focus-visible, .sub-form textarea:focus-visible {
+      border-color: var(--scope-ink);
+      outline: none;
+    }
+    .sub-form textarea { resize: vertical; }
+    .sub-form fieldset {
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.625rem 0.75rem;
+      margin: 0;
+    }
+    .sub-form fieldset legend {
+      font-size: 0.8125rem; font-weight: 500; color: var(--stale);
+      padding: 0 0.375rem;
+    }
+    .scope-check {
+      display: inline-flex !important;
+      flex-direction: row !important;
+      align-items: center;
+      gap: 0.25rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 400;
+      min-height: 44px;
+    }
+    .scope-check input { width: auto; min-height: auto; margin: 0; }
+    .submit-btn {
+      align-self: flex-start;
+      padding: 0.625rem 1.25rem;
+      min-height: 44px;
+      font-family: inherit; font-size: 0.875rem; font-weight: 600;
+      color: var(--name-ink);
+      background: var(--name);
+      border: none; border-radius: 6px;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+    }
+    .submit-btn:hover { opacity: 0.88; }
+    .submit-btn:active { transform: scale(0.98); }
+    .submit-btn:focus-visible {
+      outline: 2px solid var(--scope-ink);
+      outline-offset: 2px;
+    }
+
     .static-doc h3 {
       margin-top: 1.75rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--name);
+      font-size: 1rem; font-weight: 600; color: var(--name);
     }
     .static-doc ul {
-      max-width: 68ch;
-      padding-left: 1.25rem;
-      line-height: 1.7;
+      max-width: 68ch; padding-left: 1.25rem; line-height: 1.7;
     }
-    .static-doc li {
-      margin-bottom: 0.25rem;
-    }
-    .static-doc pre {
-      max-width: 68ch;
-      overflow-x: auto;
-    }
-    .static-doc :global(code) {
-      font-size: 0.875rem;
-    }
+    .static-doc li { margin-bottom: 0.25rem; }
+    .static-doc pre { max-width: 68ch; overflow-x: auto; }
+    .static-doc :global(code) { font-size: 0.875rem; }
   </style>
 </Layout>
