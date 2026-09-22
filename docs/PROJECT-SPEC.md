@@ -1,59 +1,59 @@
 # Project Spec — AI Security Matrix
 
-## 定位
+## Positioning
 
-AI Security Matrix 是 [aisecuritymatrix.com](https://aisecuritymatrix.com) 的开源双语社区镜像。
-上游负责工具筛选、分类决策与风险审计标准；本仓库负责中文翻译、可搜索界面、工具详情页与交互式贡献流程。
+AI Security Matrix is an open-source bilingual community mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com).
+Upstream handles curation, categorisation decisions, and risk-audit criteria. This repository owns Chinese translations, the searchable interface, per-tool detail pages, and the interactive contribution workflow.
 
-**一句话**：一份精选的 AI 安全测试工具目录——不仅告诉你"有哪些"，还在你 `git clone` 之前告诉你"它会对你的机器做什么"。
+**In one sentence**: A curated directory of AI security testing tools — not only "what's out there," but "what it does to your machine" before you `git clone`.
 
 ---
 
-## 目标受众
+## Target audience
 
-| 角色 | 核心诉求 | 页面 |
+| Role | Core need | Page |
 |:---|:---|:---|
-| 渗透测试员 / 红队成员 | 按攻击面筛选可用工具，评估运行风险 | 主页（筛选 + 排序） |
-| Bug Bounty 猎人 | 发现新工具，验证风险标记是否与场景匹配 | 分类 / 范围 / 风险标记索引页 |
-| 防守方（蓝队） | 了解攻击者可能使用哪些工具及其行为 | About / Guide |
-| 开发者 / 贡献者 | 修正翻译、改进页面、贡献新工具 | Contribute |
-| 安全决策者 | 了解 AI 安全生态全貌、识别商业化产品缺口 | Commercial |
+| Pentester / red-team operator | Filter by attack surface, evaluate runtime risk | Home (filter + sort) |
+| Bug-bounty hunter | Discover new tools, verify risk flags match their scenario | Category / Scope / Flag index pages |
+| Defender (blue team) | Understand what tools attackers might deploy | About / Guide |
+| Developer / contributor | Fix translations, improve pages, suggest new tools | Contribute |
+| Security decision-maker | Survey the AI security ecosystem, identify commercial gaps | Commercial |
 
 ---
 
-## 功能范围
+## Feature scope
 
-### 核心（已交付）
+### Core (delivered)
 
-| 功能 | 描述 |
+| Feature | Description |
 |:---|:---|
-| **65 个工具全量收录** | 每个工具含 slug、仓库地址、描述、星级、许可证、内置工具、风险标记、检查清单 |
-| **双语** | 全站中英双语，语言切换保持当前路由 |
-| **多维筛选** | 按文本、测试范围、风险标记实时搜索；按分类 tab 一键过滤 |
-| **多列排序** | 最近更新、类别、工具名、Stars、风险标记数量 |
-| **双视图** | 列表视图（数据表格）+ 覆盖面视图（Scope × Category 矩阵） |
-| **四层索引** | 分类（4）、测试范围（15）、风险标记（6）、标签（249）各自独立索引页 |
-| **工具详情页** | 徽章、GitHub 社交预览图、安全检查表、Scope/Flag/Topics 可点击跳转 |
-| **四静态说明页** | About / Guide / Contribute / Commercial，中英双语 |
-| **贡献表单** | 修正翻译、推荐新工具、报告数据——纯前端生成预填 GitHub Issue URL |
-| **Web Audio 音效** | hover / click / focus 微交互音效，默认开启，纯合成零资源 |
-| **暗/亮主题** | 全站双主题，localStorage 持久化 |
+| **65 tools indexed** | Each with slug, repo URL, description, stars, licence, bundled tools, risk flags, safety checklist |
+| **Bilingual** | English and Chinese across all routes; language switch preserves current path |
+| **Multi-dimensional filter** | Real-time search by text, scope, risk flag; one-click category tab filter |
+| **Multi-column sort** | Last updated, category, tool name, stars, risk flag count |
+| **Dual view** | List view (data table) + Coverage view (scope × category heatmap) |
+| **Four-layer index** | Category (4), Scope (15), Flag (6), Topic (249) — each with dedicated index pages |
+| **Tool detail page** | Badges, GitHub social preview, safety checklist, clickable Scope/Flag/Topics |
+| **Four static content pages** | About / Guide / Contribute / Commercial, bilingual |
+| **Contribution forms** | Fix translations, suggest tools, report data — client-side pre-filled GitHub Issue URLs |
+| **Web Audio sound** | Hover / click / focus micro-interaction cues, default on, pure synthesis |
+| **Dark / light themes** | Dual themes, localStorage persistence |
 
-### 明确不在范围内
+### Explicitly out of scope
 
-- 工具排名或评分系统
-- 自动化测试工具本身
-- 商业/付费产品的收录（有明确准入标准，见 `/commercial/`）
-- 需要后端 API 的功能（纯静态输出）
+- Tool ranking or scoring systems
+- Automated testing of the tools themselves
+- Commercial / paid product listings (clear criteria defined at `/commercial/`)
+- Features requiring a backend API (static output only)
 
 ---
 
-## 非功能指标
+## Non-functional metrics
 
-| 指标 | 当前值 | 来源 |
+| Metric | Current value | Source |
 |:---|:---|:---|
-| 静态页面数 | 688 | `npm run build` |
-| E2E 测试 | 208 passed / 0 failed | Playwright, 4 视口 |
-| axe-core 违规 | 0 | WCAG 2.2 AA + BP, 15 页 × 2 主题 |
-| 对比度 | 12/12 通过 | 6 页面 × 2 主题, Playwright 实测 |
-| 数据同步频率 | 每日一次 | `sync-aisecuritymatrix.yml` |
+| Static pages | 688 | `npm run build` |
+| E2E tests | 208 passed / 0 failed | Playwright, 4 viewports |
+| axe-core violations | 0 | WCAG 2.2 AA + BP, 15 pages × 2 themes |
+| Contrast | 12/12 pass | 6 pages × 2 themes, Playwright measured |
+| Data sync frequency | Daily | `sync-aisecuritymatrix.yml` |

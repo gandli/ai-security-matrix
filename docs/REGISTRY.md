@@ -1,99 +1,97 @@
 # Registry — AI Security Matrix
 
-数据抓取、校验与翻译分发的完整说明。
-
 ---
 
-## 1. 数据抓取（`scripts/scrape.py`）
+## 1. Data Scraping (`scripts/scrape.py`)
 
-每日 GitHub Actions（`sync-aisecuritymatrix.yml`）自动运行：
+Runs daily via GitHub Actions (`sync-aisecuritymatrix.yml`):
 
-### 流程
+### Pipeline
 
-1. **Sitemap 解析**：从 `aisecuritymatrix.com/sitemap.xml` 提取全部工具页面 URL。
-2. **索引页解析**：抓取首页 HTML，提取分类、测试范围、星级、风险标记。
-3. **详情页解析**：逐页抓取每个工具的描述、许可证、维护者、内置工具、安全检查清单。
-4. **翻译合并**：从 `translations.json` 注入中文描述（若无则回退英文）。
-5. **结构化输出**：写入 `tools.json`（排序后的完整数据集）。
-6. **静态页面镜像**：生成 `tools/agents/*.md`、`tools/agents/*.zh.md` 等分类目录。
-7. **README 生成**：调用 `directory_readme()` 生成 `README.md` 与 `README.zh.md`。
-8. **Git 提交**：`git add -A && git commit`（如有变化）。
+1. **Sitemap parsing**: Extract all tool page URLs from `aisecuritymatrix.com/sitemap.xml`.
+2. **Index page parsing**: Fetch homepage HTML to extract category, scope, stars, and risk flags per tool.
+3. **Detail page parsing**: Scrape each tool page for description, licence, maintainers, bundled tools, and safety checklist.
+4. **Translation injection**: Inject Chinese descriptions from `translations.json` (fallback to English if missing).
+5. **Structured output**: Write `tools.json` (sorted complete dataset).
+6. **Static page mirror**: Generate `tools/agents/*.md`, `tools/agents/*.zh.md`, etc. by category directory.
+7. **README generation**: Call `directory_readme()` to generate `README.md` and `README.zh.md`.
+8. **Git commit**: `git add -A && git commit` (only if changed).
 
-### 安全守门
+### Safety gate
 
 ```yaml
 # Guard against a broken scrape
 NEW=$(echo ${{ steps.scrape.outputs.after }})
 OLD=${{ steps.scrape.outputs.before }}
-# 如果工具数量骤减超过 30%，CI 将拒绝合并
+# CI rejects merge if tool count drops by more than 30%
 ```
 
 ---
 
-## 2. 数据结构
+## 2. Data Schema
 
-### `tools.json`（顶层字段）
+### `tools.json` (top-level fields)
 
-| 字段 | 类型 | 说明 |
+| Field | Type | Description |
 |:---|:---|:---|
-| `slug` | string | 工具标识（URL 段） |
-| `repo` | string | GitHub 仓库路径 (`owner/name`) |
-| `category` | string | 分类：`agent` / `scanner` / `mcp` / `skill` |
-| `stars` | string | 格式化星级（如 `63k`） |
-| `freshness` | string | 最后推送（如 `today`, `7d`, `1.2y`） |
-| `description` | string | 英文描述（来自 GitHub API 或 README） |
-| `description_zh` | string | 中文描述（来自 translations.json） |
-| `licence` | string | 许可证标识 |
-| `bundled_tools` | string[] | 内嵌/捆绑的第三方工具列表 |
-| `checklist` | object | 六项安全检查结果（yes/no） |
-| `scopes` | string[] | 测试范围（如 `webapp`, `api`, `network`） |
-| `access` | string[] | Access 风险标记（`root`, `credentials`） |
-| `host` | string[] | Host 风险标记（`installs`, `binaries`） |
-| `unseen` | string[] | Unseen 风险标记（`calls out`, `opaque`） |
+| `slug` | string | Tool identifier (URL segment) |
+| `repo` | string | GitHub repo path (`owner/name`) |
+| `category` | string | Category: `agent` / `scanner` / `mcp` / `skill` |
+| `stars` | string | Formatted star count (e.g. `63k`) |
+| `freshness` | string | Last push (e.g. `today`, `7d`, `1.2y`) |
+| `description` | string | English description |
+| `description_zh` | string | Chinese description (from translations.json) |
+| `licence` | string | Licence identifier |
+| `bundled_tools` | string[] | Bundled third-party tool list |
+| `checklist` | object | Six safety check results (yes / no) |
+| `scopes` | string[] | Testing scopes (e.g. `webapp`, `api`, `network`) |
+| `access` | string[] | Access risk flags (`root`, `credentials`) |
+| `host` | string[] | Host risk flags (`installs`, `binaries`) |
+| `unseen` | string[] | Unseen risk flags (`calls out`, `opaque`) |
 
 ### `translations.json`
 
-| Key | 用途 |
+| Key | Purpose |
 |:---|:---|
-| `_comment` | 注释说明 |
-| `tools` | `{slug: 中文描述}` 映射，65 个条目 |
-| `static` | 静态页整段翻译（`about` / `guide` / `contribute` / `commercial`） |
+| `_comment` | Documentation note |
+| `tools` | `{slug: Chinese description}` mapping, 65 entries |
+| `static` | Full static page translations (`about`, `guide`, `contribute`, `commercial`) |
 
 ---
 
-## 3. 校验规则
+## 3. Validation Rules
 
-### 数据完整性
+### Data integrity
 
-- 工具总数不得低于 30（防上游站点结构变更导致解析全空）。
-- 每个工具必须有 `repo` 和 `category` 字段。
-- `checklist` 六项检查必须存在（可为 `not checked`）。
+- Total tool count must not drop below 30 (guards against upstream site restructuring).
+- Every tool must have a `repo` and `category` field.
+- `checklist` must contain all six checks (may be `not checked`).
 
-### 对比度合规
+### Contrast compliance
 
-- 全部前景/背景色对必须通过 `scripts/contrast-audit.mjs`（WCAG AA ≥ 4.5:1）。
-- 修改任何 token 后必须重跑该脚本，并确认两套主题均通过。
+- All foreground/background pairs must pass `scripts/contrast-audit.mjs` (WCAG AA ≥ 4.5:1).
+- After any token change, rerun the audit and confirm both themes pass.
 
-### 无障碍合规
+### Accessibility compliance
 
-- 全部页面必须通过 `scripts/a11y-audit.mjs`（axe-core WCAG 2.2 AA + BP 零违规）。
+- All pages must pass `scripts/a11y-audit.mjs` (axe-core WCAG 2.2 AA + BP zero violations).
 
 ---
 
-## 4. 翻译分发
+## 4. Translation Distribution
 
-### 翻译来源优先级
+### Translation source priority
 
-1. `translations.json` 中 `tools[slug]` 的人工维护翻译（最高优先）
-2. `translations.json` 中 `static[slug]` 的整段翻译
-3. 无翻译时回退到英文原文（不阻塞同步）
+1. Curated translation from `translations.json` → `tools[slug]` (highest priority)
+2. Static page translation from `translations.json` → `static[slug]`
+3. Fallback to English original if no translation exists (never blocks sync)
 
-### 翻译流程
+### Translation workflow
 
 ```
-1. 贡献者编辑 translations.json（或通过贡献页表单提交 Issue）
-2. 人工审核 PR
-3. 合并至 astro-site 分支
-4. 次日同步自动保留翻译（不覆盖 translations.json）
-5. npm run build → 全站 688 页重新生成
+1. Contributor edits translations.json (or submits via contribute form → GitHub Issue)
+2. Manual review of pull request
+3. Merged into astro-site branch
+4. Daily sync preserves the translation (does not overwrite translations.json)
+5. npm run build → all 688 pages regenerated
 ```

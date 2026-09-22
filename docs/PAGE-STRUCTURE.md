@@ -2,30 +2,30 @@
 
 ---
 
-## 1. 路由体系
+## 1. Route Architecture
 
-全站为 Astro 静态路由，所有页面部署于 Base 路径 `/ai-security-matrix/` 下。
+All pages are Astro static routes deployed under the base path `/ai-security-matrix/`.
 
-| 路由 (EN) | 路由 (ZH) | 类型 | 页面说明 | 页面数 |
+| Route (EN) | Route (ZH) | Type | Description | Count |
 |:---|:---|:---:|:---|:---:|
-| `/` | `/zh/` | 静态 | 矩阵主页（筛选、排序、双视图） | 2 |
-| `/about/` | `/zh/about/` | 静态 | 关于页面（镜像定位、风险审计标准） | 2 |
-| `/guide/` | `/zh/guide/` | 静态 | 使用指南（分类、范围、标记字典） | 2 |
-| `/contribute/` | `/zh/contribute/` | 静态 | 贡献页面（三套交互式提交表单） | 2 |
-| `/commercial/` | `/zh/commercial/` | 静态 | 商业工具（开源范围说明、收录标准） | 2 |
-| `/tools/[slug]/` | `/zh/tools/[slug]/` | 动态 | 工具详情页（按 repo slug） | 130 |
-| `/category/[cat]/` | `/zh/category/[cat]/` | 动态 | 分类索引页（4 个分类） | 8 |
-| `/scope/[scope]/` | `/zh/scope/[scope]/` | 动态 | 测试范围索引页（15 个范围） | 30 |
-| `/flag/[flag]/` | `/zh/flag/[flag]/` | 动态 | 风险标记索引页（6 项标记） | 12 |
-| `/topic/[topic]/` | `/zh/topic/[topic]/` | 动态 | 标签索引页（249 个标签） | 498 |
+| `/` | `/zh/` | Static | Matrix home (filter, sort, dual views) | 2 |
+| `/about/` | `/zh/about/` | Static | About (mirror positioning, risk criteria) | 2 |
+| `/guide/` | `/zh/guide/` | Static | Guide (category, scope, flag dictionary) | 2 |
+| `/contribute/` | `/zh/contribute/` | Static | Contribute (3 interactive submission forms) | 2 |
+| `/commercial/` | `/zh/commercial/` | Static | Commercial (open-source scope, listing criteria) | 2 |
+| `/tools/[slug]/` | `/zh/tools/[slug]/` | Dynamic | Tool detail (by repo slug) | 130 |
+| `/category/[cat]/` | `/zh/category/[cat]/` | Dynamic | Category index (4 categories) | 8 |
+| `/scope/[scope]/` | `/zh/scope/[scope]/` | Dynamic | Scope index (15 scopes) | 30 |
+| `/flag/[flag]/` | `/zh/flag/[flag]/` | Dynamic | Risk flag index (6 flags) | 12 |
+| `/topic/[topic]/` | `/zh/topic/[topic]/` | Dynamic | Topic index (249 tags) | 498 |
 
-**构建总页面数**：688 个静态 HTML 文件。
+**Total static pages**: 688 HTML files.
 
 ---
 
-## 2. 页面与组件结构
+## 2. Page & Component Structure
 
-### 通用布局 (`src/layouts/Layout.astro`)
+### Universal Layout (`src/layouts/Layout.astro`)
 
 ```html
 <!doctype html>
@@ -42,8 +42,8 @@
         <nav class="site-nav">
           <div class="nav-links">About · Guide · Submit · Vendors</div>
           <div class="nav-actions">
-            <!-- language toggle (globe) -->
-            <!-- theme toggle (sun/moon) -->
+            <!-- language toggle (globe icon) -->
+            <!-- theme toggle (sun/moon icon) -->
           </div>
         </nav>
       </header>
@@ -60,7 +60,7 @@
 </html>
 ```
 
-### 矩阵主页 (`src/pages/index.astro` / `zh/index.astro`)
+### Matrix Home (`src/pages/index.astro` / `zh/index.astro`)
 
 ```
 Layout
@@ -77,7 +77,7 @@ Layout
     └── Coverage View: matrix table (Category × Scope heatmap)
 ```
 
-### 工具详情页 (`src/pages/tools/[slug].astro` / `zh/tools/[slug].astro`)
+### Tool Detail (`src/pages/tools/[slug].astro` / `zh/tools/[slug].astro`)
 
 ```
 Layout (with ogImage = self-generated PNG)
@@ -86,8 +86,8 @@ Layout (with ogImage = self-generated PNG)
     ├── h1: owner/name
     ├── description (EN / ZH)
     ├── ToolBadges.astro (GitHub stars, DeepWiki, Zread, CodeWiki)
-    ├── figure.gh-og: GitHub social preview illustration (opengraph.githubassets.com)
-    ├── tool-detail-grid: Category (chip), Stars, Last updated, Licence, Contributors, Size, Forks
+    ├── figure.gh-og: GitHub social preview (opengraph.githubassets.com)
+    ├── tool-detail-grid: Category, Stars, Last updated, Licence, Contributors, Size, Forks
     ├── Scope pills: clickable → /scope/[scope]/
     ├── Bundled tools list
     ├── Safety checklist table: 6 checks (yes / no / not checked)
@@ -95,19 +95,19 @@ Layout (with ogImage = self-generated PNG)
     └── Topics: clickable → /topic/[topic]/
 ```
 
-### 索引列表页 (`src/components/TermList.astro`)
+### Index List Pages (`src/components/TermList.astro`)
 
-用于 `/category/`、`/scope/`、`/flag/`、`/topic/` 页面：
+Used for `/category/`, `/scope/`, `/flag/`, `/topic/` pages:
 
 ```
 Layout
 └── TermList.astro
     ├── header: h2.term-headline + p.term-sub ("N tools · Back to matrix")
     └── ul.tool-card-grid
-        └── li.tool-card-link (cards with repo name, stars, description)
+        └── li.tool-card-link (cards: repo name, star badge, description)
 ```
 
-### 贡献页面 (`src/pages/contribute.astro` / `zh/contribute.astro`)
+### Contribute Page (`src/pages/contribute.astro` / `zh/contribute.astro`)
 
 ```
 Layout
@@ -115,10 +115,10 @@ Layout
     ├── crumb: "← Back to matrix"
     ├── h1: "Contribute"
     ├── lede: mirror statement
-    ├── Form section (tablist + 3 tabpanels)
-    │   ├── Tab 1: Translation fix (tool select, textarea, reason)
-    │   ├── Tab 2: Suggest a tool (repo URL, category, 15 scope checkboxes, why)
-    │   └── Tab 3: Report data (tool select, field, expected value)
+    ├── Form section (role="tablist" + 3 role="tabpanel" sections)
+    │   ├── Tab 1: Translation fix (tool select, textarea, optional reason)
+    │   ├── Tab 2: Suggest a tool (repo URL, category select, 15 scope checkboxes, why)
+    │   └── Tab 3: Report data (tool select, field select, expected value)
     │   └── Submit buttons: open pre-filled GitHub Issue URLs
     └── Manual guide: PR workflow, local run, pre-flight checklist, upstream notes
 ```

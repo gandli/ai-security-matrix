@@ -2,149 +2,148 @@
 
 ---
 
-## 1. 前置依赖
+## 1. Prerequisites
 
-| 依赖 | 版本 | 安装 |
-|:---|:---|:---|
-| Node.js | ≥ 22 | [nodejs.org](https://nodejs.org) |
-| npm | ≥ 10 | 随 Node.js |
-| Python | ≥ 3.11 | [python.org](https://python.org) |
-| Chromium | any | `apt install chromium`（仅 Playwright / agent-browser 需要） |
-| 字体 | fonts-noto-cjk | `apt install fonts-noto-cjk`（仅截图与 Linux 中文渲染需要） |
+| Dependency | Version | Install command | Notes |
+|:---|:---|:---|:---|
+| Node.js | ≥ 22 | [nodejs.org](https://nodejs.org) | Runtime |
+| npm | ≥ 10 | Bundled with Node | Package manager |
+| Python | ≥ 3.11 | [python.org](https://python.org) | Scraper & data pipeline |
+| Chromium | Any | `apt install chromium` | Playwright & agent-browser |
+| Fonts | Noto CJK | `apt install fonts-noto-cjk` | Linux CJK screenshot rendering |
 
 ---
 
-## 2. 快速开始
+## 2. Quick Start
 
 ```bash
 git clone https://github.com/gandli/ai-security-matrix.git
 cd ai-security-matrix
 npm install
 
-# 启动开发服务器 (默认 http://localhost:4321/ai-security-matrix/)
+# Start local dev server (default: http://localhost:4321/ai-security-matrix/)
 npm run dev
 
-# 启动构建并预览
+# Build static site and preview locally
 npm run build && npm run preview
 
-# 运行全量 E2E 测试
+# Run the full end-to-end test suite
 npx playwright test
 ```
 
 ---
 
-## 3. npm 脚本
+## 3. npm Scripts
 
-| 脚本 | 命令 | 说明 |
+| Script | Command | Purpose |
 |:---|:---|:---|
-| `npm run dev` | `astro dev` | 开发服务器，Vite HMR 热更新 |
-| `npm run build` | `node scripts/gen-tool-og.mjs && astro build` | 生成 OG 图 + 构建静态站点 |
-| `npm run preview` | `astro preview` | 本地预览构建产物（生产模式） |
-| `npx playwright test` | Playwright E2E | 4 视口 × 8 spec 文件 |
+| `npm run dev` | `astro dev` | Dev server with Vite HMR hot module replacement |
+| `npm run build` | `node scripts/gen-tool-og.mjs && astro build` | Generate 130 OG images + compile static site |
+| `npm run preview` | `astro preview` | Local preview of production build |
+| `npx playwright test` | Playwright CLI | 4 viewports × 8 spec files |
 
 ---
 
-## 4. 项目脚本说明
+## 4. Automation Scripts
 
-| 脚本 | 说明 |
+| Script | Purpose |
 |:---|:---|
-| `scripts/scrape.py` | 抓取 aisecuritymatrix.com，生成 `tools.json` / `src/data/site.json` / README / Markdown 镜像 |
-| `scripts/gen-tool-og.mjs` | 从 `site.json` 生成 130 张（65 × 2 语言）工具 OG 图（sharp SVG→PNG） |
-| `scripts/a11y-audit.mjs` | axe-core WCAG 2.2 AA 全站无障碍合规扫描 |
-| `scripts/contrast-audit.mjs` | Playwright 实测对比度（WCAG AA/AAA 阈值） |
-| `scripts/capture-screenshots.mjs` | Playwright 自动采集全站截图（EN/ZH × Dark/Light） |
-| `scripts/measure-header.mjs` | 量测移动端 Header 在各视口下的实际高度 |
+| `scripts/scrape.py` | Scrapes aisecuritymatrix.com, generates `tools.json`, `site.json`, READMEs, Markdown mirror |
+| `scripts/gen-tool-og.mjs` | Generates 130 per-tool OG images (sharp SVG → PNG) |
+| `scripts/a11y-audit.mjs` | axe-core WCAG 2.2 AA full-site accessibility audit |
+| `scripts/contrast-audit.mjs` | Playwright-based rendered contrast measurement (WCAG AA/AAA) |
+| `scripts/capture-screenshots.mjs` | Automated screenshot capture (EN/ZH × Dark/Light) |
+| `scripts/measure-header.mjs` | Measures mobile header height across viewport widths |
 
 ---
 
-## 5. 开发工作流
+## 5. Development Workflows
 
-### 场景 A：修改一个组件的样式
+### Workflow A — Modifying Component Styles
 
 ```bash
-# 1. 在 dev 模式下编辑
+# 1. Edit in dev mode
 vim src/styles/global.css
-# 浏览器自动热更新，无需手动刷新
+# Browser hot-reloads automatically
 
-# 2. 验证构建与测试
+# 2. Validate build and tests
 npm run build
 npx playwright test
 
-# 3. 运行无障碍与对比度检查
+# 3. Verify accessibility and contrast
 node scripts/a11y-audit.mjs
 node scripts/contrast-audit.mjs
 
-# 4. 提交
+# 4. Commit and push
 git add -A
 git commit -m "refine(style): <describe change>"
 git push origin astro-site
 ```
 
-### 场景 B：新增一个功能特性
+### Workflow B — Adding a Feature
 
 ```bash
-# 1. 在开发分支上工作
+# 1. Work on a feature branch
 git checkout -b feat/your-feature
 
-# 2. 修改对应的 .astro 文件或创建新组件
+# 2. Modify or create .astro components
 vim src/components/YourComponent.astro
 
-# 3. 确认双语：如果涉及文案，同时修改 ZH 版本
+# 3. Bilingual parity: update both EN and ZH versions if copy changes
 
-# 4. 确认移动端：使用 Chrome DevTools 或 agent-browser 在 320px 测试
+# 4. Mobile check: test at 320px width via Chrome DevTools or agent-browser
 
-# 5. 跑通全部检查
+# 5. Run all checks
 npm run build && npx playwright test
 
-# 6. 提交并推送
+# 6. Push and open PR against astro-site
 git add -A && git commit -m "feat: <description>"
 git push origin feat/your-feature
-# 向 astro-site 分支发 PR
 ```
 
-### 场景 C：更新工具数据
+### Workflow C — Refreshing Upstream Data
 
 ```bash
-# 手动触发每日同步
+# Trigger the scraper manually
 python3 scripts/scrape.py
 
-# 或通过 GitHub Actions
+# Or trigger via GitHub Actions
 gh workflow run sync-aisecuritymatrix.yml
 ```
 
 ---
 
-## 6. 调试技巧
+## 6. Debugging Tips
 
-### Playwright 交互调试
+### Playwright Interactive Debugging
 
 ```bash
-# 只跑一个 spec 文件
+# Run a single spec file
 npx playwright test e2e/contribute.spec.ts
 
-# 使用 headed 模式（有浏览器窗口）
+# Headed mode (visible browser window)
 npx playwright test --headed
 
-# 显示 trace
+# Enable trace on failure
 npx playwright test --trace on
 
-# 查看最近失败截图
+# View failure screenshots
 ls test-results/*/test-failed-1.png
 ```
 
-### 无障碍审计
+### Accessibility Auditing
 
 ```bash
-# axe-core 全量扫描（15 页 × 2 主题）
+# axe-core full-site audit (15 pages × 2 themes)
 node scripts/a11y-audit.mjs
 
-# 只跑对比度
+# Contrast-only verification
 node scripts/contrast-audit.mjs
 ```
 
-### 移动端 Header 量测
+### Mobile Header Height Measurement
 
 ```bash
 node scripts/measure-header.mjs
-# 输出各视口宽度下的 header 高度与 nav 行数
+# Outputs header pixel height and nav row count for 320, 375, 390, 414px
 ```

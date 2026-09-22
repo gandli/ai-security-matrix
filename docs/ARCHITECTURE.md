@@ -1,6 +1,6 @@
 # Architecture — AI Security Matrix
 
-## 系统拓扑
+## System Topology
 
 ```
 upstream (aisecuritymatrix.com)
@@ -37,16 +37,16 @@ GitHub Pages (https://gandli.github.io/ai-security-matrix/)
 
 ---
 
-## 目录结构
+## Directory Structure
 
 ```
 .
 ├── .github/workflows/
-│   ├── deploy-pages.yml          # GitHub Pages 构建与发布
-│   ├── e2e.yml                   # Playwright E2E 测试流水线
-│   └── sync-aisecuritymatrix.yml # 每日上游数据同步
-├── assets/readme/                # README 嵌入的截图像册 (3.2 MB)
-├── docs/                         # 项目技术文档
+│   ├── deploy-pages.yml          # GitHub Pages build & publish
+│   ├── e2e.yml                   # Playwright E2E test pipeline
+│   └── sync-aisecuritymatrix.yml # Daily upstream scrape & sync
+├── assets/readme/                # Screenshots embedded in README (3.2 MB)
+├── docs/                         # Technical documentation
 │   ├── PROJECT-SPEC.md
 │   ├── ARCHITECTURE.md
 │   ├── COMPONENT-GUIDELINES.md
@@ -54,69 +54,69 @@ GitHub Pages (https://gandli.github.io/ai-security-matrix/)
 │   ├── DEVELOPMENT.md
 │   ├── REGISTRY.md
 │   └── DEPLOYMENT.md
-├── e2e/                          # Playwright 测试套件 (8 个 spec 文件)
-├── public/                       # 静态静态资源 (favicon, og-image)
-│   └── og/                       # 构建时生成的 130 张工具 OG 图
-├── scripts/                      # 核心脚本
-│   ├── scrape.py                 # 上游抓取 + 数据生成
-│   ├── gen-tool-og.mjs           # 每工具 OG 图批量生成 (sharp)
-│   ├── a11y-audit.mjs            # axe-core 无障碍合规扫描
-│   ├── contrast-audit.mjs        # Playwright 真实对比度测量
-│   └── capture-screenshots.mjs   # 自动化全站截图采集
+├── e2e/                          # Playwright test suite (8 spec files)
+├── public/                       # Static public assets (favicon, og-image)
+│   └── og/                       # 130 tool OG images generated at build time
+├── scripts/                      # Core automation scripts
+│   ├── scrape.py                 # Upstream scraper + data generator
+│   ├── gen-tool-og.mjs           # Per-tool OG image generator (sharp)
+│   ├── a11y-audit.mjs            # axe-core WCAG 2.2 AA audit
+│   ├── contrast-audit.mjs        # Playwright contrast verification
+│   └── capture-screenshots.mjs   # Automated full-site screenshot capture
 ├── src/
 │   ├── components/
-│   │   ├── Hero.astro            # 首页 Hero 区域
-│   │   ├── MatrixApp.astro       # 核心应用：筛选/排序/表格/覆盖面
-│   │   ├── TermList.astro        # 索引页通用卡片网格
-│   │   └── ToolBadges.astro      # 工具详情页外部徽章行
+│   │   ├── Hero.astro            # Home page hero banner
+│   │   ├── MatrixApp.astro       # Core app: filter / sort / table / coverage
+│   │   ├── TermList.astro        # Reusable card grid for index pages
+│   │   └── ToolBadges.astro      # External badge row for tool detail
 │   ├── data/
-│   │   └── site.json             # 构建期消费的数据集
+│   │   └── site.json             # Build-time dataset
 │   ├── layouts/
-│   │   └── Layout.astro          # 全站通用布局（header/nav/footer/a11y/audio）
+│   │   └── Layout.astro          # Universal layout (header/nav/footer/a11y/audio)
 │   ├── lib/
-│   │   ├── audio/sounds.ts       # Web Audio 纯合成音效引擎
-│   │   ├── taxonomy.ts           # 双语术语字典
-│   │   └── url.ts                # Base 路径感知的 URL 构建器
-│   ├── pages/                    # 静态路由与动态路由
+│   │   ├── audio/sounds.ts       # Web Audio synthetic sound engine
+│   │   ├── taxonomy.ts           # Bilingual taxonomy dictionary
+│   │   └── url.ts                # Base-path-aware URL builder
+│   ├── pages/                    # Static and dynamic page routes
 │   └── styles/
-│       └── global.css            # 全局样式：设计令牌 + 重置 + 组件 + 响应式
-├── AGENTS.md                     # Agent 协作与开发规范
-├── CHANGELOG.md                  # 版本变更日志
-├── DESIGN.md                     # 设计系统与视觉规范
-├── PRODUCT.md                    # 产品上下文与受众定义
-├── README.md                     # 英文主页索引
-├── README.zh.md                  # 中文主页索引
-├── TODO.md                       # 开发计划与待办事项
-├── astro.config.mjs              # Astro 配置文件
-├── package.json                  # 依赖与脚本
-├── playwright.config.ts          # Playwright E2E 配置
-├── tailwind.config.js            # Tailwind 配置
-├── tools.json                    # 爬虫输出的原始数据
-└── translations.json             # 人工维护的双语翻译库
+│       └── global.css            # Global tokens, reset, components, responsive
+├── AGENTS.md                     # Agent collaboration & development rules
+├── CHANGELOG.md                  # Version history
+├── DESIGN.md                     # Design system specification
+├── PRODUCT.md                    # Product context & audience definition
+├── README.md                     # English root index (canonical)
+├── README.zh.md                  # Chinese translation index
+├── TODO.md                       # Development status & roadmap
+├── astro.config.mjs              # Astro configuration
+├── package.json                  # Dependencies & scripts
+├── playwright.config.ts          # Playwright test configuration
+├── tailwind.config.js            # Tailwind integration configuration
+├── tools.json                    # Scraped raw dataset
+└── translations.json             # Curated bilingual translation dictionary
 ```
 
 ---
 
-## 数据流与派生管线
+## Data Flow & Derivation Pipeline
 
 ```
-1. 抓取 (scripts/scrape.py)
+1. Scrape (scripts/scrape.py)
    aisecuritymatrix.com/sitemap.xml
-   ├── 解析 65 个工具页面 HTML
-   ├── 提取元数据、内置工具、checklist
-   └── 写入 tools.json
+   ├── Parse 65 tool page HTMLs
+   ├── Extract metadata, bundled tools, checklist
+   └── Write tools.json
 
-2. 翻译合并 (translations.json)
-   tools.json + translations.json (tools + static 字典)
-   └── 派生 src/data/site.json
+2. Merge translations (translations.json)
+   tools.json + translations.json (tools + static dictionaries)
+   └── Derive src/data/site.json
 
-3. 视觉资产预生成 (scripts/gen-tool-og.mjs)
-   site.json → sharp (SVG 模板 → 144 DPI PNG)
-   └── 输出 public/og/{slug}.png + {slug}-zh.png (130 张)
+3. Pre-generate visual assets (scripts/gen-tool-og.mjs)
+   site.json → sharp (SVG template → 144 DPI PNG)
+   └── Output public/og/{slug}.png + {slug}-zh.png (130 images)
 
-4. 静态生成 (astro build)
-   site.json + 路由模板 → 688 个 HTML 文件 (dist/)
+4. Static build (astro build)
+   site.json + page templates → 688 HTML files (dist/)
 
-5. 部署 (deploy-pages.yml)
-   dist/ → 孤立分支 gh-pages → GitHub Pages CDN
+5. Deploy (deploy-pages.yml)
+   dist/ → orphan branch gh-pages → GitHub Pages CDN
 ```
