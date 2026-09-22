@@ -7,7 +7,7 @@ _Model Context Protocol tool servers · 14 tools_
 - [GhidraMCP](lauriewired-ghidramcp.md) — 10k · MCP Server for Ghidra
 - [mcp-server](portswigger-mcp-server.md) — 1.2k · MCP Server for Burp
 - [MCP-Kali-Server](wh0am123-mcp-kali-server.md) — 825 · MCP configuration to connect AI agent to a Linux machine.
-- [mcp-security-hub](fuzzinglabs-mcp-security-hub.md) — 792 · A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.
+- [mcp-security-hub](fuzzinglabs-mcp-security-hub.md) — 793 · A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.
 - [MetasploitMCP](gh05tcrew-metasploitmcp.md) — 730 · MCP Server for Metasploit
 - [mcp-for-security](cyproxio-mcp-for-security.md) — 631 · MCP for Security: A collection of Model Context Protocol servers for popular security tools like SQLMap, FFUF, NMAP, Masscan and more. Integrate security t
 - [BloodHound-MCP-AI](mordavid-bloodhound-mcp-ai.md) — 376 · BloodHound-MCP-AI is integration that connects BloodHound with AI through Model Context Protocol, allowing security professionals to analyze Active Directo
