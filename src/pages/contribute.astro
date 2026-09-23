@@ -61,7 +61,7 @@ const JSON_SAMPLE = `{
         </label>
         <label>
           <span>Reason <em>(optional)</em></span>
-          <input name="reason" type="text" placeholder="e.g. the current one mistranslates 'red team'" />
+          <input name="reason" type="text" autocomplete="off" placeholder="e.g. the current one mistranslates 'red team'…" />
         </label>
         <button type="submit" class="submit-btn">Open GitHub issue →</button>
       </form>
@@ -77,7 +77,7 @@ const JSON_SAMPLE = `{
       <form class="sub-form" data-kind="new-tool">
         <label>
           <span>GitHub repo URL</span>
-          <input name="repo" type="url" required placeholder="https://github.com/owner/repo"
+          <input name="repo" type="url" required autocomplete="off" placeholder="https://github.com/owner/repo…"
             pattern="https://github\.com/[^/]+/[^/]+.*" />
         </label>
         <label>
@@ -100,7 +100,7 @@ const JSON_SAMPLE = `{
         </fieldset>
         <label>
           <span>Why it belongs here <em>(optional)</em></span>
-          <textarea name="reason" rows="2" placeholder="e.g. first open-source tool that covers X"></textarea>
+          <textarea name="reason" rows="2" autocomplete="off" placeholder="e.g. first open-source tool that covers X…"></textarea>
         </label>
         <button type="submit" class="submit-btn">Open GitHub issue →</button>
       </form>
@@ -130,7 +130,7 @@ const JSON_SAMPLE = `{
         <label>
           <span>Expected value</span>
           <textarea name="expected" rows="2" required
-            placeholder="e.g. it should be flagged 'credentials' because it reads ~/.aws in setup.sh"></textarea>
+            placeholder="e.g. it should be flagged 'credentials' because it reads ~/.aws in setup.sh…"></textarea>
         </label>
         <button type="submit" class="submit-btn">Open GitHub issue →</button>
       </form>

@@ -623,6 +623,7 @@ input {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  text-wrap: balance;
 }
 .static-doc h2 {
   font-size: 1.25rem;
@@ -631,6 +632,7 @@ input {
   margin-bottom: 0.75rem;
   border-bottom: 1px solid var(--rule);
   padding-bottom: 0.375rem;
+  text-wrap: balance;
 }
 .static-doc p,
 .static-doc li {

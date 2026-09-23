@@ -116,7 +116,7 @@ const cats = [
     </div>
     <div>
       <span class="pill pill-scope">{isZh ? "范围" : "scope"}</span>
-      <span>{isZh ? "工具的攻击/测试面" : "Target surface (webapp, llm, ad...)"}</span>
+      <span>{isZh ? "工具的攻击/测试面" : "Target surface (webapp, llm, ad…)"}</span>
     </div>
     <div>
       <span class="pill pill-access">root</span>
@@ -200,6 +200,50 @@ const cats = [
     view: "list",
   };
 
+  // Restore state from URL (deep-linkable filters/search/sort)
+  (function initStateFromURL() {
+    const p = new URLSearchParams(location.search);
+    const q = p.get("q");
+    if (q) {
+      state.query = q;
+      const si = document.getElementById("search-input");
+      if (si) si.value = q;
+    }
+    const cat = p.get("cat");
+    if (cat && document.querySelector(`.cat-tab[data-cat="${CSS.escape(cat)}"]`)) {
+      state.category = cat;
+      document.querySelectorAll(".cat-tab").forEach((b) => b.classList.toggle("is-active", b.dataset.cat === cat));
+      const searchWrap = document.getElementById("search-box-wrap");
+      if (searchWrap) searchWrap.dataset.cat = cat;
+    }
+    const sort = p.get("sort");
+    const validSorts = ["idle", "category", "tool", "stars", "flags"];
+    if (sort && validSorts.includes(sort)) {
+      state.sortKey = sort;
+      const dir = p.get("dir");
+      if (dir === "asc" || dir === "desc") state.sortDir = dir;
+      document.querySelectorAll(".matrix thead th[data-sort]").forEach((h) => {
+        const active = h.dataset.sort === sort;
+        h.setAttribute("aria-sort", active ? (state.sortDir === "asc" ? "ascending" : "descending") : "none");
+        const ind = h.querySelector(".sort-indicator");
+        if (ind) ind.textContent = active ? (state.sortDir === "asc" ? "▴" : "▾") : "";
+      });
+    }
+  })();
+
+  // Persist state to URL after each render (replaceState — no history spam)
+  function syncURLState() {
+    const p = new URLSearchParams();
+    if (state.query) p.set("q", state.query);
+    if (state.category !== "all") p.set("cat", state.category);
+    if (state.sortKey !== "stars" || state.sortDir !== "desc") {
+      p.set("sort", state.sortKey);
+      p.set("dir", state.sortDir);
+    }
+    const qs = p.toString();
+    history.replaceState(null, "", qs ? `${location.pathname}?${qs}` : location.pathname);
+  }
+
   function parseTerms(q) {
     const words = q.toLowerCase().trim().split(/\s+/).filter(Boolean);
     return words.map((w) => ALIASES[w] || w);
@@ -280,7 +324,7 @@ const cats = [
     if (!tbody) return;
 
     if (!filtered.length) {
-      tbody.innerHTML = `<tr class="matrix-empty"><td colspan="6" style="padding: 2rem 1rem; text-align: center; color: var(--dead);">
+      tbody.innerHTML = `<tr class="matrix-empty"><td colspan="6" role="status" style="padding: 2rem 1rem; text-align: center; color: var(--dead);">
         ${isZh ? "未找到匹配的工具。" : "No matching tools found."}
         <button type="button" class="clear-link" id="clear-filters">${isZh ? "清除筛选" : "Clear filters"}</button>
       </td></tr>`;
@@ -366,6 +410,7 @@ const cats = [
       .join("");
 
     tbody.innerHTML = html;
+    syncURLState();
   }
 
   // Bind category tabs

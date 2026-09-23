@@ -63,7 +63,7 @@ unseen: pill #001e25 bg / #0094ad ink   (cyan)
 ### Header (`.site-header`)
 - Flex row, brand left + nav right. Stacks on mobile (≤640px).
 - Brand: 22px matrix SVG in `--name` color + "AI Security Matrix" wordmark
-- Nav: About / Definitions / Contribute / Commercial + globe (EN/中文) + theme icon toggle
+- Nav: About / Guide / Submit / Vendors + globe (EN/中文) + theme icon toggle
 
 ### Matrix Toolbar
 - Category tabs with counts (active = colored underline, inactive = 60% opacity)
@@ -71,7 +71,7 @@ unseen: pill #001e25 bg / #0094ad ink   (cyan)
 - Table: 6 columns (Last updated, Category, Tool, Scope, Stars, Flags), sortable headers, row hover highlight
 
 ### Pills
-- `border-radius: 9999px`, padding `0.125rem 0.625rem`, `0.6875rem` font
+- `border-radius: 9999px`, padding `0.125rem 0.625rem`, `0.75rem` font
 - Scope (teal), access (amber), host (red), unseen (cyan)
 - NOT used as decorative cards; only for tags/labels
 

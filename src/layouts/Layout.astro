@@ -56,6 +56,12 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
     <meta name="description" content={pageDescription} />
     <link rel="icon" href={faviconHref} type="image/svg+xml" />
     <link rel="canonical" href={canonical || Astro.url.href} />
+    <meta name="theme-color" content="#001615" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f2f4f5" media="(prefers-color-scheme: light)" />
+    <link rel="preconnect" href="https://github.com" crossorigin />
+    <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin />
+    <link rel="preconnect" href="https://img.shields.io" crossorigin />
+    <link rel="preconnect" href="https://opengraph.githubassets.com" crossorigin />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />

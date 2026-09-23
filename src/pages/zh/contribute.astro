@@ -60,7 +60,7 @@ const JSON_SAMPLE = `{
         </label>
         <label>
           <span>修改原因 <em>（选填）</em></span>
-          <input name="reason" type="text" placeholder="例如：当前版本把 red team 翻译错了" />
+          <input name="reason" type="text" autocomplete="off" placeholder="例如：当前版本把 red team 翻译错了…" />
         </label>
         <button type="submit" class="submit-btn">打开 GitHub Issue →</button>
       </form>
@@ -76,7 +76,7 @@ const JSON_SAMPLE = `{
       <form class="sub-form" data-kind="new-tool">
         <label>
           <span>GitHub 仓库地址</span>
-          <input name="repo" type="url" required placeholder="https://github.com/owner/repo"
+          <input name="repo" type="url" required autocomplete="off" placeholder="https://github.com/owner/repo…"
             pattern="https://github\.com/[^/]+/[^/]+.*" />
         </label>
         <label>
@@ -99,7 +99,7 @@ const JSON_SAMPLE = `{
         </fieldset>
         <label>
           <span>为什么适合收录 <em>（选填）</em></span>
-          <textarea name="reason" rows="2" placeholder="例如：第一个覆盖 X 的开源工具"></textarea>
+          <textarea name="reason" rows="2" autocomplete="off" placeholder="例如：第一个覆盖 X 的开源工具…"></textarea>
         </label>
         <button type="submit" class="submit-btn">打开 GitHub Issue →</button>
       </form>
@@ -129,7 +129,7 @@ const JSON_SAMPLE = `{
         <label>
           <span>期望值</span>
           <textarea name="expected" rows="2" required
-            placeholder="例如：应标记 credentials，因为 setup.sh 会读取 ~/.aws"></textarea>
+            placeholder="例如：应标记 credentials，因为 setup.sh 会读取 ~/.aws…"></textarea>
         </label>
         <button type="submit" class="submit-btn">打开 GitHub Issue →</button>
       </form>
