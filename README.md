@@ -15,11 +15,11 @@
 
 ## What this is
 
-A curated directory of **AI security testing tools** — LLM red-teaming platforms, agentic pentest frameworks, security-focused MCP servers, and skill packs.
+A curated list of **AI-enabled security testing tools** (mirror of [aisecuritymatrix.com](https://aisecuritymatrix.com)) — LLM red-teaming platforms, agentic pentest frameworks, security-focused MCP servers, and skill packs.
 
 Most lists tell you what a tool does. This one tells you what it does to *your machine* — whether it asks for root, reads `~/.aws` or `~/.ssh`, installs software, or calls endpoints it does not own.
 
-The repository syncs daily from [aisecuritymatrix.com](https://aisecuritymatrix.com) and flags each project on all four counts.
+The repository syncs daily and flags each project on all four counts.
 
 | Entry point | What you get |
 |:---|:---|
