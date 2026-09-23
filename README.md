@@ -17,8 +17,9 @@
 
 A curated directory of **AI security testing tools** — LLM red-teaming platforms, agentic pentest frameworks, security-focused MCP servers, and skill packs.
 
-**What sets it apart: every tool is audited for what it does to your machine before you run it.**
-The repository syncs daily from [aisecuritymatrix.com](https://aisecuritymatrix.com) and flags whether each project asks for root, reads `~/.aws` or `~/.ssh`, installs software, or calls endpoints it does not own.
+Most lists tell you what a tool does. This one tells you what it does to *your machine* — whether it asks for root, reads `~/.aws` or `~/.ssh`, installs software, or calls endpoints it does not own.
+
+The repository syncs daily from [aisecuritymatrix.com](https://aisecuritymatrix.com) and flags each project on all four counts.
 
 | Entry point | What you get |
 |:---|:---|
@@ -39,7 +40,7 @@ Every entry answers the same set of questions. Across all 65 tools:
 | `opaque` | Contains long unreadable encoded blobs | `6` |
 | `binaries` | Ships compiled binaries you did not build | `4` |
 
-> These flags are not a verdict. They tell you what to expect before you `git clone`.
+> These are not a verdict. They tell you what to expect before you `git clone`.
 
 ## Screenshots
 
