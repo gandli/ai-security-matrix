@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="zh" data-theme="dark"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>关于 — AI 安全矩阵</title><meta name="description" content="精选的 AI 赋能网络安全测试与红队工具目录，aisecuritymatrix.com 镜像。"><link rel="icon" href="/ai-security-matrix/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://gandli.github.io/ai-security-matrix/zh/about/"><meta name="theme-color" content="#001615" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f2f4f5" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://github.com" crossorigin><link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin><link rel="preconnect" href="https://img.shields.io" crossorigin><link rel="preconnect" href="https://opengraph.githubassets.com" crossorigin><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="AI Security Matrix"><meta property="og:title" content="关于 — AI 安全矩阵"><meta property="og:description" content="精选的 AI 赋能网络安全测试与红队工具目录，aisecuritymatrix.com 镜像。"><meta property="og:url" content="https://gandli.github.io/ai-security-matrix/zh/about/"><meta property="og:image" content="https://gandli.github.io/ai-security-matrix/og-image.zh.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI 安全矩阵 — 精选的 AI 赋能安全测试工具"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="关于 — AI 安全矩阵"><meta name="twitter:description" content="精选的 AI 赋能网络安全测试与红队工具目录，aisecuritymatrix.com 镜像。"><meta name="twitter:image" content="https://gandli.github.io/ai-security-matrix/og-image.zh.png"><script>
+      // theme init — runs in <head>, before the toggle button exists in the DOM
+      (function () {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+
+        const applyThemeIcon = () => {
+          const dark = document.documentElement.dataset.theme !== "light";
+          document.querySelectorAll(".theme-icon-sun").forEach((el) => (el.style.display = dark ? "none" : ""));
+          document.querySelectorAll(".theme-icon-moon").forEach((el) => (el.style.display = dark ? "" : "none"));
+        };
+        applyThemeIcon();
+
+        // Bind after the button is parsed; the script itself runs too early otherwise.
+        const bind = () => {
+          const btn = document.getElementById("theme-btn");
+          if (!btn) return;
+          btn.addEventListener("click", () => {
+            const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            localStorage.setItem("theme", next);
+            applyThemeIcon();
+          });
+        };
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", bind, { once: true });
+        } else {
+          bind();
+        }
+      })();
+    </script><link rel="stylesheet" href="/ai-security-matrix/_astro/about.BaYRvQDO.css">
+<style>.lede[data-astro-cid-vdfswtcn]{font-size:1rem;line-height:1.7;color:var(--alive);max-width:68ch;padding:.875rem 1rem;border-left:2px solid var(--rule-strong);background:var(--paper-raised);border-radius:0 6px 6px 0;margin:1rem 0 1.75rem}.static-doc[data-astro-cid-vdfswtcn] ul[data-astro-cid-vdfswtcn]{max-width:68ch;padding-left:1.25rem;line-height:1.7}.static-doc[data-astro-cid-vdfswtcn] li[data-astro-cid-vdfswtcn]{margin-bottom:.375rem}.static-doc[data-astro-cid-vdfswtcn] h2[data-astro-cid-vdfswtcn]{margin-top:2.25rem}
+</style></head> <body> <a href="#main" class="skip-link">跳到主要内容</a> <div class="wrap"> <!-- Site Header --> <header class="site-header"> <div> <h1> <a href="/ai-security-matrix/zh/" class="brand"> <svg width="22" height="22" viewBox="0 0 19 19" role="img" aria-label="AI Security Matrix"> <rect x="0.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="7" y="0" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="0" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="0" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7.6" y="14.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="14" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> </svg> <span class="brand-title">AI Security <em>Matrix</em></span> </a> </h1> <p class="tagline"> 精选的 AI 赋能网络安全测试与红队工具目录，aisecuritymatrix.com 镜像。 </p> </div> <nav class="site-nav" aria-label="Site"> <div class="nav-links"> <a href="/ai-security-matrix/zh/about">关于</a> <a href="/ai-security-matrix/zh/guide">指南</a> <a href="/ai-security-matrix/zh/contribute">贡献</a> <a href="/ai-security-matrix/zh/commercial">商业</a> </div> <div class="nav-actions"> <!-- Language toggle --> <a href="/ai-security-matrix/about/" class="icon-btn" aria-label="Switch to English" title="English"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="10"></circle> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path> <path d="M2 12h20"></path> </svg> <span class="icon-label">EN</span> </a> <!-- Theme toggle --> <button id="theme-btn" class="icon-btn" type="button" aria-label="切换明暗主题" title="明暗主题"> <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="4"></circle> <path d="M12 2v2"></path> <path d="M12 20v2"></path> <path d="m4.93 4.93 1.41 1.41"></path> <path d="m17.66 17.66 1.41 1.41"></path> <path d="M2 12h2"></path> <path d="M20 12h2"></path> <path d="m6.34 17.66-1.41 1.41"></path> <path d="m19.07 4.93-1.41 1.41"></path> </svg> <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path> </svg> </button> </div> </nav> </header> <!-- Main Slot --> <main id="main" tabindex="-1">  <article class="static-doc" data-astro-cid-vdfswtcn> <h1 data-astro-cid-vdfswtcn>关于</h1> <p class="lede" data-astro-cid-vdfswtcn>
+工具筛选与风险审计由
+<a href="https://aisecuritymatrix.com" target="_blank" rel="noopener" data-astro-cid-vdfswtcn>aisecuritymatrix.com</a>
+完成。本仓库是独立的双语镜像：每天同步其数据，并补上中文翻译、可搜索界面与工具详情页。
+      本站内容不在此原创——若想参与镜像维护，请看<a href="/ai-security-matrix/zh/contribute/" data-astro-cid-vdfswtcn>贡献</a>。
+</p> <h2 data-astro-cid-vdfswtcn>什么是 AI 安全矩阵？</h2> <p data-astro-cid-vdfswtcn>AI 安全矩阵帮助你找到用于安全测试作战的 AI 赋能安全测试工具。</p> <p data-astro-cid-vdfswtcn>自行搜索往往会陷入无底洞——GitHub star 数、博客评测、Reddit 帖子——仍然难以分辨每个工具的定位。本矩阵按<strong data-astro-cid-vdfswtcn>用途</strong>与<strong data-astro-cid-vdfswtcn>测试范围</strong>对每个工具进行分类，并标注工具对你机器的<strong data-astro-cid-vdfswtcn>运行风险</strong>，帮你判断在某场景下是否可以信任该工具。</p> <h2 data-astro-cid-vdfswtcn>什么是 AI 安全工具？</h2> <p data-astro-cid-vdfswtcn>AI 安全工具在评估过程中借助语言模型完成部分工作，用以评估系统的安全态势。团队将其用于漏洞评估、渗透测试与红队作战。</p> <p data-astro-cid-vdfswtcn>其范围朝两个方向延伸：一些指向 Web 应用、企业系统、云等传统目标；另一些则用于测试 AI 系统本身——模型扫描器、提示注入测试、智能体与 RAG 评估。</p> <h2 data-astro-cid-vdfswtcn>面向谁？</h2> <p data-astro-cid-vdfswtcn>任何执行安全评估的人：渗透测试员、红队、漏洞赏金猎人、以及需要了解工具行为的防守方。</p> <p data-astro-cid-vdfswtcn>范围标签告诉你工具指向何种目标（Web 应用、内网、Active Directory、云、逆向工程，或 AI 系统本身）；最近推送日期告诉你是否还有人维护；风险标签告诉你工具会安装什么、需要什么权限、是否索取凭据。</p> <h2 data-astro-cid-vdfswtcn>AI 安全矩阵不是什么？</h2> <p data-astro-cid-vdfswtcn>本矩阵不排名、也不测试工具。此处没有任何条目被验证过能如描述那样工作，因此请把每条列表都当作你自己进一步核实的起点。</p> <h2 data-astro-cid-vdfswtcn>你能信任这些工具吗？</h2> <p data-astro-cid-vdfswtcn>AI 安全矩阵通过风险标注给你一个起点，但在你亲自审查并测试之前，请把一切视为不安全。</p> <h2 data-astro-cid-vdfswtcn>它对机器做了什么？</h2> <p data-astro-cid-vdfswtcn>这里每个工具都是你可以自行克隆的仓库。六项检查告诉你若这样做会发生什么。列表中的任何内容都从未被执行验证——仓库只是被克隆、阅读、丢弃。风险列标识的是<strong data-astro-cid-vdfswtcn>观察到的</strong>风险。</p> <ul data-astro-cid-vdfswtcn> <li data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>二进制（binaries）</strong>：项目自带已编译产物，你没有构建过、也无法阅读。</li> <li data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>安装（installs）</strong>：运行它会向你的机器装入更多软件——从互联网直接管道进 shell 的脚本、安装时静默触发的钩子、或宽松到让你装到当天任意版本的依赖清单。</li> <li data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>Root</strong>：安装过程在某处需要特权：sudo、特权容器、Docker socket。</li> <li data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>凭据（credentials）</strong>：代码会伸向存放密钥之处：AWS profile、SSH 目录、Kubernetes 配置。</li> <li data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>对外请求（calls out）</strong>：代码中内置了遥测，使用它就是在告诉别人你用了它。</li> <li data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>不透明（opaque）</strong>：项目中有你读不懂的部分：内联的第三方代码、压缩文件、超长的编码数据块。</li> </ul> <h2 data-astro-cid-vdfswtcn>这些标注不是指控</h2> <p data-astro-cid-vdfswtcn>很多好工具都需要 root，多数项目都会内联某些代码。标注只是提醒你在运行前先看一眼，而非告诉你去回避它。</p> <p data-astro-cid-vdfswtcn>没有任何标注的条目也<strong data-astro-cid-vdfswtcn>不是</strong>清白证明——凡是某项检查未能读取到内容的地方，条目标为“未检查”而非“无”。</p> <h2 data-astro-cid-vdfswtcn>创建者</h2> <p data-astro-cid-vdfswtcn><strong data-astro-cid-vdfswtcn>Joe Vest</strong> —— “threat gets vote（威胁说了算）”。如果你构建防御却不理解对手如何实际运作，那做安全决策的就不是你，而是威胁本身。</p> <p data-astro-cid-vdfswtcn>Joe 在网络安全领域深耕 20 余年，近 15 年专注进攻性安全作战。</p> </article>   </main> <!-- Site Footer --> <footer class="site-footer"> <nav aria-label="Pages"> <a href="/ai-security-matrix/zh/about">关于</a> <a href="/ai-security-matrix/zh/guide">指南</a> <a href="/ai-security-matrix/zh/contribute">贡献</a> <a href="/ai-security-matrix/zh/commercial">商业</a> <a href="https://github.com/gandli/ai-security-matrix" target="_blank" rel="noopener">GitHub</a> </nav> <p> © 2026 AI Security Matrix · 开源镜像维护者 gandli/ai-security-matrix </p> </footer> </div> <script type="module">
+  // Inject sound engine
+  import { audio } from '@/lib/audio/sounds.js';
+  
+  window.__AUDIO_ENGINE__ = audio;
+  
+  // Initialize on first interaction (browser policy)
+  function initAudio() {
+    if (!window.__AUDIO_INITED__) {
+      audio.init();
+      window.__AUDIO_INITED__ = true;
+      
+      // Global event delegation for sounds
+      document.addEventListener('mouseenter', (e) => {
+        const el = e.target.closest('a, button, [data-sound-hover]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('hover');
+        }
+      });
+      
+      document.addEventListener('mousedown', (e) => {
+        const el = e.target.closest('a, button, [data-sound-click]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('click');
+        }
+      });
+      
+      document.addEventListener('focusin', (e) => {
+        const el = e.target.closest('a, input, button, [data-sound-focus]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('focus');
+        }
+      });
+    }
+  }
+  
+  // Init on user gesture
+  window.__AUDIO_INIT__ = () => {
+    initAudio();
+    return Promise.resolve();
+  };
+  
+  // Audio is on by default; no toggle UI.
+  window.__AUDIO_ENABLED__ = true;
+</script></body></html><!-- Audio engine init -->

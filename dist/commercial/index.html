@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Commercial Tools — AI Security Matrix</title><meta name="description" content="Why this index covers open-source projects only, and what a commercial listing would need to qualify."><link rel="icon" href="/ai-security-matrix/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://gandli.github.io/ai-security-matrix/commercial/"><meta name="theme-color" content="#001615" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f2f4f5" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://github.com" crossorigin><link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin><link rel="preconnect" href="https://img.shields.io" crossorigin><link rel="preconnect" href="https://opengraph.githubassets.com" crossorigin><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="AI Security Matrix"><meta property="og:title" content="Commercial Tools — AI Security Matrix"><meta property="og:description" content="Why this index covers open-source projects only, and what a commercial listing would need to qualify."><meta property="og:url" content="https://gandli.github.io/ai-security-matrix/commercial/"><meta property="og:image" content="https://gandli.github.io/ai-security-matrix/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Security Matrix — curated AI security testing tools"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Commercial Tools — AI Security Matrix"><meta name="twitter:description" content="Why this index covers open-source projects only, and what a commercial listing would need to qualify."><meta name="twitter:image" content="https://gandli.github.io/ai-security-matrix/og-image.png"><script>
+      // theme init — runs in <head>, before the toggle button exists in the DOM
+      (function () {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+
+        const applyThemeIcon = () => {
+          const dark = document.documentElement.dataset.theme !== "light";
+          document.querySelectorAll(".theme-icon-sun").forEach((el) => (el.style.display = dark ? "none" : ""));
+          document.querySelectorAll(".theme-icon-moon").forEach((el) => (el.style.display = dark ? "" : "none"));
+        };
+        applyThemeIcon();
+
+        // Bind after the button is parsed; the script itself runs too early otherwise.
+        const bind = () => {
+          const btn = document.getElementById("theme-btn");
+          if (!btn) return;
+          btn.addEventListener("click", () => {
+            const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            localStorage.setItem("theme", next);
+            applyThemeIcon();
+          });
+        };
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", bind, { once: true });
+        } else {
+          bind();
+        }
+      })();
+    </script><link rel="stylesheet" href="/ai-security-matrix/_astro/about.BaYRvQDO.css">
+<style>.crumb[data-astro-cid-437l2xm3]{font-size:.875rem;color:var(--stale)}.lede[data-astro-cid-437l2xm3]{font-size:1rem;line-height:1.7;color:var(--alive);max-width:68ch}.static-doc[data-astro-cid-437l2xm3] .checklist-table[data-astro-cid-437l2xm3]{max-width:68ch}.static-doc[data-astro-cid-437l2xm3] .checklist-table[data-astro-cid-437l2xm3] td[data-astro-cid-437l2xm3]:first-child{width:11rem}
+</style></head> <body> <a href="#main" class="skip-link">Skip to main content</a> <div class="wrap"> <!-- Site Header --> <header class="site-header"> <div> <h1> <a href="/ai-security-matrix/" class="brand"> <svg width="22" height="22" viewBox="0 0 19 19" role="img" aria-label="AI Security Matrix"> <rect x="0.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="7" y="0" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="0" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="0" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7.6" y="14.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="14" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> </svg> <span class="brand-title">AI Security <em>Matrix</em></span> </a> </h1> <p class="tagline"> A curated list of AI-enabled security testing tools (mirror of aisecuritymatrix.com). </p> </div> <nav class="site-nav" aria-label="Site"> <div class="nav-links"> <a href="/ai-security-matrix/about">About</a> <a href="/ai-security-matrix/guide">Guide</a> <a href="/ai-security-matrix/contribute">Submit</a> <a href="/ai-security-matrix/commercial">Vendors</a> </div> <div class="nav-actions"> <!-- Language toggle --> <a href="/ai-security-matrix/zh/commercial/" class="icon-btn" aria-label="切换为中文" title="中文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="10"></circle> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path> <path d="M2 12h20"></path> </svg> <span class="icon-label">中</span> </a> <!-- Theme toggle --> <button id="theme-btn" class="icon-btn" type="button" aria-label="Toggle dark/light theme" title="Theme"> <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="4"></circle> <path d="M12 2v2"></path> <path d="M12 20v2"></path> <path d="m4.93 4.93 1.41 1.41"></path> <path d="m17.66 17.66 1.41 1.41"></path> <path d="M2 12h2"></path> <path d="M20 12h2"></path> <path d="m6.34 17.66-1.41 1.41"></path> <path d="m19.07 4.93-1.41 1.41"></path> </svg> <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path> </svg> </button> </div> </nav> </header> <!-- Main Slot --> <main id="main" tabindex="-1">  <article class="static-doc" data-astro-cid-437l2xm3> <p class="crumb" data-astro-cid-437l2xm3><a href="/ai-security-matrix/" data-astro-cid-437l2xm3>← Back to matrix</a></p> <h1 data-astro-cid-437l2xm3>Commercial Tools</h1> <p class="lede" data-astro-cid-437l2xm3>
+Every one of the <strong data-astro-cid-437l2xm3>65</strong> entries in this index is an open-source project —
+      each links to a public repository and declares a licence
+      (7 distinct licences across the set). Vendor and paid products are
+<strong data-astro-cid-437l2xm3>not listed yet</strong>, and upstream does not list them either.
+</p> <h2 data-astro-cid-437l2xm3>Why the split matters</h2> <p data-astro-cid-437l2xm3>
+The risk flags on this site answer one question: <em data-astro-cid-437l2xm3>what does this do to my machine?</em>
+For open-source tools that is checkable — the code is right there, and the
+<a href="/ai-security-matrix/guide/" data-astro-cid-437l2xm3>guide</a> explains how each flag is derived.
+      A commercial product is a different bargain: you are trusting a vendor's description
+      instead of reading the source, so the same flags cannot be verified the same way.
+      Mixing the two in one table would quietly weaken every label on the page.
+</p> <h2 data-astro-cid-437l2xm3>What a listing would need</h2> <table class="checklist-table" data-astro-cid-437l2xm3> <tbody data-astro-cid-437l2xm3> <tr data-astro-cid-437l2xm3> <td data-astro-cid-437l2xm3>A public product page</td> <td data-astro-cid-437l2xm3>Reachable without a sales call, so the description can be checked</td> </tr> <tr data-astro-cid-437l2xm3> <td data-astro-cid-437l2xm3>Deployment model</td> <td data-astro-cid-437l2xm3>Runs on your host, or a hosted service — this changes what the flags mean</td> </tr> <tr data-astro-cid-437l2xm3> <td data-astro-cid-437l2xm3>What it tests</td> <td data-astro-cid-437l2xm3>Which of the <a href="/ai-security-matrix/guide/" data-astro-cid-437l2xm3>scopes</a> it covers</td> </tr> <tr data-astro-cid-437l2xm3> <td data-astro-cid-437l2xm3>Pricing shape</td> <td data-astro-cid-437l2xm3>At minimum, whether there is a free or trial tier</td> </tr> <tr data-astro-cid-437l2xm3> <td data-astro-cid-437l2xm3>Independent evidence</td> <td data-astro-cid-437l2xm3>Docs, a public changelog, or third-party evaluation — something that is not marketing</td> </tr> </tbody> </table> <h2 data-astro-cid-437l2xm3>Suggesting one</h2> <p data-astro-cid-437l2xm3>
+Curation happens upstream at
+<a href="https://aisecuritymatrix.com/commercial.html" target="_blank" rel="noopener" data-astro-cid-437l2xm3>aisecuritymatrix.com</a>.
+      Raise the suggestion there; this mirror picks up changes on its next sync.
+      For anything about this mirror itself — translations, layout, a wrong flag —
+      see <a href="/ai-security-matrix/" data-astro-cid-437l2xm3>Contribute</a>.
+</p> </article>   </main> <!-- Site Footer --> <footer class="site-footer"> <nav aria-label="Pages"> <a href="/ai-security-matrix/about">About</a> <a href="/ai-security-matrix/guide">Guide</a> <a href="/ai-security-matrix/contribute">Submit</a> <a href="/ai-security-matrix/commercial">Vendors</a> <a href="https://github.com/gandli/ai-security-matrix" target="_blank" rel="noopener">GitHub</a> </nav> <p> © 2026 AI Security Matrix · Independent replica by gandli/ai-security-matrix </p> </footer> </div> <script type="module">
+  // Inject sound engine
+  import { audio } from '@/lib/audio/sounds.js';
+  
+  window.__AUDIO_ENGINE__ = audio;
+  
+  // Initialize on first interaction (browser policy)
+  function initAudio() {
+    if (!window.__AUDIO_INITED__) {
+      audio.init();
+      window.__AUDIO_INITED__ = true;
+      
+      // Global event delegation for sounds
+      document.addEventListener('mouseenter', (e) => {
+        const el = e.target.closest('a, button, [data-sound-hover]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('hover');
+        }
+      });
+      
+      document.addEventListener('mousedown', (e) => {
+        const el = e.target.closest('a, button, [data-sound-click]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('click');
+        }
+      });
+      
+      document.addEventListener('focusin', (e) => {
+        const el = e.target.closest('a, input, button, [data-sound-focus]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('focus');
+        }
+      });
+    }
+  }
+  
+  // Init on user gesture
+  window.__AUDIO_INIT__ = () => {
+    initAudio();
+    return Promise.resolve();
+  };
+  
+  // Audio is on by default; no toggle UI.
+  window.__AUDIO_ENABLED__ = true;
+</script></body></html><!-- Audio engine init -->

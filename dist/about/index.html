@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About — AI Security Matrix</title><meta name="description" content="A curated list of AI-enabled security testing tools (mirror of aisecuritymatrix.com)."><link rel="icon" href="/ai-security-matrix/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://gandli.github.io/ai-security-matrix/about/"><meta name="theme-color" content="#001615" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f2f4f5" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://github.com" crossorigin><link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin><link rel="preconnect" href="https://img.shields.io" crossorigin><link rel="preconnect" href="https://opengraph.githubassets.com" crossorigin><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="AI Security Matrix"><meta property="og:title" content="About — AI Security Matrix"><meta property="og:description" content="A curated list of AI-enabled security testing tools (mirror of aisecuritymatrix.com)."><meta property="og:url" content="https://gandli.github.io/ai-security-matrix/about/"><meta property="og:image" content="https://gandli.github.io/ai-security-matrix/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI Security Matrix — curated AI security testing tools"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="About — AI Security Matrix"><meta name="twitter:description" content="A curated list of AI-enabled security testing tools (mirror of aisecuritymatrix.com)."><meta name="twitter:image" content="https://gandli.github.io/ai-security-matrix/og-image.png"><script>
+      // theme init — runs in <head>, before the toggle button exists in the DOM
+      (function () {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+
+        const applyThemeIcon = () => {
+          const dark = document.documentElement.dataset.theme !== "light";
+          document.querySelectorAll(".theme-icon-sun").forEach((el) => (el.style.display = dark ? "none" : ""));
+          document.querySelectorAll(".theme-icon-moon").forEach((el) => (el.style.display = dark ? "" : "none"));
+        };
+        applyThemeIcon();
+
+        // Bind after the button is parsed; the script itself runs too early otherwise.
+        const bind = () => {
+          const btn = document.getElementById("theme-btn");
+          if (!btn) return;
+          btn.addEventListener("click", () => {
+            const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            localStorage.setItem("theme", next);
+            applyThemeIcon();
+          });
+        };
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", bind, { once: true });
+        } else {
+          bind();
+        }
+      })();
+    </script><link rel="stylesheet" href="/ai-security-matrix/_astro/about.BaYRvQDO.css">
+<style>.lede[data-astro-cid-kh7btl4r]{font-size:1rem;line-height:1.7;color:var(--alive);max-width:68ch;padding:.875rem 1rem;border-left:2px solid var(--rule-strong);background:var(--paper-raised);border-radius:0 6px 6px 0;margin:1rem 0 1.75rem}.static-doc[data-astro-cid-kh7btl4r] ul[data-astro-cid-kh7btl4r]{max-width:68ch;padding-left:1.25rem;line-height:1.7}.static-doc[data-astro-cid-kh7btl4r] li[data-astro-cid-kh7btl4r]{margin-bottom:.375rem}.static-doc[data-astro-cid-kh7btl4r] h2[data-astro-cid-kh7btl4r]{margin-top:2.25rem}
+</style></head> <body> <a href="#main" class="skip-link">Skip to main content</a> <div class="wrap"> <!-- Site Header --> <header class="site-header"> <div> <h1> <a href="/ai-security-matrix/" class="brand"> <svg width="22" height="22" viewBox="0 0 19 19" role="img" aria-label="AI Security Matrix"> <rect x="0.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="7" y="0" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="0" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="0" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7.6" y="14.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="14" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> </svg> <span class="brand-title">AI Security <em>Matrix</em></span> </a> </h1> <p class="tagline"> A curated list of AI-enabled security testing tools (mirror of aisecuritymatrix.com). </p> </div> <nav class="site-nav" aria-label="Site"> <div class="nav-links"> <a href="/ai-security-matrix/about">About</a> <a href="/ai-security-matrix/guide">Guide</a> <a href="/ai-security-matrix/contribute">Submit</a> <a href="/ai-security-matrix/commercial">Vendors</a> </div> <div class="nav-actions"> <!-- Language toggle --> <a href="/ai-security-matrix/zh/about/" class="icon-btn" aria-label="切换为中文" title="中文"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="10"></circle> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path> <path d="M2 12h20"></path> </svg> <span class="icon-label">中</span> </a> <!-- Theme toggle --> <button id="theme-btn" class="icon-btn" type="button" aria-label="Toggle dark/light theme" title="Theme"> <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="4"></circle> <path d="M12 2v2"></path> <path d="M12 20v2"></path> <path d="m4.93 4.93 1.41 1.41"></path> <path d="m17.66 17.66 1.41 1.41"></path> <path d="M2 12h2"></path> <path d="M20 12h2"></path> <path d="m6.34 17.66-1.41 1.41"></path> <path d="m19.07 4.93-1.41 1.41"></path> </svg> <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path> </svg> </button> </div> </nav> </header> <!-- Main Slot --> <main id="main" tabindex="-1">  <article class="static-doc" data-astro-cid-kh7btl4r> <h1 data-astro-cid-kh7btl4r>About</h1> <p class="lede" data-astro-cid-kh7btl4r>
+Curation and risk auditing are done by
+<a href="https://aisecuritymatrix.com" target="_blank" rel="noopener" data-astro-cid-kh7btl4r>aisecuritymatrix.com</a>.
+      This repository is an independent bilingual mirror: it syncs their data daily and
+      adds Chinese translations, a searchable interface, and per-tool detail pages.
+      Nothing on this site originates here — see
+<a href="/ai-security-matrix/contribute/" data-astro-cid-kh7btl4r>Contribute</a> if you want to help with the mirror.
+</p> <h2 data-astro-cid-kh7btl4r>What Is the AI Security Matrix?</h2> <p data-astro-cid-kh7btl4r>The AI Security Matrix helps you find AI-enabled security testing tools for your engagements.</p> <p data-astro-cid-kh7btl4r>Searching for them leads down a rabbit hole. GitHub stars, blog reviews, Reddit threads, and it's still hard to tell what's what. The matrix categorizes each tool by purpose and testing scope. It also flags the risk of what running the tool does to your machine so you can determine if you can trust the tool in your scenario.</p> <h2 data-astro-cid-kh7btl4r>What is an AI Security Tool?</h2> <p data-astro-cid-kh7btl4r>An AI security tool evaluates the security posture of a system during an assessment, with a language model doing part of the work. Teams use them for vulnerability assessments, penetration testing, and red team engagements.</p> <p data-astro-cid-kh7btl4r>Their scope runs in two directions. Some point at traditional targets like web apps, enterprise systems, and cloud. Others are built to test AI systems themselves: model scanners, prompt injection testing, agent and RAG assessment.</p> <h2 data-astro-cid-kh7btl4r>Who it is for</h2> <p data-astro-cid-kh7btl4r>Anyone running security assessments. Pentesters, red teamers, bug bounty hunters, and the defenders who need to know what those tools do.</p> <p data-astro-cid-kh7btl4r>The scope labels tell you which tools point at your targets, whether that's web applications, internal networks, Active Directory, cloud, reverse engineering, or AI systems themselves. The last-push date tells you whether anyone still maintains it. The risk flags tell you what the tool installs, what privilege it wants, and whether it reaches for your credentials.</p> <h2 data-astro-cid-kh7btl4r>What the AI Security Matrix is not</h2> <p data-astro-cid-kh7btl4r>The matrix does not rank tools and does not test them. Nothing here has been verified to work as described, so treat every listing as a starting point you check yourself.</p> <h2 data-astro-cid-kh7btl4r>Can you trust these tools?</h2> <p data-astro-cid-kh7btl4r>The AI Security Matrix flags risk to give you a starting point, but treat everything here as unsafe until you vet and test it yourself.</p> <h2 data-astro-cid-kh7btl4r>What it does to your machine</h2> <p data-astro-cid-kh7btl4r>Every tool here is a repo you could clone yourself. Six checks tell you what happens if you do. Nothing on this list is ever executed to find out: the repo is cloned, read, and thrown away. The risk column identifies observed risks.</p> <ul data-astro-cid-kh7btl4r> <li data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>binaries</strong> — the project ships compiled artifacts you did not build and cannot read.</li> <li data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>installs</strong> — running it puts more software on your machine: a script piped straight into a shell, an install-time hook, or a dependency range loose enough to pull whatever ships that day.</li> <li data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>root</strong> — setup needs privilege somewhere: sudo, a privileged container, the Docker socket.</li> <li data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>credentials</strong> — the code reaches for where secrets live: AWS profiles, SSH directories, Kubernetes config.</li> <li data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>calls out</strong> — telemetry is built in. Using it tells someone else that you did.</li> <li data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>opaque</strong> — parts of the project you cannot read: inlined third-party code, archives, long encoded blobs.</li> </ul> <h2 data-astro-cid-kh7btl4r>None of this is an accusation</h2> <p data-astro-cid-kh7btl4r>Plenty of good tools need root. Most projects vendor something. A flag tells you what to look at before you run it, not what to avoid.</p> <p data-astro-cid-kh7btl4r>An entry with no flags is not a clean bill. Where a check could not read something, the entry says not checked rather than no.</p> <h2 data-astro-cid-kh7btl4r>Creators</h2> <p data-astro-cid-kh7btl4r><strong data-astro-cid-kh7btl4r>Joe Vest</strong></p> <p data-astro-cid-kh7btl4r>The threat gets a vote. If you build a defense without understanding how an adversary actually operates, you're not making security decisions. The threat is making them for you.</p> <p data-astro-cid-kh7btl4r>Joe has spent over 20 years in cybersecurity, the last 15 focused on offensive security operations.</p> </article>   </main> <!-- Site Footer --> <footer class="site-footer"> <nav aria-label="Pages"> <a href="/ai-security-matrix/about">About</a> <a href="/ai-security-matrix/guide">Guide</a> <a href="/ai-security-matrix/contribute">Submit</a> <a href="/ai-security-matrix/commercial">Vendors</a> <a href="https://github.com/gandli/ai-security-matrix" target="_blank" rel="noopener">GitHub</a> </nav> <p> © 2026 AI Security Matrix · Independent replica by gandli/ai-security-matrix </p> </footer> </div> <script type="module">
+  // Inject sound engine
+  import { audio } from '@/lib/audio/sounds.js';
+  
+  window.__AUDIO_ENGINE__ = audio;
+  
+  // Initialize on first interaction (browser policy)
+  function initAudio() {
+    if (!window.__AUDIO_INITED__) {
+      audio.init();
+      window.__AUDIO_INITED__ = true;
+      
+      // Global event delegation for sounds
+      document.addEventListener('mouseenter', (e) => {
+        const el = e.target.closest('a, button, [data-sound-hover]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('hover');
+        }
+      });
+      
+      document.addEventListener('mousedown', (e) => {
+        const el = e.target.closest('a, button, [data-sound-click]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('click');
+        }
+      });
+      
+      document.addEventListener('focusin', (e) => {
+        const el = e.target.closest('a, input, button, [data-sound-focus]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('focus');
+        }
+      });
+    }
+  }
+  
+  // Init on user gesture
+  window.__AUDIO_INIT__ = () => {
+    initAudio();
+    return Promise.resolve();
+  };
+  
+  // Audio is on by default; no toggle UI.
+  window.__AUDIO_ENABLED__ = true;
+</script></body></html><!-- Audio engine init -->

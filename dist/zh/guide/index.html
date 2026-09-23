@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="zh" data-theme="dark"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>使用指南 — AI 安全矩阵</title><meta name="description" content="AI 安全矩阵中每个类别、测试范围与风险标记的含义。"><link rel="icon" href="/ai-security-matrix/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://gandli.github.io/ai-security-matrix/zh/guide/"><meta name="theme-color" content="#001615" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#f2f4f5" media="(prefers-color-scheme: light)"><link rel="preconnect" href="https://github.com" crossorigin><link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin><link rel="preconnect" href="https://img.shields.io" crossorigin><link rel="preconnect" href="https://opengraph.githubassets.com" crossorigin><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="AI Security Matrix"><meta property="og:title" content="使用指南 — AI 安全矩阵"><meta property="og:description" content="AI 安全矩阵中每个类别、测试范围与风险标记的含义。"><meta property="og:url" content="https://gandli.github.io/ai-security-matrix/zh/guide/"><meta property="og:image" content="https://gandli.github.io/ai-security-matrix/og-image.zh.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="AI 安全矩阵 — 精选的 AI 赋能安全测试工具"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="使用指南 — AI 安全矩阵"><meta name="twitter:description" content="AI 安全矩阵中每个类别、测试范围与风险标记的含义。"><meta name="twitter:image" content="https://gandli.github.io/ai-security-matrix/og-image.zh.png"><script>
+      // theme init — runs in <head>, before the toggle button exists in the DOM
+      (function () {
+        const saved = localStorage.getItem("theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+
+        const applyThemeIcon = () => {
+          const dark = document.documentElement.dataset.theme !== "light";
+          document.querySelectorAll(".theme-icon-sun").forEach((el) => (el.style.display = dark ? "none" : ""));
+          document.querySelectorAll(".theme-icon-moon").forEach((el) => (el.style.display = dark ? "" : "none"));
+        };
+        applyThemeIcon();
+
+        // Bind after the button is parsed; the script itself runs too early otherwise.
+        const bind = () => {
+          const btn = document.getElementById("theme-btn");
+          if (!btn) return;
+          btn.addEventListener("click", () => {
+            const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+            document.documentElement.dataset.theme = next;
+            localStorage.setItem("theme", next);
+            applyThemeIcon();
+          });
+        };
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", bind, { once: true });
+        } else {
+          bind();
+        }
+      })();
+    </script><link rel="stylesheet" href="/ai-security-matrix/_astro/about.BaYRvQDO.css">
+<style>.crumb[data-astro-cid-mmblzbnw]{font-size:.875rem;color:var(--stale)}.lede[data-astro-cid-mmblzbnw]{font-size:1rem;line-height:1.7;color:var(--alive);max-width:68ch}.note[data-astro-cid-mmblzbnw]{font-size:.875rem;color:var(--stale);max-width:68ch;margin-top:.5rem}.static-doc[data-astro-cid-mmblzbnw] .checklist-table[data-astro-cid-mmblzbnw]{max-width:68ch}.static-doc[data-astro-cid-mmblzbnw] .checklist-table[data-astro-cid-mmblzbnw] td[data-astro-cid-mmblzbnw]:first-child{width:9rem}.n[data-astro-cid-mmblzbnw]{font-family:var(--font-mono);font-size:.75rem;font-variant-numeric:tabular-nums;color:var(--dead);margin-left:.375rem}
+</style></head> <body> <a href="#main" class="skip-link">跳到主要内容</a> <div class="wrap"> <!-- Site Header --> <header class="site-header"> <div> <h1> <a href="/ai-security-matrix/zh/" class="brand"> <svg width="22" height="22" viewBox="0 0 19 19" role="img" aria-label="AI Security Matrix"> <rect x="0.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="7" y="0" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14.6" y="0.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="0" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="14" y="7" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="0" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> <rect x="7.6" y="14.6" width="3.8" height="3.8" rx="0.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"></rect> <rect x="14" y="14" width="5" height="5" rx="0.5" fill="currentColor"></rect> </svg> <span class="brand-title">AI Security <em>Matrix</em></span> </a> </h1> <p class="tagline"> 精选的 AI 赋能网络安全测试与红队工具目录，aisecuritymatrix.com 镜像。 </p> </div> <nav class="site-nav" aria-label="Site"> <div class="nav-links"> <a href="/ai-security-matrix/zh/about">关于</a> <a href="/ai-security-matrix/zh/guide">指南</a> <a href="/ai-security-matrix/zh/contribute">贡献</a> <a href="/ai-security-matrix/zh/commercial">商业</a> </div> <div class="nav-actions"> <!-- Language toggle --> <a href="/ai-security-matrix/guide/" class="icon-btn" aria-label="Switch to English" title="English"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="10"></circle> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path> <path d="M2 12h20"></path> </svg> <span class="icon-label">EN</span> </a> <!-- Theme toggle --> <button id="theme-btn" class="icon-btn" type="button" aria-label="切换明暗主题" title="明暗主题"> <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <circle cx="12" cy="12" r="4"></circle> <path d="M12 2v2"></path> <path d="M12 20v2"></path> <path d="m4.93 4.93 1.41 1.41"></path> <path d="m17.66 17.66 1.41 1.41"></path> <path d="M2 12h2"></path> <path d="M20 12h2"></path> <path d="m6.34 17.66-1.41 1.41"></path> <path d="m19.07 4.93-1.41 1.41"></path> </svg> <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"> <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path> </svg> </button> </div> </nav> </header> <!-- Main Slot --> <main id="main" tabindex="-1">  <article class="static-doc" data-astro-cid-mmblzbnw> <p class="crumb" data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/" data-astro-cid-mmblzbnw>← 返回目录</a></p> <h1 data-astro-cid-mmblzbnw>使用指南</h1> <p class="lede" data-astro-cid-mmblzbnw>
+每个工具带三类标签：<strong data-astro-cid-mmblzbnw>类别</strong>（它怎么工作）、
+<strong data-astro-cid-mmblzbnw>测试范围</strong>（它测什么），以及若干
+<strong data-astro-cid-mmblzbnw>风险标记</strong>（它会对运行它的机器做什么）。
+</p> <h2 data-astro-cid-mmblzbnw>类别</h2> <table class="checklist-table" data-astro-cid-mmblzbnw> <tbody data-astro-cid-mmblzbnw> <tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>agent</code></td> <td data-astro-cid-mmblzbnw>自己运行任务循环，根据刚发现的结果决定下一步。 <span class="n" data-astro-cid-mmblzbnw>22</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>scanner</code></td> <td data-astro-cid-mmblzbnw>跑一组固定的检查，报告查到了什么。 <span class="n" data-astro-cid-mmblzbnw>20</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>mcp</code></td> <td data-astro-cid-mmblzbnw>通过模型上下文协议把工具提供给模型。由模型驱动。 <span class="n" data-astro-cid-mmblzbnw>14</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>skill</code></td> <td data-astro-cid-mmblzbnw>给模型的提示词与指令，自身不是程序。 <span class="n" data-astro-cid-mmblzbnw>9</span></td> </tr> </tbody> </table> <h2 data-astro-cid-mmblzbnw>测试范围</h2> <p class="note" data-astro-cid-mmblzbnw>工具被指向的目标。一个工具可以覆盖多个范围。</p> <table class="checklist-table" data-astro-cid-mmblzbnw> <tbody data-astro-cid-mmblzbnw> <tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/ad/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>ad</code></a></td> <td data-astro-cid-mmblzbnw>Active Directory：本地域身份。 <span class="n" data-astro-cid-mmblzbnw>10</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/agentic/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>agentic</code></a></td> <td data-astro-cid-mmblzbnw>AI 智能体及其运行循环——被测试的对象就是它本身。 <span class="n" data-astro-cid-mmblzbnw>9</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/api/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>api</code></a></td> <td data-astro-cid-mmblzbnw>应用背后的 HTTP 与 RPC 接口。 <span class="n" data-astro-cid-mmblzbnw>4</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/binary/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>binary</code></a></td> <td data-astro-cid-mmblzbnw>编译后的可执行文件与固件。 <span class="n" data-astro-cid-mmblzbnw>7</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/cloud/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>cloud</code></a></td> <td data-astro-cid-mmblzbnw>云厂商账号及其配置。 <span class="n" data-astro-cid-mmblzbnw>2</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/code/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>code</code></a></td> <td data-astro-cid-mmblzbnw>源码：仓库里的，或一次 diff。 <span class="n" data-astro-cid-mmblzbnw>7</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/entra/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>entra</code></a></td> <td data-astro-cid-mmblzbnw>Entra ID：微软的云身份。 <span class="n" data-astro-cid-mmblzbnw>2</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/llm/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>llm</code></a></td> <td data-astro-cid-mmblzbnw>模型本身：它的提示词、护栏，以及它输出什么。 <span class="n" data-astro-cid-mmblzbnw>11</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/logging/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>logging</code></a></td> <td data-astro-cid-mmblzbnw>测试留下的记录：覆盖面、发现，以及背后的证据。 <span class="n" data-astro-cid-mmblzbnw>1</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/modfile/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>modfile</code></a></td> <td data-astro-cid-mmblzbnw>序列化的模型文件——这类格式可以携带可执行代码。 <span class="n" data-astro-cid-mmblzbnw>5</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/network/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>network</code></a></td> <td data-astro-cid-mmblzbnw>主机、端口与流量。 <span class="n" data-astro-cid-mmblzbnw>21</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/recon/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>recon</code></a></td> <td data-astro-cid-mmblzbnw>在测试任何东西之前，先弄清有什么。 <span class="n" data-astro-cid-mmblzbnw>15</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/redteam/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>redteam</code></a></td> <td data-astro-cid-mmblzbnw>针对整个环境的对手模拟。 <span class="n" data-astro-cid-mmblzbnw>11</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/social/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>social</code></a></td> <td data-astro-cid-mmblzbnw>人：钓鱼、话术，以及他们交出了什么。 <span class="n" data-astro-cid-mmblzbnw>1</span></td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/scope/webapp/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>webapp</code></a></td> <td data-astro-cid-mmblzbnw>面向浏览器的应用。 <span class="n" data-astro-cid-mmblzbnw>25</span></td> </tr> </tbody> </table> <h2 data-astro-cid-mmblzbnw>风险标记</h2> <p class="note" data-astro-cid-mmblzbnw>
+这些标记回答了本来要克隆之后才会知道的问题。
+      它不是判决，只是让你提前知道该准备什么。
+</p> <table class="checklist-table" data-astro-cid-mmblzbnw> <tbody data-astro-cid-mmblzbnw> <tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/flag/root/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>root</code></a></td> <td data-astro-cid-mmblzbnw>要求 root 或 sudo——预期它想要提权。</td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/flag/credentials/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>credentials</code></a></td> <td data-astro-cid-mmblzbnw>读取 ~/.aws、~/.ssh 这类凭证路径。</td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/flag/installs/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>installs</code></a></td> <td data-astro-cid-mmblzbnw>在你的主机上安装软件。</td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/flag/calls-out/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>calls out</code></a></td> <td data-astro-cid-mmblzbnw>请求项目自身不拥有的端点。</td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/flag/opaque/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>opaque</code></a></td> <td data-astro-cid-mmblzbnw>含无法阅读的长编码数据块。</td> </tr><tr data-astro-cid-mmblzbnw> <td data-astro-cid-mmblzbnw><a href="/ai-security-matrix/zh/flag/binaries/" data-astro-cid-mmblzbnw><code data-astro-cid-mmblzbnw>binaries</code></a></td> <td data-astro-cid-mmblzbnw>分发你未编译的二进制文件。</td> </tr> </tbody> </table> <h2 data-astro-cid-mmblzbnw>怎么读一行</h2> <p class="note" data-astro-cid-mmblzbnw>
+星级与最近更新说明项目是否还活着，风险标记说明它跑起来会做什么。
+      提交活跃且没有标记的工具最容易上手；带 <code data-astro-cid-mmblzbnw>root</code> 和
+<code data-astro-cid-mmblzbnw>credentials</code> 的工具，请放在一次性环境里运行。
+</p> </article>   </main> <!-- Site Footer --> <footer class="site-footer"> <nav aria-label="Pages"> <a href="/ai-security-matrix/zh/about">关于</a> <a href="/ai-security-matrix/zh/guide">指南</a> <a href="/ai-security-matrix/zh/contribute">贡献</a> <a href="/ai-security-matrix/zh/commercial">商业</a> <a href="https://github.com/gandli/ai-security-matrix" target="_blank" rel="noopener">GitHub</a> </nav> <p> © 2026 AI Security Matrix · 开源镜像维护者 gandli/ai-security-matrix </p> </footer> </div> <script type="module">
+  // Inject sound engine
+  import { audio } from '@/lib/audio/sounds.js';
+  
+  window.__AUDIO_ENGINE__ = audio;
+  
+  // Initialize on first interaction (browser policy)
+  function initAudio() {
+    if (!window.__AUDIO_INITED__) {
+      audio.init();
+      window.__AUDIO_INITED__ = true;
+      
+      // Global event delegation for sounds
+      document.addEventListener('mouseenter', (e) => {
+        const el = e.target.closest('a, button, [data-sound-hover]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('hover');
+        }
+      });
+      
+      document.addEventListener('mousedown', (e) => {
+        const el = e.target.closest('a, button, [data-sound-click]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('click');
+        }
+      });
+      
+      document.addEventListener('focusin', (e) => {
+        const el = e.target.closest('a, input, button, [data-sound-focus]');
+        if (el && window.__AUDIO_ENGINE__.enabled) {
+          window.__AUDIO_ENGINE__.play('focus');
+        }
+      });
+    }
+  }
+  
+  // Init on user gesture
+  window.__AUDIO_INIT__ = () => {
+    initAudio();
+    return Promise.resolve();
+  };
+  
+  // Audio is on by default; no toggle UI.
+  window.__AUDIO_ENABLED__ = true;
+</script></body></html><!-- Audio engine init -->
