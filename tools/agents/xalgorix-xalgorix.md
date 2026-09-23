@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.1k |
-| **Last updated** | today |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 17 |
 | **Size** | 141,448 lines · 436 |

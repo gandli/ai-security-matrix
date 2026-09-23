@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 48 |
-| **Last updated** | 17d |
+| **Last updated** | 18d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 37,285 lines · 145 |

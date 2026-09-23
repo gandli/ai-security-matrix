@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | BSD-2 |
 | **Maintainers** | 7 |
-| **Size** | 341,490 lines · 792 |
+| **Size** | 349,065 lines · 802 |
 | **Source** | <https://github.com/berylliumsec/nebula> |
 | **Scopes & traits** | `network` `recon` *root* *credentials* ~calls out~ |
 

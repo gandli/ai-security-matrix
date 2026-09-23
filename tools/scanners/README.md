@@ -4,7 +4,7 @@ _Rule / LLM-assisted detection & evaluation · 20 tools_
 
 - [promptfoo](promptfoo-promptfoo.md) — 25k · Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more.
 - [garak](nvidia-garak.md) — 9.3k · the LLM vulnerability scanner
-- [AI-Infra-Guard](tencent-ai-infra-guard.md) — 6.5k · A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.
+- [AI-Infra-Guard](tencent-ai-infra-guard.md) — 6.6k · A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.
 - [PyRIT](microsoft-pyrit.md) — 4.5k · The Python Risk Identification Tool for generative AI (PyRIT) is an open source framework built to empower security professionals and engineers to proactiv
 - [agent-scan](snyk-agent-scan.md) — 3.1k · Security scanner for AI agents, MCP servers and agent skills.
 - [deepteam](confident-ai-deepteam.md) — 2.9k · DeepTeam is a framework to red team LLMs and AI agents.

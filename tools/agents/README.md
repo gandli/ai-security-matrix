@@ -10,7 +10,7 @@ _Autonomous / multi-step AI orchestration · 22 tools_
 - [Decepticon](purpleailab-decepticon.md) — 5.6k · Autonomous Hacking Agent for Red Team
 - [pentestagent](gh05tcrew-pentestagent.md) — 3.1k · PentestAgent is an AI agent framework for black-box security testing, supporting bug bounty, red-team, and penetration testing workflows.
 - [Pentest-Swarm-AI](armur-ai-pentest-swarm-ai.md) — 2.6k · Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning
-- [redamon](samugit83-redamon.md) — 2.5k · An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero
+- [redamon](samugit83-redamon.md) — 2.6k · An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero
 - [pentest-ai](0xsteph-pentest-ai.md) — 1.7k · Open-source AI pentester that proves every finding. Machine oracles re-run each exploit; verified bugs ship a proof capsule you can replay yourself.
 - [pentest-copilot](bugbasesecurity-pentest-copilot.md) — 1.5k · Pentest Copilot is an AI-powered browser based ethical hacking assistant tool designed to streamline pentesting workflows.
 - [hackingBuddyGPT](ipa-lab-hackingbuddygpt.md) — 1.2k · Helping Ethical Hackers use LLMs in 50 Lines of Code or less..

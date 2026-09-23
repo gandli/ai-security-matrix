@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 2.5k |
-| **Last updated** | 2d |
+| **Stars** | 2.6k |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 20 |
-| **Size** | 605,745 lines · 2327 |
+| **Size** | 607,357 lines · 2329 |
 | **Source** | <https://github.com/samugit83/redamon> |
 | **Scopes & traits** | `redteam` `ad` `network` `recon` *root* *credentials* _installs_ ~calls out~ ~opaque~ |
 

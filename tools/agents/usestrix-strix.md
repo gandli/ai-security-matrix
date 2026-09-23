@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 64k |
-| **Last updated** | 2d |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 71 |
-| **Size** | 91,927 lines · 349 |
+| **Size** | 95,635 lines · 352 |
 | **Source** | <https://github.com/usestrix/strix> |
 | **Scopes & traits** | `webapp` `api` `code` *root* *credentials* _installs_ ~calls out~ |
 

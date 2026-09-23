@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 83 |
-| **Size** | 35,427 lines · 87 |
+| **Size** | 35,569 lines · 87 |
 | **Source** | <https://github.com/mrexodia/ida-pro-mcp> |
 | **Scopes & traits** | `binary` |
 

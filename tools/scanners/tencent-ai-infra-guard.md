@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 6.5k |
-| **Last updated** | 2d |
+| **Stars** | 6.6k |
+| **Last updated** | 3d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 57 |
 | **Size** | 153,908 lines · 963 |
