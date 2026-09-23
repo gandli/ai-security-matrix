@@ -22,7 +22,7 @@ const {
 
 const isZh = lang === "zh";
 const pageTitle = title || (isZh ? "AI 赋能安全测试工具 — AI 安全矩阵" : "AI-enabled security testing tools — AI Security Matrix");
-const pageDescription = description || (isZh ? "一份精选的 AI 赋能网络安全测试与红队工具目录。" : "A curated list of AI-enabled security testing tools.");
+const pageDescription = description || (isZh ? "精选 65 款 AI 安全测试工具，每个都标注了它对你的机器做什么——root、凭据、安装、外呼。可搜索、可排序、中英双语。" : "A curated directory of 65 AI security tools — each audited for what it does to your machine before you run it. Searchable, sortable, bilingual.");
 
 // Strip any existing base/language prefix to compute switch target
 const pathname = Astro.url.pathname;
@@ -134,8 +134,8 @@ const ogImage = ogImageProp || `https://gandli.github.io/ai-security-matrix/og-i
           </h1>
           <p class="tagline">
             {isZh
-              ? "一份精选的 AI 赋能网络安全测试与红队工具目录。"
-              : "A curated list of AI-enabled security testing tools."}
+              ? "65 款工具，运行前先审计。"
+              : "65 tools, audited before you run them."}
           </p>
         </div>
 
