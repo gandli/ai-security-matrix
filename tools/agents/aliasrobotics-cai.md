@@ -1,6 +1,6 @@
 # aliasrobotics/cai
 
-> Cybersecurity AI (CAI), the framework for AI Security
+> The reference framework behind a body of published AI offensive-security research, kept as its final source tree. Its capabilities moved on to a commercial
 
 | | |
 |---|---|
@@ -11,22 +11,11 @@
 | **Maintainers** | 1 |
 | **Size** | 257,755 lines · 1122 |
 | **Source** | <https://github.com/aliasrobotics/cai> |
-| **Scopes & traits** | `network` `webapp` `recon` *root* *credentials* _installs_ |
+| **Scopes & traits** | `network` `webapp` `recon` _fetched install_ _host access_ |
 
 ## Bundled tools
 
 `dirb`, `gobuster`, `hashcat`, `hydra`, `john`, `metasploit-framework`, `nikto`, `nmap`, `sqlmap`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

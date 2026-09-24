@@ -1,6 +1,6 @@
 # LaurieWired/GhidraMCP
 
-> MCP Server for Ghidra
+> Installs into Ghidra as an extension and opens its decompiler and symbol table to a model, which can rename methods and data as it works through the progra
 
 | | |
 |---|---|
@@ -12,17 +12,6 @@
 | **Size** | 2,027 lines · 3 |
 | **Source** | <https://github.com/LaurieWired/GhidraMCP> |
 | **Scopes & traits** | `binary` |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

@@ -1,17 +1,17 @@
 # Nightlysec/nightly
 
-> Autonomous AI penetration testing agent
+> Runs inside CI on a pull request and blocks the merge when it can validate a bug, rather than being driven from a terminal against a live target.
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1 |
-| **Last updated** | 41d |
+| **Last updated** | 42d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 68 |
 | **Size** | 59,092 lines · 275 |
 | **Source** | <https://github.com/Nightlysec/nightly> |
-| **Scopes & traits** | `webapp` `api` `code` *root* *credentials* _installs_ ~calls out~ |
+| **Scopes & traits** | `webapp` `api` `code` _fetched install_ |
 
 ## Bundled tools
 
@@ -20,17 +20,6 @@
 ## Shares files with
 
 usestrix/strix
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

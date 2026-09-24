@@ -1,28 +1,17 @@
 # Wh0am123/MCP-Kali-Server
 
-> MCP configuration to connect AI agent to a Linux machine.
+> A thin bridge giving a model a shell on a Linux box you already run, plus a short list of named tool wrappers. Raw command execution is the point; the wrap
 
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 825 |
-| **Last updated** | 190d |
+| **Stars** | 826 |
+| **Last updated** | 191d |
 | **Licence** | MIT |
 | **Maintainers** | 4 |
 | **Size** | 1,024 lines · 2 |
 | **Source** | <https://github.com/Wh0am123/MCP-Kali-Server> |
-| **Scopes & traits** | `network` `webapp` *root* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `network` `webapp` |
 
 ---
 

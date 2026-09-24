@@ -1,28 +1,17 @@
 # confident-ai/deepteam
 
-> DeepTeam is a framework to red team LLMs and AI agents.
+> Simulates jailbreaks and injection against an application you have already built, then ships the guardrail that blocks what it found, so the test and the d
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 2.9k |
-| **Last updated** | 2d |
+| **Last updated** | 3d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 27 |
 | **Size** | 91,196 lines · 813 |
 | **Source** | <https://github.com/confident-ai/deepteam> |
-| **Scopes & traits** | `llm` `agentic` _installs_ ~calls out~ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `llm` `agentic` *calls out* |
 
 ---
 

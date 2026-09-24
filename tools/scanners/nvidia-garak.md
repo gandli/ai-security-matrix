@@ -1,28 +1,17 @@
 # NVIDIA/garak
 
-> the LLM vulnerability scanner
+> Fires a catalogue of named probes at a model and reports which ones got through, covering jailbreaks, leakage, injection and toxicity. Probes are the unit
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 9.3k |
-| **Last updated** | 7d |
+| **Last updated** | 8d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 100 |
 | **Size** | 80,102 lines · 494 |
 | **Source** | <https://github.com/NVIDIA/garak> |
-| **Scopes & traits** | `llm` *root* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `llm` |
 
 ---
 

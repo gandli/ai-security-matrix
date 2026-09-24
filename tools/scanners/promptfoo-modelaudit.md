@@ -1,28 +1,17 @@
 # promptfoo/modelaudit
 
-> Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment
+> Covers the widest range of model formats of any of these, emits SARIF for a CI gate, and says plainly where its own analysis was bounded rather than report
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 73 |
-| **Last updated** | 3d |
+| **Last updated** | 4d |
 | **Licence** | MIT |
 | **Maintainers** | 17 |
 | **Size** | 656,743 lines · 506 |
 | **Source** | <https://github.com/promptfoo/modelaudit> |
-| **Scopes & traits** | `modfile` *root* *credentials* ~calls out~ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `modfile` *calls out* |
 
 ---
 

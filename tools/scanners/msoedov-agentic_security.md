@@ -1,28 +1,17 @@
 # msoedov/agentic_security
 
-> Agentic LLM Vulnerability Scanner / AI red teaming kit 🧪
+> Probes across text, images and audio rather than prompts alone, and uses reinforcement learning to adapt a multi-step attack as the model's defences respon
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 2.0k |
-| **Last updated** | 1d |
+| **Last updated** | 2d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 36 |
 | **Size** | 44,546 lines · 144 |
 | **Source** | <https://github.com/msoedov/agentic_security> |
-| **Scopes & traits** | `llm` `agentic` ~calls out~ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `llm` `agentic` *calls out* |
 
 ---
 

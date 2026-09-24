@@ -1,28 +1,17 @@
 # utkusen/promptmap
 
-> a security scanner for custom LLM applications
+> Runs a second model whose only job is to read the target's replies and rule on whether an injection actually worked. Point it at your own system prompt, or
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.3k |
-| **Last updated** | 296d |
+| **Last updated** | 297d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 8 |
 | **Size** | 1,504 lines · 1 |
 | **Source** | <https://github.com/utkusen/promptmap> |
 | **Scopes & traits** | `llm` |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

@@ -1,6 +1,6 @@
 # MorDavid/BloodHound-MCP-AI
 
-> BloodHound-MCP-AI is integration that connects BloodHound with AI through Model Context Protocol, allowing security professionals to analyze Active Directo
+> Turns BloodHound's own Cypher query library into one MCP tool per query, so you ask for an attack path in English and the server runs a query someone alrea
 
 | | |
 |---|---|
@@ -11,18 +11,7 @@
 | **Maintainers** | 1 |
 | **Size** | 873 lines · 1 |
 | **Source** | <https://github.com/MorDavid/BloodHound-MCP-AI> |
-| **Scopes & traits** | `ad` _installs_ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `ad` ~licence~ |
 
 ---
 

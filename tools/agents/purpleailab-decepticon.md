@@ -1,32 +1,21 @@
 # PurpleAILAB/Decepticon
 
-> Autonomous Hacking Agent for Red Team
+> Runs a red-team engagement from a terminal CLI, with an orchestrator that starts specialist stacks like BloodHound or a C2 server only when the engagement
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 5.6k |
-| **Last updated** | 4d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 17 |
-| **Size** | 188,476 lines · 959 |
+| **Maintainers** | 18 |
+| **Size** | 189,645 lines · 961 |
 | **Source** | <https://github.com/PurpleAILAB/Decepticon> |
-| **Scopes & traits** | `redteam` `network` `webapp` *root* *credentials* _installs_ ~calls out~ |
+| **Scopes & traits** | `redteam` `network` `webapp` *calls out* _fetched install_ _host access_ |
 
 ## Bundled tools
 
 `binwalk`, `radare2`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

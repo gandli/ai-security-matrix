@@ -1,28 +1,17 @@
 # chetstriker/LLMtary
 
-> Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal & external targets. Suppo
+> A Flutter desktop application that can run the whole engagement against a model on your own GPU, feeding each phase's findings into the next phase's prompt
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 37 |
-| **Last updated** | 165d |
+| **Last updated** | 166d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 944 lines · 17 |
 | **Source** | <https://github.com/chetstriker/LLMtary> |
-| **Scopes & traits** | `recon` `webapp` *root* _installs_ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `recon` `webapp` _fetched install_ |
 
 ---
 

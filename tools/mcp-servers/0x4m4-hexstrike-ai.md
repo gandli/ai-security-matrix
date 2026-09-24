@@ -1,28 +1,17 @@
 # 0x4m4/hexstrike-ai
 
-> HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated
+> Serves a large tool catalogue over MCP and adds a layer of its own that picks which tool to run and with what flags, so the client's model chooses the goal
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 12k |
-| **Last updated** | 51d |
+| **Last updated** | 52d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 22,759 lines · 2 |
 | **Source** | <https://github.com/0x4m4/hexstrike-ai> |
-| **Scopes & traits** | `webapp` `network` `recon` `binary` *root* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `webapp` `network` `recon` `binary` |
 
 ---
 

@@ -1,28 +1,17 @@
 # mbrg/power-pwn
 
-> An offensive/defense security toolset for discovery, recon and ethical assessment of AI Agents
+> Works the Microsoft 365 side of the problem: Power Platform flows, Copilot Studio bots left open to anonymous users, and the agents a tenant has published
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.2k |
-| **Last updated** | 276d |
+| **Last updated** | 277d |
 | **Licence** | MIT |
 | **Maintainers** | 10 |
 | **Size** | 15,276 lines · 192 |
 | **Source** | <https://github.com/mbrg/power-pwn> |
-| **Scopes & traits** | `cloud` `llm` *root* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `cloud` `llm` |
 
 ---
 

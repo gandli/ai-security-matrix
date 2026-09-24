@@ -1,32 +1,21 @@
 # Tencent/AI-Infra-Guard
 
-> A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.
+> Gathers several separate AI security scans behind one console: the agent, the MCP servers, the skills, the serving infrastructure, and a jailbreak pass aga
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 6.6k |
-| **Last updated** | 3d |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 57 |
 | **Size** | 153,908 lines · 963 |
 | **Source** | <https://github.com/Tencent/AI-Infra-Guard> |
-| **Scopes & traits** | `llm` `agentic` *root* *credentials* _installs_ ~calls out~ |
+| **Scopes & traits** | `llm` `agentic` *calls out* _fetched install_ |
 
 ## Bundled tools
 
 `nmap`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

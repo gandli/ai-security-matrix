@@ -1,32 +1,21 @@
 # capture0x/AdStrike
 
-> AI-powered modular Active Directory red-team framework for authorized penetration testing, AD enumeration, attack-path analysis,   Kerberos/ADCS workflows,
+> A menu-driven Active Directory framework that carries credentials and Kerberos state in one session across its modules. It also serves those modules over M
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 355 |
-| **Last updated** | 104d |
+| **Last updated** | 105d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
 | **Size** | 34,549 lines · 79 |
 | **Source** | <https://github.com/capture0x/AdStrike> |
-| **Scopes & traits** | `ad` *root* *credentials* |
+| **Scopes & traits** | `ad` ~licence~ |
 
 ## Bundled tools
 
 `seclists`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

@@ -26,31 +26,29 @@ The matrix does not rank tools and does not test them. Nothing here has been ver
 
 The AI Security Matrix flags risk to give you a starting point, but treat everything here as unsafe until you vet and test it yourself.
 
-## What it does to your machine
+## What you take on by using it
 
-Every tool here is a repo you could clone yourself. Six checks tell you what happens if you do. Nothing on this list is ever executed to find out: the repo is cloned, read, and thrown away. The risk column idendifies observed risks.
+Every tool here is a repo you could clone yourself. Five flags say what you take on if you do. Nothing on this list is ever executed to find out: the repo is cloned, read, and thrown away. Each flag is measured only on the files that make the tool run, never on its tests, its docs or its sample data.
 
-## What lands on your host
+## What reaches your machine
 
-Binaries means the project ships something already compiled. You did not build it and you cannot read it.
+Fetched install means the documented install fetches a script and runs it. What runs is whatever that script holds on the day you install, which is not the version anyone reviewed.
 
-Installs means running it puts more software on your machine. A script piped from the internet straight into your shell, a hook that fires quietly during install, or a dependency list loose enough that you get whichever versions happen to be current that day.
+Host access means the container it ships is handed access back to the host: the Docker socket, a privileged container, or host networking. Shipping a container is not the same as the container holding.
 
-## What it asks for
+## Where your data goes
 
-Root means the setup wants privilege somewhere: sudo, a privileged container, the Docker socket.
+Calls out means it sends data to a third party that is not the model provider. What is sent is not visible from here.
 
-Credentials means the code reaches toward the places your keys live. Your AWS profile, your SSH directory, your Kubernetes config.
+## What you cannot establish
 
-## What you cannot see
+Licence means there is no licence file, or the README and the LICENSE disagree. Either way nobody can tell you which terms apply. A copyleft licence is a choice, not a defect, and does not raise this flag.
 
-Calls out means there is analytics in the code, so using the tool tells someone else you used it.
-
-Opaque means part of the project is unreadable. Vendored code, minified files, long encoded blobs.
+Opaque means part of what ships cannot be reviewed by reading the source. Vendored code, minified files, committed binaries, long encoded blobs.
 
 ## None of this is an accusation
 
-Plenty of good tools need root. Most projects vendor something. A flag tells you what to look at before you run it, not what to avoid.
+Plenty of good tools need root, and most projects vendor something. Running as root inside a container the tool brought with it is normal, and is not flagged. A flag presents a risk for you to weigh, not a verdict.
 
 An entry with no flags is not a clean bill. Where a check could not read something, the entry says not checked rather than no.
 

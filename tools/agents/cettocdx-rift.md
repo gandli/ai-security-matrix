@@ -1,28 +1,17 @@
 # cettocdx/rift
 
-> RIFT - Autonomous AI Penetration Testing Agent
+> Takes a target and an objective in plain language, then plans and runs the whole job inside a sandbox. A second mode answers questions about a finding with
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 11 |
-| **Last updated** | 4d |
+| **Last updated** | 5d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 7 |
 | **Size** | 489,896 lines · 2486 |
 | **Source** | <https://github.com/cettocdx/rift> |
-| **Scopes & traits** | `webapp` `network` *root* *credentials* _installs_ ~calls out~ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `webapp` `network` *calls out* _fetched install_ |
 
 ---
 

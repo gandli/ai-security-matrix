@@ -1,28 +1,17 @@
 # GH05TCREW/MetasploitMCP
 
-> MCP Server for Metasploit
+> Drives Metasploit over its RPC interface: search the modules, run an exploit or a post module, generate a payload, and send commands into a session that is
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 730 |
-| **Last updated** | 230d |
+| **Last updated** | 231d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 5 |
 | **Size** | 3,219 lines · 7 |
 | **Source** | <https://github.com/GH05TCREW/MetasploitMCP> |
 | **Scopes & traits** | `network` |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

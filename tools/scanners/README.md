@@ -2,23 +2,23 @@
 
 _Rule / LLM-assisted detection & evaluation · 20 tools_
 
-- [promptfoo](promptfoo-promptfoo.md) — 25k · Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more.
-- [garak](nvidia-garak.md) — 9.3k · the LLM vulnerability scanner
-- [AI-Infra-Guard](tencent-ai-infra-guard.md) — 6.6k · A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.
-- [PyRIT](microsoft-pyrit.md) — 4.5k · The Python Risk Identification Tool for generative AI (PyRIT) is an open source framework built to empower security professionals and engineers to proactiv
-- [agent-scan](snyk-agent-scan.md) — 3.1k · Security scanner for AI agents, MCP servers and agent skills.
-- [deepteam](confident-ai-deepteam.md) — 2.9k · DeepTeam is a framework to red team LLMs and AI agents.
-- [vulnhuntr](protectai-vulnhuntr.md) — 2.8k · Zero shot vulnerability discovery using LLMs
-- [agentic_security](msoedov-agentic_security.md) — 2.0k · Agentic LLM Vulnerability Scanner / AI red teaming kit 🧪
-- [FuzzyAI](cyberark-fuzzyai.md) — 1.6k · A powerful tool for automated LLM fuzzing. It is designed to help developers and security researchers identify and mitigate potential jailbreaks in their L
-- [promptmap](utkusen-promptmap.md) — 1.3k · a security scanner for custom LLM applications
-- [power-pwn](mbrg-power-pwn.md) — 1.2k · An offensive/defense security toolset for discovery, recon and ethical assessment of AI Agents
-- [agentic-radar](splx-ai-agentic-radar.md) — 1.1k · A security scanner for your LLM agentic workflows
-- [mcp-scanner](cisco-ai-defense-mcp-scanner.md) — 1.1k · Scan MCP servers for potential threats & security findings.
-- [counterfit](azure-counterfit.md) — 939 · a CLI that provides a generic automation layer for assessing the security of ML models
-- [modelscan](protectai-modelscan.md) — 775 · Protection against Model Serialization Attacks
-- [fickling](trailofbits-fickling.md) — 670 · A Python pickling decompiler and static analyzer
-- [AgentHound](adithyan-ak-agenthound.md) — 439 · Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A
-- [picklescan](mmaitre314-picklescan.md) — 423 · Security scanner detecting Python Pickle files performing suspicious actions
-- [aisbom](lab700xorg-aisbom.md) — 80 · Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AI
-- [modelaudit](promptfoo-modelaudit.md) — 73 · Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment
+- [promptfoo](promptfoo-promptfoo.md) — 25k · Describes a test suite for an LLM app in a config file and runs it from the CLI or CI, either as a plain eval or as a red-team pass. The declarative file i
+- [garak](nvidia-garak.md) — 9.3k · Fires a catalogue of named probes at a model and reports which ones got through, covering jailbreaks, leakage, injection and toxicity. Probes are the unit
+- [AI-Infra-Guard](tencent-ai-infra-guard.md) — 6.6k · Gathers several separate AI security scans behind one console: the agent, the MCP servers, the skills, the serving infrastructure, and a jailbreak pass aga
+- [PyRIT](microsoft-pyrit.md) — 4.5k · A library for assembling your own attack rather than a fixed suite: you compose an orchestrator from targets, converters and scorers, and it runs the conve
+- [agent-scan](snyk-agent-scan.md) — 3.1k · Finds the agent components already installed on your machine, the MCP servers, skills and agent configs, and scans each for prompt injection and known vuln
+- [deepteam](confident-ai-deepteam.md) — 2.9k · Simulates jailbreaks and injection against an application you have already built, then ships the guardrail that blocks what it found, so the test and the d
+- [vulnhuntr](protectai-vulnhuntr.md) — 2.8k · Reads a Python codebase and asks a model to trace user input through to dangerous sinks, reporting the call chain behind each bug it claims. It applies no
+- [agentic_security](msoedov-agentic_security.md) — 2.0k · Probes across text, images and audio rather than prompts alone, and uses reinforcement learning to adapt a multi-step attack as the model's defences respon
+- [FuzzyAI](cyberark-fuzzyai.md) — 1.6k · Fuzzes a model endpoint with a catalogue of jailbreak techniques, mutating prompts until one gets past the guardrail, and works against a local model as re
+- [promptmap](utkusen-promptmap.md) — 1.3k · Runs a second model whose only job is to read the target's replies and rule on whether an injection actually worked. Point it at your own system prompt, or
+- [power-pwn](mbrg-power-pwn.md) — 1.2k · Works the Microsoft 365 side of the problem: Power Platform flows, Copilot Studio bots left open to anonymous users, and the agents a tenant has published
+- [agentic-radar](splx-ai-agentic-radar.md) — 1.1k · Reads the source of an agentic workflow, CrewAI or LangGraph or the OpenAI Agents SDK, and maps what the agents can actually reach before anything runs.
+- [mcp-scanner](cisco-ai-defense-mcp-scanner.md) — 1.1k · Judges an MCP server's tool definitions three ways, by YARA rule, by hosted inspection API and by asking a model, so a poisoned tool description has to cle
+- [counterfit](azure-counterfit.md) — 939 · Brings the established adversarial machine-learning frameworks under one CLI and points them at a model you nominate. Its subject is classic ML, not langua
+- [modelscan](protectai-modelscan.md) — 774 · Reads a saved model file and reports the unsafe calls hiding in it, across pickle, HDF5 and SavedModel, so a download from a public registry can be checked
+- [fickling](trailofbits-fickling.md) — 670 · Decompiles pickle bytecode back into readable Python, and will rewrite or build one too. The same tool that tells you a model file is malicious is the one
+- [AgentHound](adithyan-ak-agenthound.md) — 439 · Runs from a host you have already compromised: it collects the agent credentials and configuration it finds there, reuses them against whatever AI services
+- [picklescan](mmaitre314-picklescan.md) — 423 · Scans a pickle for the dangerous imports it would execute on load, and will fetch one straight from Hugging Face, a URL or an archive rather than making yo
+- [aisbom](lab700xorg-aisbom.md) — 80 · Produces the compliance artefact as well as the verdict: a CycloneDX or SPDX bill of materials for a model file, alongside the Keras, GGUF and ONNX payload
+- [modelaudit](promptfoo-modelaudit.md) — 73 · Covers the widest range of model formats of any of these, emits SARIF for a CI gate, and says plainly where its own analysis was bounded rather than report

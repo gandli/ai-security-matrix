@@ -1,28 +1,17 @@
 # cyberark/FuzzyAI
 
-> A powerful tool for automated LLM fuzzing. It is designed to help developers and security researchers identify and mitigate potential jailbreaks in their L
+> Fuzzes a model endpoint with a catalogue of jailbreak techniques, mutating prompts until one gets past the guardrail, and works against a local model as re
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.6k |
-| **Last updated** | 229d |
+| **Last updated** | 230d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 13 |
 | **Size** | 11,682 lines · 199 |
 | **Source** | <https://github.com/cyberark/FuzzyAI> |
 | **Scopes & traits** | `llm` |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

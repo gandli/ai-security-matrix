@@ -1,28 +1,17 @@
 # MythicAgents/Sage
 
-> Sage is a virtual Mythic agent that that uses an AI agentic system to operate Mythic and Mythic agents running on compromised hosts.
+> Installs into a Mythic C2 server and operates it from the inside, reasoning over the live callbacks and the BloodHound graph to issue Mythic tasks. It neve
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 25 |
-| **Last updated** | 28d |
+| **Last updated** | 29d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 2 |
 | **Size** | 227,125 lines · 437 |
 | **Source** | <https://github.com/MythicAgents/Sage> |
-| **Scopes & traits** | `redteam` `ad` *root* *credentials* _installs_ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `redteam` `ad` |
 
 ---
 

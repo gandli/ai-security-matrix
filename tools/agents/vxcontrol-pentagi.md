@@ -1,32 +1,21 @@
 # vxcontrol/pentagi
 
-> Fully autonomous AI Agents system capable of performing complex penetration testing tasks
+> Runs autonomous pentest agents from a self-hosted web console, each inside its own Docker container rather than on the host. You start a task in the browse
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 25k |
-| **Last updated** | 13d |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 17 |
 | **Size** | 398,445 lines · 1054 |
 | **Source** | <https://github.com/vxcontrol/pentagi> |
-| **Scopes & traits** | `webapp` `network` `recon` *root* *credentials* _binaries_ _installs_ |
+| **Scopes & traits** | `webapp` `network` `recon` _host access_ |
 
 ## Bundled tools
 
 `masscan`, `sqlmap`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **yes** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

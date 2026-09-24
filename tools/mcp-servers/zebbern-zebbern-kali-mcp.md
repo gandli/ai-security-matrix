@@ -1,32 +1,21 @@
 # zebbern/zebbern-kali-mcp
 
-> MCP server for Kali Linux penetration testing - 121 tools for AI-assisted security testing - Giving Agents access to full pentesting tools
+> Ships the Kali toolkit as a container with an HTTP API in front, so the model's commands run in a prepared environment rather than on the machine you start
 
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 48 |
-| **Last updated** | 18d |
+| **Stars** | 49 |
+| **Last updated** | 19d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 37,285 lines · 145 |
 | **Source** | <https://github.com/zebbern/zebbern-kali-mcp> |
-| **Scopes & traits** | `network` `webapp` `recon` *root* *credentials* |
+| **Scopes & traits** | `network` `webapp` `recon` _host access_ |
 
 ## Bundled tools
 
 `amass`, `arjun`, `binwalk`, `chisel`, `dirb`, `enum4linux`, `evil-winrm`, `exploitdb`, `gobuster`, `hashcat`, `httpx`, `hydra`, `john`, `masscan`, `metasploit-framework`, `netexec`, `nikto`, `nmap`, `nuclei`, `proxychains4`, `radare2`, `responder`, `seclists`, `smbclient`, `sqlmap`, `sslscan`, `subfinder`, `tcpdump`, `waybackurls`, `wpscan`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

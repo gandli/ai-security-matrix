@@ -1,6 +1,6 @@
 # usestrix/strix
 
-> Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.
+> Drives a live pentest against a running web app or API, choosing each probe from what the last one returned, then reports what it found.
 
 | | |
 |---|---|
@@ -9,9 +9,9 @@
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 71 |
-| **Size** | 95,635 lines · 352 |
+| **Size** | 96,814 lines · 354 |
 | **Source** | <https://github.com/usestrix/strix> |
-| **Scopes & traits** | `webapp` `api` `code` *root* *credentials* _installs_ ~calls out~ |
+| **Scopes & traits** | `webapp` `api` `code` *calls out* _fetched install_ |
 
 ## Bundled tools
 
@@ -20,17 +20,6 @@
 ## Shares files with
 
 Nightlysec/nightly
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

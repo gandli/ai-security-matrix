@@ -1,28 +1,17 @@
 # mpgn/NetExec-mcp
 
-> NetExec MCP
+> Wraps the NetExec CLI as a subprocess and nothing more, across every protocol it speaks. Discovery meta-tools keep its 128 calls out of the model's context
 
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 80 |
-| **Last updated** | 17d |
+| **Stars** | 81 |
+| **Last updated** | 18d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
 | **Size** | 8,913 lines · 22 |
 | **Source** | <https://github.com/mpgn/NetExec-mcp> |
 | **Scopes & traits** | `ad` `network` |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

@@ -1,28 +1,17 @@
 # ipa-lab/hackingBuddyGPT
 
-> Helping Ethical Hackers use LLMs in 50 Lines of Code or less..
+> A framework for building your own testing agent rather than a finished one. It supplies the model plumbing, the target connectors and the run limits, and y
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.2k |
-| **Last updated** | 10d |
+| **Last updated** | 11d |
 | **Licence** | MIT |
 | **Maintainers** | 15 |
 | **Size** | 18,450 lines · 132 |
 | **Source** | <https://github.com/ipa-lab/hackingBuddyGPT> |
-| **Scopes & traits** | `network` *root* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `network` |
 
 ---
 

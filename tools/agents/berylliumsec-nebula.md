@@ -1,6 +1,6 @@
 # berylliumsec/nebula
 
-> AI-powered penetration testing assistant for automating recon, note-taking, and vulnerability analysis.
+> A desktop workspace holding the terminal, notes, findings and report in one place, with an approval pause between what the model proposes and what actually
 
 | | |
 |---|---|
@@ -9,20 +9,9 @@
 | **Last updated** | today |
 | **Licence** | BSD-2 |
 | **Maintainers** | 7 |
-| **Size** | 349,065 lines · 802 |
+| **Size** | 352,796 lines · 820 |
 | **Source** | <https://github.com/berylliumsec/nebula> |
-| **Scopes & traits** | `network` `recon` *root* *credentials* ~calls out~ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `network` `recon` *calls out* |
 
 ---
 

@@ -8,11 +8,11 @@
     "category": "agent",
     "stars": "64k",
     "freshness": "today",
-    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "description": "Drives a live pentest against a running web app or API, choosing each probe from what the last one returned, then reports what it found.",
     "description_zh": "开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。",
     "licence": "Apache-2.0",
     "maintainers": "71",
-    "size": "95,635 lines · 352",
+    "size": "96,814 lines · 354",
     "bundled_tools": [
       "arjun",
       "dirsearch",
@@ -29,28 +29,19 @@
       "wafw00f"
     ],
     "shares_files_with": "Nightlysec/nightly",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "api",
       "code"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install"
     ],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "vxcontrol-pentagi",
@@ -60,8 +51,8 @@
     "url": "https://github.com/vxcontrol/pentagi",
     "category": "agent",
     "stars": "25k",
-    "freshness": "13d",
-    "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+    "freshness": "1d",
+    "description": "Runs autonomous pentest agents from a self-hosted web console, each inside its own Docker container rather than on the host. You start a task in the browse",
     "description_zh": "完全自主的 AI 智能体系统，能够执行复杂的渗透测试任务。",
     "licence": "MIT",
     "maintainers": "17",
@@ -71,25 +62,15 @@
       "sqlmap"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "yes",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network",
       "recon"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "binaries",
-      "installs"
+      "host access"
     ],
     "unseen": []
   },
@@ -102,33 +83,25 @@
     "category": "scanner",
     "stars": "25k",
     "freshness": "today",
-    "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more.",
+    "description": "Describes a test suite for an LLM app in a config file and runs it from the CLI or CI, either as a plain eval or as a red-team pass. The declarative file i",
     "description_zh": "测试你的提示词、智能体与 RAG。面向 AI 的红队/渗透/漏洞扫描。对比 GPT、Claude、Gemini、DeepSeek 等的表现。简洁的声明式配置，支持命令行与 CI/CD 集成。被 OpenAI 与 Anthropic 采用。",
     "licence": "MIT",
     "maintainers": "100",
-    "size": "1,035,983 lines · 2964",
+    "size": "1,042,837 lines · 2965",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "yes"
-    },
+    "checklist": {},
     "scopes": [
       "llm",
       "agentic"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": [
-      "calls out",
       "opaque"
     ]
   },
@@ -140,31 +113,23 @@
     "url": "https://github.com/GreyDGL/PentestGPT",
     "category": "agent",
     "stars": "16k",
-    "freshness": "71d",
-    "description": "Automated Penetration Testing Agentic Framework Powered by Large Language Models",
+    "freshness": "72d",
+    "description": "Works a target in named stages, feeding each stage's findings to the next, and drives Claude Code or Codex to do the actual running. Built for CTF categori",
     "description_zh": "由大语言模型驱动的自动化渗透测试智能体框架。",
     "licence": "MIT",
     "maintainers": "24",
     "size": "15,956 lines · 89",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network",
       "recon"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -176,21 +141,15 @@
     "url": "https://github.com/mrexodia/ida-pro-mcp",
     "category": "mcp",
     "stars": "12k",
-    "freshness": "1d",
-    "description": "AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.",
+    "freshness": "2d",
+    "description": "Exposes an open IDA Pro database to an LLM client, so you ask about a binary in chat instead of clicking through the GUI: rename functions, read decompiled",
     "description_zh": "通过 MCP 将 IDA Pro 与大语言模型桥接的 AI 驱动逆向工程助手。",
     "licence": "MIT",
     "maintainers": "83",
     "size": "35,569 lines · 87",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "binary"
     ],
@@ -206,30 +165,22 @@
     "url": "https://github.com/0x4m4/hexstrike-ai",
     "category": "mcp",
     "stars": "12k",
-    "freshness": "51d",
-    "description": "HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated",
+    "freshness": "52d",
+    "description": "Serves a large tool catalogue over MCP and adds a layer of its own that picks which tool to run and with what flags, so the client's model chooses the goal",
     "description_zh": "HexStrike AI MCP Agents 是一个高级 MCP 服务器，让 AI 智能体（Claude、GPT、Copilot 等）自主运行 150+ 网络安全工具，用于自动化渗透测试、漏洞发现、漏洞赏金自动化与安全研究。无缝桥接 LLM 与真实世界的进攻性安全能力。",
     "licence": "MIT",
     "maintainers": "2",
     "size": "22,759 lines · 2",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network",
       "recon",
       "binary"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -242,20 +193,14 @@
     "category": "mcp",
     "stars": "10k",
     "freshness": "1.3y",
-    "description": "MCP Server for Ghidra",
+    "description": "Installs into Ghidra as an extension and opens its decompiler and symbol table to a model, which can rename methods and data as it works through the progra",
     "description_zh": "面向 Ghidra 的 MCP 服务器。",
     "licence": "Apache-2.0",
     "maintainers": "10",
     "size": "2,027 lines · 3",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "binary"
     ],
@@ -272,7 +217,7 @@
     "category": "agent",
     "stars": "9.8k",
     "freshness": "archived",
-    "description": "Cybersecurity AI (CAI), the framework for AI Security",
+    "description": "The reference framework behind a body of published AI offensive-security research, kept as its final source tree. Its capabilities moved on to a commercial",
     "description_zh": "Cybersecurity AI (CAI)，面向 AI 安全的框架。",
     "licence": "MIT",
     "maintainers": "1",
@@ -289,24 +234,16 @@
       "sqlmap"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network",
       "webapp",
       "recon"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install",
+      "host access"
     ],
     "unseen": []
   },
@@ -318,27 +255,19 @@
     "url": "https://github.com/NVIDIA/garak",
     "category": "scanner",
     "stars": "9.3k",
-    "freshness": "7d",
-    "description": "the LLM vulnerability scanner",
+    "freshness": "8d",
+    "description": "Fires a catalogue of named probes at a model and reports which ones got through, covering jailbreaks, leakage, injection and toxicity. Probes are the unit",
     "description_zh": "LLM 漏洞扫描器。",
     "licence": "Apache-2.0",
     "maintainers": "100",
     "size": "80,102 lines · 494",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -350,33 +279,24 @@
     "url": "https://github.com/trailofbits/skills",
     "category": "skill",
     "stars": "7.2k",
-    "freshness": "today",
-    "description": "Trail of Bits Claude Code skills for security research, vulnerability detection, and audit workflows",
+    "freshness": "1d",
+    "description": "An audit firm's review practice published as plugins: how to approach an unfamiliar codebase, what to look at in it, and how to write up what you found.",
     "description_zh": "Trail of Bits 的 Claude Code 技能，用于安全研究、漏洞检测与审计工作流。",
     "licence": "CC-BY-SA-4.0",
     "maintainers": "57",
     "size": "89,385 lines · 248",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "agentic",
       "binary",
       "code",
       "webapp"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -389,34 +309,21 @@
     "category": "agent",
     "stars": "7.0k",
     "freshness": "1d",
-    "description": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves",
+    "description": "Keeps an operation replayable: the plan, the approvals, the evidence and the attack-chain model live in one workspace you can re-run afterwards. Built in G",
     "description_zh": "AI 原生网络安全的行动系统——让意图变为受控执行、证据变为运行记忆，并使每次操作都优化下一次。",
     "licence": "Apache-2.0",
     "maintainers": "16",
-    "size": "227,098 lines · 722",
+    "size": "227,148 lines · 722",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "yes"
-    },
+    "checklist": {},
     "scopes": [
       "network",
       "webapp"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "installs"
-    ],
-    "unseen": [
-      "opaque"
-    ]
+    "access": [],
+    "host": [],
+    "unseen": []
   },
   {
     "slug": "tencent-ai-infra-guard",
@@ -426,8 +333,8 @@
     "url": "https://github.com/Tencent/AI-Infra-Guard",
     "category": "scanner",
     "stars": "6.6k",
-    "freshness": "3d",
-    "description": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
+    "freshness": "today",
+    "description": "Gathers several separate AI security scans behind one console: the agent, the MCP servers, the skills, the serving infrastructure, and a jailbreak pass aga",
     "description_zh": "全栈 AI 红队平台，通过 Agent 扫描、技能扫描、MCP 扫描、AI 基础设施扫描与 LLM 越狱评估来守护 AI 生态。",
     "licence": "Apache-2.0",
     "maintainers": "57",
@@ -436,27 +343,18 @@
       "nmap"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm",
       "agentic"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install"
     ],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "purpleailab-decepticon",
@@ -466,39 +364,31 @@
     "url": "https://github.com/PurpleAILAB/Decepticon",
     "category": "agent",
     "stars": "5.6k",
-    "freshness": "4d",
-    "description": "Autonomous Hacking Agent for Red Team",
+    "freshness": "1d",
+    "description": "Runs a red-team engagement from a terminal CLI, with an orchestrator that starts specialist stacks like BloodHound or a C2 server only when the engagement",
     "description_zh": "面向红队的自主攻击智能体。",
     "licence": "Apache-2.0",
-    "maintainers": "17",
-    "size": "188,476 lines · 959",
+    "maintainers": "18",
+    "size": "189,645 lines · 961",
     "bundled_tools": [
       "binwalk",
       "radare2"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "network",
       "webapp"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install",
+      "host access"
     ],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "microsoft-pyrit",
@@ -509,33 +399,25 @@
     "category": "scanner",
     "stars": "4.5k",
     "freshness": "today",
-    "description": "The Python Risk Identification Tool for generative AI (PyRIT) is an open source framework built to empower security professionals and engineers to proactiv",
+    "description": "A library for assembling your own attack rather than a fixed suite: you compose an orchestrator from targets, converters and scorers, and it runs the conve",
     "description_zh": "面向生成式 AI 的 Python 风险识别工具（PyRIT）是一个开源框架，赋能安全从业者与工程师主动识别生成式 AI 系统的风险。",
     "licence": "MIT",
     "maintainers": "100",
-    "size": "488,574 lines · 1758",
+    "size": "501,661 lines · 1799",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "yes"
-    },
+    "checklist": {},
     "scopes": [
       "llm"
     ],
     "access": [
-      "root"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install",
+      "host access"
     ],
-    "unseen": [
-      "calls out",
-      "opaque"
-    ]
+    "unseen": []
   },
   {
     "slug": "gh05tcrew-pentestagent",
@@ -545,29 +427,23 @@
     "url": "https://github.com/GH05TCREW/pentestagent",
     "category": "agent",
     "stars": "3.1k",
-    "freshness": "2d",
-    "description": "PentestAgent is an AI agent framework for black-box security testing, supporting bug bounty, red-team, and penetration testing workflows.",
+    "freshness": "3d",
+    "description": "A terminal UI for black-box testing that hands the model a real browser alongside the usual command tools, so it can work an application the way a user wou",
     "description_zh": "PentestAgent 是面向黑盒安全测试的 AI 智能体框架，支持漏洞赏金、红队与渗透测试工作流。",
     "licence": "MIT",
     "maintainers": "13",
     "size": "27,906 lines · 118",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "api"
     ],
-    "access": [
-      "root"
+    "access": [],
+    "host": [
+      "host access"
     ],
-    "host": [],
     "unseen": []
   },
   {
@@ -579,30 +455,19 @@
     "category": "scanner",
     "stars": "3.1k",
     "freshness": "today",
-    "description": "Security scanner for AI agents, MCP servers and agent skills.",
+    "description": "Finds the agent components already installed on your machine, the MCP servers, skills and agent configs, and scans each for prompt injection and known vuln",
     "description_zh": "面向 AI 智能体、MCP 服务器与智能体技能的安全扫描器。",
     "licence": "Apache-2.0",
     "maintainers": "22",
-    "size": "60,233 lines · 147",
+    "size": "60,314 lines · 147",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "agentic"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "installs"
-    ],
+    "access": [],
+    "host": [],
     "unseen": []
   },
   {
@@ -613,32 +478,24 @@
     "url": "https://github.com/confident-ai/deepteam",
     "category": "scanner",
     "stars": "2.9k",
-    "freshness": "2d",
-    "description": "DeepTeam is a framework to red team LLMs and AI agents.",
+    "freshness": "3d",
+    "description": "Simulates jailbreaks and injection against an application you have already built, then ships the guardrail that blocks what it found, so the test and the d",
     "description_zh": "DeepTeam 是一个对 LLM 与 AI 智能体进行红队的框架。",
     "licence": "Apache-2.0",
     "maintainers": "27",
     "size": "91,196 lines · 813",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm",
       "agentic"
     ],
-    "access": [],
-    "host": [
-      "installs"
-    ],
-    "unseen": [
+    "access": [
       "calls out"
-    ]
+    ],
+    "host": [],
+    "unseen": []
   },
   {
     "slug": "protectai-vulnhuntr",
@@ -649,27 +506,19 @@
     "category": "scanner",
     "stars": "2.8k",
     "freshness": "1.6y",
-    "description": "Zero shot vulnerability discovery using LLMs",
+    "description": "Reads a Python codebase and asks a model to trace user input through to dangerous sinks, reporting the call chain behind each bug it claims. It applies no",
     "description_zh": "使用大语言模型进行零样本漏洞发现。",
     "licence": "AGPL-3.0",
     "maintainers": "6",
     "size": "1,336 lines · 5",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "code"
     ],
     "access": [],
-    "host": [
-      "installs"
-    ],
+    "host": [],
     "unseen": []
   },
   {
@@ -680,8 +529,8 @@
     "url": "https://github.com/Armur-Ai/Pentest-Swarm-AI",
     "category": "agent",
     "stars": "2.6k",
-    "freshness": "today",
-    "description": "Autonomous penetration testing using a swarm of AI agents. Orchestrates recon, classification, exploitation, and reporting specialists with ReAct reasoning",
+    "freshness": "1d",
+    "description": "Runs many agents against one scope at once, coordinating through a shared board so a new finding immediately wakes whichever agent it matters to. Written i",
     "description_zh": "用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用与报告专家——支持漏洞赏金、持续监控与 CTF 模式。基于 Go 与 7+ 原生安全工具构建。",
     "licence": "AGPL-3.0",
     "maintainers": "13",
@@ -706,23 +555,15 @@
       "wafw00f"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network",
       "recon"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -734,8 +575,8 @@
     "url": "https://github.com/samugit83/redamon",
     "category": "agent",
     "stars": "2.6k",
-    "freshness": "1d",
-    "description": "An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero",
+    "freshness": "2d",
+    "description": "Chains recon, exploitation and post-exploitation, then carries a finding further than a report: it writes the fix and opens a pull request on your reposito",
     "description_zh": "AI 驱动的智能体化红队框架，从零人工干预地自动化进攻性安全作战，从侦察到利用再到后渗透。",
     "licence": "MIT",
     "maintainers": "20",
@@ -755,13 +596,7 @@
       "subfinder"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "yes"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "ad",
@@ -769,16 +604,13 @@
       "recon"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install",
+      "host access"
     ],
-    "unseen": [
-      "calls out",
-      "opaque"
-    ]
+    "unseen": []
   },
   {
     "slug": "0xsteph-pentest-ai-agents",
@@ -788,8 +620,8 @@
     "url": "https://github.com/0xSteph/pentest-ai-agents",
     "category": "skill",
     "stars": "2.3k",
-    "freshness": "38d",
-    "description": "Turn Claude Code into your offensive security research assistant. Specialized AI subagents for authorized penetration testing plan engagements, analyze rec",
+    "freshness": "39d",
+    "description": "Fifty subagents, one per specialism, that Claude routes between on its own as the task moves. Each offensive agent also names the detection its technique w",
     "description_zh": "将 Claude Code 变为你的进攻性安全研究助手。面向授权渗透测试的专业 AI 子智能体，用于规划作战、分析侦察、研究利用、构建检测、审计 STIG 与撰写报告。",
     "licence": "MIT",
     "maintainers": "1",
@@ -823,23 +655,14 @@
       "whatweb"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "recon"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -851,30 +674,24 @@
     "url": "https://github.com/msoedov/agentic_security",
     "category": "scanner",
     "stars": "2.0k",
-    "freshness": "1d",
-    "description": "Agentic LLM Vulnerability Scanner / AI red teaming kit 🧪",
+    "freshness": "2d",
+    "description": "Probes across text, images and audio rather than prompts alone, and uses reinforcement learning to adapt a multi-step attack as the model's defences respon",
     "description_zh": "智能体化 LLM 漏洞扫描器 / AI 红队工具包 🧪",
     "licence": "Apache-2.0",
     "maintainers": "36",
     "size": "44,546 lines · 144",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm",
       "agentic"
     ],
-    "access": [],
-    "host": [],
-    "unseen": [
+    "access": [
       "calls out"
-    ]
+    ],
+    "host": [],
+    "unseen": []
   },
   {
     "slug": "0xsteph-pentest-ai",
@@ -884,8 +701,8 @@
     "url": "https://github.com/0xSteph/pentest-ai",
     "category": "agent",
     "stars": "1.7k",
-    "freshness": "10d",
-    "description": "Open-source AI pentester that proves every finding. Machine oracles re-run each exploit; verified bugs ship a proof capsule you can replay yourself.",
+    "freshness": "11d",
+    "description": "Drives the investigation from an AI client you already use, over MCP, and hands each claimed exploit to an oracle that has to reproduce it. What survives s",
     "description_zh": "开源 AI 渗透测试器，为每个发现提供证明。机器预言机会重跑每个利用；经验证的漏洞附带可复现的证明包。",
     "licence": "MIT",
     "maintainers": "1",
@@ -910,23 +727,13 @@
       "whatweb"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network"
     ],
-    "access": [
-      "root"
-    ],
-    "host": [
-      "installs"
-    ],
+    "access": [],
+    "host": [],
     "unseen": []
   },
   {
@@ -937,21 +744,15 @@
     "url": "https://github.com/cyberark/FuzzyAI",
     "category": "scanner",
     "stars": "1.6k",
-    "freshness": "229d",
-    "description": "A powerful tool for automated LLM fuzzing. It is designed to help developers and security researchers identify and mitigate potential jailbreaks in their L",
+    "freshness": "230d",
+    "description": "Fuzzes a model endpoint with a catalogue of jailbreak techniques, mutating prompts until one gets past the guardrail, and works against a local model as re",
     "description_zh": "强大的自动化 LLM 模糊测试工具，帮助开发者与安全研究者识别并缓解其 LLM API 中的潜在越狱。",
     "licence": "Apache-2.0",
     "maintainers": "13",
     "size": "11,682 lines · 199",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm"
     ],
@@ -967,8 +768,8 @@
     "url": "https://github.com/bugbasesecurity/pentest-copilot",
     "category": "agent",
     "stars": "1.5k",
-    "freshness": "40d",
-    "description": "Pentest Copilot is an AI-powered browser based ethical hacking assistant tool designed to streamline pentesting workflows.",
+    "freshness": "41d",
+    "description": "Connects to a Kali box you already run and works it from the browser, issuing the commands there and reading the output back.",
     "description_zh": "Pentest Copilot 是基于浏览器的 AI 道德黑客助手，旨在简化渗透测试工作流。",
     "licence": "MIT",
     "maintainers": "4",
@@ -994,22 +795,13 @@
       "wpscan"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "host access"
     ],
     "unseen": []
   },
@@ -1021,21 +813,15 @@
     "url": "https://github.com/utkusen/promptmap",
     "category": "scanner",
     "stars": "1.3k",
-    "freshness": "296d",
-    "description": "a security scanner for custom LLM applications",
+    "freshness": "297d",
+    "description": "Runs a second model whose only job is to read the target's replies and rule on whether an injection actually worked. Point it at your own system prompt, or",
     "description_zh": "面向自定义 LLM 应用的安全扫描器。",
     "licence": "GPL-3.0",
     "maintainers": "8",
     "size": "1,504 lines · 1",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm"
     ],
@@ -1051,27 +837,19 @@
     "url": "https://github.com/ipa-lab/hackingBuddyGPT",
     "category": "agent",
     "stars": "1.2k",
-    "freshness": "10d",
-    "description": "Helping Ethical Hackers use LLMs in 50 Lines of Code or less..",
+    "freshness": "11d",
+    "description": "A framework for building your own testing agent rather than a finished one. It supplies the model plumbing, the target connectors and the run limits, and y",
     "description_zh": "用不超过 50 行代码帮助道德黑客使用大语言模型。",
     "licence": "MIT",
     "maintainers": "15",
     "size": "18,450 lines · 132",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1083,30 +861,24 @@
     "url": "https://github.com/PortSwigger/mcp-server",
     "category": "mcp",
     "stars": "1.2k",
-    "freshness": "5d",
-    "description": "MCP Server for Burp",
+    "freshness": "6d",
+    "description": "A Burp Suite extension that opens the running instance to an AI client, so a model can work through the proxy history and replay requests from the session",
     "description_zh": "面向 Burp 的 MCP 服务器。",
     "licence": "GPL-3.0",
     "maintainers": "14",
     "size": "7,078 lines · 41",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "yes",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "api"
     ],
     "access": [],
-    "host": [
-      "binaries"
-    ],
-    "unseen": []
+    "host": [],
+    "unseen": [
+      "opaque"
+    ]
   },
   {
     "slug": "mbrg-power-pwn",
@@ -1116,28 +888,20 @@
     "url": "https://github.com/mbrg/power-pwn",
     "category": "scanner",
     "stars": "1.2k",
-    "freshness": "276d",
-    "description": "An offensive/defense security toolset for discovery, recon and ethical assessment of AI Agents",
+    "freshness": "277d",
+    "description": "Works the Microsoft 365 side of the problem: Power Platform flows, Copilot Studio bots left open to anonymous users, and the agents a tenant has published",
     "description_zh": "用于发现、侦察与道德评估 AI 智能体的攻防安全工具集。",
     "licence": "MIT",
     "maintainers": "10",
     "size": "15,276 lines · 192",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "cloud",
       "llm"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1150,32 +914,23 @@
     "category": "agent",
     "stars": "1.1k",
     "freshness": "today",
-    "description": "AI-powered penetration testing assistant for automating recon, note-taking, and vulnerability analysis.",
+    "description": "A desktop workspace holding the terminal, notes, findings and report in one place, with an approval pause between what the model proposes and what actually",
     "description_zh": "AI 驱动的渗透测试助手，自动化侦察、笔记与漏洞分析。",
     "licence": "BSD-2",
     "maintainers": "7",
-    "size": "349,065 lines · 802",
+    "size": "352,796 lines · 820",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network",
       "recon"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "splx-ai-agentic-radar",
@@ -1185,28 +940,20 @@
     "url": "https://github.com/splx-ai/agentic-radar",
     "category": "scanner",
     "stars": "1.1k",
-    "freshness": "300d",
-    "description": "A security scanner for your LLM agentic workflows",
+    "freshness": "301d",
+    "description": "Reads the source of an agentic workflow, CrewAI or LangGraph or the OpenAI Agents SDK, and maps what the agents can actually reach before anything runs.",
     "description_zh": "面向你的 LLM 智能体工作流的安全扫描器。",
     "licence": "Apache-2.0",
     "maintainers": "8",
     "size": "14,117 lines · 165",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "agentic"
     ],
     "access": [],
-    "host": [
-      "installs"
-    ],
+    "host": [],
     "unseen": []
   },
   {
@@ -1217,8 +964,8 @@
     "url": "https://github.com/xalgorix/xalgorix",
     "category": "agent",
     "stars": "1.1k",
-    "freshness": "1d",
-    "description": "Autonomous AI pentesting agents — real-time reconnaissance, vulnerability detection, and exploitation orchestration. Go + TypeScript.",
+    "freshness": "2d",
+    "description": "Runs a second, independent agent whose only job is to re-exploit what the first one claimed, so a finding is either reproduced or dropped. One self-hosted",
     "description_zh": "自主 AI 渗透测试智能体——实时侦察、漏洞检测与利用编排。Go + TypeScript。",
     "licence": "Apache-2.0",
     "maintainers": "17",
@@ -1231,28 +978,20 @@
       "seclists"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "recon",
       "webapp",
       "network"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install",
+      "host access"
     ],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "cisco-ai-defense-mcp-scanner",
@@ -1262,28 +1001,19 @@
     "url": "https://github.com/cisco-ai-defense/mcp-scanner",
     "category": "scanner",
     "stars": "1.1k",
-    "freshness": "4d",
-    "description": "Scan MCP servers for potential threats & security findings.",
+    "freshness": "5d",
+    "description": "Judges an MCP server's tool definitions three ways, by YARA rule, by hosted inspection API and by asking a model, so a poisoned tool description has to cle",
     "description_zh": "扫描 MCP 服务器的潜在威胁与安全发现。",
     "licence": "Apache-2.0",
     "maintainers": "26",
     "size": "97,298 lines · 368",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "agentic"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1296,26 +1026,18 @@
     "category": "scanner",
     "stars": "939",
     "freshness": "1.2y",
-    "description": "a CLI that provides a generic automation layer for assessing the security of ML models",
+    "description": "Brings the established adversarial machine-learning frameworks under one CLI and points them at a model you nominate. Its subject is classic ML, not langua",
     "description_zh": "提供通用自动化层以评估机器学习模型安全性的 CLI。",
     "licence": "MIT",
     "maintainers": "9",
     "size": "6,035 lines · 84",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "llm"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1326,29 +1048,21 @@
     "owner": "Wh0am123",
     "url": "https://github.com/Wh0am123/MCP-Kali-Server",
     "category": "mcp",
-    "stars": "825",
-    "freshness": "190d",
-    "description": "MCP configuration to connect AI agent to a Linux machine.",
+    "stars": "826",
+    "freshness": "191d",
+    "description": "A thin bridge giving a model a shell on a Linux box you already run, plus a short list of named tool wrappers. Raw command execution is the point; the wrap",
     "description_zh": "将 AI 智能体连接到 Linux 主机的 MCP 配置。",
     "licence": "MIT",
     "maintainers": "4",
     "size": "1,024 lines · 2",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network",
       "webapp"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1360,8 +1074,8 @@
     "url": "https://github.com/FuzzingLabs/mcp-security-hub",
     "category": "mcp",
     "stars": "792",
-    "freshness": "168d",
-    "description": "A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.",
+    "freshness": "169d",
+    "description": "One hardened container per tool, brought up with Compose, so a job runs only the servers it needs instead of one process holding everything.",
     "description_zh": "不断增长的 MCP 服务器集合，为 AI 助手带来进攻性安全工具。Nmap、Ghidra、Nuclei、SQLMap、Hashcat 等。",
     "licence": "MIT",
     "maintainers": "8",
@@ -1381,24 +1095,16 @@
       "waybackurls"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network",
       "webapp",
       "binary"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install",
+      "host access"
     ],
     "unseen": []
   },
@@ -1409,28 +1115,20 @@
     "owner": "protectai",
     "url": "https://github.com/protectai/modelscan",
     "category": "scanner",
-    "stars": "775",
-    "freshness": "217d",
-    "description": "Protection against Model Serialization Attacks",
+    "stars": "774",
+    "freshness": "218d",
+    "description": "Reads a saved model file and reports the unsafe calls hiding in it, across pickle, HDF5 and SavedModel, so a download from a public registry can be checked",
     "description_zh": "防范模型序列化攻击。",
     "licence": "Apache-2.0",
     "maintainers": "22",
     "size": "4,681 lines · 33",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "modfile"
     ],
-    "access": [
-      "credentials"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1442,21 +1140,15 @@
     "url": "https://github.com/GH05TCREW/MetasploitMCP",
     "category": "mcp",
     "stars": "730",
-    "freshness": "230d",
-    "description": "MCP Server for Metasploit",
+    "freshness": "231d",
+    "description": "Drives Metasploit over its RPC interface: search the modules, run an exploit or a post module, generate a payload, and send commands into a session that is",
     "description_zh": "面向 Metasploit 的 MCP 服务器。",
     "licence": "Apache-2.0",
     "maintainers": "5",
     "size": "3,219 lines · 7",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network"
     ],
@@ -1472,33 +1164,21 @@
     "url": "https://github.com/trailofbits/fickling",
     "category": "scanner",
     "stars": "670",
-    "freshness": "4d",
-    "description": "A Python pickling decompiler and static analyzer",
+    "freshness": "5d",
+    "description": "Decompiles pickle bytecode back into readable Python, and will rewrite or build one too. The same tool that tells you a model file is malicious is the one",
     "description_zh": "Python pickle 反编译与静态分析工具。",
     "licence": "LGPL",
     "maintainers": "23",
     "size": "9,573 lines · 46",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "yes"
-    },
+    "checklist": {},
     "scopes": [
       "modfile"
     ],
-    "access": [
-      "credentials"
-    ],
-    "host": [
-      "installs"
-    ],
-    "unseen": [
-      "opaque"
-    ]
+    "access": [],
+    "host": [],
+    "unseen": []
   },
   {
     "slug": "specterops-skills",
@@ -1507,22 +1187,16 @@
     "owner": "SpecterOps",
     "url": "https://github.com/SpecterOps/skills",
     "category": "skill",
-    "stars": "665",
-    "freshness": "20d",
-    "description": "A marketplace for LLM skills",
+    "stars": "669",
+    "freshness": "1d",
+    "description": "Packages SpecterOps' own engagement workflow as installable plugins, including the wiring that lets an agent drive BloodHound and Ghostwriter. It assumes y",
     "description_zh": "LLM 技能的市场。",
     "licence": "Apache-2.0",
     "maintainers": "7",
     "size": "15,327 lines · 94",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "yes",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "ad",
       "binary",
@@ -1534,14 +1208,8 @@
       "social",
       "webapp"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "binaries",
-      "installs"
-    ],
+    "access": [],
+    "host": [],
     "unseen": []
   },
   {
@@ -1553,7 +1221,7 @@
     "category": "mcp",
     "stars": "630",
     "freshness": "archived",
-    "description": "MCP for Security: A collection of Model Context Protocol servers for popular security tools like SQLMap, FFUF, NMAP, Masscan and more. Integrate security t",
+    "description": "One MCP server per security tool, each a thin wrapper over that binary's flags. Development has moved to a successor project under a different name.",
     "description_zh": "安全版 MCP：一系列面向 SQLMap、FFUF、NMAP、Masscan 等流行安全工具的模型上下文协议服务器，将安全与渗透测试集成进 AI 工作流。",
     "licence": "MIT",
     "maintainers": "4",
@@ -1570,13 +1238,7 @@
       "waybackurls"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network",
@@ -1584,42 +1246,7 @@
     ],
     "access": [],
     "host": [
-      "installs"
-    ],
-    "unseen": []
-  },
-  {
-    "slug": "adithyan-ak-agenthound",
-    "repo": "adithyan-ak/AgentHound",
-    "name": "AgentHound",
-    "owner": "adithyan-ak",
-    "url": "https://github.com/adithyan-ak/AgentHound",
-    "category": "scanner",
-    "stars": "439",
-    "freshness": "11d",
-    "description": "Offensive security framework for AI agent infrastructure - recon, credential looting, model exfiltration, poisoning, and attack-path analysis across MCP, A",
-    "description_zh": "面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。",
-    "licence": "Apache-2.0",
-    "maintainers": "4",
-    "size": "159,049 lines · 774",
-    "bundled_tools": [],
-    "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
-    "scopes": [
-      "agentic"
-    ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -1630,33 +1257,47 @@
     "owner": "Masriyan",
     "url": "https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill",
     "category": "skill",
-    "stars": "438",
-    "freshness": "16d",
-    "description": "22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat h",
+    "stars": "441",
+    "freshness": "17d",
+    "description": "Twenty-two skills, each carrying a methodology, the commands to run and a template for the write-up, reaching into OT and ICS, mobile and governance as wel",
     "description_zh": "为网络安全从业者打造的 22 个生产级 Claude Code 技能——涵盖进攻性安全、防御运营、逆向工程、威胁猎杀、威胁情报、紫队/对手模拟、CSOC 自动化、AI/LLM 安全、移动端、OT/ICS、GRC、软件供应链安全等。",
     "licence": "MIT",
     "maintainers": "3",
     "size": "9,529 lines · 35",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "binary",
       "llm"
     ],
-    "access": [
-      "root"
+    "access": [],
+    "host": [],
+    "unseen": []
+  },
+  {
+    "slug": "adithyan-ak-agenthound",
+    "repo": "adithyan-ak/AgentHound",
+    "name": "AgentHound",
+    "owner": "adithyan-ak",
+    "url": "https://github.com/adithyan-ak/AgentHound",
+    "category": "scanner",
+    "stars": "439",
+    "freshness": "12d",
+    "description": "Runs from a host you have already compromised: it collects the agent credentials and configuration it finds there, reuses them against whatever AI services",
+    "description_zh": "面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。",
+    "licence": "Apache-2.0",
+    "maintainers": "4",
+    "size": "159,049 lines · 774",
+    "bundled_tools": [],
+    "shares_files_with": "",
+    "checklist": {},
+    "scopes": [
+      "agentic"
     ],
-    "host": [
-      "installs"
-    ],
+    "access": [],
+    "host": [],
     "unseen": []
   },
   {
@@ -1667,21 +1308,15 @@
     "url": "https://github.com/mmaitre314/picklescan",
     "category": "scanner",
     "stars": "423",
-    "freshness": "22d",
-    "description": "Security scanner detecting Python Pickle files performing suspicious actions",
+    "freshness": "1d",
+    "description": "Scans a pickle for the dangerous imports it would execute on load, and will fetch one straight from Hugging Face, a URL or an archive rather than making yo",
     "description_zh": "检测执行可疑行为的 Python Pickle 文件的安全扫描器。",
     "licence": "MIT",
     "maintainers": "8",
     "size": "3,160 lines · 9",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "modfile"
     ],
@@ -1697,28 +1332,20 @@
     "url": "https://github.com/briiirussell/cybersecurity-skills",
     "category": "skill",
     "stars": "401",
-    "freshness": "119d",
-    "description": "Cybersecurity skills for AI coding agents (Claude Code, Cursor, Codex)",
+    "freshness": "120d",
+    "description": "Written so someone who is not a security specialist can run an audit and follow the result, and built for Cursor and Codex as well as Claude Code.",
     "description_zh": "面向 AI 编码智能体（Claude Code、Cursor、Codex）的网络安全技能。",
     "licence": "MIT",
     "maintainers": "2",
     "size": "0 lines · 0",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "recon",
       "webapp"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1730,8 +1357,8 @@
     "url": "https://github.com/hypnguyen1209/offensive-claude",
     "category": "skill",
     "stars": "377",
-    "freshness": "2d",
-    "description": "Offensive security toolkit for Claude Code covering red team, exploit dev, AD attacks, EDR bypass, mobile pentest",
+    "freshness": "3d",
+    "description": "Organises its skills along the kill chain and adds a dispatcher that loads at the start of every session, so the scope check and the OPSEC note happen whet",
     "description_zh": "面向 Claude Code 的进攻性安全工具包，涵盖红队、利用开发、AD 攻击、EDR 绕过与移动渗透测试。",
     "licence": "MIT",
     "maintainers": "4",
@@ -1741,23 +1368,14 @@
       "semgrep"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "ad"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -1770,28 +1388,22 @@
     "category": "mcp",
     "stars": "375",
     "freshness": "1.3y",
-    "description": "BloodHound-MCP-AI is integration that connects BloodHound with AI through Model Context Protocol, allowing security professionals to analyze Active Directo",
+    "description": "Turns BloodHound's own Cypher query library into one MCP tool per query, so you ask for an attack path in English and the server runs a query someone alrea",
     "description_zh": "BloodHound-MCP-AI 通过模型上下文协议将 BloodHound 与 AI 连接，让安全从业者用自然语言而非复杂的 Cypher 查询分析 Active Directory 攻击路径。",
     "licence": "MIT",
     "maintainers": "1",
     "size": "873 lines · 1",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "ad"
     ],
     "access": [],
-    "host": [
-      "installs"
-    ],
-    "unseen": []
+    "host": [],
+    "unseen": [
+      "licence"
+    ]
   },
   {
     "slug": "capture0x-adstrike",
@@ -1801,8 +1413,8 @@
     "url": "https://github.com/capture0x/AdStrike",
     "category": "agent",
     "stars": "355",
-    "freshness": "104d",
-    "description": "AI-powered modular Active Directory red-team framework for authorized penetration testing, AD enumeration, attack-path analysis,   Kerberos/ADCS workflows,",
+    "freshness": "105d",
+    "description": "A menu-driven Active Directory framework that carries credentials and Kerberos state in one session across its modules. It also serves those modules over M",
     "description_zh": "AI 驱动的模块化 Active Directory 红队框架，用于授权渗透测试、AD 枚举、攻击路径分析、Kerberos/ADCS 工作流、报告、运维自动化与 MCP 集成。",
     "licence": "MIT",
     "maintainers": "1",
@@ -1811,22 +1423,15 @@
       "seclists"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "ad"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [],
-    "unseen": []
+    "unseen": [
+      "licence"
+    ]
   },
   {
     "slug": "adscanpro-claude-ad",
@@ -1835,28 +1440,20 @@
     "owner": "ADScanPro",
     "url": "https://github.com/ADScanPro/Claude-AD",
     "category": "skill",
-    "stars": "203",
-    "freshness": "30d",
-    "description": "Active Directory pentest methodology for Claude Code: skills, agents and slash commands for internal AD red-team work (Kerberoasting, ADCS ESC1-17, DCSync,",
+    "stars": "204",
+    "freshness": "31d",
+    "description": "Walks an internal AD engagement technique by technique, each step naming the command to run and the telemetry it leaves behind. It ships no code of its own",
     "description_zh": "面向 Claude Code 的 Active Directory 渗透测试方法论：用于内部 AD 红队作业（Kerberoasting、ADCS ESC1-17、DCSync、ACL 滥用、NTLM 中继、委派）的技能、智能体与斜杠命令，附带逐技术的 OPSEC/遥测注记。驱动 netexec、impacket、certipy、bloodyAD、BloodHound CE。",
     "licence": "MIT",
     "maintainers": "1",
     "size": "0 lines · 0",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "ad"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -1867,33 +1464,22 @@
     "owner": "trilwu",
     "url": "https://github.com/trilwu/secskills",
     "category": "skill",
-    "stars": "147",
-    "freshness": "19d",
-    "description": "Transform Claude Code into your personal security engineer",
+    "stars": "148",
+    "freshness": "20d",
+    "description": "Aims at the judgement rather than the commands: trace a finding to demonstrated impact, capture memory before the box is reimaged, notice the honeypot. Off",
     "description_zh": "将 Claude Code 变为你的个人安全工程师。",
     "licence": "MIT",
     "maintainers": "1",
     "size": "1,308 lines · 4",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "code"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "installs"
-    ],
+    "access": [],
+    "host": [],
     "unseen": []
   },
   {
@@ -1904,8 +1490,8 @@
     "url": "https://github.com/NeoTheCapt/RedteamAgent",
     "category": "agent",
     "stars": "135",
-    "freshness": "52d",
-    "description": "An AI red-team agent for authorized labs and web app pentesting workflows. Turns Claude Code / OpenCode / Codex into a structured recon → test → exploit →",
+    "freshness": "53d",
+    "description": "Turns a coding CLI you already use into a five-phase lab workflow with eight specialist subagents, running every tool in Docker and keeping the run resumab",
     "description_zh": "面向授权实验室与 Web 应用渗透工作流的 AI 红队智能体。将 Claude Code / OpenCode / Codex 变为结构化的侦察→测试→利用→报告流程，含容器化工具与可恢复状态。",
     "licence": "no licence file",
     "maintainers": "1",
@@ -1927,22 +1513,16 @@
       "whatweb"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "redteam"
     ],
-    "access": [
-      "credentials"
-    ],
+    "access": [],
     "host": [],
-    "unseen": []
+    "unseen": [
+      "licence"
+    ]
   },
   {
     "slug": "mwnickerson-bloodhound_mcp",
@@ -1951,22 +1531,16 @@
     "owner": "mwnickerson",
     "url": "https://github.com/mwnickerson/bloodhound_mcp",
     "category": "mcp",
-    "stars": "134",
-    "freshness": "35d",
-    "description": "A Model Context Protocol (MCP) server to converse with data in Bloodhound",
+    "stars": "135",
+    "freshness": "36d",
+    "description": "Keeps the tool surface deliberately small, a handful of composite calls plus reference material the model loads only when it needs it, and ships a system p",
     "description_zh": "一个用于与 BloodHound 数据对话的模型上下文协议（MCP）服务器。",
     "licence": "GPL-3.0",
     "maintainers": "5",
     "size": "11,092 lines · 9",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "ad"
     ],
@@ -1982,8 +1556,8 @@
     "url": "https://github.com/dreadnode/ares",
     "category": "agent",
     "stars": "82",
-    "freshness": "today",
-    "description": "Ares is an autonomous security operations platform where LLM-driven red and blue team agents operate against each other on live infrastructure, enabling re",
+    "freshness": "1d",
+    "description": "Puts red and blue agents on the same live infrastructure at once: one side chains Active Directory attacks, the other reads the logs and writes detections",
     "description_zh": "Ares 是自主安全运营平台，让 LLM 驱动的红队与蓝队智能体在真实基础设施上互相对抗，实现攻防的现实评估。",
     "licence": "MIT",
     "maintainers": "3",
@@ -1997,28 +1571,15 @@
       "smbclient"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "yes"
-    },
+    "checklist": {},
     "scopes": [
       "ad",
       "network",
       "redteam"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "installs"
-    ],
-    "unseen": [
-      "opaque"
-    ]
+    "access": [],
+    "host": [],
+    "unseen": []
   },
   {
     "slug": "mpgn-netexec-mcp",
@@ -2027,22 +1588,16 @@
     "owner": "mpgn",
     "url": "https://github.com/mpgn/NetExec-mcp",
     "category": "mcp",
-    "stars": "80",
-    "freshness": "17d",
-    "description": "NetExec MCP",
+    "stars": "81",
+    "freshness": "18d",
+    "description": "Wraps the NetExec CLI as a subprocess and nothing more, across every protocol it speaks. Discovery meta-tools keep its 128 calls out of the model's context",
     "description_zh": "NetExec 的 MCP。",
     "licence": "BSD-2",
     "maintainers": "1",
     "size": "8,913 lines · 22",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "ad",
       "network"
@@ -2059,21 +1614,15 @@
     "url": "https://github.com/Lab700xOrg/aisbom",
     "category": "scanner",
     "stars": "80",
-    "freshness": "4d",
-    "description": "Static security scanner for ML model files — detects pickle bombs, Keras Lambda RCE and GGUF template injection, and generates CycloneDX / SPDX AI-BOMs (AI",
+    "freshness": "5d",
+    "description": "Produces the compliance artefact as well as the verdict: a CycloneDX or SPDX bill of materials for a model file, alongside the Keras, GGUF and ONNX payload",
     "description_zh": "面向 ML 模型文件的静态安全扫描器——检测 pickle 炸弹、Keras Lambda RCE 与 GGUF 模板注入，并生成 CycloneDX / SPDX 的 AI-BOM（AIBOM），作为 EU AI Act、CRA 与 FDA §524B 的合规证据。",
     "licence": "Apache-2.0",
     "maintainers": "2",
     "size": "29,519 lines · 74",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "modfile"
     ],
@@ -2088,28 +1637,20 @@
     "owner": "Security-Phoenix-demo",
     "url": "https://github.com/Security-Phoenix-demo/security-skills-claude-code",
     "category": "skill",
-    "stars": "76",
-    "freshness": "2d",
-    "description": "This repository is a curated collection of skills, plugins, and automation pipelines designed for Claude Code — Anthropic's CLI for AI-assisted software en",
+    "stars": "77",
+    "freshness": "3d",
+    "description": "Works the defensive side: searches threat intelligence, generates Semgrep rules, puts a STRIDE model into a product spec, and gates a plan before anyone bu",
     "description_zh": "本仓库是为 Claude Code——Anthropic 面向 AI 辅助软件工程的 CLI——设计的技能、插件与自动化流水线的精选集合，由 Phoenix Security 的工程与安全工程团队构建并开源。",
     "licence": "MIT",
     "maintainers": "1",
     "size": "5,523 lines · 28",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "code"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -2121,32 +1662,23 @@
     "url": "https://github.com/promptfoo/modelaudit",
     "category": "scanner",
     "stars": "73",
-    "freshness": "3d",
-    "description": "Security scanner for AI/ML model files. Detects malicious code, backdoors, and vulnerabilities before deployment",
+    "freshness": "4d",
+    "description": "Covers the widest range of model formats of any of these, emits SARIF for a CI gate, and says plainly where its own analysis was bounded rather than report",
     "description_zh": "面向 AI/ML 模型文件的安全扫描器，在部署前检测恶意代码、后门与漏洞。",
     "licence": "MIT",
     "maintainers": "17",
     "size": "656,743 lines · 506",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "modfile"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "atomicchonk-roadrecon_mcp_server",
@@ -2157,20 +1689,14 @@
     "category": "mcp",
     "stars": "51",
     "freshness": "1.5y",
-    "description": "Claude MCP server to perform analysis on ROADrecon data",
+    "description": "Reads a running ROADrecon instance so a model can question the Entra tenant it already collected, with prompt templates for the analyses people usually run",
     "description_zh": "用于分析 ROADrecon 数据的 Claude MCP 服务器。",
     "licence": "MIT",
     "maintainers": "1",
     "size": "940 lines · 1",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "entra",
       "cloud"
@@ -2186,9 +1712,9 @@
     "owner": "zebbern",
     "url": "https://github.com/zebbern/zebbern-kali-mcp",
     "category": "mcp",
-    "stars": "48",
-    "freshness": "18d",
-    "description": "MCP server for Kali Linux penetration testing - 121 tools for AI-assisted security testing - Giving Agents access to full pentesting tools",
+    "stars": "49",
+    "freshness": "19d",
+    "description": "Ships the Kali toolkit as a container with an HTTP API in front, so the model's commands run in a prepared environment rather than on the machine you start",
     "description_zh": "面向 Kali Linux 渗透测试的 MCP 服务器——121 个工具用于 AI 辅助安全测试，为智能体提供完整的渗透工具集。",
     "licence": "MIT",
     "maintainers": "2",
@@ -2226,23 +1752,16 @@
       "wpscan"
     ],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "network",
       "webapp",
       "recon"
     ],
-    "access": [
-      "root",
-      "credentials"
+    "access": [],
+    "host": [
+      "host access"
     ],
-    "host": [],
     "unseen": []
   },
   {
@@ -2253,30 +1772,22 @@
     "url": "https://github.com/chetstriker/LLMtary",
     "category": "agent",
     "stars": "37",
-    "freshness": "165d",
-    "description": "Autonomous AI-powered penetration testing platform. LLM-driven recon, vulnerability analysis, and exploit validation for internal & external targets. Suppo",
+    "freshness": "166d",
+    "description": "A Flutter desktop application that can run the whole engagement against a model on your own GPU, feeding each phase's findings into the next phase's prompt",
     "description_zh": "自主 AI 驱动的渗透测试平台。面向内外部目标的 LLM 驱动侦察、漏洞分析与利用验证。支持本地 AI（Ollama、LM Studio）与云端模型（Claude、GPT-4、Gemini）。Linux · macOS · Windows。",
     "licence": "MIT",
     "maintainers": "2",
     "size": "944 lines · 17",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "recon",
       "webapp"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
     "unseen": []
   },
@@ -2288,28 +1799,20 @@
     "url": "https://github.com/CSPF-Founder/red-clippy",
     "category": "mcp",
     "stars": "28",
-    "freshness": "22d",
-    "description": "open-source pentest management built to be operated by an AI agent",
+    "freshness": "23d",
+    "description": "Holds the engagement record an agent loses when its context fills: the scope, which methodology phases have been covered, and findings with the evidence be",
     "description_zh": "为 AI 智能体操作而构建的开源渗透测试管理工具。",
     "licence": "GPL-3.0",
     "maintainers": "1",
     "size": "43,545 lines · 133",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "logging"
     ],
-    "access": [
-      "root"
-    ],
+    "access": [],
     "host": [],
     "unseen": []
   },
@@ -2321,32 +1824,21 @@
     "url": "https://github.com/MythicAgents/Sage",
     "category": "agent",
     "stars": "25",
-    "freshness": "28d",
-    "description": "Sage is a virtual Mythic agent that that uses an AI agentic system to operate Mythic and Mythic agents running on compromised hosts.",
+    "freshness": "29d",
+    "description": "Installs into a Mythic C2 server and operates it from the inside, reasoning over the live callbacks and the BloodHound graph to issue Mythic tasks. It neve",
     "description_zh": "Sage 是一个虚拟 Mythic 智能体，使用 AI 智能体系统来操作运行在被控主机上的 Mythic 及其他 Mythic 智能体。",
     "licence": "GPL-3.0",
     "maintainers": "2",
     "size": "227,125 lines · 437",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "redteam",
       "ad"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
-    "host": [
-      "installs"
-    ],
+    "access": [],
+    "host": [],
     "unseen": []
   },
   {
@@ -2357,35 +1849,26 @@
     "url": "https://github.com/cettocdx/rift",
     "category": "agent",
     "stars": "11",
-    "freshness": "4d",
-    "description": "RIFT - Autonomous AI Penetration Testing Agent",
+    "freshness": "5d",
+    "description": "Takes a target and an objective in plain language, then plans and runs the whole job inside a sandbox. A second mode answers questions about a finding with",
     "description_zh": "RIFT——自主 AI 渗透测试智能体。",
     "licence": "Apache-2.0",
     "maintainers": "7",
     "size": "489,896 lines · 2486",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "network"
     ],
     "access": [
-      "root",
-      "credentials"
+      "calls out"
     ],
     "host": [
-      "installs"
+      "fetched install"
     ],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   },
   {
     "slug": "mayank-dev-15-ai-pentest-agent",
@@ -2395,28 +1878,24 @@
     "url": "https://github.com/mayank-dev-15/AI-Pentest-Agent",
     "category": "agent",
     "stars": "3",
-    "freshness": "92d",
-    "description": "Autonomous AI penetration testing agent with scanning, reconnaissance, and exploitation modules",
+    "freshness": "93d",
+    "description": "Ships its own port scanner and web recon rather than wrapping the usual tools, and the model only plans the attack chain. Without a key it falls back to a",
     "description_zh": "具备扫描、侦察与利用模块的自主 AI 渗透测试智能体。",
     "licence": "MIT",
     "maintainers": "1",
     "size": "5,282 lines · 26",
     "bundled_tools": [],
     "shares_files_with": "",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "no",
-      "reads_credentials": "no",
-      "calls_external_endpoint": "no",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "recon"
     ],
     "access": [],
     "host": [],
-    "unseen": []
+    "unseen": [
+      "licence"
+    ]
   },
   {
     "slug": "nightlysec-nightly",
@@ -2426,8 +1905,8 @@
     "url": "https://github.com/Nightlysec/nightly",
     "category": "agent",
     "stars": "1",
-    "freshness": "41d",
-    "description": "Autonomous AI penetration testing agent",
+    "freshness": "42d",
+    "description": "Runs inside CI on a pull request and blocks the merge when it can validate a bug, rather than being driven from a terminal against a live target.",
     "description_zh": "自主 AI 渗透测试智能体。",
     "licence": "Apache-2.0",
     "maintainers": "68",
@@ -2448,27 +1927,16 @@
       "wafw00f"
     ],
     "shares_files_with": "usestrix/strix",
-    "checklist": {
-      "ships_compiled_binaries": "no",
-      "asks_root": "yes",
-      "reads_credentials": "yes",
-      "calls_external_endpoint": "yes",
-      "encoded_blobs": "no"
-    },
+    "checklist": {},
     "scopes": [
       "webapp",
       "api",
       "code"
     ],
-    "access": [
-      "root",
-      "credentials"
-    ],
+    "access": [],
     "host": [
-      "installs"
+      "fetched install"
     ],
-    "unseen": [
-      "calls out"
-    ]
+    "unseen": []
   }
 ]

@@ -2,17 +2,17 @@
 
 _Model Context Protocol tool servers · 14 tools_
 
-- [ida-pro-mcp](mrexodia-ida-pro-mcp.md) — 12k · AI-powered reverse engineering assistant that bridges IDA Pro with language models through MCP.
-- [hexstrike-ai](0x4m4-hexstrike-ai.md) — 12k · HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated
-- [GhidraMCP](lauriewired-ghidramcp.md) — 10k · MCP Server for Ghidra
-- [mcp-server](portswigger-mcp-server.md) — 1.2k · MCP Server for Burp
-- [MCP-Kali-Server](wh0am123-mcp-kali-server.md) — 825 · MCP configuration to connect AI agent to a Linux machine.
-- [mcp-security-hub](fuzzinglabs-mcp-security-hub.md) — 792 · A growing collection of MCP servers bringing offensive security tools to AI assistants. Nmap, Ghidra, Nuclei, SQLMap, Hashcat and more.
-- [MetasploitMCP](gh05tcrew-metasploitmcp.md) — 730 · MCP Server for Metasploit
-- [mcp-for-security](cyproxio-mcp-for-security.md) — 630 · MCP for Security: A collection of Model Context Protocol servers for popular security tools like SQLMap, FFUF, NMAP, Masscan and more. Integrate security t
-- [BloodHound-MCP-AI](mordavid-bloodhound-mcp-ai.md) — 375 · BloodHound-MCP-AI is integration that connects BloodHound with AI through Model Context Protocol, allowing security professionals to analyze Active Directo
-- [bloodhound_mcp](mwnickerson-bloodhound_mcp.md) — 134 · A Model Context Protocol (MCP) server to converse with data in Bloodhound
-- [NetExec-mcp](mpgn-netexec-mcp.md) — 80 · NetExec MCP
-- [roadrecon_mcp_server](atomicchonk-roadrecon_mcp_server.md) — 51 · Claude MCP server to perform analysis on ROADrecon data
-- [zebbern-kali-mcp](zebbern-zebbern-kali-mcp.md) — 48 · MCP server for Kali Linux penetration testing - 121 tools for AI-assisted security testing - Giving Agents access to full pentesting tools
-- [red-clippy](cspf-founder-red-clippy.md) — 28 · open-source pentest management built to be operated by an AI agent
+- [ida-pro-mcp](mrexodia-ida-pro-mcp.md) — 12k · Exposes an open IDA Pro database to an LLM client, so you ask about a binary in chat instead of clicking through the GUI: rename functions, read decompiled
+- [hexstrike-ai](0x4m4-hexstrike-ai.md) — 12k · Serves a large tool catalogue over MCP and adds a layer of its own that picks which tool to run and with what flags, so the client's model chooses the goal
+- [GhidraMCP](lauriewired-ghidramcp.md) — 10k · Installs into Ghidra as an extension and opens its decompiler and symbol table to a model, which can rename methods and data as it works through the progra
+- [mcp-server](portswigger-mcp-server.md) — 1.2k · A Burp Suite extension that opens the running instance to an AI client, so a model can work through the proxy history and replay requests from the session
+- [MCP-Kali-Server](wh0am123-mcp-kali-server.md) — 826 · A thin bridge giving a model a shell on a Linux box you already run, plus a short list of named tool wrappers. Raw command execution is the point; the wrap
+- [mcp-security-hub](fuzzinglabs-mcp-security-hub.md) — 792 · One hardened container per tool, brought up with Compose, so a job runs only the servers it needs instead of one process holding everything.
+- [MetasploitMCP](gh05tcrew-metasploitmcp.md) — 730 · Drives Metasploit over its RPC interface: search the modules, run an exploit or a post module, generate a payload, and send commands into a session that is
+- [mcp-for-security](cyproxio-mcp-for-security.md) — 630 · One MCP server per security tool, each a thin wrapper over that binary's flags. Development has moved to a successor project under a different name.
+- [BloodHound-MCP-AI](mordavid-bloodhound-mcp-ai.md) — 375 · Turns BloodHound's own Cypher query library into one MCP tool per query, so you ask for an attack path in English and the server runs a query someone alrea
+- [bloodhound_mcp](mwnickerson-bloodhound_mcp.md) — 135 · Keeps the tool surface deliberately small, a handful of composite calls plus reference material the model loads only when it needs it, and ships a system p
+- [NetExec-mcp](mpgn-netexec-mcp.md) — 81 · Wraps the NetExec CLI as a subprocess and nothing more, across every protocol it speaks. Discovery meta-tools keep its 128 calls out of the model's context
+- [roadrecon_mcp_server](atomicchonk-roadrecon_mcp_server.md) — 51 · Reads a running ROADrecon instance so a model can question the Entra tenant it already collected, with prompt templates for the analyses people usually run
+- [zebbern-kali-mcp](zebbern-zebbern-kali-mcp.md) — 49 · Ships the Kali toolkit as a container with an HTTP API in front, so the model's commands run in a prepared environment rather than on the machine you start
+- [red-clippy](cspf-founder-red-clippy.md) — 28 · Holds the engagement record an agent loses when its context fills: the scope, which methodology phases have been covered, and findings with the evidence be

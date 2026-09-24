@@ -1,32 +1,21 @@
 # xalgorix/xalgorix
 
-> Autonomous AI pentesting agents — real-time reconnaissance, vulnerability detection, and exploitation orchestration. Go + TypeScript.
+> Runs a second, independent agent whose only job is to re-exploit what the first one claimed, so a finding is either reproduced or dropped. One self-hosted
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.1k |
-| **Last updated** | 1d |
+| **Last updated** | 2d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 17 |
 | **Size** | 141,448 lines · 436 |
 | **Source** | <https://github.com/xalgorix/xalgorix> |
-| **Scopes & traits** | `recon` `webapp` `network` *root* *credentials* _installs_ ~calls out~ |
+| **Scopes & traits** | `recon` `webapp` `network` *calls out* _fetched install_ _host access_ |
 
 ## Bundled tools
 
 `dirsearch`, `httpx`, `naabu`, `nuclei`, `seclists`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

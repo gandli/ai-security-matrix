@@ -1,6 +1,6 @@
 # microsoft/PyRIT
 
-> The Python Risk Identification Tool for generative AI (PyRIT) is an open source framework built to empower security professionals and engineers to proactiv
+> A library for assembling your own attack rather than a fixed suite: you compose an orchestrator from targets, converters and scorers, and it runs the conve
 
 | | |
 |---|---|
@@ -9,20 +9,9 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 488,574 lines · 1758 |
+| **Size** | 501,661 lines · 1799 |
 | **Source** | <https://github.com/microsoft/PyRIT> |
-| **Scopes & traits** | `llm` *root* _installs_ ~calls out~ ~opaque~ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **yes** |
+| **Scopes & traits** | `llm` *calls out* _fetched install_ _host access_ |
 
 ---
 

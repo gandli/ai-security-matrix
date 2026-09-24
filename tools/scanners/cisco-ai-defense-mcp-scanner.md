@@ -1,28 +1,17 @@
 # cisco-ai-defense/mcp-scanner
 
-> Scan MCP servers for potential threats & security findings.
+> Judges an MCP server's tool definitions three ways, by YARA rule, by hosted inspection API and by asking a model, so a poisoned tool description has to cle
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.1k |
-| **Last updated** | 4d |
+| **Last updated** | 5d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 26 |
 | **Size** | 97,298 lines · 368 |
 | **Source** | <https://github.com/cisco-ai-defense/mcp-scanner> |
-| **Scopes & traits** | `agentic` *root* *credentials* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `agentic` |
 
 ---
 

@@ -1,28 +1,17 @@
 # splx-ai/agentic-radar
 
-> A security scanner for your LLM agentic workflows
+> Reads the source of an agentic workflow, CrewAI or LangGraph or the OpenAI Agents SDK, and maps what the agents can actually reach before anything runs.
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.1k |
-| **Last updated** | 300d |
+| **Last updated** | 301d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 8 |
 | **Size** | 14,117 lines · 165 |
 | **Source** | <https://github.com/splx-ai/agentic-radar> |
-| **Scopes & traits** | `agentic` _installs_ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **no** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `agentic` |
 
 ---
 

@@ -1,32 +1,21 @@
 # samugit83/redamon
 
-> An AI-powered agentic red team framework that automates offensive security operations, from reconnaissance to exploitation to post-exploitation, with zero
+> Chains recon, exploitation and post-exploitation, then carries a finding further than a report: it writes the fix and opens a pull request on your reposito
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 2.6k |
-| **Last updated** | 1d |
+| **Last updated** | 2d |
 | **Licence** | MIT |
 | **Maintainers** | 20 |
 | **Size** | 607,357 lines · 2329 |
 | **Source** | <https://github.com/samugit83/redamon> |
-| **Scopes & traits** | `redteam` `ad` `network` `recon` *root* *credentials* _installs_ ~calls out~ ~opaque~ |
+| **Scopes & traits** | `redteam` `ad` `network` `recon` *calls out* _fetched install_ _host access_ |
 
 ## Bundled tools
 
 `bloodhound`, `certipy-ad`, `gau`, `httpx`, `katana`, `kerbrute`, `ldapdomaindump`, `metasploit-framework`, `naabu`, `nuclei`, `semgrep`, `subfinder`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **yes** |
-| Contains long encoded blobs you cannot read | **yes** |
 
 ---
 

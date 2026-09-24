@@ -1,32 +1,21 @@
 # hypnguyen1209/offensive-claude
 
-> Offensive security toolkit for Claude Code covering red team, exploit dev, AD attacks, EDR bypass, mobile pentest
+> Organises its skills along the kill chain and adds a dispatcher that loads at the start of every session, so the scope check and the OPSEC note happen whet
 
 | | |
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 377 |
-| **Last updated** | 2d |
+| **Last updated** | 3d |
 | **Licence** | MIT |
 | **Maintainers** | 4 |
 | **Size** | 39,821 lines · 240 |
 | **Source** | <https://github.com/hypnguyen1209/offensive-claude> |
-| **Scopes & traits** | `redteam` `ad` *root* *credentials* _installs_ |
+| **Scopes & traits** | `redteam` `ad` _fetched install_ |
 
 ## Bundled tools
 
 `impacket`, `semgrep`
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **yes** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
 
 ---
 

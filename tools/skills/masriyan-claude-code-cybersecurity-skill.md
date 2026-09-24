@@ -1,28 +1,17 @@
 # Masriyan/Claude-Code-CyberSecurity-Skill
 
-> 22 production-quality Claude Code Skills for cybersecurity professionals — covering offensive security, defensive operations, reverse engineering, threat h
+> Twenty-two skills, each carrying a methodology, the commands to run and a template for the write-up, reaching into OT and ICS, mobile and governance as wel
 
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 438 |
-| **Last updated** | 16d |
+| **Stars** | 441 |
+| **Last updated** | 17d |
 | **Licence** | MIT |
 | **Maintainers** | 3 |
 | **Size** | 9,529 lines · 35 |
 | **Source** | <https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill> |
-| **Scopes & traits** | `redteam` `binary` `llm` *root* _installs_ |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `redteam` `binary` `llm` |
 
 ---
 

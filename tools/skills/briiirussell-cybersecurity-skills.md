@@ -1,28 +1,17 @@
 # briiirussell/cybersecurity-skills
 
-> Cybersecurity skills for AI coding agents (Claude Code, Cursor, Codex)
+> Written so someone who is not a security specialist can run an audit and follow the result, and built for Cursor and Codex as well as Claude Code.
 
 | | |
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 401 |
-| **Last updated** | 119d |
+| **Last updated** | 120d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 0 lines · 0 |
 | **Source** | <https://github.com/briiirussell/cybersecurity-skills> |
-| **Scopes & traits** | `recon` `webapp` *root* |
-
-## Before running it
-
-| Check | Answer |
-|---|---|
-| Ships compiled binaries you did not build | **no** |
-| Asks for root or sudo | **yes** |
-| Reads credential paths such as ~/.aws or ~/.ssh | **no** |
-| Installs software on host | **—** |
-| Calls an endpoint the project does not own | **no** |
-| Contains long encoded blobs you cannot read | **no** |
+| **Scopes & traits** | `recon` `webapp` |
 
 ---
 

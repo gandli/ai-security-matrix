@@ -6,27 +6,16 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 2.6k |
-| **最近更新** | 1d |
+| **最近更新** | 2d |
 | **许可证** | MIT |
 | **维护者** | 20 |
 | **规模** | 607,357 lines · 2329 |
 | **源码** | <https://github.com/samugit83/redamon> |
-| **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） / `network`（主机/端口/流量） / `recon`（信息收集） / *root* / *credentials* |
+| **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） / `network`（主机/端口/流量） / `recon`（信息收集） / *calls out* |
 
 ## 内置工具
 
 `bloodhound`, `certipy-ad`, `gau`, `httpx`, `katana`, `kerbrute`, `ldapdomaindump`, `metasploit-framework`, `naabu`, `nuclei`, `semgrep`, `subfinder`
-
-## 运行前须知
-
-| 检查项 | 结果 |
-|---|---|
-| 是否包含未自行构建的预编译二进制 | **no** |
-| 是否要求 root / sudo | **yes** |
-| 是否读取 `~/.aws`、`~/.ssh` 等凭据路径 | **yes** |
-| 是否在主机上安装软件 | **—** |
-| 是否调用项目不拥有的外部端点 | **yes** |
-| 是否包含无法阅读的超长编码数据 | **yes** |
 
 ---
 
