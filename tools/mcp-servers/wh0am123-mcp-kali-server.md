@@ -1,12 +1,12 @@
 # Wh0am123/MCP-Kali-Server
 
-> A thin bridge giving a model a shell on a Linux box you already run, plus a short list of named tool wrappers. Raw command execution is the point; the wrap
+> A thin bridge giving a model a shell on a Linux box you already run, plus a short list of named tool wrappers. Raw command execution is the point; the…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 826 |
-| **Last updated** | 191d |
+| **Stars** | 828 |
+| **Last updated** | 192d |
 | **Licence** | MIT |
 | **Maintainers** | 4 |
 | **Size** | 1,024 lines · 2 |

@@ -1,12 +1,12 @@
 # NVIDIA/garak
 
-> Fires a catalogue of named probes at a model and reports which ones got through, covering jailbreaks, leakage, injection and toxicity. Probes are the unit
+> Fires a catalogue of named probes at a model and reports which ones got through, covering jailbreaks, leakage, injection and toxicity. Probes are the…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 9.3k |
-| **Last updated** | 8d |
+| **Stars** | 9.4k |
+| **Last updated** | 9d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 100 |
 | **Size** | 80,102 lines · 494 |

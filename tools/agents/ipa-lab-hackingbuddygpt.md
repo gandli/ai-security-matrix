@@ -1,12 +1,12 @@
 # ipa-lab/hackingBuddyGPT
 
-> A framework for building your own testing agent rather than a finished one. It supplies the model plumbing, the target connectors and the run limits, and y
+> A framework for building your own testing agent rather than a finished one. It supplies the model plumbing, the target connectors and the run limits, and…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.2k |
-| **Last updated** | 11d |
+| **Last updated** | 12d |
 | **Licence** | MIT |
 | **Maintainers** | 15 |
 | **Size** | 18,450 lines · 132 |

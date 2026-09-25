@@ -1,17 +1,17 @@
 # Tencent/AI-Infra-Guard
 
-> Gathers several separate AI security scans behind one console: the agent, the MCP servers, the skills, the serving infrastructure, and a jailbreak pass aga
+> Gathers several separate AI security scans behind one console: the agent, the MCP servers, the skills, the serving infrastructure, and a jailbreak pass…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 6.6k |
-| **Last updated** | today |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 57 |
-| **Size** | 153,908 lines · 963 |
+| **Maintainers** | 58 |
+| **Size** | 153,938 lines · 963 |
 | **Source** | <https://github.com/Tencent/AI-Infra-Guard> |
-| **Scopes & traits** | `llm` `agentic` *calls out* _fetched install_ |
+| **Scopes & traits** | `llm` `agentic` *callout* _remote_ |
 
 ## Bundled tools
 

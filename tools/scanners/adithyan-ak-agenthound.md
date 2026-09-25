@@ -1,12 +1,12 @@
 # adithyan-ak/AgentHound
 
-> Runs from a host you have already compromised: it collects the agent credentials and configuration it finds there, reuses them against whatever AI services
+> Runs from a host you have already compromised: it collects the agent credentials and configuration it finds there, reuses them against whatever AI…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 439 |
-| **Last updated** | 12d |
+| **Stars** | 438 |
+| **Last updated** | 13d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 4 |
 | **Size** | 159,049 lines · 774 |

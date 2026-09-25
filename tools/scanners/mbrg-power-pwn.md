@@ -1,12 +1,12 @@
 # mbrg/power-pwn
 
-> Works the Microsoft 365 side of the problem: Power Platform flows, Copilot Studio bots left open to anonymous users, and the agents a tenant has published
+> Works the Microsoft 365 side of the problem: Power Platform flows, Copilot Studio bots left open to anonymous users, and the agents a tenant has…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.2k |
-| **Last updated** | 277d |
+| **Last updated** | 278d |
 | **Licence** | MIT |
 | **Maintainers** | 10 |
 | **Size** | 15,276 lines · 192 |

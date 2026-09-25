@@ -1,12 +1,12 @@
 # mwnickerson/bloodhound_mcp
 
-> Keeps the tool surface deliberately small, a handful of composite calls plus reference material the model loads only when it needs it, and ships a system p
+> Keeps the tool surface deliberately small, a handful of composite calls plus reference material the model loads only when it needs it, and ships a system…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 135 |
-| **Last updated** | 36d |
+| **Last updated** | 37d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 5 |
 | **Size** | 11,092 lines · 9 |

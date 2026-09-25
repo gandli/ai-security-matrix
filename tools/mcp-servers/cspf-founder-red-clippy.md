@@ -1,17 +1,17 @@
 # CSPF-Founder/red-clippy
 
-> Holds the engagement record an agent loses when its context fills: the scope, which methodology phases have been covered, and findings with the evidence be
+> Holds the engagement record an agent loses when its context fills: the scope, which methodology phases have been covered, and findings with the evidence…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 28 |
-| **Last updated** | 23d |
+| **Last updated** | 24d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 1 |
 | **Size** | 43,545 lines · 133 |
 | **Source** | <https://github.com/CSPF-Founder/red-clippy> |
-| **Scopes & traits** | `redteam` `logging` |
+| **Scopes & traits** | `redteam` `reporting` |
 
 ---
 

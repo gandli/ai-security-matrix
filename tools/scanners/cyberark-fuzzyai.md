@@ -1,12 +1,12 @@
 # cyberark/FuzzyAI
 
-> Fuzzes a model endpoint with a catalogue of jailbreak techniques, mutating prompts until one gets past the guardrail, and works against a local model as re
+> Fuzzes a model endpoint with a catalogue of jailbreak techniques, mutating prompts until one gets past the guardrail, and works against a local model as…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.6k |
-| **Last updated** | 230d |
+| **Last updated** | 231d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 13 |
 | **Size** | 11,682 lines · 199 |

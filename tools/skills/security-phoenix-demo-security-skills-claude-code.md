@@ -1,12 +1,12 @@
 # Security-Phoenix-demo/security-skills-claude-code
 
-> Works the defensive side: searches threat intelligence, generates Semgrep rules, puts a STRIDE model into a product spec, and gates a plan before anyone bu
+> Works the defensive side: searches threat intelligence, generates Semgrep rules, puts a STRIDE model into a product spec, and gates a plan before anyone…
 
 | | |
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 77 |
-| **Last updated** | 3d |
+| **Last updated** | 4d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
 | **Size** | 5,523 lines · 28 |

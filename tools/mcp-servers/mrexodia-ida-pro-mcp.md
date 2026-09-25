@@ -1,12 +1,12 @@
 # mrexodia/ida-pro-mcp
 
-> Exposes an open IDA Pro database to an LLM client, so you ask about a binary in chat instead of clicking through the GUI: rename functions, read decompiled
+> Exposes an open IDA Pro database to an LLM client, so you ask about a binary in chat instead of clicking through the GUI: rename functions, read…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 12k |
-| **Last updated** | 2d |
+| **Last updated** | 3d |
 | **Licence** | MIT |
 | **Maintainers** | 83 |
 | **Size** | 35,569 lines · 87 |

@@ -1,6 +1,6 @@
 # microsoft/PyRIT
 
-> A library for assembling your own attack rather than a fixed suite: you compose an orchestrator from targets, converters and scorers, and it runs the conve
+> A library for assembling your own attack rather than a fixed suite: you compose an orchestrator from targets, converters and scorers, and it runs the…
 
 | | |
 |---|---|
@@ -9,9 +9,9 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 501,661 lines · 1799 |
+| **Size** | 514,142 lines · 1830 |
 | **Source** | <https://github.com/microsoft/PyRIT> |
-| **Scopes & traits** | `llm` *calls out* _fetched install_ _host access_ |
+| **Scopes & traits** | `llm` *callout* _remote_ _escape_ |
 
 ---
 

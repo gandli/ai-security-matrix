@@ -1,6 +1,6 @@
 # aliasrobotics/cai
 
-> The reference framework behind a body of published AI offensive-security research, kept as its final source tree. Its capabilities moved on to a commercial
+> The reference framework behind a body of published AI offensive-security research, kept as its final source tree. Its capabilities moved on to a…
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@
 | **Maintainers** | 1 |
 | **Size** | 257,755 lines · 1122 |
 | **Source** | <https://github.com/aliasrobotics/cai> |
-| **Scopes & traits** | `network` `webapp` `recon` _fetched install_ _host access_ |
+| **Scopes & traits** | `network` `webapp` `recon` _remote_ _escape_ |
 
 ## Bundled tools
 

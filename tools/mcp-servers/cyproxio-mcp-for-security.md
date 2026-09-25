@@ -5,13 +5,13 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 630 |
+| **Stars** | 629 |
 | **Last updated** | archived |
 | **Licence** | MIT |
 | **Maintainers** | 4 |
 | **Size** | 3,735 lines · 50 |
 | **Source** | <https://github.com/cyproxio/mcp-for-security> |
-| **Scopes & traits** | `webapp` `network` `recon` _fetched install_ |
+| **Scopes & traits** | `webapp` `network` `recon` _remote_ |
 
 ## Bundled tools
 

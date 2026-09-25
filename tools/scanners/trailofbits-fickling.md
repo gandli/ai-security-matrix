@@ -1,12 +1,12 @@
 # trailofbits/fickling
 
-> Decompiles pickle bytecode back into readable Python, and will rewrite or build one too. The same tool that tells you a model file is malicious is the one
+> Decompiles pickle bytecode back into readable Python, and will rewrite or build one too. The same tool that tells you a model file is malicious is the…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 670 |
-| **Last updated** | 5d |
+| **Last updated** | 6d |
 | **Licence** | LGPL |
 | **Maintainers** | 23 |
 | **Size** | 9,573 lines · 46 |

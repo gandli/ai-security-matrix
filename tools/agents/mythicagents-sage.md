@@ -1,12 +1,12 @@
 # MythicAgents/Sage
 
-> Installs into a Mythic C2 server and operates it from the inside, reasoning over the live callbacks and the BloodHound graph to issue Mythic tasks. It neve
+> Installs into a Mythic C2 server and operates it from the inside, reasoning over the live callbacks and the BloodHound graph to issue Mythic tasks. It…
 
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 25 |
-| **Last updated** | 29d |
+| **Stars** | 26 |
+| **Last updated** | 30d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 2 |
 | **Size** | 227,125 lines · 437 |

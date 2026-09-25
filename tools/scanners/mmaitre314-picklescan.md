@@ -1,12 +1,12 @@
 # mmaitre314/picklescan
 
-> Scans a pickle for the dangerous imports it would execute on load, and will fetch one straight from Hugging Face, a URL or an archive rather than making yo
+> Scans a pickle for the dangerous imports it would execute on load, and will fetch one straight from Hugging Face, a URL or an archive rather than making…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 423 |
-| **Last updated** | 1d |
+| **Stars** | 424 |
+| **Last updated** | 2d |
 | **Licence** | MIT |
 | **Maintainers** | 8 |
 | **Size** | 3,160 lines · 9 |

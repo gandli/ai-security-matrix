@@ -32,13 +32,13 @@ Every tool here is a repo you could clone yourself. Five flags say what you take
 
 ## What reaches your machine
 
-Fetched install means the documented install fetches a script and runs it. What runs is whatever that script holds on the day you install, which is not the version anyone reviewed.
+Remote means the documented install fetches a script and runs it. What runs is whatever that script holds on the day you install, which is not the version anyone reviewed.
 
-Host access means the container it ships is handed access back to the host: the Docker socket, a privileged container, or host networking. Shipping a container is not the same as the container holding.
+Escape means the container it ships is handed access back to the host: the Docker socket, a privileged container, or host networking. Shipping a container is not the same as the container holding.
 
 ## Where your data goes
 
-Calls out means it sends data to a third party that is not the model provider. What is sent is not visible from here.
+Callout means it sends data to a third party that is not the model provider. What is sent is not visible from here.
 
 ## What you cannot establish
 

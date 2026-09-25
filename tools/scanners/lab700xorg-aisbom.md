@@ -1,12 +1,12 @@
 # Lab700xOrg/aisbom
 
-> Produces the compliance artefact as well as the verdict: a CycloneDX or SPDX bill of materials for a model file, alongside the Keras, GGUF and ONNX payload
+> Produces the compliance artefact as well as the verdict: a CycloneDX or SPDX bill of materials for a model file, alongside the Keras, GGUF and ONNX…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 80 |
-| **Last updated** | 5d |
+| **Last updated** | 6d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 2 |
 | **Size** | 29,519 lines · 74 |

@@ -1,17 +1,17 @@
 # zebbern/zebbern-kali-mcp
 
-> Ships the Kali toolkit as a container with an HTTP API in front, so the model's commands run in a prepared environment rather than on the machine you start
+> Ships the Kali toolkit as a container with an HTTP API in front, so the model's commands run in a prepared environment rather than on the machine you…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 49 |
-| **Last updated** | 19d |
+| **Last updated** | 20d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 37,285 lines · 145 |
 | **Source** | <https://github.com/zebbern/zebbern-kali-mcp> |
-| **Scopes & traits** | `network` `webapp` `recon` _host access_ |
+| **Scopes & traits** | `network` `webapp` `recon` _escape_ |
 
 ## Bundled tools
 

@@ -6,12 +6,12 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 2.6k |
-| **最近更新** | 2d |
+| **最近更新** | 3d |
 | **许可证** | MIT |
 | **维护者** | 20 |
 | **规模** | 607,357 lines · 2329 |
 | **源码** | <https://github.com/samugit83/redamon> |
-| **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） / `network`（主机/端口/流量） / `recon`（信息收集） / *calls out* |
+| **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） / `network`（主机/端口/流量） / `recon`（信息收集） / *callout* |
 
 ## 内置工具
 

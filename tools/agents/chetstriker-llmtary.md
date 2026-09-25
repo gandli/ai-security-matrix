@@ -1,17 +1,17 @@
 # chetstriker/LLMtary
 
-> A Flutter desktop application that can run the whole engagement against a model on your own GPU, feeding each phase's findings into the next phase's prompt
+> A Flutter desktop application that can run the whole engagement against a model on your own GPU, feeding each phase's findings into the next phase's…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 37 |
-| **Last updated** | 166d |
+| **Last updated** | 167d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
 | **Size** | 944 lines · 17 |
 | **Source** | <https://github.com/chetstriker/LLMtary> |
-| **Scopes & traits** | `recon` `webapp` _fetched install_ |
+| **Scopes & traits** | `recon` `webapp` _remote_ |
 
 ---
 

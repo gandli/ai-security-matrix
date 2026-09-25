@@ -1,17 +1,17 @@
 # cettocdx/rift
 
-> Takes a target and an objective in plain language, then plans and runs the whole job inside a sandbox. A second mode answers questions about a finding with
+> Takes a target and an objective in plain language, then plans and runs the whole job inside a sandbox. A second mode answers questions about a finding…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 11 |
-| **Last updated** | 5d |
+| **Last updated** | 6d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 7 |
 | **Size** | 489,896 lines · 2486 |
 | **Source** | <https://github.com/cettocdx/rift> |
-| **Scopes & traits** | `webapp` `network` *calls out* _fetched install_ |
+| **Scopes & traits** | `webapp` `network` *callout* _remote_ |
 
 ---
 

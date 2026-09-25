@@ -1,15 +1,15 @@
 # mpgn/NetExec-mcp
 
-> Wraps the NetExec CLI as a subprocess and nothing more, across every protocol it speaks. Discovery meta-tools keep its 128 calls out of the model's context
+> Wraps the NetExec CLI as a subprocess and nothing more, across every protocol it speaks. Discovery meta-tools keep its 128 calls out of the model's…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 81 |
-| **Last updated** | 18d |
+| **Stars** | 82 |
+| **Last updated** | 1d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
-| **Size** | 8,913 lines · 22 |
+| **Size** | 9,216 lines · 22 |
 | **Source** | <https://github.com/mpgn/NetExec-mcp> |
 | **Scopes & traits** | `ad` `network` |
 

@@ -1,6 +1,6 @@
 # MorDavid/BloodHound-MCP-AI
 
-> Turns BloodHound's own Cypher query library into one MCP tool per query, so you ask for an attack path in English and the server runs a query someone alrea
+> Turns BloodHound's own Cypher query library into one MCP tool per query, so you ask for an attack path in English and the server runs a query someone…
 
 | | |
 |---|---|

@@ -1,17 +1,17 @@
 # xalgorix/xalgorix
 
-> Runs a second, independent agent whose only job is to re-exploit what the first one claimed, so a finding is either reproduced or dropped. One self-hosted
+> Runs a second, independent agent whose only job is to re-exploit what the first one claimed, so a finding is either reproduced or dropped. One…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.1k |
-| **Last updated** | 2d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 17 |
-| **Size** | 141,448 lines · 436 |
+| **Size** | 142,844 lines · 442 |
 | **Source** | <https://github.com/xalgorix/xalgorix> |
-| **Scopes & traits** | `recon` `webapp` `network` *calls out* _fetched install_ _host access_ |
+| **Scopes & traits** | `recon` `webapp` `network` *callout* _remote_ _escape_ |
 
 ## Bundled tools
 

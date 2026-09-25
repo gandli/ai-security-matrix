@@ -6,12 +6,12 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1 |
-| **Last updated** | 42d |
+| **Last updated** | 43d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 68 |
 | **Size** | 59,092 lines · 275 |
 | **Source** | <https://github.com/Nightlysec/nightly> |
-| **Scopes & traits** | `webapp` `api` `code` _fetched install_ |
+| **Scopes & traits** | `webapp` `api` `code` _remote_ |
 
 ## Bundled tools
 

@@ -1,12 +1,12 @@
 # utkusen/promptmap
 
-> Runs a second model whose only job is to read the target's replies and rule on whether an injection actually worked. Point it at your own system prompt, or
+> Runs a second model whose only job is to read the target's replies and rule on whether an injection actually worked. Point it at your own system prompt…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.3k |
-| **Last updated** | 297d |
+| **Last updated** | 298d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 8 |
 | **Size** | 1,504 lines · 1 |

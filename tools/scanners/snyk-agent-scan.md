@@ -1,6 +1,6 @@
 # snyk/agent-scan
 
-> Finds the agent components already installed on your machine, the MCP servers, skills and agent configs, and scans each for prompt injection and known vuln
+> Finds the agent components already installed on your machine, the MCP servers, skills and agent configs, and scans each for prompt injection and known…
 
 | | |
 |---|---|
@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 22 |
-| **Size** | 60,314 lines · 147 |
+| **Size** | 61,024 lines · 149 |
 | **Source** | <https://github.com/snyk/agent-scan> |
 | **Scopes & traits** | `agentic` |
 

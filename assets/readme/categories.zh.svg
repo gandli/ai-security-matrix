@@ -12,7 +12,7 @@
   <rect x="0" y="5" width="4" height="18" rx="2" fill="#2c85ff"/>
   <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">智能体工具</text>
   <text x="69" y="20" fill="#7c8787" font-size="13">自主运行或多步骤编排的 AI 工具</text>
-  <text x="1020" y="20" fill="#2c85ff" font-size="15" font-weight="600" text-anchor="end" class="mono">22</text>
+  <text x="1020" y="20" fill="#2c85ff" font-size="15" font-weight="600" text-anchor="end" class="mono">23</text>
 </g>
 <g transform="translate(48,78)">
   <rect width="1104" height="28" rx="6" fill="#002523" stroke="#8f8b0040" stroke-width="1"/>
@@ -33,6 +33,6 @@
   <rect x="0" y="5" width="4" height="18" rx="2" fill="#ff10a3"/>
   <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">技能集</text>
   <text x="51" y="20" fill="#7c8787" font-size="13">智能体技能包、提示词与剧本</text>
-  <text x="1020" y="20" fill="#ff10a3" font-size="15" font-weight="600" text-anchor="end" class="mono">9</text>
+  <text x="1020" y="20" fill="#ff10a3" font-size="15" font-weight="600" text-anchor="end" class="mono">10</text>
 </g>
 </svg>

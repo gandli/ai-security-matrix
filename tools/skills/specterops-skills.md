@@ -1,12 +1,12 @@
 # SpecterOps/skills
 
-> Packages SpecterOps' own engagement workflow as installable plugins, including the wiring that lets an agent drive BloodHound and Ghostwriter. It assumes y
+> Packages SpecterOps' own engagement workflow as installable plugins, including the wiring that lets an agent drive BloodHound and Ghostwriter. It assumes…
 
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 669 |
-| **Last updated** | 1d |
+| **Stars** | 671 |
+| **Last updated** | 2d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 7 |
 | **Size** | 15,327 lines · 94 |

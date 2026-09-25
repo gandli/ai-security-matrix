@@ -1,12 +1,12 @@
 # GH05TCREW/MetasploitMCP
 
-> Drives Metasploit over its RPC interface: search the modules, run an exploit or a post module, generate a payload, and send commands into a session that is
+> Drives Metasploit over its RPC interface: search the modules, run an exploit or a post module, generate a payload, and send commands into a session that…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 730 |
-| **Last updated** | 231d |
+| **Stars** | 732 |
+| **Last updated** | 232d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 5 |
 | **Size** | 3,219 lines · 7 |

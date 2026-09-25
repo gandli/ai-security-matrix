@@ -1,12 +1,12 @@
 # trilwu/secskills
 
-> Aims at the judgement rather than the commands: trace a finding to demonstrated impact, capture memory before the box is reimaged, notice the honeypot. Off
+> Aims at the judgement rather than the commands: trace a finding to demonstrated impact, capture memory before the box is reimaged, notice the honeypot…
 
 | | |
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 148 |
-| **Last updated** | 20d |
+| **Last updated** | 21d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
 | **Size** | 1,308 lines · 4 |

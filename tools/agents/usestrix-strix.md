@@ -5,13 +5,13 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 64k |
+| **Stars** | 65k |
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 71 |
 | **Size** | 96,814 lines · 354 |
 | **Source** | <https://github.com/usestrix/strix> |
-| **Scopes & traits** | `webapp` `api` `code` *calls out* _fetched install_ |
+| **Scopes & traits** | `webapp` `api` `code` *callout* _remote_ |
 
 ## Bundled tools
 

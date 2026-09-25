@@ -1,17 +1,17 @@
 # samugit83/redamon
 
-> Chains recon, exploitation and post-exploitation, then carries a finding further than a report: it writes the fix and opens a pull request on your reposito
+> Chains recon, exploitation and post-exploitation, then carries a finding further than a report: it writes the fix and opens a pull request on your…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 2.6k |
-| **Last updated** | 2d |
+| **Last updated** | 3d |
 | **Licence** | MIT |
 | **Maintainers** | 20 |
 | **Size** | 607,357 lines · 2329 |
 | **Source** | <https://github.com/samugit83/redamon> |
-| **Scopes & traits** | `redteam` `ad` `network` `recon` *calls out* _fetched install_ _host access_ |
+| **Scopes & traits** | `redteam` `ad` `network` `recon` *callout* _remote_ _escape_ |
 
 ## Bundled tools
 

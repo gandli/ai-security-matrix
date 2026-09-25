@@ -1,12 +1,12 @@
 # capture0x/AdStrike
 
-> A menu-driven Active Directory framework that carries credentials and Kerberos state in one session across its modules. It also serves those modules over M
+> A menu-driven Active Directory framework that carries credentials and Kerberos state in one session across its modules. It also serves those modules over…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 355 |
-| **Last updated** | 105d |
+| **Last updated** | 106d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
 | **Size** | 34,549 lines · 79 |

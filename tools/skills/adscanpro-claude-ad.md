@@ -1,12 +1,12 @@
 # ADScanPro/Claude-AD
 
-> Walks an internal AD engagement technique by technique, each step naming the command to run and the telemetry it leaves behind. It ships no code of its own
+> Walks an internal AD engagement technique by technique, each step naming the command to run and the telemetry it leaves behind. It ships no code of its…
 
 | | |
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 204 |
-| **Last updated** | 31d |
+| **Last updated** | 32d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
 | **Size** | 0 lines · 0 |

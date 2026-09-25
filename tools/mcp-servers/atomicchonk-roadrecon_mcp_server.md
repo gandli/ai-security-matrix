@@ -1,6 +1,6 @@
 # atomicchonk/roadrecon_mcp_server
 
-> Reads a running ROADrecon instance so a model can question the Entra tenant it already collected, with prompt templates for the analyses people usually run
+> Reads a running ROADrecon instance so a model can question the Entra tenant it already collected, with prompt templates for the analyses people usually…
 
 | | |
 |---|---|

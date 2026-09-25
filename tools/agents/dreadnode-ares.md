@@ -1,12 +1,12 @@
 # dreadnode/ares
 
-> Puts red and blue agents on the same live infrastructure at once: one side chains Active Directory attacks, the other reads the logs and writes detections
+> Puts red and blue agents on the same live infrastructure at once: one side chains Active Directory attacks, the other reads the logs and writes…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 82 |
-| **Last updated** | 1d |
+| **Last updated** | 2d |
 | **Licence** | MIT |
 | **Maintainers** | 3 |
 | **Size** | 270,869 lines · 556 |

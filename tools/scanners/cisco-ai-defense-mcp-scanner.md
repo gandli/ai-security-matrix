@@ -1,12 +1,12 @@
 # cisco-ai-defense/mcp-scanner
 
-> Judges an MCP server's tool definitions three ways, by YARA rule, by hosted inspection API and by asking a model, so a poisoned tool description has to cle
+> Judges an MCP server's tool definitions three ways, by YARA rule, by hosted inspection API and by asking a model, so a poisoned tool description has to…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.1k |
-| **Last updated** | 5d |
+| **Last updated** | 6d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 26 |
 | **Size** | 97,298 lines · 368 |

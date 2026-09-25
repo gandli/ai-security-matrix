@@ -1,17 +1,17 @@
 # PurpleAILAB/Decepticon
 
-> Runs a red-team engagement from a terminal CLI, with an orchestrator that starts specialist stacks like BloodHound or a C2 server only when the engagement
+> Runs a red-team engagement from a terminal CLI, with an orchestrator that starts specialist stacks like BloodHound or a C2 server only when the…
 
 | | |
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 5.6k |
-| **Last updated** | 1d |
+| **Last updated** | 2d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 18 |
 | **Size** | 189,645 lines · 961 |
 | **Source** | <https://github.com/PurpleAILAB/Decepticon> |
-| **Scopes & traits** | `redteam` `network` `webapp` *calls out* _fetched install_ _host access_ |
+| **Scopes & traits** | `redteam` `network` `webapp` *callout* _remote_ _escape_ |
 
 ## Bundled tools
 

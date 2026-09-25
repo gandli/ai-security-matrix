@@ -1,6 +1,6 @@
 # LaurieWired/GhidraMCP
 
-> Installs into Ghidra as an extension and opens its decompiler and symbol table to a model, which can rename methods and data as it works through the progra
+> Installs into Ghidra as an extension and opens its decompiler and symbol table to a model, which can rename methods and data as it works through the…
 
 | | |
 |---|---|

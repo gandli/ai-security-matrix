@@ -1,6 +1,6 @@
 # Azure/counterfit
 
-> Brings the established adversarial machine-learning frameworks under one CLI and points them at a model you nominate. Its subject is classic ML, not langua
+> Brings the established adversarial machine-learning frameworks under one CLI and points them at a model you nominate. Its subject is classic ML, not…
 
 | | |
 |---|---|

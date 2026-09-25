@@ -1,6 +1,6 @@
 # protectai/vulnhuntr
 
-> Reads a Python codebase and asks a model to trace user input through to dangerous sinks, reporting the call chain behind each bug it claims. It applies no
+> Reads a Python codebase and asks a model to trace user input through to dangerous sinks, reporting the call chain behind each bug it claims. It applies…
 
 | | |
 |---|---|

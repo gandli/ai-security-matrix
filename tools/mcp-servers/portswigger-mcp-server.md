@@ -1,12 +1,12 @@
 # PortSwigger/mcp-server
 
-> A Burp Suite extension that opens the running instance to an AI client, so a model can work through the proxy history and replay requests from the session
+> A Burp Suite extension that opens the running instance to an AI client, so a model can work through the proxy history and replay requests from the…
 
 | | |
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 1.2k |
-| **Last updated** | 6d |
+| **Last updated** | 7d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 14 |
 | **Size** | 7,078 lines · 41 |

@@ -1,12 +1,12 @@
 # protectai/modelscan
 
-> Reads a saved model file and reports the unsafe calls hiding in it, across pickle, HDF5 and SavedModel, so a download from a public registry can be checked
+> Reads a saved model file and reports the unsafe calls hiding in it, across pickle, HDF5 and SavedModel, so a download from a public registry can be…
 
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 774 |
-| **Last updated** | 218d |
+| **Stars** | 775 |
+| **Last updated** | 219d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 22 |
 | **Size** | 4,681 lines · 33 |

@@ -1,6 +1,6 @@
 # promptfoo/promptfoo
 
-> Describes a test suite for an LLM app in a config file and runs it from the CLI or CI, either as a plain eval or as a red-team pass. The declarative file i
+> Describes a test suite for an LLM app in a config file and runs it from the CLI or CI, either as a plain eval or as a red-team pass. The declarative file…
 
 | | |
 |---|---|
@@ -9,9 +9,9 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 1,042,837 lines · 2965 |
+| **Size** | 1,043,278 lines · 2965 |
 | **Source** | <https://github.com/promptfoo/promptfoo> |
-| **Scopes & traits** | `llm` `agentic` *calls out* _fetched install_ ~opaque~ |
+| **Scopes & traits** | `llm` `agentic` *callout* _remote_ ~opaque~ |
 
 ---
 

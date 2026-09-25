@@ -1,12 +1,12 @@
 # NeoTheCapt/RedteamAgent
 
-> Turns a coding CLI you already use into a five-phase lab workflow with eight specialist subagents, running every tool in Docker and keeping the run resumab
+> Turns a coding CLI you already use into a five-phase lab workflow with eight specialist subagents, running every tool in Docker and keeping the run…
 
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 135 |
-| **Last updated** | 53d |
+| **Stars** | 136 |
+| **Last updated** | 54d |
 | **Licence** | no licence file |
 | **Maintainers** | 1 |
 | **Size** | 28,707 lines · 140 |

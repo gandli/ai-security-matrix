@@ -6,12 +6,12 @@
 |---|---|
 | **类别** | `scanner` |
 | **Stars** | 2.0k |
-| **最近更新** | 2d |
+| **最近更新** | 3d |
 | **许可证** | Apache-2.0 |
 | **维护者** | 36 |
 | **规模** | 44,546 lines · 144 |
 | **源码** | <https://github.com/msoedov/agentic_security> |
-| **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *calls out* |
+| **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *callout* |
 
 ---
 

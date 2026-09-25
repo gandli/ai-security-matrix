@@ -5,7 +5,7 @@
 <div align="center">
 
 [![数据来源](https://img.shields.io/badge/数据来源-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)
-![项目数](https://img.shields.io/badge/收录项目-65-2fe3a0?style=flat-square&labelColor=002523)
+![项目数](https://img.shields.io/badge/收录项目-67-2fe3a0?style=flat-square&labelColor=002523)
 ![自动同步](https://img.shields.io/badge/每日自动同步-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)
 [![English](https://img.shields.io/badge/Language-English-9ca6a7?style=flat-square&labelColor=002523)](README.md)
 
@@ -23,10 +23,10 @@
 
 | 类别 | 数量 | 定位 | 目录入口 |
 |:---|:---:|:---|:---|
-| **智能体工具** (`agent`) | `22` | 自主运行或多步骤编排的 AI 工具 | [进入目录 →](tools/agents/) |
+| **智能体工具** (`agent`) | `23` | 自主运行或多步骤编排的 AI 工具 | [进入目录 →](tools/agents/) |
 | **扫描器** (`scanner`) | `20` | 基于规则或 LLM 的检测与评估工具 | [进入目录 →](tools/scanners/) |
 | **MCP 服务器** (`mcp`) | `14` | 模型上下文协议（MCP）工具服务器 | [进入目录 →](tools/mcp-servers/) |
-| **技能集** (`skill`) | `9` | 智能体技能包、提示词与剧本 | [进入目录 →](tools/skills/) |
+| **技能集** (`skill`) | `10` | 智能体技能包、提示词与剧本 | [进入目录 →](tools/skills/) |
 
 ## 结构化数据
 

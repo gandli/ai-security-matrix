@@ -6,12 +6,12 @@
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 792 |
-| **Last updated** | 169d |
+| **Last updated** | 170d |
 | **Licence** | MIT |
 | **Maintainers** | 8 |
 | **Size** | 13,500 lines · 32 |
 | **Source** | <https://github.com/FuzzingLabs/mcp-security-hub> |
-| **Scopes & traits** | `network` `webapp` `binary` _fetched install_ _host access_ |
+| **Scopes & traits** | `network` `webapp` `binary` _remote_ _escape_ |
 
 ## Bundled tools
 

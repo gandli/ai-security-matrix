@@ -1,12 +1,12 @@
 # Masriyan/Claude-Code-CyberSecurity-Skill
 
-> Twenty-two skills, each carrying a methodology, the commands to run and a template for the write-up, reaching into OT and ICS, mobile and governance as wel
+> Twenty-two skills, each carrying a methodology, the commands to run and a template for the write-up, reaching into OT and ICS, mobile and governance as…
 
 | | |
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 441 |
-| **Last updated** | 17d |
+| **Last updated** | 18d |
 | **Licence** | MIT |
 | **Maintainers** | 3 |
 | **Size** | 9,529 lines · 35 |

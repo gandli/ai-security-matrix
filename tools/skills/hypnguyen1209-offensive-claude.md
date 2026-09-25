@@ -1,17 +1,17 @@
 # hypnguyen1209/offensive-claude
 
-> Organises its skills along the kill chain and adds a dispatcher that loads at the start of every session, so the scope check and the OPSEC note happen whet
+> Organises its skills along the kill chain and adds a dispatcher that loads at the start of every session, so the scope check and the OPSEC note happen…
 
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 377 |
-| **Last updated** | 3d |
+| **Stars** | 379 |
+| **Last updated** | 4d |
 | **Licence** | MIT |
 | **Maintainers** | 4 |
 | **Size** | 39,821 lines · 240 |
 | **Source** | <https://github.com/hypnguyen1209/offensive-claude> |
-| **Scopes & traits** | `redteam` `ad` _fetched install_ |
+| **Scopes & traits** | `redteam` `ad` _remote_ |
 
 ## Bundled tools
 
