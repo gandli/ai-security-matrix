@@ -5,7 +5,7 @@
 <div align="center">
 
 [![source](https://img.shields.io/badge/source-aisecuritymatrix.com-00755a?style=flat-square)](https://aisecuritymatrix.com)
-![projects](https://img.shields.io/badge/projects-67-2fe3a0?style=flat-square&labelColor=002523)
+![projects](https://img.shields.io/badge/projects-68-2fe3a0?style=flat-square&labelColor=002523)
 ![auto-sync](https://img.shields.io/badge/daily%20sync-GitHub%20Actions-2c85ff?style=flat-square&labelColor=002523)
 [![中文文档](https://img.shields.io/badge/Language-中文-9ca6a7?style=flat-square&labelColor=002523)](README.zh.md)
 
@@ -23,7 +23,7 @@
 
 | Category | Count | Purpose | Directory |
 |:---|:---:|:---|:---|
-| **Agents** (`agent`) | `23` | Autonomous / multi-step AI orchestration | [Browse →](tools/agents/) |
+| **Agents** (`agent`) | `24` | Autonomous / multi-step AI orchestration | [Browse →](tools/agents/) |
 | **Scanners** (`scanner`) | `20` | Rule / LLM-assisted detection & evaluation | [Browse →](tools/scanners/) |
 | **MCP Servers** (`mcp`) | `14` | Model Context Protocol tool servers | [Browse →](tools/mcp-servers/) |
 | **Skills** (`skill`) | `10` | Agent skill bundles, prompts & playbooks | [Browse →](tools/skills/) |

@@ -6,16 +6,12 @@
 |---|---|
 | **类别** | `skill` |
 | **Stars** | 6 |
-| **最近更新** | 7d |
+| **最近更新** | 8d |
 | **许可证** | BSD-2 |
 | **维护者** | 1 |
 | **规模** | 4,216 lines · 14 |
 | **源码** | <https://github.com/GhostManager/ghostwriter-skills> |
 | **作用范围/特征** | `reporting`（） |
-
-## 与以下项目共享文件
-
-not checked
 
 ---
 

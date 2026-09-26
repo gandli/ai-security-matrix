@@ -6,16 +6,12 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 6 |
-| **Last updated** | 7d |
+| **Last updated** | 8d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
 | **Size** | 4,216 lines · 14 |
 | **Source** | <https://github.com/GhostManager/ghostwriter-skills> |
 | **Scopes & traits** | `reporting` |
-
-## Shares files with
-
-not checked
 
 ---
 

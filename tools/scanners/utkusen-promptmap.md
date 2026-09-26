@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.3k |
-| **Last updated** | 298d |
+| **Last updated** | 299d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 8 |
 | **Size** | 1,504 lines · 1 |
