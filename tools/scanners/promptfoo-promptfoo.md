@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 1,044,219 lines · 2966 |
+| **Size** | 1,047,391 lines · 2971 |
 | **Source** | <https://github.com/promptfoo/promptfoo> |
 | **Scopes & traits** | `llm` `agentic` *callout* _remote_ ~opaque~ |
 

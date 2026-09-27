@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 674 |
-| **Last updated** | 3d |
+| **Stars** | 676 |
+| **Last updated** | 4d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 7 |
 | **Size** | 15,327 lines · 94 |
