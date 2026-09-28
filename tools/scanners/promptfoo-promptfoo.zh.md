@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `scanner` |
-| **Stars** | 25k |
+| **Stars** | 26k |
 | **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 100 |
-| **规模** | 1,047,391 lines · 2971 |
+| **规模** | 1,050,996 lines · 3001 |
 | **源码** | <https://github.com/promptfoo/promptfoo> |
 | **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *callout* |
 

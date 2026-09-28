@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `skill` |
 | **Stars** | 382 |
-| **最近更新** | 6d |
+| **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 4 |
-| **规模** | 39,821 lines · 240 |
+| **规模** | 40,105 lines · 242 |
 | **源码** | <https://github.com/hypnguyen1209/offensive-claude> |
 | **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） |
 
