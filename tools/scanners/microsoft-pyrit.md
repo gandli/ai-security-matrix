@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 524,326 lines · 1861 |
+| **Size** | 528,514 lines · 1871 |
 | **Source** | <https://github.com/microsoft/PyRIT> |
 | **Scopes & traits** | `llm` *callout* _remote_ _escape_ |
 
