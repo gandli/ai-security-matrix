@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 2.8k |
+| **Stars** | 2.9k |
 | **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 20 |
-| **Size** | 653,760 lines · 2598 |
+| **Size** | 693,539 lines · 2761 |
 | **Source** | <https://github.com/samugit83/redamon> |
 | **Scopes & traits** | `redteam` `ad` `network` `recon` *callout* _remote_ _escape_ |
 

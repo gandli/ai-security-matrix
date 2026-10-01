@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 17 |
-| **Size** | 398,445 lines · 1054 |
+| **Size** | 430,733 lines · 1302 |
 | **Source** | <https://github.com/vxcontrol/pentagi> |
 | **Scopes & traits** | `webapp` `network` `recon` _escape_ |
 

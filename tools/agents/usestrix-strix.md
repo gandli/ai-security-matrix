@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 73 |
-| **Size** | 98,110 lines · 357 |
+| **Size** | 97,908 lines · 358 |
 | **Source** | <https://github.com/usestrix/strix> |
 | **Scopes & traits** | `webapp` `api` `code` *callout* _remote_ |
 

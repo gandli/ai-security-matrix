@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `agent` |
-| **Stars** | 48k |
+| **Stars** | 49k |
 | **最近更新** | 1d |
 | **许可证** | AGPL-3.0 |
 | **维护者** | 8 |
-| **规模** | 51,503 lines · 206 |
+| **规模** | 51,521 lines · 207 |
 | **源码** | <https://github.com/KeygraphHQ/shannon> |
 | **作用范围/特征** | `webapp`（浏览器应用） / `api`（HTTP/RPC 接口） / `code`（源代码） |
 
