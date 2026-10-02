@@ -6,7 +6,7 @@ _模型上下文协议（MCP）工具服务器 · 14 个_
 - [hexstrike-ai](0x4m4-hexstrike-ai.zh.md) — 12k · HexStrike AI MCP Agents 是一个高级 MCP 服务器，让 AI 智能体（Claude、GPT、Copilot 等）自主运行 150+ 网络安全工具，用于自动化渗透测试、漏洞发现、漏洞赏金自动化与安全研究。无缝桥接 LLM 与真实世界的进攻性安全能力。
 - [GhidraMCP](lauriewired-ghidramcp.zh.md) — 10k · 面向 Ghidra 的 MCP 服务器。
 - [mcp-server](portswigger-mcp-server.zh.md) — 1.2k · 面向 Burp 的 MCP 服务器。
-- [MCP-Kali-Server](wh0am123-mcp-kali-server.zh.md) — 829 · 将 AI 智能体连接到 Linux 主机的 MCP 配置。
+- [MCP-Kali-Server](wh0am123-mcp-kali-server.zh.md) — 830 · 将 AI 智能体连接到 Linux 主机的 MCP 配置。
 - [mcp-security-hub](fuzzinglabs-mcp-security-hub.zh.md) — 796 · 不断增长的 MCP 服务器集合，为 AI 助手带来进攻性安全工具。Nmap、Ghidra、Nuclei、SQLMap、Hashcat 等。
 - [MetasploitMCP](gh05tcrew-metasploitmcp.zh.md) — 734 · 面向 Metasploit 的 MCP 服务器。
 - [mcp-for-security](cyproxio-mcp-for-security.zh.md) — 629 · 安全版 MCP：一系列面向 SQLMap、FFUF、NMAP、Masscan 等流行安全工具的模型上下文协议服务器，将安全与渗透测试集成进 AI 工作流。

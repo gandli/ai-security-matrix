@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 49 |
-| **Last updated** | 26d |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
-| **Size** | 37,285 lines · 145 |
+| **Size** | 41,019 lines · 151 |
 | **Source** | <https://github.com/zebbern/zebbern-kali-mcp> |
 | **Scopes & traits** | `network` `webapp` `recon` _escape_ |
 

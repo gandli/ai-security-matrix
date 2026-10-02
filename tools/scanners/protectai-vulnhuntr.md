@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 2.8k |
-| **Last updated** | 1.6y |
+| **Last updated** | 1.7y |
 | **Licence** | AGPL-3.0 |
 | **Maintainers** | 6 |
 | **Size** | 1,336 lines · 5 |

@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 1.1k |
-| **Last updated** | 1d |
+| **Stars** | 1.2k |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 17 |
-| **Size** | 158,912 lines · 481 |
+| **Size** | 162,480 lines · 499 |
 | **Source** | <https://github.com/xalgorix/xalgorix> |
 | **Scopes & traits** | `recon` `webapp` `network` *callout* _remote_ _escape_ |
 
