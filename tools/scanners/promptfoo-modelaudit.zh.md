@@ -9,7 +9,7 @@
 | **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 17 |
-| **规模** | 656,777 lines · 506 |
+| **规模** | 656,834 lines · 506 |
 | **源码** | <https://github.com/promptfoo/modelaudit> |
 | **作用范围/特征** | `modfile`（序列化模型文件） / *callout* |
 

@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 357 |
-| **Last updated** | 113d |
+| **Last updated** | 114d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
 | **Size** | 34,549 lines · 79 |
