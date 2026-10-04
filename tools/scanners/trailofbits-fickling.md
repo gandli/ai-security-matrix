@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 670 |
-| **Last updated** | 2d |
+| **Last updated** | 3d |
 | **Licence** | LGPL |
 | **Maintainers** | 23 |
 | **Size** | 9,573 lines · 46 |

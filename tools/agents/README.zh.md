@@ -8,11 +8,11 @@ _自主运行或多步骤编排的 AI 工具 · 25 个_
 - [PentestGPT](greydgl-pentestgpt.zh.md) — 16k · 由大语言模型驱动的自动化渗透测试智能体框架。
 - [cai](aliasrobotics-cai.zh.md) — 9.8k · Cybersecurity AI (CAI)，面向 AI 安全的框架。
 - [CyberStrikeAI](aipentest-cyberstrikeai.zh.md) — 7.1k · AI 原生网络安全的行动系统——让意图变为受控执行、证据变为运行记忆，并使每次操作都优化下一次。
-- [Decepticon](purpleailab-decepticon.zh.md) — 5.6k · 面向红队的自主攻击智能体。
+- [Decepticon](purpleailab-decepticon.zh.md) — 5.7k · 面向红队的自主攻击智能体。
 - [pentestagent](gh05tcrew-pentestagent.zh.md) — 3.1k · PentestAgent 是面向黑盒安全测试的 AI 智能体框架，支持漏洞赏金、红队与渗透测试工作流。
 - [redamon](samugit83-redamon.zh.md) — 2.9k · AI 驱动的智能体化红队框架，从零人工干预地自动化进攻性安全作战，从侦察到利用再到后渗透。
 - [Pentest-Swarm-AI](armur-ai-pentest-swarm-ai.zh.md) — 2.7k · 用 AI 智能体集群进行自主渗透测试。以 ReAct 推理编排侦察、分类、利用与报告专家——支持漏洞赏金、持续监控与 CTF 模式。基于 Go 与 7+ 原生安全工具构建。
-- [mantis](google-mantis.zh.md) — 2.2k · Reads a codebase and its commit history, builds a threat model from them, and sends agents to chase each hypothesis it raises. It then tries to reproduce…
+- [mantis](google-mantis.zh.md) — 2.3k · Reads a codebase and its commit history, builds a threat model from them, and sends agents to chase each hypothesis it raises. It then tries to reproduce…
 - [pentest-ai](0xsteph-pentest-ai.zh.md) — 1.7k · 开源 AI 渗透测试器，为每个发现提供证明。机器预言机会重跑每个利用；经验证的漏洞附带可复现的证明包。
 - [pentest-copilot](bugbasesecurity-pentest-copilot.zh.md) — 1.5k · Pentest Copilot 是基于浏览器的 AI 道德黑客助手，旨在简化渗透测试工作流。
 - [hackingBuddyGPT](ipa-lab-hackingbuddygpt.zh.md) — 1.2k · 用不超过 50 行代码帮助道德黑客使用大语言模型。
