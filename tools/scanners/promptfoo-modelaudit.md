@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 17 |
-| **Size** | 645,116 lines · 518 |
+| **Size** | 646,591 lines · 525 |
 | **Source** | <https://github.com/promptfoo/modelaudit> |
 | **Scopes & traits** | `modfile` *callout* |
 
