@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 2.3k |
-| **Last updated** | today |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 3 |
-| **Size** | 55,068 lines · 100 |
+| **Size** | 57,126 lines · 107 |
 | **Source** | <https://github.com/google/mantis> |
 | **Scopes & traits** | `code` |
 

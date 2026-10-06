@@ -1,14 +1,17 @@
 # 扫描器
 
-_基于规则或 LLM 的检测与评估工具 · 20 个_
+_基于规则或 LLM 的检测与评估工具 · 23 个_
 
 - [promptfoo](promptfoo-promptfoo.zh.md) — 26k · 测试你的提示词、智能体与 RAG。面向 AI 的红队/渗透/漏洞扫描。对比 GPT、Claude、Gemini、DeepSeek 等的表现。简洁的声明式配置，支持命令行与 CI/CD 集成。被 OpenAI 与 Anthropic 采用。
+- [SkillSpector](nvidia-skillspector.zh.md) — 19k · Checks an agent skill before you install it, following the files it pulls in and asking a model whether any of it is trying to misdirect the agent. Each…
 - [garak](nvidia-garak.zh.md) — 9.4k · LLM 漏洞扫描器。
-- [AI-Infra-Guard](tencent-ai-infra-guard.zh.md) — 6.7k · 全栈 AI 红队平台，通过 Agent 扫描、技能扫描、MCP 扫描、AI 基础设施扫描与 LLM 越狱评估来守护 AI 生态。
+- [AI-Infra-Guard](tencent-ai-infra-guard.zh.md) — 6.8k · 全栈 AI 红队平台，通过 Agent 扫描、技能扫描、MCP 扫描、AI 基础设施扫描与 LLM 越狱评估来守护 AI 生态。
+- [claude-code-security-review](anthropics-claude-code-security-review.zh.md) — 6.3k · A GitHub Action that has a model review only the diff of a pull request, comments the security issues inline, then filters its own findings to cut the…
 - [PyRIT](microsoft-pyrit.zh.md) — 4.6k · 面向生成式 AI 的 Python 风险识别工具（PyRIT）是一个开源框架，赋能安全从业者与工程师主动识别生成式 AI 系统的风险。
 - [agent-scan](snyk-agent-scan.zh.md) — 3.1k · 面向 AI 智能体、MCP 服务器与智能体技能的安全扫描器。
 - [deepteam](confident-ai-deepteam.zh.md) — 3.0k · DeepTeam 是一个对 LLM 与 AI 智能体进行红队的框架。
 - [vulnhuntr](protectai-vulnhuntr.zh.md) — 2.8k · 使用大语言模型进行零样本漏洞发现。
+- [skill-scanner](cisco-ai-defense-skill-scanner.zh.md) — 2.6k · Rules on whether an agent skill is malicious, with a model judge whose catch and false-positive rates are published against a labelled test set. A team…
 - [agentic_security](msoedov-agentic_security.zh.md) — 2.0k · 智能体化 LLM 漏洞扫描器 / AI 红队工具包 🧪
 - [FuzzyAI](cyberark-fuzzyai.zh.md) — 1.6k · 强大的自动化 LLM 模糊测试工具，帮助开发者与安全研究者识别并缓解其 LLM API 中的潜在越狱。
 - [promptmap](utkusen-promptmap.zh.md) — 1.3k · 面向自定义 LLM 应用的安全扫描器。
