@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 10k |
+| **Stars** | 11k |
 | **Last updated** | 1.3y |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 10 |
