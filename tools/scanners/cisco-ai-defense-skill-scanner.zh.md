@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `scanner` |
 | **Stars** | 2.6k |
-| **最近更新** | 3d |
+| **最近更新** | today |
 | **许可证** | Apache-2.0 |
 | **维护者** | 50 |
-| **规模** | 211,065 lines · 488 |
+| **规模** | 212,215 lines · 494 |
 | **源码** | <https://github.com/cisco-ai-defense/skill-scanner> |
 | **作用范围/特征** | `agentic`（智能体及其循环） |
 

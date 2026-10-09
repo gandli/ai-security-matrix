@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 137 |
-| **Last updated** | 50d |
+| **Stars** | 138 |
+| **Last updated** | 51d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 5 |
 | **Size** | 11,092 lines · 9 |

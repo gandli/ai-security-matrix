@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 377 |
+| **Stars** | 378 |
 | **Last updated** | 1.4y |
 | **Licence** | MIT |
 | **Maintainers** | 1 |

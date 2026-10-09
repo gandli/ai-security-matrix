@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 2.6k |
-| **Last updated** | 3d |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 50 |
-| **Size** | 211,065 lines · 488 |
+| **Size** | 212,215 lines · 494 |
 | **Source** | <https://github.com/cisco-ai-defense/skill-scanner> |
 | **Scopes & traits** | `agentic` |
 
