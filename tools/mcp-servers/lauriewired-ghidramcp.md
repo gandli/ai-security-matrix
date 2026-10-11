@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 11k |
-| **Last updated** | 1.3y |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 10 |
-| **Size** | 2,027 lines · 3 |
+| **Size** | 3,102 lines · 26 |
 | **Source** | <https://github.com/LaurieWired/GhidraMCP> |
 | **Scopes & traits** | `binary` |
 
