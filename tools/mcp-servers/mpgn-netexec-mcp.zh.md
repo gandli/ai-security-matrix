@@ -9,7 +9,7 @@
 | **最近更新** | 1d |
 | **许可证** | BSD-2 |
 | **维护者** | 1 |
-| **规模** | 9,983 lines · 22 |
+| **规模** | 10,172 lines · 22 |
 | **源码** | <https://github.com/mpgn/NetExec-mcp> |
 | **作用范围/特征** | `ad`（Active Directory 域） / `network`（主机/端口/流量） |
 
