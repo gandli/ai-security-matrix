@@ -6,12 +6,12 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 1 |
-| **最近更新** | 60d |
+| **最近更新** | 61d |
 | **许可证** | Apache-2.0 |
 | **维护者** | 68 |
 | **规模** | 59,092 lines · 275 |
 | **源码** | <https://github.com/Nightlysec/nightly> |
-| **作用范围/特征** | `webapp`（浏览器应用） / `api`（HTTP/RPC 接口） / `code`（源代码） |
+| **作用范围/特征** | `webapp`（浏览器应用） / `api`（HTTP/RPC 接口） / `code`（源代码） / `recon`（信息收集） |
 
 ## 内置工具
 
