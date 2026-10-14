@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 5.0k |
+| **Stars** | 5.1k |
 | **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 11 |

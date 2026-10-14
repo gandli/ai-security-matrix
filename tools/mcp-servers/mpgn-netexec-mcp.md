@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 88 |
-| **Last updated** | 2d |
+| **Last updated** | 3d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
 | **Size** | 10,172 lines · 22 |
