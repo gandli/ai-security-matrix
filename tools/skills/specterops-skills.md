@@ -5,10 +5,10 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 711 |
-| **Last updated** | 21d |
+| **Stars** | 713 |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 7 |
+| **Maintainers** | 8 |
 | **Size** | 15,327 lines · 94 |
 | **Source** | <https://github.com/SpecterOps/skills> |
 | **Scopes & traits** | `ad` `binary` `code` `entra` `network` `recon` `redteam` `social` `webapp` |

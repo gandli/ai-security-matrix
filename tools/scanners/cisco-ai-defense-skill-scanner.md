@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 50 |
-| **Size** | 212,215 lines · 494 |
+| **Size** | 212,770 lines · 498 |
 | **Source** | <https://github.com/cisco-ai-defense/skill-scanner> |
 | **Scopes & traits** | `agentic` |
 

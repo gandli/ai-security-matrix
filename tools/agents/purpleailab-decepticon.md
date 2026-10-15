@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 6.0k |
+| **Stars** | 6.1k |
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 20 |
-| **Size** | 214,440 lines · 1093 |
+| **Maintainers** | 21 |
+| **Size** | 215,667 lines · 1101 |
 | **Source** | <https://github.com/PurpleAILAB/Decepticon> |
 | **Scopes & traits** | `redteam` `network` `webapp` *callout* _remote_ _escape_ |
 

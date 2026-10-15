@@ -5,17 +5,21 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 808 |
-| **Last updated** | 189d |
-| **Licence** | MIT |
-| **Maintainers** | 8 |
-| **Size** | 13,500 lines · 32 |
+| **Stars** | — |
+| **Last updated** | — |
+| **Licence** | not checked |
+| **Maintainers** | not checked |
+| **Size** | not checked Bundled tools not checked |
 | **Source** | <https://github.com/FuzzingLabs/mcp-security-hub> |
-| **Scopes & traits** | `network` `webapp` `binary` `recon` _remote_ _escape_ |
+| **Scopes & traits** | `network` `webapp` `binary` `recon` |
 
 ## Bundled tools
 
-`binwalk`, `hashcat`, `httpx`, `katana`, `masscan`, `medusa`, `naabu`, `nmap`, `nuclei`, `subfinder`, `tlsx`, `waybackurls`
+`not checked`
+
+## Shares files with
+
+not checked
 
 ---
 
