@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 476 |
-| **Last updated** | 38d |
+| **Stars** | 479 |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 3 |
-| **Size** | 9,529 lines · 35 |
+| **Size** | 9,819 lines · 44 |
 | **Source** | <https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill> |
 | **Scopes & traits** | `redteam` `binary` `llm` |
 

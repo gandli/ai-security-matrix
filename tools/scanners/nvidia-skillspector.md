@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 100 |
-| **Size** | 201,757 lines · 327 |
+| **Size** | 202,400 lines · 328 |
 | **Source** | <https://github.com/NVIDIA/SkillSpector> |
 | **Scopes & traits** | `agentic` _remote_ |
 

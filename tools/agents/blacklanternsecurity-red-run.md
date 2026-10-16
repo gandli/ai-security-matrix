@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 289 |
-| **Last updated** | 17d |
+| **Stars** | 290 |
+| **Last updated** | 18d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 3 |
 | **Size** | 13,453 lines · 46 |

@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 671 |
+| **Stars** | 672 |
 | **Last updated** | 1d |
 | **Licence** | LGPL |
 | **Maintainers** | 23 |
