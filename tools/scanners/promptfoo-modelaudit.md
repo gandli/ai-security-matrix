@@ -8,8 +8,8 @@
 | **Stars** | 79 |
 | **Last updated** | 1d |
 | **Licence** | MIT |
-| **Maintainers** | 17 |
-| **Size** | 637,235 lines · 525 |
+| **Maintainers** | 18 |
+| **Size** | 637,124 lines · 525 |
 | **Source** | <https://github.com/promptfoo/modelaudit> |
 | **Scopes & traits** | `modfile` *callout* |
 
