@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 378 |
-| **Last updated** | 128d |
+| **Stars** | 379 |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
-| **Size** | 34,549 lines · 79 |
+| **Size** | 34,602 lines · 79 |
 | **Source** | <https://github.com/capture0x/AdStrike> |
 | **Scopes & traits** | `ad` ~licence~ |
 
