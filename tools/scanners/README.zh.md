@@ -3,7 +3,7 @@
 _基于规则或 LLM 的检测与评估工具 · 23 个_
 
 - [promptfoo](promptfoo-promptfoo.zh.md) — 26k · 测试你的提示词、智能体与 RAG。面向 AI 的红队/渗透/漏洞扫描。对比 GPT、Claude、Gemini、DeepSeek 等的表现。简洁的声明式配置，支持命令行与 CI/CD 集成。被 OpenAI 与 Anthropic 采用。
-- [SkillSpector](nvidia-skillspector.zh.md) — 20k · Checks an agent skill before you install it, following the files it pulls in and asking a model whether any of it is trying to misdirect the agent. Each…
+- [SkillSpector](nvidia-skillspector.zh.md) — 21k · Checks an agent skill before you install it, following the files it pulls in and asking a model whether any of it is trying to misdirect the agent. Each…
 - [garak](nvidia-garak.zh.md) — 9.6k · LLM 漏洞扫描器。
 - [AI-Infra-Guard](tencent-ai-infra-guard.zh.md) — 6.9k · 全栈 AI 红队平台，通过 Agent 扫描、技能扫描、MCP 扫描、AI 基础设施扫描与 LLM 越狱评估来守护 AI 生态。
 - [claude-code-security-review](anthropics-claude-code-security-review.zh.md) — 6.4k · A GitHub Action that has a model review only the diff of a pull request, comments the security issues inline, then filters its own findings to cut the…
@@ -19,7 +19,7 @@ _基于规则或 LLM 的检测与评估工具 · 23 个_
 - [agentic-radar](splx-ai-agentic-radar.zh.md) — 1.1k · 面向你的 LLM 智能体工作流的安全扫描器。
 - [mcp-scanner](cisco-ai-defense-mcp-scanner.zh.md) — 1.1k · 扫描 MCP 服务器的潜在威胁与安全发现。
 - [counterfit](azure-counterfit.zh.md) — 944 · 提供通用自动化层以评估机器学习模型安全性的 CLI。
-- [modelscan](protectai-modelscan.zh.md) — 784 · 防范模型序列化攻击。
+- [modelscan](protectai-modelscan.zh.md) — 785 · 防范模型序列化攻击。
 - [fickling](trailofbits-fickling.zh.md) — 672 · Python pickle 反编译与静态分析工具。
 - [AgentHound](adithyan-ak-agenthound.zh.md) — 453 · 面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。
 - [picklescan](mmaitre314-picklescan.zh.md) — 427 · 检测执行可疑行为的 Python Pickle 文件的安全扫描器。
