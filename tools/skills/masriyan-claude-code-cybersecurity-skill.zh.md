@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `skill` |
-| **Stars** | 487 |
-| **最近更新** | 3d |
+| **Stars** | 490 |
+| **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 3 |
-| **规模** | 9,819 lines · 44 |
+| **规模** | 11,355 lines · 44 |
 | **源码** | <https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill> |
 | **作用范围/特征** | `redteam`（攻击模拟） / `binary`（二进制/固件） / `llm`（大模型本身） |
 
