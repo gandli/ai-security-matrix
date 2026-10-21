@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | CC-BY-SA-4.0 |
 | **Maintainers** | 63 |
-| **Size** | 91,781 lines · 262 |
+| **Size** | 100,301 lines · 296 |
 | **Source** | <https://github.com/trailofbits/skills> |
 | **Scopes & traits** | `agentic` `binary` `code` `webapp` _remote_ |
 

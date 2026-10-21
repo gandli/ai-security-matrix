@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `scanner` |
-| **Stars** | 79 |
-| **最近更新** | 1d |
+| **Stars** | 81 |
+| **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 18 |
-| **规模** | 699,033 lines · 527 |
+| **规模** | 699,044 lines · 527 |
 | **源码** | <https://github.com/promptfoo/modelaudit> |
 | **作用范围/特征** | `modfile`（序列化模型文件） / *callout* |
 
