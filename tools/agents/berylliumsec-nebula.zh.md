@@ -8,8 +8,8 @@
 | **Stars** | 1.1k |
 | **最近更新** | today |
 | **许可证** | BSD-2 |
-| **维护者** | 7 |
-| **规模** | 506,926 lines · 1104 |
+| **维护者** | 8 |
+| **规模** | 507,570 lines · 1104 |
 | **源码** | <https://github.com/berylliumsec/nebula> |
 | **作用范围/特征** | `network`（主机/端口/流量） / `recon`（信息收集） / *callout* |
 
