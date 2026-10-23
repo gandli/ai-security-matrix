@@ -9,7 +9,7 @@
 | **最近更新** | 1d |
 | **许可证** | Apache-2.0 |
 | **维护者** | 29 |
-| **规模** | 105,704 lines · 379 |
+| **规模** | 106,279 lines · 379 |
 | **源码** | <https://github.com/cisco-ai-defense/mcp-scanner> |
 | **作用范围/特征** | `agentic`（智能体及其循环） |
 
