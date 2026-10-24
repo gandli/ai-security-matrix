@@ -6,9 +6,9 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 296 |
-| **最近更新** | 25d |
-| **许可证** | GPL-3.0 |
-| **维护者** | 3 |
+| **最近更新** | 1d |
+| **许可证** | AGPL-3.0 |
+| **维护者** | 4 |
 | **规模** | 13,453 lines · 46 |
 | **源码** | <https://github.com/blacklanternsecurity/red-run> |
 | **作用范围/特征** | `network`（主机/端口/流量） / `ad`（Active Directory 域） / `webapp`（浏览器应用） / `recon`（信息收集） |

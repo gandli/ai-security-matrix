@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 2 |
-| **Size** | 227,125 lines · 437 |
+| **Size** | 366,001 lines · 743 |
 | **Source** | <https://github.com/MythicAgents/Sage> |
 | **Scopes & traits** | `redteam` `ad` |
 

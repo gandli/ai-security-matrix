@@ -6,9 +6,9 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 296 |
-| **Last updated** | 25d |
-| **Licence** | GPL-3.0 |
-| **Maintainers** | 3 |
+| **Last updated** | 1d |
+| **Licence** | AGPL-3.0 |
+| **Maintainers** | 4 |
 | **Size** | 13,453 lines · 46 |
 | **Source** | <https://github.com/blacklanternsecurity/red-run> |
 | **Scopes & traits** | `network` `ad` `webapp` `recon` |

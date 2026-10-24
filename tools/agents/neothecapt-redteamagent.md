@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 153 |
-| **Last updated** | 82d |
+| **Stars** | 154 |
+| **Last updated** | 83d |
 | **Licence** | no licence file |
 | **Maintainers** | 1 |
 | **Size** | 28,707 lines · 140 |

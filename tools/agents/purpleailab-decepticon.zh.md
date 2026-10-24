@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 6.4k |
-| **最近更新** | today |
+| **最近更新** | 1d |
 | **许可证** | Apache-2.0 |
 | **维护者** | 23 |
-| **规模** | 234,545 lines · 1245 |
+| **规模** | 234,861 lines · 1248 |
 | **源码** | <https://github.com/PurpleAILAB/Decepticon> |
 | **作用范围/特征** | `redteam`（攻击模拟） / `network`（主机/端口/流量） / `webapp`（浏览器应用） / *callout* |
 
