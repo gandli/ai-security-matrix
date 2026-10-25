@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 83 |
-| **Last updated** | 6d |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 2 |
-| **Size** | 29,519 lines · 74 |
+| **Size** | 29,833 lines · 74 |
 | **Source** | <https://github.com/Lab700xOrg/aisbom> |
 | **Scopes & traits** | `modfile` |
 

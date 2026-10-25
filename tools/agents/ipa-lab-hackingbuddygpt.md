@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.3k |
-| **Last updated** | 23d |
+| **Last updated** | 1d |
 | **Licence** | MIT |
-| **Maintainers** | 15 |
-| **Size** | 18,450 lines · 132 |
+| **Maintainers** | 16 |
+| **Size** | 18,449 lines · 132 |
 | **Source** | <https://github.com/ipa-lab/hackingBuddyGPT> |
 | **Scopes & traits** | `network` |
 

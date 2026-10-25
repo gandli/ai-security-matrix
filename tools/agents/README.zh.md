@@ -2,7 +2,7 @@
 
 _自主运行或多步骤编排的 AI 工具 · 26 个_
 
-- [strix](usestrix-strix.zh.md) — 71k · 开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。
+- [strix](usestrix-strix.zh.md) — 72k · 开源 AI 渗透测试工具，用于发现并修复应用中的漏洞。
 - [shannon](keygraphhq-shannon.zh.md) — 49k · Reads an application's source to pick its attack paths, then attacks the running web app and its API through a browser and command-line tools. A finding…
 - [pentagi](vxcontrol-pentagi.zh.md) — 32k · 完全自主的 AI 智能体系统，能够执行复杂的渗透测试任务。
 - [PentestGPT](greydgl-pentestgpt.zh.md) — 16k · 由大语言模型驱动的自动化渗透测试智能体框架。
@@ -18,8 +18,8 @@ _自主运行或多步骤编排的 AI 工具 · 26 个_
 - [hackingBuddyGPT](ipa-lab-hackingbuddygpt.zh.md) — 1.3k · 用不超过 50 行代码帮助道德黑客使用大语言模型。
 - [xalgorix](xalgorix-xalgorix.zh.md) — 1.2k · 自主 AI 渗透测试智能体——实时侦察、漏洞检测与利用编排。Go + TypeScript。
 - [nebula](berylliumsec-nebula.zh.md) — 1.1k · AI 驱动的渗透测试助手，自动化侦察、笔记与漏洞分析。
-- [h5i](h5i-dev-h5i.zh.md) — 805 · Gives an agent a browser that controls its own network traffic, so the model can capture, edit, replay and compare the requests a web app sends without a…
-- [AdStrike](capture0x-adstrike.zh.md) — 387 · AI 驱动的模块化 Active Directory 红队框架，用于授权渗透测试、AD 枚举、攻击路径分析、Kerberos/ADCS 工作流、报告、运维自动化与 MCP 集成。
+- [h5i](h5i-dev-h5i.zh.md) — 806 · Gives an agent a browser that controls its own network traffic, so the model can capture, edit, replay and compare the requests a web app sends without a…
+- [AdStrike](capture0x-adstrike.zh.md) — 388 · AI 驱动的模块化 Active Directory 红队框架，用于授权渗透测试、AD 枚举、攻击路径分析、Kerberos/ADCS 工作流、报告、运维自动化与 MCP 集成。
 - [red-run](blacklanternsecurity-red-run.zh.md) — 296 · An orchestrator inside Claude Code that runs a team of agents across an internal network and Active Directory engagement. It lays out the paths open to…
 - [RedteamAgent](neothecapt-redteamagent.zh.md) — 154 · 面向授权实验室与 Web 应用渗透工作流的 AI 红队智能体。将 Claude Code / OpenCode / Codex 变为结构化的侦察→测试→利用→报告流程，含容器化工具与可恢复状态。
 - [ares](dreadnode-ares.zh.md) — 98 · Ares 是自主安全运营平台，让 LLM 驱动的红队与蓝队智能体在真实基础设施上互相对抗，实现攻防的现实评估。
