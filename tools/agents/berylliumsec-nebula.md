@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 9 |
-| **Size** | 510,176 lines · 1107 |
+| **Size** | 510,450 lines · 1109 |
 | **Source** | <https://github.com/berylliumsec/nebula> |
 | **Scopes & traits** | `network` `recon` *callout* |
 

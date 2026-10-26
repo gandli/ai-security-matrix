@@ -5,17 +5,17 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 1.2k |
-| **Last updated** | 1d |
+| **Stars** | 1.3k |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 17 |
-| **Size** | 165,732 lines · 525 |
+| **Size** | 167,549 lines · 536 |
 | **Source** | <https://github.com/xalgorix/xalgorix> |
 | **Scopes & traits** | `recon` `webapp` `network` *callout* _remote_ _escape_ |
 
 ## Bundled tools
 
-`dirsearch`, `httpx`, `naabu`, `nuclei`, `seclists`
+`httpx`, `naabu`, `nuclei`
 
 ---
 

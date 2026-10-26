@@ -5,17 +5,17 @@
 | | |
 |---|---|
 | **类别** | `agent` |
-| **Stars** | 1.2k |
-| **最近更新** | 1d |
+| **Stars** | 1.3k |
+| **最近更新** | today |
 | **许可证** | Apache-2.0 |
 | **维护者** | 17 |
-| **规模** | 165,732 lines · 525 |
+| **规模** | 167,549 lines · 536 |
 | **源码** | <https://github.com/xalgorix/xalgorix> |
 | **作用范围/特征** | `recon`（信息收集） / `webapp`（浏览器应用） / `network`（主机/端口/流量） / *callout* |
 
 ## 内置工具
 
-`dirsearch`, `httpx`, `naabu`, `nuclei`, `seclists`
+`httpx`, `naabu`, `nuclei`
 
 ---
 
