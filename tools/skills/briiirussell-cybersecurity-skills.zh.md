@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `skill` |
-| **Stars** | 435 |
-| **最近更新** | today |
+| **Stars** | 444 |
+| **最近更新** | 1d |
 | **许可证** | MIT |
 | **维护者** | 2 |
-| **规模** | 0 lines · 0 |
+| **规模** | 72 lines · 1 |
 | **源码** | <https://github.com/briiirussell/cybersecurity-skills> |
 | **作用范围/特征** | `recon`（信息收集） / `webapp`（浏览器应用） |
 

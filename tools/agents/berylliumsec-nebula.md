@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.1k |
-| **Last updated** | 1d |
+| **Last updated** | 2d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 9 |
 | **Size** | 511,001 lines · 1110 |

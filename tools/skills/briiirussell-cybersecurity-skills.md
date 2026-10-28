@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 435 |
-| **Last updated** | today |
+| **Stars** | 444 |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 2 |
-| **Size** | 0 lines · 0 |
+| **Size** | 72 lines · 1 |
 | **Source** | <https://github.com/briiirussell/cybersecurity-skills> |
 | **Scopes & traits** | `recon` `webapp` |
 
