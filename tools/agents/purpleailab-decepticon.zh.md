@@ -15,7 +15,7 @@
 
 ## 内置工具
 
-`binwalk`, `radare2`
+`binwalk`, `exploitdb`, `radare2`
 
 ---
 

@@ -15,7 +15,7 @@
 
 ## Bundled tools
 
-`binwalk`, `radare2`
+`binwalk`, `exploitdb`, `radare2`
 
 ---
 

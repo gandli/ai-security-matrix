@@ -33,6 +33,6 @@
   <rect x="0" y="5" width="4" height="18" rx="2" fill="#ff10a3"/>
   <text x="24" y="20" fill="#ebf7f7" font-size="15" font-weight="600">技能集</text>
   <text x="51" y="20" fill="#7c8787" font-size="13">智能体技能包、提示词与剧本</text>
-  <text x="1020" y="20" fill="#ff10a3" font-size="15" font-weight="600" text-anchor="end" class="mono">19</text>
+  <text x="1020" y="20" fill="#ff10a3" font-size="15" font-weight="600" text-anchor="end" class="mono">20</text>
 </g>
 </svg>

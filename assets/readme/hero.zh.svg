@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160"
      role="img" aria-labelledby="title desc">
   <title id="title">AI Security Matrix</title>
-  <desc id="desc">A curated directory of 82 open-source AI-enabled security testing tools, mirrored daily.</desc>
+  <desc id="desc">A curated directory of 83 open-source AI-enabled security testing tools, mirrored daily.</desc>
   <defs>
     <style>text { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","PingFang SC","Microsoft YaHei",sans-serif; } .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }</style>
   </defs>
@@ -18,6 +18,6 @@
 <text x="492" y="128" fill="#8A929C" font-size="16" text-anchor="middle">扫描器</text>
 <text x="804" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">14</text>
 <text x="804" y="128" fill="#8A929C" font-size="16" text-anchor="middle">MCP 服务器</text>
-<text x="1116" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">19</text>
+<text x="1116" y="96" fill="#ebf7f7" font-size="52" font-weight="600" text-anchor="middle" class="mono">20</text>
 <text x="1116" y="128" fill="#8A929C" font-size="16" text-anchor="middle">技能集</text>
 </svg>

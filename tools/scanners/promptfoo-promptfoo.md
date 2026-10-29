@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 27k |
-| **Last updated** | 1d |
+| **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 1,154,160 lines · 3298 |
+| **Size** | 1,154,228 lines · 3298 |
 | **Source** | <https://github.com/promptfoo/promptfoo> |
 | **Scopes & traits** | `llm` `agentic` *callout* _remote_ ~opaque~ |
 

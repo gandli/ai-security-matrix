@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 84 |
-| **Last updated** | today |
+| **Stars** | 85 |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 18 |
 | **Size** | 699,044 lines · 527 |

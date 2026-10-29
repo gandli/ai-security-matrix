@@ -8,8 +8,8 @@
 | **Stars** | 1.1k |
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 30 |
-| **Size** | 106,613 lines · 381 |
+| **Maintainers** | 31 |
+| **Size** | 106,715 lines · 382 |
 | **Source** | <https://github.com/cisco-ai-defense/mcp-scanner> |
 | **Scopes & traits** | `agentic` |
 
