@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 298 |
-| **Last updated** | 6d |
+| **Stars** | 299 |
+| **Last updated** | 7d |
 | **Licence** | AGPL-3.0 |
 | **Maintainers** | 4 |
 | **Size** | 13,453 lines · 46 |

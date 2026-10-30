@@ -5,13 +5,17 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 0 |
-| **Last updated** | today |
+| **Stars** | 1 |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
-| **Size** | 7,892 lines · 61 |
+| **Size** | 8,948 lines · 70 |
 | **Source** | <https://github.com/vestjoe/trove-skill> |
 | **Scopes & traits** | `reporting` `ad` `network` _remote_ |
+
+## Bundled tools
+
+`masscan`, `naabu`, `nmap`, `nuclei`
 
 ## Shares files with
 

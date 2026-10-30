@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 675 |
-| **Last updated** | 6d |
+| **Stars** | 676 |
+| **Last updated** | today |
 | **Licence** | LGPL |
 | **Maintainers** | 23 |
-| **Size** | 9,590 lines · 46 |
+| **Size** | 9,671 lines · 46 |
 | **Source** | <https://github.com/trailofbits/fickling> |
 | **Scopes & traits** | `modfile` |
 

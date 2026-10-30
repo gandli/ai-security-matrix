@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 63 |
-| **Last updated** | 97d |
+| **Last updated** | 98d |
 | **Licence** | no licence file |
 | **Maintainers** | 1 |
 | **Size** | 0 lines · 0 |

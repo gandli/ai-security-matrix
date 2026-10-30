@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 789 |
-| **Last updated** | 31d |
+| **Stars** | 792 |
+| **Last updated** | 32d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 22 |
 | **Size** | 4,681 lines · 33 |
