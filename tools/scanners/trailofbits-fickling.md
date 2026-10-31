@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | LGPL |
 | **Maintainers** | 23 |
-| **Size** | 9,671 lines · 46 |
+| **Size** | 9,809 lines · 46 |
 | **Source** | <https://github.com/trailofbits/fickling> |
 | **Scopes & traits** | `modfile` |
 

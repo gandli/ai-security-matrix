@@ -9,7 +9,7 @@
 | **最近更新** | 1d |
 | **许可证** | MIT |
 | **维护者** | 1 |
-| **规模** | 8,948 lines · 70 |
+| **规模** | 8,975 lines · 70 |
 | **源码** | <https://github.com/vestjoe/trove-skill> |
 | **作用范围/特征** | `reporting`（） / `ad`（Active Directory 域） / `network`（主机/端口/流量） |
 

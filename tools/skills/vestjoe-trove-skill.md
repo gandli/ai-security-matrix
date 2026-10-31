@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
-| **Size** | 8,948 lines · 70 |
+| **Size** | 8,975 lines · 70 |
 | **Source** | <https://github.com/vestjoe/trove-skill> |
 | **Scopes & traits** | `reporting` `ad` `network` _remote_ |
 

@@ -9,7 +9,7 @@
 | **最近更新** | today |
 | **许可证** | LGPL |
 | **维护者** | 23 |
-| **规模** | 9,671 lines · 46 |
+| **规模** | 9,809 lines · 46 |
 | **源码** | <https://github.com/trailofbits/fickling> |
 | **作用范围/特征** | `modfile`（序列化模型文件） |
 
