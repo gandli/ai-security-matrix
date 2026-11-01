@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 9.9k |
+| **Stars** | 9.8k |
 | **Last updated** | archived |
 | **Licence** | MIT |
 | **Maintainers** | 1 |

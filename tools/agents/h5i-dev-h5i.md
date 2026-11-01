@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 886 |
-| **Last updated** | 2d |
+| **Stars** | 887 |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 23 |
-| **Size** | 153,543 lines · 296 |
+| **Size** | 154,105 lines · 299 |
 | **Source** | <https://github.com/h5i-dev/h5i> |
 | **Scopes & traits** | `webapp` `api` `recon` _remote_ |
 

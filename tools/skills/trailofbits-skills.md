@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 7.9k |
-| **Last updated** | 3d |
+| **Last updated** | 4d |
 | **Licence** | CC-BY-SA-4.0 |
 | **Maintainers** | 65 |
 | **Size** | 101,024 lines · 298 |
