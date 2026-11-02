@@ -9,7 +9,7 @@
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 2 |
-| **Size** | 30,691 lines · 75 |
+| **Size** | 30,706 lines · 75 |
 | **Source** | <https://github.com/Lab700xOrg/aisbom> |
 | **Scopes & traits** | `modfile` |
 

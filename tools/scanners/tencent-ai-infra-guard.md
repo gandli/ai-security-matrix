@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 7.3k |
-| **Last updated** | 2d |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 80 |
-| **Size** | 178,909 lines · 1146 |
+| **Maintainers** | 82 |
+| **Size** | 179,034 lines · 1147 |
 | **Source** | <https://github.com/Tencent/AI-Infra-Guard> |
 | **Scopes & traits** | `llm` `agentic` *callout* _remote_ |
 
