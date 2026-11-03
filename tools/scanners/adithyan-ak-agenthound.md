@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 456 |
+| **Stars** | 458 |
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 4 |
