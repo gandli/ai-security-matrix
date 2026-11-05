@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 4.7k |
+| **Stars** | 4.8k |
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 100 |
-| **Size** | 753,245 lines · 2473 |
+| **Size** | 761,776 lines · 2476 |
 | **Source** | <https://github.com/microsoft/PyRIT> |
 | **Scopes & traits** | `llm` *callout* _remote_ _escape_ |
 

@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 19 |
-| **Size** | 170,486 lines · 549 |
+| **Size** | 172,324 lines · 556 |
 | **Source** | <https://github.com/xalgorix/xalgorix> |
 | **Scopes & traits** | `recon` `webapp` `network` *callout* _remote_ _escape_ |
 

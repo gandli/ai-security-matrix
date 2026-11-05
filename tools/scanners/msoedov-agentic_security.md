@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 2.0k |
-| **Last updated** | 3d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 37 |
-| **Size** | 46,074 lines · 159 |
+| **Maintainers** | 38 |
+| **Size** | 46,141 lines · 160 |
 | **Source** | <https://github.com/msoedov/agentic_security> |
 | **Scopes & traits** | `llm` `agentic` *callout* |
 

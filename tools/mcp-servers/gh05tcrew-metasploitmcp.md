@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 756 |
-| **Last updated** | 272d |
+| **Stars** | 757 |
+| **Last updated** | 273d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 5 |
 | **Size** | 3,219 lines · 7 |

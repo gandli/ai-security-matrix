@@ -6,16 +6,16 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 74k |
-| **Last updated** | 1d |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 76 |
-| **Size** | 105,622 lines · 380 |
+| **Maintainers** | 77 |
+| **Size** | 105,799 lines · 381 |
 | **Source** | <https://github.com/usestrix/strix> |
 | **Scopes & traits** | `webapp` `api` `code` `recon` *callout* _remote_ |
 
 ## Bundled tools
 
-`arjun`, `dirsearch`, `ffuf`, `httpx`, `katana`, `naabu`, `ncat`, `nmap`, `nuclei`, `semgrep`, `sqlmap`, `subfinder`, `wafw00f`
+`arjun`, `dirsearch`, `ffuf`, `httpx`, `katana`, `naabu`, `ncat`, `nmap`, `nuclei`, `sqlmap`, `subfinder`, `wafw00f`
 
 ## Shares files with
 
