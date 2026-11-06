@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 0 |
-| **Last updated** | 2d |
+| **Stars** | 1 |
+| **Last updated** | 1d |
 | **Licence** | GPL-3.0 |
-| **Maintainers** | 14 |
-| **Size** | 7,207 lines · 42 |
+| **Maintainers** | 15 |
+| **Size** | 7,251 lines · 42 |
 | **Source** | <https://github.com/PortSwigger/mcp-server> |
 | **Scopes & traits** | `webapp` `api` ~opaque~ |
 

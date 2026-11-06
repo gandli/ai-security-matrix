@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 5 |
-| **Size** | 93,975 lines · 173 |
+| **Size** | 95,152 lines · 174 |
 | **Source** | <https://github.com/google/mantis> |
 | **Scopes & traits** | `code` |
 

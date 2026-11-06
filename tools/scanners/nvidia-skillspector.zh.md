@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `scanner` |
-| **Stars** | 24k |
-| **最近更新** | 1d |
+| **Stars** | 25k |
+| **最近更新** | today |
 | **许可证** | Apache-2.0 |
 | **维护者** | 100 |
-| **规模** | 246,263 lines · 386 |
+| **规模** | 246,497 lines · 387 |
 | **源码** | <https://github.com/NVIDIA/SkillSpector> |
 | **作用范围/特征** | `agentic`（智能体及其循环） / *callout* |
 
