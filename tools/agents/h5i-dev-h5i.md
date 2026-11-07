@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 894 |
+| **Stars** | 898 |
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 23 |
