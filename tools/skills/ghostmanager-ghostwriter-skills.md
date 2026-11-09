@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 11 |
-| **Last updated** | 51d |
+| **Last updated** | 52d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
 | **Size** | 4,216 lines · 14 |
