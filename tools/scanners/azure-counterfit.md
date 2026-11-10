@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 942 |
+| **Stars** | 941 |
 | **Last updated** | archived |
 | **Licence** | MIT |
 | **Maintainers** | 9 |

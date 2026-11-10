@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 74k |
+| **Stars** | 75k |
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 78 |
-| **Size** | 105,799 lines · 381 |
+| **Size** | 106,138 lines · 383 |
 | **Source** | <https://github.com/usestrix/strix> |
 | **Scopes & traits** | `webapp` `api` `code` `recon` *callout* _remote_ |
 

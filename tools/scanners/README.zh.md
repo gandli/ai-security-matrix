@@ -18,9 +18,9 @@ _基于规则或 LLM 的检测与评估工具 · 23 个_
 - [power-pwn](mbrg-power-pwn.zh.md) — 1.3k · 用于发现、侦察与道德评估 AI 智能体的攻防安全工具集。
 - [agentic-radar](splx-ai-agentic-radar.zh.md) — 1.1k · 面向你的 LLM 智能体工作流的安全扫描器。
 - [mcp-scanner](cisco-ai-defense-mcp-scanner.zh.md) — 1.1k · 扫描 MCP 服务器的潜在威胁与安全发现。
-- [counterfit](azure-counterfit.zh.md) — 942 · 提供通用自动化层以评估机器学习模型安全性的 CLI。
+- [counterfit](azure-counterfit.zh.md) — 941 · 提供通用自动化层以评估机器学习模型安全性的 CLI。
 - [modelscan](protectai-modelscan.zh.md) — 793 · 防范模型序列化攻击。
-- [fickling](trailofbits-fickling.zh.md) — 676 · Python pickle 反编译与静态分析工具。
+- [fickling](trailofbits-fickling.zh.md) — 677 · Python pickle 反编译与静态分析工具。
 - [AgentHound](adithyan-ak-agenthound.zh.md) — 462 · 面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。
 - [picklescan](mmaitre314-picklescan.zh.md) — 429 · 检测执行可疑行为的 Python Pickle 文件的安全扫描器。
 - [modelaudit](promptfoo-modelaudit.zh.md) — 86 · 面向 AI/ML 模型文件的安全扫描器，在部署前检测恶意代码、后门与漏洞。
