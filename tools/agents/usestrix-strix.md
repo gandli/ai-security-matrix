@@ -15,7 +15,7 @@
 
 ## Bundled tools
 
-`arjun`, `dirsearch`, `ffuf`, `httpx`, `katana`, `naabu`, `ncat`, `nmap`, `nuclei`, `sqlmap`, `subfinder`, `wafw00f`
+`arjun`, `dirsearch`, `ffuf`, `httpx`, `naabu`, `ncat`, `nmap`, `nuclei`, `sqlmap`, `subfinder`, `wafw00f`
 
 ## Shares files with
 

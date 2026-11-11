@@ -15,7 +15,7 @@
 
 ## 内置工具
 
-`arjun`, `dirsearch`, `ffuf`, `httpx`, `katana`, `naabu`, `ncat`, `nmap`, `nuclei`, `sqlmap`, `subfinder`, `wafw00f`
+`arjun`, `dirsearch`, `ffuf`, `httpx`, `naabu`, `ncat`, `nmap`, `nuclei`, `sqlmap`, `subfinder`, `wafw00f`
 
 ## 与以下项目共享文件
 
