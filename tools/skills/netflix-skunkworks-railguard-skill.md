@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 81 |
-| **Last updated** | 251d |
+| **Last updated** | 252d |
 | **Licence** | no licence file |
 | **Maintainers** | 1 |
 | **Size** | 8,932 lines · 30 |

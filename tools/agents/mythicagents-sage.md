@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 43 |
-| **Last updated** | 12d |
+| **Stars** | 45 |
+| **Last updated** | today |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 2 |
-| **Size** | 366,001 lines · 743 |
+| **Size** | 410,770 lines · 822 |
 | **Source** | <https://github.com/MythicAgents/Sage> |
 | **Scopes & traits** | `redteam` `ad` |
 

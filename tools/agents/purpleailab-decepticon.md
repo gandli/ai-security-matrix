@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 24 |
-| **Size** | 242,338 lines · 1323 |
+| **Size** | 227,750 lines · 1203 |
 | **Source** | <https://github.com/PurpleAILAB/Decepticon> |
 | **Scopes & traits** | `redteam` `network` `webapp` *callout* _remote_ _escape_ |
 

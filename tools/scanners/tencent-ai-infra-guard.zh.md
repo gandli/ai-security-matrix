@@ -8,8 +8,8 @@
 | **Stars** | 7.5k |
 | **最近更新** | today |
 | **许可证** | Apache-2.0 |
-| **维护者** | 85 |
-| **规模** | 178,790 lines · 1143 |
+| **维护者** | 86 |
+| **规模** | 184,820 lines · 1168 |
 | **源码** | <https://github.com/Tencent/AI-Infra-Guard> |
 | **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *callout* |
 

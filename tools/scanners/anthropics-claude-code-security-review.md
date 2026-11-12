@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 6.8k |
-| **Last updated** | 273d |
+| **Last updated** | 274d |
 | **Licence** | MIT |
 | **Maintainers** | 3 |
 | **Size** | 7,427 lines · 27 |

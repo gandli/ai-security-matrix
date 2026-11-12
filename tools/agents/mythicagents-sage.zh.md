@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `agent` |
-| **Stars** | 43 |
-| **最近更新** | 12d |
+| **Stars** | 45 |
+| **最近更新** | today |
 | **许可证** | GPL-3.0 |
 | **维护者** | 2 |
-| **规模** | 366,001 lines · 743 |
+| **规模** | 410,770 lines · 822 |
 | **源码** | <https://github.com/MythicAgents/Sage> |
 | **作用范围/特征** | `redteam`（攻击模拟） / `ad`（Active Directory 域） |
 

@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `skill` |
 | **Stars** | 11k |
-| **最近更新** | 30d |
+| **最近更新** | 1d |
 | **许可证** | MIT |
-| **维护者** | 9 |
-| **规模** | 422 lines · 3 |
+| **维护者** | 12 |
+| **规模** | 531 lines · 4 |
 | **源码** | <https://github.com/SnailSploit/Claude-Red> |
 | **作用范围/特征** | `redteam`（攻击模拟） / `binary`（二进制/固件） / `webapp`（浏览器应用） / `ad`（Active Directory 域） |
 

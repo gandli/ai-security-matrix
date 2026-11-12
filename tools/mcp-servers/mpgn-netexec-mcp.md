@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | **Category** | `mcp` |
-| **Stars** | 116 |
-| **Last updated** | 4d |
+| **Stars** | 117 |
+| **Last updated** | 5d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
 | **Size** | 11,094 lines · 22 |
