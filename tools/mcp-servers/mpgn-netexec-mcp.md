@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `mcp` |
 | **Stars** | 117 |
-| **Last updated** | 5d |
+| **Last updated** | 1d |
 | **Licence** | BSD-2 |
 | **Maintainers** | 1 |
-| **Size** | 11,094 lines · 22 |
+| **Size** | 11,568 lines · 22 |
 | **Source** | <https://github.com/mpgn/NetExec-mcp> |
 | **Scopes & traits** | `ad` `network` |
 

@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 8.1k |
+| **Stars** | 8.2k |
 | **Last updated** | 1d |
 | **Licence** | CC-BY-SA-4.0 |
 | **Maintainers** | 66 |
-| **Size** | 101,366 lines · 301 |
+| **Size** | 111,296 lines · 334 |
 | **Source** | <https://github.com/trailofbits/skills> |
 | **Scopes & traits** | `agentic` `binary` `code` `webapp` _remote_ |
 

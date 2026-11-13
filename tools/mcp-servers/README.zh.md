@@ -8,7 +8,7 @@ _模型上下文协议（MCP）工具服务器 · 14 个_
 - [MCP-Kali-Server](wh0am123-mcp-kali-server.zh.md) — 872 · 将 AI 智能体连接到 Linux 主机的 MCP 配置。
 - [MetasploitMCP](gh05tcrew-metasploitmcp.zh.md) — 760 · 面向 Metasploit 的 MCP 服务器。
 - [mcp-for-security](cyproxio-mcp-for-security.zh.md) — 629 · 安全版 MCP：一系列面向 SQLMap、FFUF、NMAP、Masscan 等流行安全工具的模型上下文协议服务器，将安全与渗透测试集成进 AI 工作流。
-- [BloodHound-MCP-AI](mordavid-bloodhound-mcp-ai.zh.md) — 383 · BloodHound-MCP-AI 通过模型上下文协议将 BloodHound 与 AI 连接，让安全从业者用自然语言而非复杂的 Cypher 查询分析 Active Directory 攻击路径。
+- [BloodHound-MCP-AI](mordavid-bloodhound-mcp-ai.zh.md) — 384 · BloodHound-MCP-AI 通过模型上下文协议将 BloodHound 与 AI 连接，让安全从业者用自然语言而非复杂的 Cypher 查询分析 Active Directory 攻击路径。
 - [bloodhound_mcp](mwnickerson-bloodhound_mcp.zh.md) — 143 · 一个用于与 BloodHound 数据对话的模型上下文协议（MCP）服务器。
 - [NetExec-mcp](mpgn-netexec-mcp.zh.md) — 117 · NetExec 的 MCP。
 - [roadrecon_mcp_server](atomicchonk-roadrecon_mcp_server.zh.md) — 53 · 用于分析 ROADrecon 数据的 Claude MCP 服务器。

@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 25k |
-| **Last updated** | 1d |
+| **Stars** | 26k |
+| **Last updated** | today |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 100 |
-| **Size** | 282,323 lines · 434 |
+| **Size** | 283,867 lines · 435 |
 | **Source** | <https://github.com/NVIDIA/SkillSpector> |
 | **Scopes & traits** | `agentic` *callout* _remote_ |
 
