@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 1.1k |
-| **Last updated** | 351d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 8 |
-| **Size** | 14,117 lines · 165 |
+| **Size** | 14,232 lines · 166 |
 | **Source** | <https://github.com/splx-ai/agentic-radar> |
 | **Scopes & traits** | `agentic` |
 
