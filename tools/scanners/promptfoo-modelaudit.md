@@ -6,9 +6,9 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 87 |
-| **Last updated** | 3d |
+| **Last updated** | today |
 | **Licence** | MIT |
-| **Maintainers** | 19 |
+| **Maintainers** | 18 |
 | **Size** | 695,414 lines · 542 |
 | **Source** | <https://github.com/promptfoo/modelaudit> |
 | **Scopes & traits** | `modfile` *callout* |

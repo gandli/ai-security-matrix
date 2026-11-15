@@ -9,7 +9,7 @@
 | **最近更新** | 1d |
 | **许可证** | Apache-2.0 |
 | **维护者** | 100 |
-| **规模** | 288,177 lines · 446 |
+| **规模** | 288,362 lines · 447 |
 | **源码** | <https://github.com/NVIDIA/SkillSpector> |
 | **作用范围/特征** | `agentic`（智能体及其循环） / *callout* |
 

@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `agent` |
-| **Stars** | 1.3k |
-| **最近更新** | 1d |
+| **Stars** | 1.4k |
+| **最近更新** | today |
 | **许可证** | Apache-2.0 |
 | **维护者** | 19 |
-| **规模** | 178,644 lines · 583 |
+| **规模** | 180,201 lines · 589 |
 | **源码** | <https://github.com/xalgorix/xalgorix> |
 | **作用范围/特征** | `recon`（信息收集） / `webapp`（浏览器应用） / `network`（主机/端口/流量） / *callout* |
 

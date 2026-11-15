@@ -6,16 +6,16 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 45k |
-| **Last updated** | 53d |
+| **Last updated** | 1d |
 | **Licence** | MIT |
-| **Maintainers** | 16 |
-| **Size** | 17,698 lines · 72 |
+| **Maintainers** | 32 |
+| **Size** | 18,859 lines · 82 |
 | **Source** | <https://github.com/zhaoxuya520/reverse-skill> |
 | **Scopes & traits** | `ad` `binary` `mobile` `webapp` ~opaque~ |
 
 ## Bundled tools
 
-`binwalk`, `nuclei`, `radare2`
+`binwalk`, `ffuf`, `gobuster`, `hashcat`, `hydra`, `nmap`, `nuclei`, `radare2`, `seclists`, `sqlmap`
 
 ## Shares files with
 

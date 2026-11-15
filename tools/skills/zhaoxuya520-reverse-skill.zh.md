@@ -6,16 +6,16 @@
 |---|---|
 | **类别** | `skill` |
 | **Stars** | 45k |
-| **最近更新** | 53d |
+| **最近更新** | 1d |
 | **许可证** | MIT |
-| **维护者** | 16 |
-| **规模** | 17,698 lines · 72 |
+| **维护者** | 32 |
+| **规模** | 18,859 lines · 82 |
 | **源码** | <https://github.com/zhaoxuya520/reverse-skill> |
 | **作用范围/特征** | `ad`（Active Directory 域） / `binary`（二进制/固件） / `mobile`（iOS/Android 应用） / `webapp`（浏览器应用） |
 
 ## 内置工具
 
-`binwalk`, `nuclei`, `radare2`
+`binwalk`, `ffuf`, `gobuster`, `hashcat`, `hydra`, `nmap`, `nuclei`, `radare2`, `seclists`, `sqlmap`
 
 ## 与以下项目共享文件
 

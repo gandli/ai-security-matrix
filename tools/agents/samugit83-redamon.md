@@ -6,16 +6,16 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 3.4k |
-| **Last updated** | 4d |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 28 |
-| **Size** | 966,749 lines · 4269 |
+| **Size** | 1,251,698 lines · 5563 |
 | **Source** | <https://github.com/samugit83/redamon> |
 | **Scopes & traits** | `redteam` `ad` `network` `recon` *callout* _remote_ _escape_ |
 
 ## Bundled tools
 
-`bloodhound`, `certipy-ad`, `gau`, `httpx`, `katana`, `kerbrute`, `ldapdomaindump`, `metasploit-framework`, `naabu`, `nuclei`, `semgrep`, `subfinder`
+`bloodhound`, `certipy-ad`, `gau`, `httpx`, `katana`, `kerbrute`, `ldapdomaindump`, `metasploit-framework`, `naabu`, `nuclei`, `semgrep`, `subfinder`, `tcpdump`
 
 ---
 
