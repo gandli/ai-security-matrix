@@ -9,13 +9,13 @@
 | **Last updated** | today |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
-| **Size** | 8,975 lines · 70 |
+| **Size** | 10,284 lines · 82 |
 | **Source** | <https://github.com/vestjoe/trove-skill> |
 | **Scopes & traits** | `reporting` `ad` `network` _remote_ |
 
 ## Bundled tools
 
-`masscan`, `naabu`, `nmap`, `nuclei`
+`impacket`, `kerbrute`, `masscan`, `naabu`, `nmap`, `nuclei`
 
 ## Shares files with
 

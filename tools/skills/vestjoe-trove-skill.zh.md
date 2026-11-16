@@ -9,13 +9,13 @@
 | **最近更新** | today |
 | **许可证** | MIT |
 | **维护者** | 1 |
-| **规模** | 8,975 lines · 70 |
+| **规模** | 10,284 lines · 82 |
 | **源码** | <https://github.com/vestjoe/trove-skill> |
 | **作用范围/特征** | `reporting`（） / `ad`（Active Directory 域） / `network`（主机/端口/流量） |
 
 ## 内置工具
 
-`masscan`, `naabu`, `nmap`, `nuclei`
+`impacket`, `kerbrute`, `masscan`, `naabu`, `nmap`, `nuclei`
 
 ## 与以下项目共享文件
 

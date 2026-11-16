@@ -7,7 +7,7 @@ _基于规则或 LLM 的检测与评估工具 · 23 个_
 - [garak](nvidia-garak.zh.md) — 10k · LLM 漏洞扫描器。
 - [AI-Infra-Guard](tencent-ai-infra-guard.zh.md) — 7.5k · 全栈 AI 红队平台，通过 Agent 扫描、技能扫描、MCP 扫描、AI 基础设施扫描与 LLM 越狱评估来守护 AI 生态。
 - [claude-code-security-review](anthropics-claude-code-security-review.zh.md) — 6.9k · A GitHub Action that has a model review only the diff of a pull request, comments the security issues inline, then filters its own findings to cut the…
-- [PyRIT](microsoft-pyrit.zh.md) — 4.8k · 面向生成式 AI 的 Python 风险识别工具（PyRIT）是一个开源框架，赋能安全从业者与工程师主动识别生成式 AI 系统的风险。
+- [PyRIT](microsoft-pyrit.zh.md) — 4.9k · 面向生成式 AI 的 Python 风险识别工具（PyRIT）是一个开源框架，赋能安全从业者与工程师主动识别生成式 AI 系统的风险。
 - [agent-scan](snyk-agent-scan.zh.md) — 3.2k · 面向 AI 智能体、MCP 服务器与智能体技能的安全扫描器。
 - [deepteam](confident-ai-deepteam.zh.md) — 3.1k · DeepTeam 是一个对 LLM 与 AI 智能体进行红队的框架。
 - [vulnhuntr](protectai-vulnhuntr.zh.md) — 2.8k · 使用大语言模型进行零样本漏洞发现。
@@ -24,4 +24,4 @@ _基于规则或 LLM 的检测与评估工具 · 23 个_
 - [AgentHound](adithyan-ak-agenthound.zh.md) — 464 · 面向 AI 智能体基础设施的进攻性安全框架——跨 MCP、A2A、网关与 AI 服务进行侦察、凭据掠夺、模型外泄、投毒与攻击路径分析。智能体技术栈版的 BloodHound。
 - [picklescan](mmaitre314-picklescan.zh.md) — 432 · 检测执行可疑行为的 Python Pickle 文件的安全扫描器。
 - [modelaudit](promptfoo-modelaudit.zh.md) — 87 · 面向 AI/ML 模型文件的安全扫描器，在部署前检测恶意代码、后门与漏洞。
-- [aisbom](lab700xorg-aisbom.zh.md) — 83 · 面向 ML 模型文件的静态安全扫描器——检测 pickle 炸弹、Keras Lambda RCE 与 GGUF 模板注入，并生成 CycloneDX / SPDX 的 AI-BOM（AIBOM），作为 EU AI Act、CRA 与 FDA §524B 的合规证据。
+- [aisbom](lab700xorg-aisbom.zh.md) — 84 · 面向 ML 模型文件的静态安全扫描器——检测 pickle 炸弹、Keras Lambda RCE 与 GGUF 模板注入，并生成 CycloneDX / SPDX 的 AI-BOM（AIBOM），作为 EU AI Act、CRA 与 FDA §524B 的合规证据。
