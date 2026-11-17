@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1.2k |
-| **Last updated** | 1d |
+| **Last updated** | today |
 | **Licence** | BSD-2 |
 | **Maintainers** | 10 |
-| **Size** | 740,792 lines · 1771 |
+| **Size** | 745,252 lines · 1781 |
 | **Source** | <https://github.com/berylliumsec/nebula> |
 | **Scopes & traits** | `network` `recon` *callout* |
 

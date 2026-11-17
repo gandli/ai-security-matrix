@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **类别** | `skill` |
-| **Stars** | 6.6k |
+| **Stars** | 7.5k |
 | **最近更新** | 1d |
 | **许可证** | MIT |
-| **维护者** | 11 |
-| **规模** | 11,109 lines · 53 |
+| **维护者** | 15 |
+| **规模** | 13,133 lines · 89 |
 | **源码** | <https://github.com/elementalsouls/Claude-BugHunter> |
 | **作用范围/特征** | `webapp`（浏览器应用） / `api`（HTTP/RPC 接口） / `entra`（Entra ID 云身份） / `mobile`（iOS/Android 应用） |
 

@@ -8,8 +8,8 @@
 | **Stars** | 4.9k |
 | **最近更新** | today |
 | **许可证** | MIT |
-| **维护者** | 100 |
-| **规模** | 835,631 lines · 2695 |
+| **维护者** | not checked |
+| **规模** | 838,127 lines · 2708 |
 | **源码** | <https://github.com/microsoft/PyRIT> |
 | **作用范围/特征** | `llm`（大模型本身） / *callout* |
 

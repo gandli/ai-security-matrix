@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `agent` |
 | **Stars** | 76k |
-| **最近更新** | 3d |
+| **最近更新** | today |
 | **许可证** | Apache-2.0 |
 | **维护者** | 79 |
-| **规模** | 106,371 lines · 383 |
+| **规模** | 106,469 lines · 383 |
 | **源码** | <https://github.com/usestrix/strix> |
 | **作用范围/特征** | `webapp`（浏览器应用） / `api`（HTTP/RPC 接口） / `code`（源代码） / `recon`（信息收集） / *callout* |
 
