@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `scanner` |
-| **Stars** | 3.2k |
+| **Stars** | 3.3k |
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 23 |
-| **Size** | 64,260 lines · 153 |
+| **Maintainers** | 24 |
+| **Size** | 66,631 lines · 161 |
 | **Source** | <https://github.com/snyk/agent-scan> |
 | **Scopes & traits** | `agentic` |
 

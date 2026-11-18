@@ -6,9 +6,9 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 45k |
-| **Last updated** | 3d |
+| **Last updated** | 4d |
 | **Licence** | MIT |
-| **Maintainers** | 32 |
+| **Maintainers** | 31 |
 | **Size** | 18,859 lines · 82 |
 | **Source** | <https://github.com/zhaoxuya520/reverse-skill> |
 | **Scopes & traits** | `ad` `binary` `mobile` `webapp` ~opaque~ |

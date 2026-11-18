@@ -6,9 +6,9 @@
 |---|---|
 | **类别** | `skill` |
 | **Stars** | 45k |
-| **最近更新** | 3d |
+| **最近更新** | 4d |
 | **许可证** | MIT |
-| **维护者** | 32 |
+| **维护者** | 31 |
 | **规模** | 18,859 lines · 82 |
 | **源码** | <https://github.com/zhaoxuya520/reverse-skill> |
 | **作用范围/特征** | `ad`（Active Directory 域） / `binary`（二进制/固件） / `mobile`（iOS/Android 应用） / `webapp`（浏览器应用） |
