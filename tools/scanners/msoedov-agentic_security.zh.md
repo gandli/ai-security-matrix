@@ -8,8 +8,8 @@
 | **Stars** | 2.0k |
 | **最近更新** | 1d |
 | **许可证** | Apache-2.0 |
-| **维护者** | 46 |
-| **规模** | 48,897 lines · 177 |
+| **维护者** | 47 |
+| **规模** | 48,974 lines · 178 |
 | **源码** | <https://github.com/msoedov/agentic_security> |
 | **作用范围/特征** | `llm`（大模型本身） / `agentic`（智能体及其循环） / *callout* |
 

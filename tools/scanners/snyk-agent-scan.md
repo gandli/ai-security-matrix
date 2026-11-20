@@ -8,8 +8,8 @@
 | **Stars** | 3.3k |
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 24 |
-| **Size** | 66,745 lines · 161 |
+| **Maintainers** | 25 |
+| **Size** | 69,114 lines · 163 |
 | **Source** | <https://github.com/snyk/agent-scan> |
 | **Scopes & traits** | `agentic` |
 

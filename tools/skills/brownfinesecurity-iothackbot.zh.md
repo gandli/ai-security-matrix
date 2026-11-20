@@ -6,10 +6,10 @@
 |---|---|
 | **类别** | `skill` |
 | **Stars** | 890 |
-| **最近更新** | 171d |
+| **最近更新** | 1d |
 | **许可证** | MIT |
 | **维护者** | 1 |
-| **规模** | 5,890 lines · 17 |
+| **规模** | 6,235 lines · 18 |
 | **源码** | <https://github.com/BrownFineSecurity/iothackbot> |
 | **作用范围/特征** | `binary`（二进制/固件） / `network`（主机/端口/流量） / `mobile`（iOS/Android 应用） |
 

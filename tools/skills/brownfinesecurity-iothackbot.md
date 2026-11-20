@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 890 |
-| **Last updated** | 171d |
+| **Last updated** | 1d |
 | **Licence** | MIT |
 | **Maintainers** | 1 |
-| **Size** | 5,890 lines · 17 |
+| **Size** | 6,235 lines · 18 |
 | **Source** | <https://github.com/BrownFineSecurity/iothackbot> |
 | **Scopes & traits** | `binary` `network` `mobile` |
 
