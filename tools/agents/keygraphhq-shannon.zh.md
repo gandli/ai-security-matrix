@@ -9,7 +9,7 @@
 | **最近更新** | 1d |
 | **许可证** | AGPL-3.0 |
 | **维护者** | 8 |
-| **规模** | 53,488 lines · 219 |
+| **规模** | 53,704 lines · 220 |
 | **源码** | <https://github.com/KeygraphHQ/shannon> |
 | **作用范围/特征** | `webapp`（浏览器应用） / `api`（HTTP/RPC 接口） / `code`（源代码） |
 

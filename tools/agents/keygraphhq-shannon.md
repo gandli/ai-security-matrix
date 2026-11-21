@@ -9,7 +9,7 @@
 | **Last updated** | 1d |
 | **Licence** | AGPL-3.0 |
 | **Maintainers** | 8 |
-| **Size** | 53,488 lines · 219 |
+| **Size** | 53,704 lines · 220 |
 | **Source** | <https://github.com/KeygraphHQ/shannon> |
 | **Scopes & traits** | `webapp` `api` `code` |
 
