@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 51 |
+| **Stars** | 52 |
 | **Last updated** | today |
 | **Licence** | GPL-3.0 |
 | **Maintainers** | 2 |
