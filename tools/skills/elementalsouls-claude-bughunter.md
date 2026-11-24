@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Category** | `skill` |
-| **Stars** | 18k |
-| **Last updated** | 1d |
+| **Stars** | 20k |
+| **Last updated** | today |
 | **Licence** | MIT |
-| **Maintainers** | 19 |
-| **Size** | 14,671 lines · 99 |
+| **Maintainers** | 20 |
+| **Size** | 17,905 lines · 114 |
 | **Source** | <https://github.com/elementalsouls/Claude-BugHunter> |
 | **Scopes & traits** | `webapp` `api` `entra` `mobile` |
 

@@ -6,9 +6,9 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 11k |
-| **Last updated** | 6d |
+| **Last updated** | 7d |
 | **Licence** | MIT |
-| **Maintainers** | 13 |
+| **Maintainers** | 12 |
 | **Size** | 531 lines · 4 |
 | **Source** | <https://github.com/SnailSploit/Claude-Red> |
 | **Scopes & traits** | `redteam` `binary` `webapp` `ad` |

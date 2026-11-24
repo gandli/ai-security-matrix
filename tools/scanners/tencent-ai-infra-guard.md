@@ -8,8 +8,8 @@
 | **Stars** | 7.6k |
 | **Last updated** | today |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 96 |
-| **Size** | 188,406 lines · 1207 |
+| **Maintainers** | 99 |
+| **Size** | 188,624 lines · 1208 |
 | **Source** | <https://github.com/Tencent/AI-Infra-Guard> |
 | **Scopes & traits** | `llm` `agentic` *callout* _remote_ |
 
