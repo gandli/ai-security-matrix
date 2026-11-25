@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 3.1k |
-| **Last updated** | 32d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 27 |
-| **Size** | 91,346 lines · 825 |
+| **Maintainers** | 38 |
+| **Size** | 102,564 lines · 912 |
 | **Source** | <https://github.com/confident-ai/deepteam> |
 | **Scopes & traits** | `llm` `agentic` *callout* |
 
