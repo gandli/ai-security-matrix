@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 52k |
-| **Last updated** | today |
+| **Last updated** | 1d |
 | **Licence** | AGPL-3.0 |
 | **Maintainers** | 8 |
-| **Size** | 53,704 lines · 220 |
+| **Size** | 53,767 lines · 222 |
 | **Source** | <https://github.com/KeygraphHQ/shannon> |
 | **Scopes & traits** | `webapp` `api` `code` |
 

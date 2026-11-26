@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Category** | `agent` |
-| **Stars** | 311 |
+| **Stars** | 312 |
 | **Last updated** | archived |
 | **Licence** | AGPL-3.0 |
 | **Maintainers** | 4 |

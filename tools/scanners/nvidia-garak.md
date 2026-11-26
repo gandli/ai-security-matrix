@@ -6,10 +6,10 @@
 |---|---|
 | **Category** | `scanner` |
 | **Stars** | 10k |
-| **Last updated** | 2d |
+| **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
 | **Maintainers** | 100 |
-| **Size** | 89,192 lines · 512 |
+| **Size** | 90,160 lines · 512 |
 | **Source** | <https://github.com/NVIDIA/garak> |
 | **Scopes & traits** | `llm` |
 

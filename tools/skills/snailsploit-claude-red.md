@@ -6,7 +6,7 @@
 |---|---|
 | **Category** | `skill` |
 | **Stars** | 12k |
-| **Last updated** | 8d |
+| **Last updated** | 9d |
 | **Licence** | MIT |
 | **Maintainers** | 12 |
 | **Size** | 531 lines · 4 |

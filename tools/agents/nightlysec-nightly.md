@@ -6,9 +6,9 @@
 |---|---|
 | **Category** | `agent` |
 | **Stars** | 1 |
-| **Last updated** | 104d |
+| **Last updated** | 105d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 67 |
+| **Maintainers** | 68 |
 | **Size** | 59,092 lines · 275 |
 | **Source** | <https://github.com/Nightlysec/nightly> |
 | **Scopes & traits** | `webapp` `api` `code` `recon` _remote_ |
