@@ -8,8 +8,8 @@
 | **Stars** | 2.1k |
 | **Last updated** | 1d |
 | **Licence** | Apache-2.0 |
-| **Maintainers** | 50 |
-| **Size** | 49,701 lines · 186 |
+| **Maintainers** | 52 |
+| **Size** | 50,177 lines · 188 |
 | **Source** | <https://github.com/msoedov/agentic_security> |
 | **Scopes & traits** | `llm` `agentic` *callout* |
 
